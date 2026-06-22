@@ -48,7 +48,12 @@
       white-space: nowrap; transition: all 0.15s;
       font-family: 'Instrument Sans', system-ui, sans-serif;
     }
-    .mode-btn.active { background: var(--text); color: #fff; }
+    .mode-btn.active {
+      background: linear-gradient(135deg, #E088BE, #9878D8, #78A0D8, #78D4C0, #D4CC78, #E088BE);
+      background-size: 300% 300%;
+      animation: shimmer 3.5s ease infinite;
+      color: #fff; border-color: transparent;
+    }
 
     /* Botón Solo Nuevos */
     .btn-solo-nuevos {
@@ -58,7 +63,12 @@
       white-space: nowrap; transition: all 0.15s; flex-shrink: 0;
       font-family: 'Instrument Sans', system-ui, sans-serif;
     }
-    .btn-solo-nuevos.active { background: var(--text); color: #fff; border-color: var(--text); }
+    .btn-solo-nuevos.active {
+      background: linear-gradient(135deg, #E088BE, #9878D8, #78A0D8, #78D4C0, #D4CC78, #E088BE);
+      background-size: 300% 300%;
+      animation: shimmer 3.5s ease infinite;
+      color: #fff; border-color: transparent;
+    }
 
     /* Toggle Agotados */
     .toggle-wrap { display: flex; align-items: center; gap: 6px; cursor: pointer; flex-shrink: 0; }
@@ -72,7 +82,11 @@
       width: 12px; height: 12px; border-radius: 50%; background: #fff;
       transition: transform 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     }
-    .toggle-switch.on { background: var(--text); }
+    .toggle-switch.on {
+      background: linear-gradient(135deg, #E088BE, #9878D8, #78A0D8, #78D4C0, #D4CC78, #E088BE);
+      background-size: 300% 300%;
+      animation: shimmer 3.5s ease infinite;
+    }
     .toggle-switch.on::after { transform: translateX(13px); }
 
     /* Barra de búsqueda */
@@ -111,27 +125,42 @@
       padding: 3px 7px; border-radius: 3px;
     }
 
+    /* ── TORNASOL / IRIDISCENTE ─────────────────── */
+    @keyframes shimmer {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     /* ── BANNER ─────────────────────────────────── */
     .banner {
       background: linear-gradient(to right, #222222, #555555);
       padding: 48px 28px 52px;
-      position: relative; overflow: hidden;
+      display: flex; justify-content: space-between;
+      align-items: flex-start; gap: 32px;
+    }
+    .banner-left  { flex: 1; }
+    .banner-right {
+      display: flex; flex-direction: column;
+      align-items: flex-end; gap: 10px; flex-shrink: 0;
     }
     .banner-logo {
-      height: 38px; width: auto; display: block;
+      height: 50px; width: auto; display: block;
       filter: brightness(0) invert(1);
-      margin-bottom: 28px;
     }
-    .banner-eyebrow {
-      font-size: 10px; font-weight: 500; letter-spacing: 2.5px;
-      text-transform: uppercase; color: rgba(255,255,255,0.38);
-      margin-bottom: 14px; display: block;
+    .banner-catalog-year {
+      font-size: 0.7rem; color: rgba(255,255,255,0.35);
+      letter-spacing: 0.5px; text-align: right;
     }
     .banner-title {
       font-size: 1.9rem; font-weight: 600; letter-spacing: -0.5px; line-height: 1.2;
-      color: #fff; max-width: 480px;
+      color: #fff;
     }
     .banner-title em { font-weight: 400; font-style: italic; }
+    .banner-desc {
+      font-size: 0.75rem; color: rgba(255,255,255,0.45);
+      line-height: 1.65; margin-top: 14px; max-width: 400px;
+    }
 
     /* ── BEST SELLERS ───────────────────────────── */
     .bs-section { padding: 64px 28px 88px; }
@@ -149,7 +178,15 @@
       font-size: 2.6rem; font-weight: 600; letter-spacing: -1px; line-height: 1;
       color: var(--text);
     }
-    .sec-title em { font-weight: 400; font-style: italic; }
+    .sec-title em {
+      font-weight: 400; font-style: italic;
+      background: linear-gradient(90deg, #E088BE, #9878D8, #78A0D8, #78D4C0, #D4CC78, #E088BE);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
     .bs-heading-note {
       font-size: 0.78rem; color: var(--text-sec); line-height: 1.5;
       max-width: 200px; text-align: right; padding-bottom: 4px;
@@ -216,7 +253,12 @@
       cursor: pointer; white-space: nowrap; background: var(--bg);
       transition: all 0.15s;
     }
-    .subfilter-chip.active { background: var(--text); color: #fff; border-color: var(--text); }
+    .subfilter-chip.active {
+      background: linear-gradient(135deg, #E088BE, #9878D8, #78A0D8, #78D4C0, #D4CC78, #E088BE);
+      background-size: 300% 300%;
+      animation: shimmer 3.5s ease infinite;
+      color: #fff; border-color: transparent;
+    }
     .subfilter-chip:hover:not(.active) { color: var(--text); border-color: var(--text-sec); }
 
     /* ── SEARCH RESULTS ──────────────────────────── */
@@ -235,10 +277,16 @@
       flex-shrink: 0; padding: 15px 18px;
       font-size: 0.82rem; font-weight: 500; color: var(--text-sec);
       border-bottom: 2px solid transparent;
-      cursor: pointer; white-space: nowrap;
-      transition: color 0.15s, border-color 0.15s;
+      cursor: pointer; white-space: nowrap; position: relative;
+      transition: color 0.15s;
     }
-    .cat-tab.active { color: var(--text); border-bottom-color: var(--text); }
+    .cat-tab.active { color: var(--text); border-bottom-color: transparent; }
+    .cat-tab.active::after {
+      content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, #E088BE, #9878D8, #78A0D8, #78D4C0, #D4CC78, #E088BE);
+      background-size: 200% auto;
+      animation: shimmer 3s linear infinite;
+    }
     .cat-tab:hover:not(.active) { color: var(--text); }
 
     /* ── PRODUCT SECTIONS ───────────────────────── */
@@ -515,6 +563,9 @@
       .banner, .search-wrap, .products-main, .bs-section, footer { padding-left: 16px; padding-right: 16px; }
       .cat-nav { padding: 0 16px; }
       .subfilter-wrap { padding-left: 16px; padding-right: 16px; }
+      .banner { flex-direction: column; gap: 20px; }
+      .banner-right { flex-direction: row; align-items: center; justify-content: space-between; width: 100%; }
+      .banner-catalog-year { text-align: left; }
       .sec-title { font-size: 2rem; }
       .cat-section-name { font-size: 1.4rem; }
       .bs-heading { flex-direction: column; gap: 12px; }
@@ -531,9 +582,14 @@
 
 <!-- ── BANNER ─────────────────────────────────── -->
 <div class="banner">
-  <img src="img/Logo_Maragel-Negro.png" alt="Maragel" class="banner-logo">
-  <span class="banner-eyebrow">Colombia · Desde 2017</span>
-  <h2 class="banner-title">Color y calidad<br><em>que evolucionan.</em></h2>
+  <div class="banner-left">
+    <h2 class="banner-title">Color y calidad<br><em>que evolucionan.</em></h2>
+    <p class="banner-desc">Catálogo de consulta para asesoras y clientes. Precios en COP. Para pedidos, comunícate con tu asesor DU.</p>
+  </div>
+  <div class="banner-right">
+    <img src="img/Logo_Maragel-Negro.png" alt="Maragel" class="banner-logo">
+    <span class="banner-catalog-year">Catálogo 2026</span>
+  </div>
 </div>
 
 <!-- ── SEARCH & CONTROLS ───────────────────────── -->
