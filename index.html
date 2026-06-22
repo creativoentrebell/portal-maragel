@@ -40,6 +40,30 @@
       font-size: 10px; color: var(--text-sec); letter-spacing: 1.2px; text-transform: uppercase;
     }
 
+    /* ── SEARCH ─────────────────────────────────── */
+    .search-wrap {
+      position: sticky; top: 60px; z-index: 95;
+      background: var(--bg); border-bottom: 1px solid var(--border);
+      padding: 10px 28px;
+    }
+    .search-inner { position: relative; }
+    .search-input {
+      width: 100%; padding: 9px 36px 9px 14px;
+      border: 1px solid var(--border); border-radius: 8px;
+      font-family: 'Instrument Sans', system-ui, sans-serif;
+      font-size: 0.85rem; color: var(--text);
+      background: var(--card-bg); outline: none;
+      transition: border-color 0.15s;
+    }
+    .search-input:focus { border-color: var(--text-sec); }
+    .search-input::placeholder { color: var(--text-sec); }
+    .search-clear {
+      position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+      background: none; border: none; cursor: pointer;
+      color: var(--text-sec); font-size: 17px; line-height: 1;
+      display: none; padding: 2px 4px;
+    }
+
     /* ── BANNER ─────────────────────────────────── */
     .banner {
       background: linear-gradient(to right, #222222, #555555);
@@ -47,12 +71,12 @@
       position: relative; overflow: hidden;
     }
     .banner-icon {
-      position: absolute; right: -10px; top: 50%;
+      position: absolute; right: 28px; top: 50%;
       transform: translateY(-50%);
-      height: 210%; width: auto;
+      height: 80px; width: auto;
       filter: invert(1);
       mix-blend-mode: screen;
-      opacity: 0.1;
+      opacity: 0.12;
       pointer-events: none; user-select: none;
     }
     .banner-eyebrow {
@@ -130,8 +154,35 @@
 
     /* ── CATEGORY NAV ───────────────────────────── */
     .cat-nav-wrap {
-      position: sticky; top: 60px; z-index: 90;
+      position: sticky; top: 110px; z-index: 90;
       background: var(--bg); border-bottom: 1px solid var(--border);
+    }
+
+    /* ── SUBFILTROS ──────────────────────────────── */
+    .subfilter-wrap {
+      display: none; padding: 8px 28px; gap: 6px;
+      background: var(--bg); border-bottom: 1px solid var(--border);
+      overflow-x: auto; scrollbar-width: none;
+    }
+    .subfilter-wrap::-webkit-scrollbar { display: none; }
+    .subfilter-wrap.visible { display: flex; }
+    .subfilter-chip {
+      flex-shrink: 0; padding: 5px 13px;
+      border: 1px solid var(--border); border-radius: 20px;
+      font-size: 0.75rem; font-weight: 500; color: var(--text-sec);
+      cursor: pointer; white-space: nowrap; background: var(--bg);
+      transition: all 0.15s;
+    }
+    .subfilter-chip.active { background: var(--text); color: #fff; border-color: var(--text); }
+    .subfilter-chip:hover:not(.active) { color: var(--text); border-color: var(--text-sec); }
+
+    /* ── SEARCH RESULTS ──────────────────────────── */
+    .search-results { display: none; padding: 32px 28px 80px; }
+    .search-results.visible { display: block; }
+    .search-count { font-size: 0.78rem; color: var(--text-sec); margin-bottom: 24px; display: block; }
+    .search-empty {
+      padding: 60px 0; text-align: center;
+      color: var(--text-sec); font-size: 0.9rem; font-style: italic;
     }
     .cat-nav {
       display: flex; overflow-x: auto; scrollbar-width: none; padding: 0 28px;
@@ -333,14 +384,37 @@
     .video-ph-path  { font-size: 0.62rem; opacity: 0.35; font-family: monospace; margin-top: 2px; }
 
     .gallery-dots {
-      position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
-      display: flex; gap: 5px;
+      position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 5px; pointer-events: none;
     }
     .gallery-dot {
-      width: 5.5px; height: 5.5px; border-radius: 50%;
-      background: rgba(56,56,56,0.2); cursor: pointer; transition: background 0.18s;
+      width: 5px; height: 5px; border-radius: 50%;
+      background: rgba(255,255,255,0.4);
     }
-    .gallery-dot.active { background: var(--text); }
+    .gallery-dot.active { background: #fff; }
+
+    /* Tira de miniaturas */
+    .gal-thumbs {
+      display: flex; gap: 7px; padding: 10px 14px;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto; scrollbar-width: none;
+    }
+    .gal-thumbs::-webkit-scrollbar { display: none; }
+    .gal-thumb {
+      width: 52px; height: 52px; flex-shrink: 0;
+      border-radius: 6px; overflow: hidden; cursor: pointer;
+      border: 2px solid transparent;
+      background: var(--border);
+      transition: border-color 0.15s;
+    }
+    .gal-thumb.active { border-color: var(--text); }
+    .gal-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gal-thumb-video {
+      width: 100%; height: 100%; background: #2a2a2a;
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.7); font-size: 15px;
+    }
 
     .gal-btn {
       position: absolute; top: 50%; transform: translateY(-50%);
@@ -425,6 +499,16 @@
   </div>
 </header>
 
+<!-- ── SEARCH ─────────────────────────────────── -->
+<div class="search-wrap">
+  <div class="search-inner">
+    <input type="text" class="search-input" id="search-input"
+           placeholder="Buscar por nombre o referencia..."
+           oninput="handleSearch(this.value)" autocomplete="off">
+    <button class="search-clear" id="search-clear" onclick="clearSearch()" aria-label="Limpiar">×</button>
+  </div>
+</div>
+
 <!-- ── BANNER ─────────────────────────────────── -->
 <div class="banner">
   <img src="img/Icono_Maragel-Negro.png" alt="" class="banner-icon" aria-hidden="true">
@@ -449,6 +533,15 @@
   <nav class="cat-nav" id="cat-nav"></nav>
 </div>
 
+<!-- ── SUBFILTROS ─────────────────────────────── -->
+<div class="subfilter-wrap" id="subfilter-wrap"></div>
+
+<!-- ── SEARCH RESULTS ───────────────────────────── -->
+<div class="search-results" id="search-results">
+  <span class="search-count" id="search-count"></span>
+  <div class="product-grid" id="search-grid"></div>
+</div>
+
 <!-- ── PRODUCT GRID ────────────────────────────── -->
 <main class="products-main" id="products-main"></main>
 
@@ -470,6 +563,7 @@
       <button class="gal-btn gal-prev" id="gal-prev">‹</button>
       <button class="gal-btn gal-next" id="gal-next">›</button>
     </div>
+    <div class="gal-thumbs" id="gal-thumbs"></div>
     <div class="modal-info" id="modal-info"></div>
   </div>
 </div>
@@ -600,6 +694,16 @@ const PRODUCTOS = [
     id:'m0018', nombre:'Stickers Mariposas Nail Art', referencia:'STK-MAR',
     precio:8000, categoria:'Apliques y Stickers', subcategoria:'Stickers',
     imagen:'img/maragel/STK-MAR.png', agotado:false, best_seller:false, color_blob:''
+  },
+  {
+    id:'m0019', nombre:'Esmalte Semipermanente 290', referencia:'290',
+    precio:22000, categoria:'Esmaltes en Gel', subcategoria:'Azules y Lilas',
+    imagen:'img/color/290.jpg', agotado:false, best_seller:false, color_blob:'',
+    galeria:[
+      {tipo:'foto',  src:'img/color/290.jpg'},
+      {tipo:'foto',  src:'img/esmalte/290.jpg'},
+      {tipo:'video', src:'img/video/290.mp4'}
+    ]
   }
 ];
 
@@ -704,10 +808,88 @@ function renderCatNav() {
 }
 
 function filterCat(cat) {
+  activeCat    = cat;
+  activeSubcat = null;
+
   document.querySelectorAll('.cat-tab')
     .forEach(t => t.classList.toggle('active', t.dataset.cat === cat));
   document.querySelectorAll('.cat-section')
-    .forEach(s => { s.style.display = (cat==='Todos' || s.dataset.cat===cat) ? '' : 'none'; });
+    .forEach(s => { s.style.display = (cat === 'Todos' || s.dataset.cat === cat) ? '' : 'none'; });
+
+  // Restaurar visibilidad de subcategorías
+  document.querySelectorAll('.subcat-divider, .product-grid').forEach(el => el.style.display = '');
+  document.querySelectorAll('.product-card').forEach(c => c.style.display = '');
+
+  renderSubfilters(cat);
+}
+
+function renderSubfilters(cat) {
+  const wrap = document.getElementById('subfilter-wrap');
+  if (cat === 'Todos') { wrap.classList.remove('visible'); return; }
+  const subcats = [...new Set(PRODUCTOS.filter(p => p.categoria === cat).map(p => p.subcategoria))];
+  if (subcats.length <= 1) { wrap.classList.remove('visible'); return; }
+  wrap.classList.add('visible');
+  wrap.innerHTML = ['Todos', ...subcats].map(sub =>
+    `<div class="subfilter-chip${sub==='Todos'?' active':''}" onclick="filterSubcat(this,'${sub.replace(/'/g,"&#39;")}')">${sub}</div>`
+  ).join('');
+}
+
+function filterSubcat(el, sub) {
+  activeSubcat = sub === 'Todos' ? null : sub;
+  document.querySelectorAll('.subfilter-chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+
+  if (!activeSubcat) {
+    document.querySelectorAll('.subcat-divider, .product-grid').forEach(el => el.style.display = '');
+    document.querySelectorAll('.product-card').forEach(c => c.style.display = '');
+  } else {
+    document.querySelectorAll('.subcat-divider')
+      .forEach(d => d.style.display = d.dataset.subcat === activeSubcat ? '' : 'none');
+    document.querySelectorAll('.product-grid')
+      .forEach(g => g.style.display = g.dataset.subcat === activeSubcat ? '' : 'none');
+  }
+}
+
+/* ── BÚSQUEDA ───────────────────────────────── */
+function handleSearch(val) {
+  searchQuery = val.trim().toLowerCase();
+  document.getElementById('search-clear').style.display = searchQuery ? 'block' : 'none';
+
+  const bsEl  = document.querySelector('.bs-section');
+  const main  = document.getElementById('products-main');
+  const res   = document.getElementById('search-results');
+  const sfEl  = document.getElementById('subfilter-wrap');
+
+  if (searchQuery) {
+    bsEl.style.display  = 'none';
+    main.style.display  = 'none';
+    sfEl.classList.remove('visible');
+    res.classList.add('visible');
+
+    const found = PRODUCTOS.filter(p =>
+      p.nombre.toLowerCase().includes(searchQuery) ||
+      p.referencia.toLowerCase().includes(searchQuery) ||
+      (p.subcategoria && p.subcategoria.toLowerCase().includes(searchQuery))
+    );
+
+    document.getElementById('search-count').textContent =
+      found.length ? `${found.length} ${found.length===1?'producto':'productos'}` : '';
+    document.getElementById('search-grid').innerHTML = found.length
+      ? found.map(productCard).join('')
+      : `<div class="search-empty">Sin resultados para "${val}"</div>`;
+  } else {
+    clearSearch();
+  }
+}
+
+function clearSearch() {
+  searchQuery = '';
+  document.getElementById('search-input').value = '';
+  document.getElementById('search-clear').style.display = 'none';
+  document.querySelector('.bs-section').style.display = '';
+  document.getElementById('products-main').style.display = '';
+  document.getElementById('search-results').classList.remove('visible');
+  filterCat(activeCat);
 }
 
 /* ── RENDER PRODUCT CARD ────────────────────── */
@@ -716,7 +898,7 @@ function productCard(p) {
   const hasMedia = p.galeria && p.galeria.length > 1;
   const hasVideo = hasMedia && p.galeria.some(g => g.tipo==='video');
   return `
-  <div class="product-card${p.agotado?' is-agotado':''}" style="--pc:${c}" onclick="openModal('${p.id}')">
+  <div class="product-card${p.agotado?' is-agotado':''}" style="--pc:${c}" data-subcat="${p.subcategoria}" onclick="openModal('${p.id}')">
     <div class="pc-img-wrap" data-ref="${p.referencia}">
       <img src="${p.imagen}" alt="${p.nombre}"
            onerror="this.src='${getImgSrc(p)}';this.classList.add('is-ph')">
@@ -753,11 +935,11 @@ function renderProducts() {
     const inner = showSubs
       ? subcats.map(sub => {
           const sProds = cProds.filter(p => p.subcategoria === sub);
-          return `<div class="subcat-divider">
+          return `<div class="subcat-divider" data-subcat="${sub}">
               <span class="subcat-label">${sub}</span>
               <div class="subcat-rule"></div>
             </div>
-            <div class="product-grid">${sProds.map(productCard).join('')}</div>`;
+            <div class="product-grid" data-subcat="${sub}">${sProds.map(productCard).join('')}</div>`;
         }).join('')
       : `<div class="product-grid">${cProds.map(productCard).join('')}</div>`;
 
@@ -804,30 +986,52 @@ function galVideoError(el, src) {
 }
 
 function buildGallery() {
-  const track = document.getElementById('gal-track');
-  const dots  = document.getElementById('gal-dots');
+  const track  = document.getElementById('gal-track');
+  const dots   = document.getElementById('gal-dots');
+  const thumbs = document.getElementById('gal-thumbs');
+  const ph = getImgSrc(gProd, 'swatch');
 
+  // Slides principales
   track.innerHTML = gItems.map((item, idx) => {
     if (item.tipo === 'video') {
+      const mime = item.src.endsWith('.mov') ? 'video/quicktime' : 'video/mp4';
       return `
       <div class="gallery-item is-video">
         <video controls playsinline preload="metadata"
                onerror="galVideoError(this,'${item.src}')">
-          <source src="${item.src}" type="video/mp4"
+          <source src="${item.src}" type="${mime}"
                   onerror="galVideoError(this,'${item.src}')">
         </video>
       </div>`;
     }
-    const fallback = idx === 1 ? getImgSrc(gProd, 'nail') : getImgSrc(gProd, 'swatch');
     return `<div class="gallery-item">
       <img src="${item.src}" alt="Foto ${idx+1}"
-           onerror="this.src='${fallback}';this.classList.add('is-ph')">
+           onerror="this.src='${ph}';this.classList.add('is-ph')">
     </div>`;
   }).join('');
 
+  // Puntos sutiles (solo si hay más de 1)
   dots.innerHTML = gItems.length > 1
-    ? gItems.map((_,i) => `<div class="gallery-dot${i===0?' active':''}" onclick="goTo(${i})"></div>`).join('')
+    ? gItems.map((_,i) => `<div class="gallery-dot${i===0?' active':''}"></div>`).join('')
     : '';
+
+  // Tira de miniaturas
+  if (gItems.length > 1) {
+    thumbs.style.display = '';
+    thumbs.innerHTML = gItems.map((item, i) => {
+      if (item.tipo === 'video') {
+        return `<div class="gal-thumb${i===0?' active':''}" onclick="goTo(${i})">
+          <div class="gal-thumb-video">▶</div>
+        </div>`;
+      }
+      return `<div class="gal-thumb${i===0?' active':''}" onclick="goTo(${i})">
+        <img src="${item.src}" alt="Miniatura ${i+1}"
+             onerror="this.parentElement.style.background='#d8d8d8';this.remove()">
+      </div>`;
+    }).join('');
+  } else {
+    thumbs.style.display = 'none';
+  }
 
   updateGallery();
 }
@@ -835,6 +1039,7 @@ function buildGallery() {
 function updateGallery() {
   document.getElementById('gal-track').style.transform = `translateX(-${gi*100}%)`;
   document.querySelectorAll('.gallery-dot').forEach((d,i) => d.classList.toggle('active',i===gi));
+  document.querySelectorAll('.gal-thumb').forEach((t,i) => t.classList.toggle('active',i===gi));
   document.getElementById('gal-prev').disabled = gi===0;
   document.getElementById('gal-next').disabled = gi===gItems.length-1;
 
@@ -842,9 +1047,9 @@ function updateGallery() {
   if (gItems.length<=1) { tag.classList.add('hidden'); return; }
   tag.classList.remove('hidden');
   const cur = gItems[gi];
-  if (cur.tipo==='video') tag.textContent='Video';
-  else if (gi===1)        tag.textContent='Foto uña';
-  else                    tag.textContent='Foto producto';
+  if (cur.tipo==='video')   tag.textContent = 'Video';
+  else if (gi === 0)        tag.textContent = 'Foto principal';
+  else                      tag.textContent = 'Foto frasco';
 }
 
 function goTo(i) { gi=i; updateGallery(); }
@@ -864,6 +1069,11 @@ function buildModalInfo() {
     ${p.descripcion ? `<div class="modal-desc">${p.descripcion}</div>` : ''}
     ${p.agotado ? '<div class="modal-badge-sold">Agotado temporalmente</div>' : ''}`;
 }
+
+/* ── ESTADO GLOBAL ──────────────────────────── */
+let activeCat    = 'Todos';
+let activeSubcat = null;
+let searchQuery  = '';
 
 /* ── SWIPE (móvil) ──────────────────────────── */
 let swipeX = 0;
