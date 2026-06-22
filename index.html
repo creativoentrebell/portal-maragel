@@ -24,28 +24,58 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── HEADER ─────────────────────────────────── */
-    header {
-      position: sticky; top: 0; z-index: 100;
-      background: var(--bg); border-bottom: 1px solid var(--border);
-      height: 60px; padding: 0 28px;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .logo { display: flex; align-items: center; text-decoration: none; }
-    .logo-img { height: 30px; width: auto; display: block; }
-    .header-right {
-      display: flex; align-items: center; gap: 20px;
-    }
-    .header-meta {
-      font-size: 10px; color: var(--text-sec); letter-spacing: 1.2px; text-transform: uppercase;
-    }
-
-    /* ── SEARCH ─────────────────────────────────── */
+    /* ── SEARCH & CONTROL BAR ───────────────────── */
     .search-wrap {
-      position: sticky; top: 60px; z-index: 95;
+      position: sticky; top: 0; z-index: 95;
       background: var(--bg); border-bottom: 1px solid var(--border);
-      padding: 10px 28px;
+      padding: 10px 28px; display: flex; flex-direction: column; gap: 8px;
     }
+    /* Fila de controles */
+    .search-controls {
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    }
+    .search-controls-right { display: flex; align-items: center; gap: 8px; }
+
+    /* Toggle Detal / Mayorista */
+    .mode-toggle {
+      display: flex; border: 1px solid var(--border); border-radius: 8px;
+      overflow: hidden; flex-shrink: 0;
+    }
+    .mode-btn {
+      padding: 6px 12px; font-size: 0.72rem; font-weight: 500;
+      border: none; cursor: pointer;
+      background: var(--bg); color: var(--text-sec);
+      white-space: nowrap; transition: all 0.15s;
+      font-family: 'Instrument Sans', system-ui, sans-serif;
+    }
+    .mode-btn.active { background: var(--text); color: #fff; }
+
+    /* Botón Solo Nuevos */
+    .btn-solo-nuevos {
+      padding: 6px 12px; font-size: 0.72rem; font-weight: 500;
+      border: 1px solid var(--border); border-radius: 8px;
+      cursor: pointer; background: var(--bg); color: var(--text-sec);
+      white-space: nowrap; transition: all 0.15s; flex-shrink: 0;
+      font-family: 'Instrument Sans', system-ui, sans-serif;
+    }
+    .btn-solo-nuevos.active { background: var(--text); color: #fff; border-color: var(--text); }
+
+    /* Toggle Agotados */
+    .toggle-wrap { display: flex; align-items: center; gap: 6px; cursor: pointer; flex-shrink: 0; }
+    .toggle-label-text { font-size: 0.72rem; color: var(--text-sec); white-space: nowrap; user-select: none; }
+    .toggle-switch {
+      width: 30px; height: 17px; background: #C0C0C0; border-radius: 17px;
+      position: relative; transition: background 0.2s; flex-shrink: 0;
+    }
+    .toggle-switch::after {
+      content: ''; position: absolute; top: 2.5px; left: 2.5px;
+      width: 12px; height: 12px; border-radius: 50%; background: #fff;
+      transition: transform 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+    .toggle-switch.on { background: var(--text); }
+    .toggle-switch.on::after { transform: translateX(13px); }
+
+    /* Barra de búsqueda */
     .search-inner { position: relative; }
     .search-input {
       width: 100%; padding: 9px 36px 9px 14px;
@@ -64,20 +94,33 @@
       display: none; padding: 2px 4px;
     }
 
+    /* Banner modo Mayorista */
+    .modo-banner {
+      display: none; position: sticky; top: 84px; z-index: 94;
+      background: var(--text); color: #fff;
+      padding: 7px 28px; text-align: center;
+      font-size: 0.75rem; font-weight: 500; letter-spacing: 0.5px;
+    }
+    .modo-banner.visible { display: block; }
+
+    /* Badge Nuevo */
+    .badge-nuevo {
+      position: absolute; top: 9px; left: 9px; z-index: 2;
+      background: var(--text); color: #fff;
+      font-size: 9px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;
+      padding: 3px 7px; border-radius: 3px;
+    }
+
     /* ── BANNER ─────────────────────────────────── */
     .banner {
       background: linear-gradient(to right, #222222, #555555);
       padding: 48px 28px 52px;
       position: relative; overflow: hidden;
     }
-    .banner-icon {
-      position: absolute; right: 28px; top: 50%;
-      transform: translateY(-50%);
-      height: 80px; width: auto;
-      filter: invert(1);
-      mix-blend-mode: screen;
-      opacity: 0.12;
-      pointer-events: none; user-select: none;
+    .banner-logo {
+      height: 38px; width: auto; display: block;
+      filter: brightness(0) invert(1);
+      margin-bottom: 28px;
     }
     .banner-eyebrow {
       font-size: 10px; font-weight: 500; letter-spacing: 2.5px;
@@ -154,7 +197,7 @@
 
     /* ── CATEGORY NAV ───────────────────────────── */
     .cat-nav-wrap {
-      position: sticky; top: 110px; z-index: 90;
+      position: sticky; top: 84px; z-index: 90;
       background: var(--bg); border-bottom: 1px solid var(--border);
     }
 
@@ -293,10 +336,6 @@
 
     /* Card info */
     .pc-info { padding: 10px 12px 14px; }
-    .pc-subcat {
-      font-size: 9px; font-weight: 500; letter-spacing: 1.5px;
-      text-transform: uppercase; color: var(--text-sec); margin-bottom: 3px;
-    }
     .pc-name {
       font-size: 0.82rem; font-weight: 500; font-style: italic;
       color: var(--text); line-height: 1.35; margin-bottom: 8px;
@@ -473,8 +512,9 @@
       .product-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 580px) {
-      header, .products-main, .bs-section, footer { padding-left: 16px; padding-right: 16px; }
+      .banner, .search-wrap, .products-main, .bs-section, footer { padding-left: 16px; padding-right: 16px; }
       .cat-nav { padding: 0 16px; }
+      .subfilter-wrap { padding-left: 16px; padding-right: 16px; }
       .sec-title { font-size: 2rem; }
       .cat-section-name { font-size: 1.4rem; }
       .bs-heading { flex-direction: column; gap: 12px; }
@@ -489,18 +529,28 @@
 </head>
 <body>
 
-<!-- ── HEADER ─────────────────────────────────── -->
-<header>
-  <a class="logo" href="#">
-    <img src="img/Logo_Maragel-Negro.png" alt="Maragel" class="logo-img">
-  </a>
-  <div class="header-right">
-    <span class="header-meta">Colombia · Desde 2017</span>
-  </div>
-</header>
+<!-- ── BANNER ─────────────────────────────────── -->
+<div class="banner">
+  <img src="img/Logo_Maragel-Negro.png" alt="Maragel" class="banner-logo">
+  <span class="banner-eyebrow">Colombia · Desde 2017</span>
+  <h2 class="banner-title">Color y calidad<br><em>que evolucionan.</em></h2>
+</div>
 
-<!-- ── SEARCH ─────────────────────────────────── -->
+<!-- ── SEARCH & CONTROLS ───────────────────────── -->
 <div class="search-wrap">
+  <div class="search-controls">
+    <div class="mode-toggle">
+      <button class="mode-btn active" id="btn-detal"     onclick="setMode('detal')">Detal</button>
+      <button class="mode-btn"        id="btn-mayorista" onclick="setMode('mayorista')">Mayorista</button>
+    </div>
+    <div class="search-controls-right">
+      <button class="btn-solo-nuevos" id="btn-nuevos" onclick="toggleNuevos()">✦ Solo Nuevos</button>
+      <div class="toggle-wrap" onclick="toggleAgotados()">
+        <span class="toggle-label-text">Agotados</span>
+        <div class="toggle-switch on" id="toggle-agotados"></div>
+      </div>
+    </div>
+  </div>
   <div class="search-inner">
     <input type="text" class="search-input" id="search-input"
            placeholder="Buscar por nombre o referencia..."
@@ -509,12 +559,8 @@
   </div>
 </div>
 
-<!-- ── BANNER ─────────────────────────────────── -->
-<div class="banner">
-  <img src="img/Icono_Maragel-Negro.png" alt="" class="banner-icon" aria-hidden="true">
-  <span class="banner-eyebrow">Colombia · Desde 2017</span>
-  <h2 class="banner-title">Color y calidad<br><em>que evolucionan.</em></h2>
-</div>
+<!-- ── BANNER MODO MAYORISTA ─────────────────── -->
+<div class="modo-banner" id="modo-banner">Precios Mayoristas — para uso interno</div>
 
 <!-- ── BEST SELLERS ───────────────────────────── -->
 <section class="bs-section">
@@ -576,9 +622,9 @@
 const PRODUCTOS = [
   {
     id:'m0001', nombre:'Esmalte Semipermanente 322', referencia:'322',
-    precio:22000, categoria:'Esmaltes en Gel', subcategoria:'Rojos',
+    precio:22000, precio_mayorista:'pendiente', categoria:'Esmaltes en Gel', subcategoria:'Rojos',
     descripcion:'Rojo intenso de alta cobertura. Acabado brillante y larga duración.',
-    imagen:'img/maragel/322.png', agotado:false, best_seller:true, color_blob:'#F2C4C4',
+    imagen:'img/maragel/322.png', agotado:false, nuevo:false, best_seller:true, color_blob:'#F2C4C4',
     galeria:[
       {tipo:'foto',  src:'img/maragel/322.png'},
       {tipo:'foto',  src:'img/maragel/322-una.png'},
@@ -697,8 +743,8 @@ const PRODUCTOS = [
   },
   {
     id:'m0019', nombre:'Esmalte Semipermanente 290', referencia:'290',
-    precio:22000, categoria:'Esmaltes en Gel', subcategoria:'Azules y Lilas',
-    imagen:'img/color/290.jpg', agotado:false, best_seller:false, color_blob:'',
+    precio:22000, precio_mayorista:'pendiente', categoria:'Esmaltes en Gel', subcategoria:'Azules y Lilas',
+    imagen:'img/color/290.jpg', agotado:false, nuevo:true, best_seller:false, color_blob:'',
     galeria:[
       {tipo:'foto',  src:'img/color/290.jpg'},
       {tipo:'foto',  src:'img/esmalte/290.jpg'},
@@ -821,6 +867,7 @@ function filterCat(cat) {
   document.querySelectorAll('.product-card').forEach(c => c.style.display = '');
 
   renderSubfilters(cat);
+  applyVisibility();
 }
 
 function renderSubfilters(cat) {
@@ -841,13 +888,62 @@ function filterSubcat(el, sub) {
 
   if (!activeSubcat) {
     document.querySelectorAll('.subcat-divider, .product-grid').forEach(el => el.style.display = '');
-    document.querySelectorAll('.product-card').forEach(c => c.style.display = '');
+    applyVisibility();
   } else {
     document.querySelectorAll('.subcat-divider')
       .forEach(d => d.style.display = d.dataset.subcat === activeSubcat ? '' : 'none');
     document.querySelectorAll('.product-grid')
       .forEach(g => g.style.display = g.dataset.subcat === activeSubcat ? '' : 'none');
+    applyVisibility();
   }
+}
+
+/* ── MODO DETAL / MAYORISTA ─────────────────── */
+function getDisplayPrice(p) {
+  if (currentMode === 'mayorista') {
+    if (!p.precio_mayorista || p.precio_mayorista === 'pendiente') return 'Consultar';
+    return fmtPrice(p.precio_mayorista);
+  }
+  return fmtPrice(p.precio);
+}
+
+function setMode(mode) {
+  currentMode = mode;
+  document.getElementById('btn-detal').classList.toggle('active', mode === 'detal');
+  document.getElementById('btn-mayorista').classList.toggle('active', mode === 'mayorista');
+  document.getElementById('modo-banner').classList.toggle('visible', mode === 'mayorista');
+  // Actualizar todos los precios visibles en el DOM
+  document.querySelectorAll('[data-detal]').forEach(el => {
+    el.textContent = mode === 'detal' ? el.dataset.detal : el.dataset.mayorista;
+  });
+  // Actualizar modal si está abierto
+  if (gProd) buildModalInfo();
+}
+
+/* ── FILTROS RÁPIDOS ────────────────────────── */
+function toggleAgotados() {
+  showAgotados = !showAgotados;
+  document.getElementById('toggle-agotados').classList.toggle('on', showAgotados);
+  if (searchQuery) handleSearch(document.getElementById('search-input').value);
+  else applyVisibility();
+}
+
+function toggleNuevos() {
+  soloNuevos = !soloNuevos;
+  document.getElementById('btn-nuevos').classList.toggle('active', soloNuevos);
+  if (searchQuery) handleSearch(document.getElementById('search-input').value);
+  else applyVisibility();
+}
+
+function applyVisibility() {
+  document.querySelectorAll('#products-main .product-card').forEach(card => {
+    const agotado = card.dataset.agotado === 'true';
+    const nuevo   = card.dataset.nuevo === 'true';
+    let show = true;
+    if (!showAgotados && agotado) show = false;
+    if (soloNuevos && !nuevo)    show = false;
+    card.style.display = show ? '' : 'none';
+  });
 }
 
 /* ── BÚSQUEDA ───────────────────────────────── */
@@ -866,11 +962,15 @@ function handleSearch(val) {
     sfEl.classList.remove('visible');
     res.classList.add('visible');
 
-    const found = PRODUCTOS.filter(p =>
-      p.nombre.toLowerCase().includes(searchQuery) ||
-      p.referencia.toLowerCase().includes(searchQuery) ||
-      (p.subcategoria && p.subcategoria.toLowerCase().includes(searchQuery))
-    );
+    const found = PRODUCTOS.filter(p => {
+      if (!showAgotados && p.agotado) return false;
+      if (soloNuevos && !p.nuevo)    return false;
+      return (
+        p.nombre.toLowerCase().includes(searchQuery) ||
+        p.referencia.toLowerCase().includes(searchQuery) ||
+        (p.subcategoria && p.subcategoria.toLowerCase().includes(searchQuery))
+      );
+    });
 
     document.getElementById('search-count').textContent =
       found.length ? `${found.length} ${found.length===1?'producto':'productos'}` : '';
@@ -897,19 +997,30 @@ function productCard(p) {
   const c = getColor(p);
   const hasMedia = p.galeria && p.galeria.length > 1;
   const hasVideo = hasMedia && p.galeria.some(g => g.tipo==='video');
+  const pDetal    = fmtPrice(p.precio);
+  const pMay      = (!p.precio_mayorista || p.precio_mayorista === 'pendiente') ? 'Consultar' : fmtPrice(p.precio_mayorista);
   return `
-  <div class="product-card${p.agotado?' is-agotado':''}" style="--pc:${c}" data-subcat="${p.subcategoria}" onclick="openModal('${p.id}')">
+  <div class="product-card${p.agotado?' is-agotado':''}"
+       style="--pc:${c}"
+       data-subcat="${p.subcategoria}"
+       data-agotado="${!!p.agotado}"
+       data-nuevo="${!!p.nuevo}"
+       onclick="openModal('${p.id}')">
     <div class="pc-img-wrap" data-ref="${p.referencia}">
       <img src="${p.imagen}" alt="${p.nombre}"
            onerror="this.src='${getImgSrc(p)}';this.classList.add('is-ph')">
+      ${p.nuevo   ? '<div class="badge-nuevo">Nuevo</div>'    : ''}
       ${p.agotado ? '<div class="badge-agotado">Agotado</div>' : ''}
-      ${hasMedia ? `<div class="badge-media">${hasVideo?'▶':'⊞'} ${p.galeria.length}</div>` : ''}
+      ${hasMedia  ? `<div class="badge-media">${hasVideo?'▶':'⊞'} ${p.galeria.length}</div>` : ''}
     </div>
     <div class="pc-info">
-      <div class="pc-subcat">${p.subcategoria}</div>
       <div class="pc-name">${p.nombre}</div>
       <div class="pc-bottom">
-        <div class="pc-price${p.agotado?' sold-out':''}">${fmtPrice(p.precio)}</div>
+        <div class="pc-price${p.agotado?' sold-out':''}"
+             data-detal="${pDetal}"
+             data-mayorista="${pMay}">
+          ${getDisplayPrice(p)}
+        </div>
         <div class="pc-ref-small">${p.referencia}</div>
       </div>
     </div>
@@ -1057,6 +1168,8 @@ function goTo(i) { gi=i; updateGallery(); }
 function buildModalInfo() {
   const p = gProd;
   const subLabel = p.subcategoria && p.subcategoria!==p.categoria ? p.subcategoria : p.categoria;
+  const pDetal   = fmtPrice(p.precio);
+  const pMay     = (!p.precio_mayorista || p.precio_mayorista === 'pendiente') ? 'Consultar' : fmtPrice(p.precio_mayorista);
   document.getElementById('modal-info').innerHTML = `
     <div class="modal-info-top">
       <div class="modal-cat">${subLabel}</div>
@@ -1064,16 +1177,20 @@ function buildModalInfo() {
     </div>
     <div class="modal-name">${p.nombre}</div>
     <div class="modal-price-row">
-      <div class="modal-price">${fmtPrice(p.precio)}</div>
+      <div class="modal-price" data-detal="${pDetal}" data-mayorista="${pMay}">${getDisplayPrice(p)}</div>
     </div>
     ${p.descripcion ? `<div class="modal-desc">${p.descripcion}</div>` : ''}
-    ${p.agotado ? '<div class="modal-badge-sold">Agotado temporalmente</div>' : ''}`;
+    ${p.agotado ? '<div class="modal-badge-sold">Agotado temporalmente</div>' : ''}
+    ${p.nuevo ? '<div class="modal-badge-sold" style="background:#383838;color:#fff;border-color:#383838">Nuevo</div>' : ''}`;
 }
 
 /* ── ESTADO GLOBAL ──────────────────────────── */
 let activeCat    = 'Todos';
 let activeSubcat = null;
 let searchQuery  = '';
+let currentMode  = 'detal';   // 'detal' | 'mayorista'
+let showAgotados = true;       // toggle agotados
+let soloNuevos   = false;      // filtro solo nuevos
 
 /* ── SWIPE (móvil) ──────────────────────────── */
 let swipeX = 0;
