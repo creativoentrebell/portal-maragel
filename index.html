@@ -238,29 +238,6 @@
       background: var(--bg); border-bottom: 1px solid var(--border);
     }
 
-    /* ── SUBFILTROS ──────────────────────────────── */
-    .subfilter-wrap {
-      display: none; padding: 8px 28px; gap: 6px;
-      background: var(--bg); border-bottom: 1px solid var(--border);
-      overflow-x: auto; scrollbar-width: none;
-    }
-    .subfilter-wrap::-webkit-scrollbar { display: none; }
-    .subfilter-wrap.visible { display: flex; }
-    .subfilter-chip {
-      flex-shrink: 0; padding: 5px 13px;
-      border: 1px solid var(--border); border-radius: 20px;
-      font-size: 0.75rem; font-weight: 500; color: var(--text-sec);
-      cursor: pointer; white-space: nowrap; background: var(--bg);
-      transition: all 0.15s;
-    }
-    .subfilter-chip.active {
-      background: linear-gradient(135deg, #E088BE, #9878D8, #78A0D8, #78D4C0, #D4CC78, #E088BE);
-      background-size: 300% 300%;
-      animation: shimmer 3.5s ease infinite;
-      color: #fff; border-color: transparent;
-    }
-    .subfilter-chip:hover:not(.active) { color: var(--text); border-color: var(--text-sec); }
-
     /* ── SEARCH RESULTS ──────────────────────────── */
     .search-results { display: none; padding: 32px 28px 80px; }
     .search-results.visible { display: block; }
@@ -563,7 +540,6 @@
     @media (max-width: 580px) {
       .banner, .search-wrap, .products-main, .bs-section, footer { padding-left: 16px; padding-right: 16px; }
       .cat-nav { padding: 0 16px; }
-      .subfilter-wrap { padding-left: 16px; padding-right: 16px; }
       .banner { flex-direction: column; gap: 20px; }
       .banner-right { flex-direction: row; align-items: center; justify-content: space-between; width: 100%; }
       .banner-catalog-year { text-align: left; }
@@ -635,9 +611,6 @@
 <div class="cat-nav-wrap">
   <nav class="cat-nav" id="cat-nav"></nav>
 </div>
-
-<!-- ── SUBFILTROS ─────────────────────────────── -->
-<div class="subfilter-wrap" id="subfilter-wrap"></div>
 
 <!-- ── SEARCH RESULTS ───────────────────────────── -->
 <div class="search-results" id="search-results">
@@ -800,7 +773,7 @@ const PRODUCTOS = [
   },
   {
     id:'m0019', nombre:'Esmalte Semipermanente 290', referencia:'290',
-    precio:22000, precio_mayorista:'pendiente', categoria:'Esmaltes en Gel', subcategoria:'Azules y Lilas',
+    precio:22000, precio_mayorista:'pendiente', categoria:'Esmaltes en Gel', subcategoria:'Amarillos y Naranjas',
     imagen:'img/color/290.jpg', agotado:false, nuevo:true, best_seller:false, color_blob:'',
     galeria:[
       {tipo:'foto',  src:'img/color/290.jpg'},
@@ -911,48 +884,17 @@ function renderCatNav() {
 }
 
 function filterCat(cat) {
-  activeCat    = cat;
-  activeSubcat = null;
+  activeCat = cat;
 
   document.querySelectorAll('.cat-tab')
     .forEach(t => t.classList.toggle('active', t.dataset.cat === cat));
   document.querySelectorAll('.cat-section')
     .forEach(s => { s.style.display = (cat === 'Todos' || s.dataset.cat === cat) ? '' : 'none'; });
 
-  // Restaurar visibilidad de subcategorías
+  // Restaurar visibilidad de productos
   document.querySelectorAll('.subcat-divider, .product-grid').forEach(el => el.style.display = '');
-  document.querySelectorAll('.product-card').forEach(c => c.style.display = '');
 
-  renderSubfilters(cat);
   applyVisibility();
-}
-
-function renderSubfilters(cat) {
-  const wrap = document.getElementById('subfilter-wrap');
-  if (cat === 'Todos') { wrap.classList.remove('visible'); return; }
-  const subcats = [...new Set(PRODUCTOS.filter(p => p.categoria === cat).map(p => p.subcategoria))];
-  if (subcats.length <= 1) { wrap.classList.remove('visible'); return; }
-  wrap.classList.add('visible');
-  wrap.innerHTML = ['Todos', ...subcats].map(sub =>
-    `<div class="subfilter-chip${sub==='Todos'?' active':''}" onclick="filterSubcat(this,'${sub.replace(/'/g,"&#39;")}')">${sub}</div>`
-  ).join('');
-}
-
-function filterSubcat(el, sub) {
-  activeSubcat = sub === 'Todos' ? null : sub;
-  document.querySelectorAll('.subfilter-chip').forEach(c => c.classList.remove('active'));
-  el.classList.add('active');
-
-  if (!activeSubcat) {
-    document.querySelectorAll('.subcat-divider, .product-grid').forEach(el => el.style.display = '');
-    applyVisibility();
-  } else {
-    document.querySelectorAll('.subcat-divider')
-      .forEach(d => d.style.display = d.dataset.subcat === activeSubcat ? '' : 'none');
-    document.querySelectorAll('.product-grid')
-      .forEach(g => g.style.display = g.dataset.subcat === activeSubcat ? '' : 'none');
-    applyVisibility();
-  }
 }
 
 /* ── MODO DETAL / MAYORISTA ─────────────────── */
@@ -1011,12 +953,10 @@ function handleSearch(val) {
   const bsEl  = document.querySelector('.bs-section');
   const main  = document.getElementById('products-main');
   const res   = document.getElementById('search-results');
-  const sfEl  = document.getElementById('subfilter-wrap');
 
   if (searchQuery) {
     bsEl.style.display  = 'none';
     main.style.display  = 'none';
-    sfEl.classList.remove('visible');
     res.classList.add('visible');
 
     const found = PRODUCTOS.filter(p => {
@@ -1244,11 +1184,10 @@ function buildModalInfo() {
 
 /* ── ESTADO GLOBAL ──────────────────────────── */
 let activeCat    = 'Todos';
-let activeSubcat = null;
 let searchQuery  = '';
-let currentMode  = 'detal';   // 'detal' | 'mayorista'
-let showAgotados = true;       // toggle agotados
-let soloNuevos   = false;      // filtro solo nuevos
+let currentMode  = 'detal';
+let showAgotados = true;
+let soloNuevos   = false;
 
 /* ── SWIPE (móvil) ──────────────────────────── */
 let swipeX = 0;
