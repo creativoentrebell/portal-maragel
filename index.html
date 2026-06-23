@@ -201,7 +201,7 @@
     .bs-card:hover .bs-swatch { transform: translateY(-7px) scale(1.03); }
 
     .bs-visual {
-      position: relative; aspect-ratio: 3 / 4;
+      position: relative; aspect-ratio: 1;
       display: flex; align-items: center; justify-content: center;
       margin-bottom: 16px; overflow: hidden;
       background: var(--card-bg); border-radius: 10px;
@@ -222,6 +222,8 @@
     }
     .bs-swatch img { width: 100%; height: auto; object-fit: contain; }
     .bs-swatch.is-ph { width: 22%; }
+    /* Tempered Top Coat: botella alta, reducir para que no ocupe tanto */
+    .bs-card[data-ref="54-5"] .bs-swatch { width: 42%; }
 
     .bs-info {}
     .bs-subcat {
@@ -712,7 +714,7 @@ function renderBS() {
     const swId = 'bssw-' + p.id;
     const fallback = getImgSrc(p);
     return `
-    <div class="bs-card" onclick="openModal('${p.id}')">
+    <div class="bs-card" data-ref="${p.referencia}" onclick="openModal('${p.id}')">
       <div class="bs-visual">
         <div class="bs-ref-ghost">${p.referencia}</div>
         <div class="bs-swatch" id="${swId}">
