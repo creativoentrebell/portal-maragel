@@ -1,1099 +1,1216 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DU — Catálogo 2026</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maragel — Catálogo Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <style>
-    /* ─── TOKENS ─────────────────────────────────────── */
     :root {
-      --du-blue:    #a6d8f2;
-      --du-blue-dk: #7cb8d9;
-      --du-gray:    #ACADAF;
-      --du-dark:    #2e2e2e;
-      --du-white:   #ffffff;
-      --du-off:     #f8f9fa;
-      --du-border:  #e8e8e8;
-      --du-shadow:  0 2px 16px rgba(0,0,0,0.06);
-      --radius:     4px;
-      --font-serif: 'Instrument Sans', system-ui, sans-serif;
-      --font-sans:  'Instrument Sans', system-ui, sans-serif;
+      --text:     #383838;
+      --text-sec: #585856;
+      --bg:       #FFFFFF;
+      --card-bg:  #F7F7F7;
+      --border:   #E9E9E9;
     }
-
-    /* ─── RESET ─────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+
     body {
-      font-family: var(--font-sans);
-      background: var(--du-white);
-      color: var(--du-dark);
-      min-height: 100vh;
+      font-family: 'Instrument Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* ─── HEADER ─────────────────────────────────────── */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--du-white);
-      border-bottom: 1px solid var(--du-border);
-      transition: border-color 0.3s;
+    /* ── SEARCH & CONTROL BAR ───────────────────── */
+    .search-wrap {
+      position: sticky; top: 0; z-index: 95;
+      background: var(--bg); border-bottom: 1px solid var(--border);
+      padding: 10px 28px; display: flex; flex-direction: column; gap: 8px;
     }
-    .site-header.mode-mayor {
-      border-bottom-color: var(--du-blue-dk);
+    /* Fila de controles */
+    .search-controls {
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
     }
-    .header-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .header-logo { flex-shrink: 0; }
-    .header-logo img { height: 36px; width: auto; display: block; }
-    .header-logo-text {
-      font-family: var(--font-serif);
-      font-size: 28px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      color: var(--du-dark);
-      text-transform: uppercase;
-    }
-    .header-divider {
-      width: 1px;
-      height: 28px;
-      background: var(--du-border);
-      flex-shrink: 0;
-    }
-    .header-tagline {
-      font-family: var(--font-sans);
-      font-size: 11px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--du-gray);
-      white-space: nowrap;
-    }
+    .search-controls-right { display: flex; align-items: center; gap: 8px; }
 
-    /* ─── MODE TOGGLE ────────────────────────────────── */
+    /* Toggle Detal / Mayorista */
     .mode-toggle {
-      display: flex;
-      border: 1px solid var(--du-border);
-      border-radius: 20px;
-      overflow: hidden;
-      flex-shrink: 0;
-      margin-left: auto;
+      display: flex; border: 1px solid var(--border); border-radius: 8px;
+      overflow: hidden; flex-shrink: 0;
     }
     .mode-btn {
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-family: var(--font-sans);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--du-gray);
-      padding: 8px 16px;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      transition: background 0.2s, color 0.2s;
-      white-space: nowrap;
+      padding: 6px 12px; font-size: 0.72rem; font-weight: 500;
+      border: none; cursor: pointer;
+      background: var(--bg); color: var(--text-sec);
+      white-space: nowrap; transition: all 0.15s;
+      font-family: 'Instrument Sans', system-ui, sans-serif;
     }
     .mode-btn.active {
-      background: var(--du-dark);
-      color: var(--du-white);
-    }
-    .mode-btn svg { width: 11px; height: 11px; flex-shrink: 0; }
-
-    .header-search {
-      max-width: 360px;
-      flex: 1;
-      position: relative;
-    }
-    .header-search input {
-      width: 100%;
-      height: 38px;
-      border: 1px solid var(--du-border);
-      border-radius: 19px;
-      padding: 0 16px 0 38px;
-      font-family: var(--font-sans);
-      font-size: 13px;
-      color: var(--du-dark);
-      background: var(--du-off);
-      outline: none;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .header-search input::placeholder { color: var(--du-gray); }
-    .header-search input:focus { border-color: var(--du-blue); background: var(--du-white); }
-    .search-icon {
-      position: absolute;
-      left: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 15px;
-      height: 15px;
-      color: var(--du-gray);
-      pointer-events: none;
-    }
-    .search-clear {
-      position: absolute;
-      right: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: var(--du-gray);
-      font-size: 16px;
-      line-height: 1;
-      display: none;
-      padding: 2px;
-    }
-    .search-clear.visible { display: block; }
-
-    /* ─── CATEGORY NAV ───────────────────────────────── */
-    .cat-nav { background: var(--du-white); border-bottom: 1px solid var(--du-border); }
-    .cat-nav-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-    }
-    .cat-btn {
-      position: relative;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-family: var(--font-sans);
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      color: var(--du-gray);
-      padding: 16px 22px;
-      transition: color 0.2s;
-      white-space: nowrap;
-    }
-    .cat-btn::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 22px;
-      right: 22px;
-      height: 2px;
-      background: var(--du-blue);
-      transform: scaleX(0);
-      transition: transform 0.2s;
-    }
-    .cat-btn:hover { color: var(--du-dark); }
-    .cat-btn.active { color: var(--du-dark); }
-    .cat-btn.active::after { transform: scaleX(1); }
-    .cat-all { color: var(--du-dark); font-weight: 500; }
-
-    /* ─── SUBCATEGORY STRIP ──────────────────────────── */
-    .subcat-strip {
-      background: var(--du-off);
-      border-bottom: 1px solid var(--du-border);
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.3s ease, padding 0.3s ease;
-    }
-    .subcat-strip.open { max-height: 80px; }
-    .subcat-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 12px 24px;
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .sub-pill {
-      background: none;
-      border: 1px solid var(--du-border);
-      border-radius: 20px;
-      cursor: pointer;
-      font-family: var(--font-sans);
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      color: var(--du-gray);
-      padding: 5px 14px;
-      transition: background 0.15s, color 0.15s, border-color 0.15s;
-      white-space: nowrap;
-    }
-    .sub-pill:hover { color: var(--du-dark); border-color: #ccc; }
-    .sub-pill.active {
-      background: var(--du-blue);
-      border-color: var(--du-blue);
-      color: var(--du-dark);
-      font-weight: 500;
+      background: linear-gradient(135deg, #E088BE, #9878D8, #78A0D8, #78D4C0, #D4CC78, #E088BE);
+      background-size: 300% 300%;
+      animation: shimmer 3.5s ease infinite;
+      color: #fff; border-color: transparent;
     }
 
-    /* ─── TOOLBAR ────────────────────────────────────── */
-    .toolbar {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 20px 24px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
+    /* Botón Solo Nuevos */
+    .btn-solo-nuevos {
+      padding: 6px 12px; font-size: 0.72rem; font-weight: 500;
+      border: 1px solid var(--border); border-radius: 8px;
+      cursor: pointer; background: var(--bg); color: var(--text-sec);
+      white-space: nowrap; transition: all 0.15s; flex-shrink: 0;
+      font-family: 'Instrument Sans', system-ui, sans-serif;
     }
-    .toolbar-left { display: flex; align-items: center; gap: 12px; }
-    .count-label { font-size: 12px; color: var(--du-gray); letter-spacing: 0.04em; }
-    .count-label strong { color: var(--du-dark); font-weight: 500; }
+    .btn-solo-nuevos.active {
+      background: linear-gradient(135deg, #E088BE, #9878D8, #78A0D8, #78D4C0, #D4CC78, #E088BE);
+      background-size: 300% 300%;
+      animation: shimmer 3.5s ease infinite;
+      color: #fff; border-color: transparent;
+    }
 
-    /* Modo badge en toolbar */
-    .modo-badge {
-      display: none;
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      background: var(--du-dark);
-      color: var(--du-white);
-      padding: 3px 9px;
-      border-radius: 3px;
-    }
-    .modo-badge.visible { display: inline-block; }
-
-    .toggle-agotados {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      font-size: 12px;
-      color: var(--du-gray);
-      user-select: none;
-    }
-    .toggle-agotados:hover { color: var(--du-dark); }
+    /* Toggle Agotados */
+    .toggle-wrap { display: flex; align-items: center; gap: 6px; cursor: pointer; flex-shrink: 0; }
+    .toggle-label-text { font-size: 0.72rem; color: var(--text-sec); white-space: nowrap; user-select: none; }
     .toggle-switch {
-      position: relative;
-      width: 32px;
-      height: 18px;
-      flex-shrink: 0;
+      width: 30px; height: 17px; background: #C0C0C0; border-radius: 17px;
+      position: relative; transition: background 0.2s; flex-shrink: 0;
     }
-    .toggle-switch input { opacity: 0; width: 0; height: 0; position: absolute; }
-    .toggle-track {
-      position: absolute;
-      inset: 0;
-      background: var(--du-border);
-      border-radius: 9px;
-      transition: background 0.2s;
+    .toggle-switch::after {
+      content: ''; position: absolute; top: 2.5px; left: 2.5px;
+      width: 12px; height: 12px; border-radius: 50%; background: #fff;
+      transition: transform 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     }
-    .toggle-switch input:checked + .toggle-track { background: var(--du-blue); }
-    .toggle-thumb {
-      position: absolute;
-      left: 2px;
-      top: 2px;
-      width: 14px;
-      height: 14px;
-      background: white;
-      border-radius: 50%;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
-      transition: transform 0.2s;
+    .toggle-switch.on {
+      background: linear-gradient(135deg, #E088BE, #9878D8, #78A0D8, #78D4C0, #D4CC78, #E088BE);
+      background-size: 300% 300%;
+      animation: shimmer 3.5s ease infinite;
     }
-    .toggle-switch input:checked ~ .toggle-thumb { transform: translateX(14px); }
+    .toggle-switch.on::after { transform: translateX(13px); }
 
-    /* ─── SECTION DIVIDER ────────────────────────────── */
-    .section-divider {
-      max-width: 1280px;
-      margin: 32px auto 0;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .section-divider-line { flex: 1; height: 1px; background: var(--du-border); }
-    .section-divider-label {
-      font-family: var(--font-serif);
-      font-size: 13px;
-      font-weight: 400;
-      font-style: italic;
-      color: var(--du-gray);
-      letter-spacing: 0.06em;
-      white-space: nowrap;
-    }
-    .section-divider-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--du-blue); flex-shrink: 0; }
-
-    /* ─── GRID ───────────────────────────────────────── */
-    .product-grid {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 24px 24px 64px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-    @media (max-width: 1100px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 760px)  { .product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 16px; } }
-    @media (max-width: 420px)  { .product-grid { grid-template-columns: 1fr; } }
-
-    /* ─── CARD ───────────────────────────────────────── */
-    .product-card {
-      background: var(--du-white);
-      border: 1px solid var(--du-border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      transition: box-shadow 0.2s, transform 0.2s;
-      cursor: default;
-      display: flex;
-      flex-direction: column;
-    }
-    .product-card:hover { box-shadow: var(--du-shadow); transform: translateY(-2px); }
-
-    .card-img-wrap {
-      position: relative;
-      aspect-ratio: 1 / 1;
-      background: #ffffff;
-      overflow: hidden;
-    }
-    .card-img-wrap.no-img { background: linear-gradient(145deg, #e8f4fd 0%, #d0eaf8 50%, #c2e2f5 100%); }
-    .card-img-wrap img { width: 100%; height: 100%; object-fit: contain; padding: 12px; display: block; position: relative; z-index: 2; }
-    .card-placeholder {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-    .card-img-wrap.no-img img { display: none; }
-    .card-img-wrap.img-error img { display: none; }
-    .card-img-wrap.img-loaded .card-placeholder { display: none; }
-    .card-placeholder-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: rgba(166,216,242,0.35);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .card-placeholder-icon svg { width: 22px; height: 22px; color: var(--du-blue-dk); }
-    .card-placeholder-ref { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--du-blue-dk); opacity: 0.7; }
-
-    .card-thumbs {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      z-index: 10;
-      display: flex;
-      gap: 4px;
-      padding: 6px;
-      background: rgba(255,255,255,0.9);
-      backdrop-filter: blur(4px);
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-    .card-thumbs::-webkit-scrollbar { display: none; }
-    .card-thumb {
-      width: 38px; height: 38px;
-      flex-shrink: 0;
-      border: 2px solid transparent;
-      border-radius: 3px;
-      overflow: hidden;
-      cursor: pointer;
-      background: white;
+    /* Barra de búsqueda */
+    .search-inner { position: relative; }
+    .search-input {
+      width: 100%; padding: 9px 36px 9px 14px;
+      border: 1px solid var(--border); border-radius: 8px;
+      font-family: 'Instrument Sans', system-ui, sans-serif;
+      font-size: 0.85rem; color: var(--text);
+      background: var(--card-bg); outline: none;
       transition: border-color 0.15s;
     }
-    .card-thumb img { width: 100%; height: 100%; object-fit: contain; display: block; padding: 2px; }
-    .card-thumb.activo { border-color: var(--du-blue-dk); }
-    .card-thumb:hover { border-color: var(--du-blue); }
+    .search-input:focus { border-color: var(--text-sec); }
+    .search-input::placeholder { color: var(--text-sec); }
+    .search-clear {
+      position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+      background: none; border: none; cursor: pointer;
+      color: var(--text-sec); font-size: 17px; line-height: 1;
+      display: none; padding: 2px 4px;
+    }
 
-    .agotado-overlay {
+    /* Banner modo Mayorista */
+    .modo-banner {
+      display: none; position: sticky; top: 84px; z-index: 94;
+      background: var(--text); color: #fff;
+      padding: 7px 28px; text-align: center;
+      font-size: 0.75rem; font-weight: 500; letter-spacing: 0.5px;
+    }
+    .modo-banner.visible { display: block; }
+
+    /* Badge Nuevo */
+    .badge-nuevo {
+      position: absolute; top: 9px; left: 9px; z-index: 2;
+      background: var(--text); color: #fff;
+      font-size: 9px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;
+      padding: 3px 7px; border-radius: 3px;
+    }
+
+    /* ── TORNASOL / IRIDISCENTE ─────────────────── */
+    @keyframes shimmer {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ── BANNER ─────────────────────────────────── */
+    .banner {
+      background: linear-gradient(to right, #222222, #555555);
+      padding: 48px 28px 52px;
+      display: flex; justify-content: space-between;
+      align-items: flex-start; gap: 32px;
+    }
+    .banner-left  { flex: 1; }
+    .banner-right {
+      display: flex; flex-direction: column;
+      align-items: flex-end; gap: 10px; flex-shrink: 0;
+      margin-right: 28px;
+    }
+    .banner-logo {
+      height: 80px; width: auto; display: block;
+      filter: brightness(0) invert(1);
+    }
+    .banner-catalog-year {
+      font-size: 0.7rem; color: rgba(255,255,255,0.35);
+      letter-spacing: 0.5px; text-align: right;
+    }
+    .banner-title {
+      font-size: 1.9rem; font-weight: 600; letter-spacing: -0.5px; line-height: 1.2;
+      color: #fff;
+    }
+    .banner-title em { font-weight: 400; font-style: italic; }
+    .banner-desc {
+      font-size: 0.75rem; color: rgba(255,255,255,0.45);
+      line-height: 1.65; margin-top: 14px; max-width: 400px;
+    }
+
+    /* ── BEST SELLERS ───────────────────────────── */
+    .bs-section { padding: 64px 28px 88px; }
+
+    .bs-heading {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      margin-bottom: 56px; gap: 20px;
+    }
+    .bs-heading-left {}
+    .sec-eyebrow {
+      font-size: 10px; font-weight: 500; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--text-sec); margin-bottom: 8px;
+    }
+    .sec-title {
+      font-size: 2.6rem; font-weight: 600; letter-spacing: -1px; line-height: 1;
+      color: var(--text);
+    }
+    .sec-title em {
+      font-weight: 400; font-style: italic;
+      background: linear-gradient(90deg, #E088BE, #9878D8, #78A0D8, #78D4C0, #D4CC78, #E088BE);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+    .bs-heading-note {
+      font-size: 0.78rem; color: var(--text-sec); line-height: 1.5;
+      max-width: 200px; text-align: right; padding-bottom: 4px;
+      font-style: italic;
+    }
+
+    .bs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+
+    /* BS card */
+    .bs-card { cursor: pointer; display: flex; flex-direction: column; }
+    .bs-card:hover .bs-swatch { transform: translateY(-7px) scale(1.03); }
+
+    .bs-visual {
+      position: relative; aspect-ratio: 3 / 4;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px; overflow: hidden;
+      background: var(--card-bg); border-radius: 10px;
+    }
+
+    .bs-ref-ghost {
+      position: absolute; z-index: 1;
+      bottom: 12px; right: 14px;
+      font-size: 5.5rem; font-weight: 700; letter-spacing: -5px; line-height: 1;
+      color: rgba(56,56,56,0.07);
+      pointer-events: none; user-select: none;
+    }
+
+    .bs-swatch {
+      position: relative; z-index: 2; width: 65%;
+      transition: transform 0.5s cubic-bezier(0.34, 1.4, 0.64, 1);
+    }
+    .bs-swatch img { width: 100%; height: auto; object-fit: contain; }
+    .bs-swatch.is-ph { width: 22%; }
+
+    .bs-info {}
+    .bs-subcat {
+      font-size: 9.5px; font-weight: 500; letter-spacing: 1.8px;
+      text-transform: uppercase; color: var(--text-sec); margin-bottom: 4px;
+    }
+    .bs-name {
+      font-size: 0.9rem; font-weight: 500; font-style: italic;
+      color: var(--text); margin-bottom: 6px; line-height: 1.3;
+    }
+    .bs-price { font-size: 1rem; font-weight: 600; color: var(--text); }
+
+    /* ── CATEGORY NAV ───────────────────────────── */
+    .cat-nav-wrap {
+      position: sticky; top: 84px; z-index: 90;
+      background: var(--bg); border-bottom: 1px solid var(--border);
+    }
+
+    /* ── SEARCH RESULTS ──────────────────────────── */
+    .search-results { display: none; padding: 32px 28px 80px; }
+    .search-results.visible { display: block; }
+    .search-count { font-size: 0.78rem; color: var(--text-sec); margin-bottom: 24px; display: block; }
+    .search-empty {
+      padding: 60px 0; text-align: center;
+      color: var(--text-sec); font-size: 0.9rem; font-style: italic;
+    }
+    .cat-nav {
+      display: flex; overflow-x: auto; scrollbar-width: none; padding: 0 28px;
+    }
+    .cat-nav::-webkit-scrollbar { display: none; }
+    .cat-tab {
+      flex-shrink: 0; padding: 15px 18px;
+      font-size: 0.82rem; font-weight: 500; color: var(--text-sec);
+      border-bottom: 2px solid transparent;
+      cursor: pointer; white-space: nowrap; position: relative;
+      transition: color 0.15s;
+    }
+    .cat-tab.active { color: var(--text); border-bottom-color: transparent; }
+    .cat-tab.active::after {
+      content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, #E088BE, #9878D8, #78A0D8, #78D4C0, #D4CC78, #E088BE);
+      background-size: 200% auto;
+      animation: shimmer 3s linear infinite;
+    }
+    .cat-tab:hover:not(.active) { color: var(--text); }
+
+    /* ── PRODUCT SECTIONS ───────────────────────── */
+    .products-main { padding: 0 28px 100px; }
+    .cat-section { margin-top: 72px; }
+
+    /* Section header — horizontal editorial layout */
+    .cat-section-head {
+      display: flex; align-items: baseline; gap: 18px;
+      padding-bottom: 20px; margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    .cat-section-name {
+      font-size: 1.75rem; font-weight: 600; letter-spacing: -0.5px;
+      flex-shrink: 0; line-height: 1;
+    }
+    .cat-section-name em { font-weight: 400; font-style: italic; }
+    .cat-section-rule { flex: 1; height: 1px; background: var(--border); }
+    .cat-section-count {
+      font-size: 0.72rem; color: var(--text-sec); flex-shrink: 0;
+      letter-spacing: 0.3px;
+    }
+
+    /* Subcategory divider */
+    .subcat-divider {
+      display: flex; align-items: center; gap: 14px;
+      margin: 36px 0 18px;
+    }
+    .subcat-label {
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--text-sec); white-space: nowrap;
+    }
+    .subcat-rule { flex: 1; height: 1px; background: var(--border); }
+
+    /* ── PRODUCT GRID ───────────────────────────── */
+    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+
+    /* ── PRODUCT CARD ───────────────────────────── */
+    .product-card {
+      position: relative; cursor: pointer; overflow: hidden;
+      background: var(--card-bg); border-radius: 10px;
+      border: 1px solid transparent;
+      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      border-color: var(--border);
+    }
+
+    /* Accent bar — color of the product, slides in on hover */
+    .product-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2.5px;
+      background: var(--pc, #383838);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 3;
+    }
+    .product-card:hover::before { transform: scaleX(1); }
+
+    /* Image area */
+    .pc-img-wrap {
+      aspect-ratio: 1; position: relative;
+      display: flex; align-items: center; justify-content: center; overflow: hidden;
+    }
+
+    /* Ghost reference number in background — solo visible sin foto real */
+    .pc-img-wrap::after {
+      content: attr(data-ref);
       position: absolute;
-      inset: 0;
-      z-index: 20;
-      background: rgba(255,255,255,0.55);
-      backdrop-filter: grayscale(0.3);
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      padding: 12px;
+      bottom: 6px; right: 10px;
+      font-size: 4.2rem; font-weight: 700; letter-spacing: -4px; line-height: 1;
+      color: rgba(56,56,56,0.055);
+      pointer-events: none; user-select: none;
     }
-    .agotado-badge {
-      background: var(--du-dark);
-      color: var(--du-white);
-      font-size: 9px;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 2px;
+    .pc-img-wrap.has-photo::after { display: none; }
+
+    .pc-img-wrap img {
+      width: 85%; height: 85%; object-fit: contain; position: relative; z-index: 1;
+    }
+    .pc-img-wrap img.is-ph { width: 18%; height: 18%; }
+
+    .badge-agotado {
+      position: absolute; top: 9px; right: 9px; z-index: 2;
+      background: rgba(255,255,255,0.9); color: var(--text-sec);
+      font-size: 9px; font-weight: 500; letter-spacing: 0.6px; text-transform: uppercase;
+      padding: 3px 7px; border-radius: 3px; backdrop-filter: blur(4px);
+    }
+    .badge-media {
+      position: absolute; bottom: 9px; right: 9px; z-index: 2;
+      background: rgba(56,56,56,0.68); color: #fff;
+      font-size: 9px; padding: 3px 6px; border-radius: 3px;
+      display: flex; align-items: center; gap: 3px;
     }
 
-    .card-body { padding: 14px 14px 16px; flex: 1; display: flex; flex-direction: column; gap: 4px; }
-    .card-subcat { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--du-blue-dk); margin-bottom: 2px; }
-    .card-name { font-family: var(--font-serif); font-size: 14px; font-weight: 500; color: var(--du-dark); line-height: 1.35; }
-    .card-ref { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--du-gray); margin-top: 2px; }
-    .card-desc { font-size: 11.5px; color: #999; line-height: 1.5; margin-top: 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-    .card-footer { padding: 10px 14px 14px; border-top: 1px solid var(--du-border); display: flex; align-items: center; justify-content: space-between; }
-    .card-price { font-family: var(--font-serif); font-size: 15px; font-weight: 600; color: var(--du-dark); letter-spacing: 0.01em; }
-    .card-price .currency { font-size: 11px; font-weight: 400; color: var(--du-gray); margin-right: 2px; }
-    .price-pending { font-size: 12px; color: var(--du-gray); font-style: italic; font-weight: 400; }
-    .card-cat-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-    .cat-pestanas { background: #c4e8fb; }
-    .cat-unas     { background: #c4e8fb; opacity: 0.6; }
-    .cat-accesorios { background: var(--du-blue); }
+    /* Card info */
+    .pc-info { padding: 10px 12px 14px; }
+    .pc-name {
+      font-size: 0.82rem; font-weight: 500; font-style: italic;
+      color: var(--text); line-height: 1.35; margin-bottom: 8px;
+    }
+    .pc-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .pc-price { font-size: 0.875rem; font-weight: 600; color: var(--text); }
+    .pc-price.sold-out { color: var(--text-sec); text-decoration: line-through; }
+    .pc-ref-small { font-size: 0.68rem; color: var(--text-sec); }
 
-    /* ─── EMPTY STATE ────────────────────────────────── */
-    .empty-state { max-width: 1280px; margin: 0 auto; padding: 80px 24px; text-align: center; display: none; }
-    .empty-state.visible { display: block; }
-    .empty-state-icon { margin-bottom: 16px; color: var(--du-border); }
-    .empty-state h3 { font-family: var(--font-serif); font-size: 22px; font-weight: 400; color: var(--du-gray); margin-bottom: 8px; }
-    .empty-state p { font-size: 13px; color: #bbb; }
+    /* Sold-out card — slightly dimmed */
+    .product-card.is-agotado { opacity: 0.65; }
 
-    /* ─── HERO ───────────────────────────────────────── */
-    .hero {
-      background: linear-gradient(135deg, #e8f4fd 0%, var(--du-white) 60%);
-      border-bottom: 1px solid var(--du-border);
-      padding: 40px 24px 36px;
+    /* ── FOOTER ─────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border); padding: 28px 28px;
+      display: flex; align-items: center; justify-content: space-between;
     }
-    .hero-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; gap: 32px; }
-    .hero-text { flex: 1; }
-    .hero-eyebrow { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--du-blue-dk); margin-bottom: 10px; }
-    .hero-title { font-family: var(--font-serif); font-size: clamp(24px, 3.2vw, 36px); font-weight: 300; color: var(--du-dark); line-height: 1.2; margin-bottom: 12px; }
-    .hero-title em { font-style: italic; color: var(--du-blue-dk); }
-    .hero-sub { font-size: 13px; color: var(--du-gray); max-width: 480px; line-height: 1.6; }
-    .hero-accent { flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
-    .hero-edition { font-family: var(--font-serif); font-size: 13px; font-weight: 400; font-style: italic; color: var(--du-gray); }
-    .hero-bar { width: 48px; height: 2px; background: var(--du-blue); }
+    .footer-brand   { font-size: 0.75rem; color: var(--text-sec); }
+    .footer-version {
+      font-size: 0.75rem; color: var(--text-sec); font-style: italic;
+    }
 
-    /* ─── FOOTER ─────────────────────────────────────── */
-    .site-footer { background: var(--du-dark); padding: 32px 24px; text-align: center; }
-    .footer-inner { max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-    .footer-brand { font-family: var(--font-serif); font-size: 22px; font-weight: 300; letter-spacing: 0.18em; text-transform: uppercase; color: var(--du-white); }
-    .footer-social { font-size: 11px; letter-spacing: 0.1em; color: var(--du-gray); }
-    .footer-note { font-size: 10px; color: #555; letter-spacing: 0.04em; }
+    /* ── MODAL ──────────────────────────────────── */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 1000;
+      background: rgba(0,0,0,0.46);
+      display: flex; align-items: flex-end; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity 0.25s ease;
+    }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
 
-    /* ─── PIN MODAL ──────────────────────────────────── */
-    .pin-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 500;
-      background: rgba(0,0,0,0.45);
-      backdrop-filter: blur(6px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.2s;
+    .modal {
+      background: var(--bg); width: 100%; max-width: 560px;
+      max-height: 90vh; overflow-y: auto; position: relative;
+      border-radius: 18px 18px 0 0;
+      transform: translateY(100%);
+      transition: transform 0.36s cubic-bezier(0.32, 0.72, 0, 1);
     }
-    .pin-overlay.visible {
-      opacity: 1;
-      pointer-events: all;
-    }
-    .pin-card {
-      background: var(--du-white);
-      border-radius: 16px;
-      padding: 40px 36px 36px;
-      width: 320px;
-      text-align: center;
-      box-shadow: 0 24px 64px rgba(0,0,0,0.18);
-      transform: translateY(8px);
-      transition: transform 0.2s;
-    }
-    .pin-overlay.visible .pin-card { transform: translateY(0); }
-    .pin-lock-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: var(--du-off);
-      border: 1px solid var(--du-border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-    }
-    .pin-lock-icon svg { width: 22px; height: 22px; color: var(--du-dark); }
-    .pin-card h3 {
-      font-family: var(--font-serif);
-      font-size: 20px;
-      font-weight: 500;
-      color: var(--du-dark);
-      margin-bottom: 6px;
-    }
-    .pin-card p {
-      font-size: 12px;
-      color: var(--du-gray);
-      margin-bottom: 24px;
-      letter-spacing: 0.02em;
-    }
-    .pin-input-wrap { position: relative; margin-bottom: 8px; }
-    .pin-card input[type="password"] {
-      width: 100%;
-      height: 52px;
-      border: 1.5px solid var(--du-border);
-      border-radius: 10px;
-      text-align: center;
-      font-size: 22px;
-      letter-spacing: 0.35em;
-      outline: none;
-      font-family: monospace;
-      color: var(--du-dark);
-      transition: border-color 0.2s;
-      background: var(--du-off);
-    }
-    .pin-card input[type="password"]:focus { border-color: var(--du-blue-dk); background: var(--du-white); }
-    .pin-card input[type="password"].error { border-color: #e05555; }
-    .pin-error-msg {
-      font-size: 11.5px;
-      color: #e05555;
-      letter-spacing: 0.02em;
-      height: 18px;
-      margin-bottom: 20px;
-      opacity: 0;
-      transition: opacity 0.2s;
-    }
-    .pin-error-msg.visible { opacity: 1; }
-    .pin-actions { display: flex; gap: 8px; }
-    .pin-btn {
-      flex: 1;
-      height: 44px;
-      border-radius: 8px;
-      border: 1px solid var(--du-border);
-      cursor: pointer;
-      font-family: var(--font-sans);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: background 0.15s, border-color 0.15s;
-    }
-    .pin-btn-cancel { background: var(--du-white); color: var(--du-gray); }
-    .pin-btn-cancel:hover { background: var(--du-off); }
-    .pin-btn-enter { background: var(--du-dark); color: var(--du-white); border-color: var(--du-dark); }
-    .pin-btn-enter:hover { background: #444; }
+    .modal-overlay.open .modal { transform: translateY(0); }
 
-    /* ─── LIGHTBOX ──────────────────────────────────── */
-    .lightbox {
-      position: fixed;
-      inset: 0;
-      z-index: 700;
-      background: rgba(0,0,0,0.88);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.2s;
-      cursor: zoom-out;
+    /* Modal top accent bar (product color) */
+    .modal-accent {
+      height: 3px; background: var(--modal-pc, var(--text));
+      border-radius: 18px 18px 0 0;
     }
-    .lightbox.visible { opacity: 1; pointer-events: all; }
-    .lightbox img {
-      max-width: 92vw;
-      max-height: 92vh;
-      object-fit: contain;
-      border-radius: 6px;
-      box-shadow: 0 12px 60px rgba(0,0,0,0.5);
-      transform: scale(0.94);
-      transition: transform 0.22s;
-      cursor: default;
-    }
-    .lightbox.visible img { transform: scale(1); }
-    .lightbox-close {
-      position: absolute;
-      top: 18px;
-      right: 22px;
-      background: rgba(255,255,255,0.1);
-      border: none;
-      color: white;
-      font-size: 20px;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0.75;
-      transition: opacity 0.15s, background 0.15s;
-    }
-    .lightbox-close:hover { opacity: 1; background: rgba(255,255,255,0.2); }
-    .card-img-wrap img { cursor: zoom-in; }
 
-    /* ─── MOBILE ─────────────────────────────────────── */
-    .mobile-search {
-      display: none;
-      padding: 10px 16px;
-      border-bottom: 1px solid var(--du-border);
-      position: relative;
+    .modal-close-btn {
+      position: absolute; top: 15px; right: 14px; z-index: 10;
+      width: 30px; height: 30px; border-radius: 50%;
+      background: rgba(247,247,247,0.92); border: none; cursor: pointer;
+      font-size: 20px; line-height: 1;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text); backdrop-filter: blur(6px);
     }
-    .mobile-search input {
-      width: 100%;
-      height: 40px;
-      border: 1px solid var(--du-border);
-      border-radius: 20px;
-      padding: 0 40px 0 40px;
-      font-family: var(--font-sans);
-      font-size: 14px;
-      outline: none;
-    }
-    .mobile-search input:focus { border-color: var(--du-blue); }
-    .mobile-search .search-icon { left: 28px; }
 
-    @media (max-width: 640px) {
-      .hero { padding: 28px 16px; }
-      .hero-accent { display: none; }
-      .header-tagline { display: none; }
-      .header-divider { display: none; }
-      .cat-btn { padding: 14px 14px; font-size: 11px; }
+    /* Gallery */
+    .gallery { position: relative; background: var(--card-bg); overflow: hidden; user-select: none; }
+    .gallery-track { display: flex; transition: transform 0.36s cubic-bezier(0.32, 0.72, 0, 1); }
+    .gallery-item {
+      min-width: 100%; aspect-ratio: 1;
+      display: flex; align-items: center; justify-content: center; overflow: hidden;
     }
-    @media (max-width: 480px) {
-      .mode-btn { padding: 8px 11px; font-size: 9px; letter-spacing: 0.1em; }
+    .gallery-item img {
+      width: 85%; height: 85%; object-fit: contain;
     }
-    @media (max-width: 400px) {
-      .header-inner { padding: 0 12px; gap: 10px; }
-      .header-search { display: none; }
-      .mobile-search { display: block; }
+    .gallery-item img.is-ph { width: 22%; height: 22%; }
+    .gallery-item.is-video video {
+      width: 100%; height: 100%; object-fit: contain; background: #181818;
+    }
+    .gallery-item.is-video { background: #181818; }
+
+    .video-ph {
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; gap: 10px; color: rgba(255,255,255,0.7);
+    }
+    .video-ph-btn {
+      width: 54px; height: 54px; border-radius: 50%;
+      background: rgba(255,255,255,0.1); border: 2px solid rgba(255,255,255,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; margin-bottom: 4px;
+    }
+    .video-ph-label { font-size: 0.82rem; font-weight: 500; }
+    .video-ph-path  { font-size: 0.62rem; opacity: 0.35; font-family: monospace; margin-top: 2px; }
+
+    .gallery-dots {
+      position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 5px; pointer-events: none;
+    }
+    .gallery-dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+    }
+    .gallery-dot.active { background: #fff; }
+
+    /* Tira de miniaturas */
+    .gal-thumbs {
+      display: flex; gap: 7px; padding: 10px 14px;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto; scrollbar-width: none;
+    }
+    .gal-thumbs::-webkit-scrollbar { display: none; }
+    .gal-thumb {
+      width: 52px; height: 52px; flex-shrink: 0;
+      border-radius: 6px; overflow: hidden; cursor: pointer;
+      border: 2px solid transparent;
+      background: var(--border);
+      transition: border-color 0.15s;
+    }
+    .gal-thumb.active { border-color: var(--text); }
+    .gal-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gal-thumb-video {
+      width: 100%; height: 100%; background: #2a2a2a;
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.7); font-size: 15px;
+    }
+
+    .gal-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 34px; height: 34px; border-radius: 50%;
+      background: rgba(255,255,255,0.86); border: none; cursor: pointer;
+      font-size: 19px; display: flex; align-items: center; justify-content: center;
+      color: var(--text); backdrop-filter: blur(4px);
+      transition: background 0.15s, opacity 0.15s;
+    }
+    .gal-btn:hover { background: #fff; }
+    .gal-btn.gal-prev { left: 12px; }
+    .gal-btn.gal-next { right: 12px; }
+    .gal-btn:disabled { opacity: 0; pointer-events: none; }
+
+    .gal-type-tag {
+      position: absolute; top: 12px; left: 12px;
+      background: rgba(56,56,56,0.64); color: #fff;
+      font-size: 9.5px; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase;
+      padding: 4px 8px; border-radius: 3px; backdrop-filter: blur(4px);
+    }
+    .gal-type-tag.hidden { display: none; }
+
+    /* Modal product info */
+    .modal-info { padding: 24px 22px 32px; }
+
+    .modal-info-top {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      margin-bottom: 4px;
+    }
+    .modal-cat {
+      font-size: 9.5px; letter-spacing: 1.8px; text-transform: uppercase;
+      color: var(--text-sec);
+    }
+    .modal-ref-tag {
+      font-size: 0.72rem; color: var(--text-sec); font-family: monospace;
+    }
+    .modal-name {
+      font-size: 1.3rem; font-weight: 600; letter-spacing: -0.3px; font-style: italic;
+      margin-bottom: 16px; line-height: 1.2;
+    }
+    .modal-price-row {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+    }
+    .modal-price { font-size: 1.4rem; font-weight: 600; }
+    .modal-desc { font-size: 0.845rem; color: var(--text-sec); line-height: 1.7; margin-bottom: 16px; }
+    .modal-badge-sold {
+      display: inline-block;
+      background: var(--card-bg); border: 1px solid var(--border);
+      color: var(--text-sec); font-size: 0.75rem; font-weight: 500;
+      padding: 5px 12px; border-radius: 4px;
+    }
+
+    /* ── RESPONSIVE ─────────────────────────────── */
+    @media (max-width: 960px) {
+      .bs-grid      { grid-template-columns: repeat(2, 1fr); }
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 580px) {
+      .banner, .search-wrap, .products-main, .bs-section, footer { padding-left: 16px; padding-right: 16px; }
+      .cat-nav { padding: 0 16px; }
+      .banner { flex-direction: column; gap: 20px; }
+      .banner-right { flex-direction: row; align-items: center; justify-content: space-between; width: 100%; }
+      .banner-catalog-year { text-align: left; }
+      .sec-title { font-size: 2rem; }
+      .cat-section-name { font-size: 1.4rem; }
+      .bs-heading { flex-direction: column; gap: 12px; }
+      .bs-heading-note { text-align: left; }
+    }
+    @media (min-width: 769px) {
+      .modal-overlay { align-items: center; }
+      .modal { border-radius: 16px; max-height: 82vh; transform: translateY(14px) scale(0.97); }
+      .modal-overlay.open .modal { transform: translateY(0) scale(1); }
     }
   </style>
 </head>
 <body>
 
-<!-- ─── HEADER ─── -->
-<header class="site-header" id="siteHeader">
-  <div class="header-inner">
-    <a class="header-logo" href="#">
-      <img src="img/logo.png" alt="DU" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-      <span class="header-logo-text" style="display:none">DU</span>
-    </a>
-    <div class="header-divider"></div>
-    <span class="header-tagline">Catálogo 2026</span>
-
-    <!-- Modo toggle -->
-    <div class="mode-toggle">
-      <button class="mode-btn active" id="btnDetal" onclick="setMode('detal')">Detal</button>
-      <button class="mode-btn" id="btnMayor" onclick="setMode('mayorista')">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-          <rect x="3" y="11" width="18" height="11" rx="2"/>
-          <path d="M7 11V7a5 5 0 0110 0v4"/>
-        </svg>
-        Mayorista
-      </button>
-    </div>
-
-    <div class="header-search">
-      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-      </svg>
-      <input type="text" id="searchInput" placeholder="Buscar producto o referencia…" autocomplete="off"/>
-      <button class="search-clear" id="searchClear" title="Limpiar búsqueda">×</button>
-    </div>
+<!-- ── BANNER ─────────────────────────────────── -->
+<div class="banner">
+  <div class="banner-left">
+    <h2 class="banner-title">Color y calidad<br><em>que evolucionan.</em></h2>
+    <p class="banner-desc">Catálogo de consulta para asesoras y clientes. Precios en COP. Para pedidos, comunícate con tu asesor DU.</p>
   </div>
-</header>
-
-<!-- ─── MOBILE SEARCH ─── -->
-<div class="mobile-search">
-  <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-  </svg>
-  <input type="text" id="searchInputMobile" placeholder="Buscar…" autocomplete="off"/>
+  <div class="banner-right">
+    <img src="img/Logo_Maragel-Negro.png" alt="Maragel" class="banner-logo">
+    <span class="banner-catalog-year">Catálogo 2026</span>
+  </div>
 </div>
 
-<!-- ─── HERO ─── -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-text">
-      <p class="hero-eyebrow">Accesorios de Belleza · Colombia</p>
-      <h1 class="hero-title">Belleza que <em>se atreve</em><br>a ser auténtica.</h1>
-      <p class="hero-sub">Catálogo de consulta para asesoras y clientes. Precios en COP. Para pedidos, comunícate con tu asesor DU.</p>
+<!-- ── SEARCH & CONTROLS ───────────────────────── -->
+<div class="search-wrap">
+  <div class="search-controls">
+    <div class="mode-toggle">
+      <button class="mode-btn active" id="btn-detal"     onclick="setMode('detal')">Detal</button>
+      <button class="mode-btn"        id="btn-mayorista" onclick="setMode('mayorista')">Mayorista</button>
     </div>
-    <div class="hero-accent">
-      <span class="hero-edition">2026</span>
-      <div class="hero-bar"></div>
+    <div class="search-controls-right">
+      <button class="btn-solo-nuevos" id="btn-nuevos" onclick="toggleNuevos()">✦ Solo Nuevos</button>
+      <div class="toggle-wrap" onclick="toggleAgotados()">
+        <span class="toggle-label-text">Agotados</span>
+        <div class="toggle-switch on" id="toggle-agotados"></div>
+      </div>
     </div>
   </div>
+  <div class="search-inner">
+    <input type="text" class="search-input" id="search-input"
+           placeholder="Buscar por nombre o referencia..."
+           oninput="handleSearch(this.value)" autocomplete="off">
+    <button class="search-clear" id="search-clear" onclick="clearSearch()" aria-label="Limpiar">×</button>
+  </div>
+</div>
+
+<!-- ── BANNER MODO MAYORISTA ─────────────────── -->
+<div class="modo-banner" id="modo-banner">Precios Mayoristas — para uso interno</div>
+
+<!-- ── BEST SELLERS ───────────────────────────── -->
+<section class="bs-section">
+  <div class="bs-heading">
+    <div class="bs-heading-left">
+      <div class="sec-eyebrow">Lo más amado</div>
+      <div class="sec-title">Best <em>Sellers</em></div>
+    </div>
+    <div class="bs-heading-note">Los tonos favoritos<br>de la temporada</div>
+  </div>
+  <div class="bs-grid" id="bs-grid"></div>
 </section>
 
-<!-- ─── CATEGORY NAV ─── -->
-<nav class="cat-nav" id="catNav">
-  <div class="cat-nav-inner">
-    <button class="cat-btn cat-all active" data-cat="">Todos</button>
-    <button class="cat-btn" data-cat="Pestañas">Pestañas</button>
-    <button class="cat-btn" data-cat="Uñas">Uñas</button>
-    <button class="cat-btn" data-cat="Accesorios">Accesorios</button>
-  </div>
-</nav>
-
-<!-- ─── SUBCATEGORY STRIP ─── -->
-<div class="subcat-strip" id="subcatStrip">
-  <div class="subcat-inner" id="subcatInner"></div>
+<!-- ── CATEGORY NAV ───────────────────────────── -->
+<div class="cat-nav-wrap">
+  <nav class="cat-nav" id="cat-nav"></nav>
 </div>
 
-<!-- ─── TOOLBAR ─── -->
-<div class="toolbar">
-  <div class="toolbar-left">
-    <span class="count-label" id="countLabel"><strong>—</strong> productos</span>
-    <span class="modo-badge" id="modoBadge">· Mayorista</span>
-  </div>
-  <label class="toggle-agotados">
-    <div class="toggle-switch">
-      <input type="checkbox" id="toggleAgotados" checked/>
-      <div class="toggle-track"></div>
-      <div class="toggle-thumb"></div>
-    </div>
-    Mostrar agotados
-  </label>
+<!-- ── SEARCH RESULTS ───────────────────────────── -->
+<div class="search-results" id="search-results">
+  <span class="search-count" id="search-count"></span>
+  <div class="product-grid" id="search-grid"></div>
 </div>
 
-<!-- ─── PRODUCT GRID ─── -->
-<div class="product-grid" id="productGrid"></div>
+<!-- ── PRODUCT GRID ────────────────────────────── -->
+<main class="products-main" id="products-main"></main>
 
-<!-- ─── EMPTY STATE ─── -->
-<div class="empty-state" id="emptyState">
-  <div class="empty-state-icon">
-    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-    </svg>
-  </div>
-  <h3>Sin resultados</h3>
-  <p>Intenta con otro término de búsqueda o cambia los filtros.</p>
-</div>
-
-<!-- ─── FOOTER ─── -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">DU</div>
-    <div class="footer-social">@DU_COLOMBIA &nbsp;·&nbsp; @DUCOLOMBIA &nbsp;·&nbsp; WWW.DUCOLOMBIA.COM</div>
-    <div class="footer-note" id="footerNote">Catálogo 2026 — Solo de consulta. No incluye opciones de pedido.</div>
-  </div>
+<!-- ── FOOTER ─────────────────────────────────── -->
+<footer>
+  <span class="footer-brand">Maragel — Esmaltes Semipermanentes</span>
+  <span class="footer-version">Catálogo digital · 2026</span>
 </footer>
 
-<!-- ─── PIN MODAL ─── -->
-<div class="pin-overlay" id="pinOverlay">
-  <div class="pin-card">
-    <div class="pin-lock-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <rect x="3" y="11" width="18" height="11" rx="2"/>
-        <path d="M7 11V7a5 5 0 0110 0v4"/>
-      </svg>
+<!-- ── MODAL ──────────────────────────────────── -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" id="modal">
+    <div class="modal-accent" id="modal-accent"></div>
+    <button class="modal-close-btn" id="modal-close">×</button>
+    <div class="gallery" id="gallery">
+      <div class="gallery-track" id="gal-track"></div>
+      <div class="gal-type-tag hidden" id="gal-tag"></div>
+      <div class="gallery-dots" id="gal-dots"></div>
+      <button class="gal-btn gal-prev" id="gal-prev">‹</button>
+      <button class="gal-btn gal-next" id="gal-next">›</button>
     </div>
-    <h3>Precios Mayorista</h3>
-    <p>Ingresa el PIN de acceso</p>
-    <div class="pin-input-wrap">
-      <input type="password" id="pinInput" maxlength="6" inputmode="numeric" placeholder="······" autocomplete="off"/>
-    </div>
-    <p class="pin-error-msg" id="pinErrorMsg">PIN incorrecto. Intenta de nuevo.</p>
-    <div class="pin-actions">
-      <button class="pin-btn pin-btn-cancel" onclick="closePinModal()">Cancelar</button>
-      <button class="pin-btn pin-btn-enter" onclick="validatePin()">Ingresar</button>
-    </div>
+    <div class="gal-thumbs" id="gal-thumbs"></div>
+    <div class="modal-info" id="modal-info"></div>
   </div>
-</div>
-
-<!-- ─── LIGHTBOX ─── -->
-<div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox()">×</button>
-  <img id="lightboxImg" src="" alt=""/>
 </div>
 
 <script>
-/* ─────────────────────────────────────────────────
-   DU CATALOG — Detal + Mayorista
-───────────────────────────────────────────────── */
-
-const PIN_CORRECTO = '000000';
-
-const SUBCATS = {
-  "Accesorios": ["Maletas, neceseres y carteras","Brochas, pinceles y accesorios","Hair Technology","Cepillos y peinillas","Cuidado del cabello","Herramientas y accesorios","Espejos"],
-  "Pestañas":   ["Pestañas de fácil aplicación","Pestañas pelo a pelo","Accesorios de pestañas"],
-  "Uñas":       ["Efectos y apliques","Stickers para uñas","Accesorios para uñas","Kits para uñas","Imanes"]
-};
-const CAT_DOTS = { "Pestañas": "cat-pestanas", "Uñas": "cat-unas", "Accesorios": "cat-accesorios" };
-const ICONS = {
-  "Pestañas": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s3-8 10-8 10 8 10 8-3 8-10 8-10-8-10-8z"/><circle cx="12" cy="12" r="3"/></svg>`,
-  "Uñas":     `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17s-.5-7 5-7 5 7 5 7H7z"/><path d="M12 10c0-3 1.5-5 3-5" stroke-linecap="round"/></svg>`,
-  "Accesorios":`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M8 6V4a1 1 0 011-1h6a1 1 0 011 1v2"/></svg>`
-};
-
-/* ── State ── */
-let allProducts = [];
-let mayorMap    = {};   // referencia → precio mayorista
-let mode        = 'detal';  // 'detal' | 'mayorista'
-let state = { cat: "", subcat: "", query: "", showAgotados: true };
-
-/* ── Cambiar foto de color ── */
-function cambiarFoto(thumb, src) {
-  const wrap = thumb.closest('.card-img-wrap');
-  const mainImg = wrap.querySelector(':scope > img');
-  if (mainImg) { mainImg.src = src; wrap.classList.remove('img-error'); wrap.classList.add('img-loaded'); }
-  wrap.querySelectorAll('.card-thumb').forEach(t => t.classList.remove('activo'));
-  thumb.classList.add('activo');
-}
-
-/* ── Format price ── */
-function formatPrice(n) {
-  return new Intl.NumberFormat("es-CO", { style:"currency", currency:"COP", maximumFractionDigits:0 })
-    .format(n).replace("COP","").trim();
-}
-
-/* ── Render card ── */
-function renderCard(p) {
-  // Precio según modo activo
-  let precio;
-  if (mode === 'mayorista') {
-    const mp = mayorMap[p.referencia];
-    precio = (mp !== undefined) ? mp : p.precio;
-  } else {
-    precio = p.precio;
+/* ──────────────────────────────────────────────────────────────
+   PRODUCTOS — demo embebido.
+   En producción: fetch('productos.json').then(r=>r.json()).then(init)
+──────────────────────────────────────────────────────────────── */
+const PRODUCTOS = [
+  {
+    id:'m0001', nombre:'Esmalte Semipermanente 322', referencia:'322',
+    precio:22000, precio_mayorista:'pendiente', categoria:'Esmaltes en Gel', subcategoria:'Rojos',
+    descripcion:'Rojo intenso de alta cobertura. Acabado brillante y larga duración.',
+    imagen:'img/maragel/322.png', agotado:false, nuevo:false, best_seller:true, color_blob:'#F2C4C4',
+    galeria:[
+      {tipo:'foto',  src:'img/maragel/322.png'},
+      {tipo:'foto',  src:'img/maragel/322-una.png'},
+      {tipo:'video', src:'video/maragel/322.mp4'}
+    ]
+  },
+  {
+    id:'m0002', nombre:'Esmalte Semipermanente 219', referencia:'219',
+    precio:22000, categoria:'Esmaltes en Gel', subcategoria:'Azules y Lilas',
+    descripcion:'Lila suave y romántico con acabado cremoso.',
+    imagen:'img/maragel/219.png', agotado:false, best_seller:true, color_blob:'#DEB8E9',
+    galeria:[
+      {tipo:'foto', src:'img/maragel/219.png'},
+      {tipo:'foto', src:'img/maragel/219-una.png'}
+    ]
+  },
+  {
+    id:'m0003', nombre:'Aurora 044', referencia:'044',
+    precio:21000, categoria:'Esmaltes en Gel', subcategoria:'Aurora',
+    descripcion:'Tono camaleón con efecto aurora boreal. Cambia de azul a lila según el ángulo.',
+    imagen:'img/maragel/044.png', agotado:false, best_seller:true, color_blob:'#E8D5C4',
+    galeria:[
+      {tipo:'foto',  src:'img/maragel/044.png'},
+      {tipo:'video', src:'video/maragel/044.mp4'}
+    ]
+  },
+  {
+    id:'m0004', nombre:'Esmalte Semipermanente 001', referencia:'001',
+    precio:22000, categoria:'Esmaltes en Gel', subcategoria:'Nudes',
+    descripcion:'Nude clásico y versátil. Perfecto para cualquier ocasión.',
+    imagen:'img/maragel/001.png', agotado:false, best_seller:true, color_blob:'#D4D4D4',
+    galeria:[
+      {tipo:'foto',  src:'img/maragel/001.png'},
+      {tipo:'foto',  src:'img/maragel/001-una.png'},
+      {tipo:'video', src:'video/maragel/001.mp4'}
+    ]
+  },
+  {
+    id:'m0005', nombre:'Esmalte Semipermanente 087', referencia:'087',
+    precio:22000, categoria:'Esmaltes en Gel', subcategoria:'Rosas',
+    imagen:'img/maragel/087.png', agotado:false, best_seller:false, color_blob:''
+  },
+  {
+    id:'m0006', nombre:'Esmalte Semipermanente 154', referencia:'154',
+    precio:22000, categoria:'Esmaltes en Gel', subcategoria:'Verdes',
+    imagen:'img/maragel/154.png', agotado:false, best_seller:false, color_blob:''
+  },
+  {
+    id:'m0007', nombre:'Esmalte Semipermanente 033', referencia:'033',
+    precio:22000, categoria:'Esmaltes en Gel', subcategoria:'Neones',
+    imagen:'img/maragel/033.png', agotado:true, best_seller:false, color_blob:''
+  },
+  {
+    id:'m0008', nombre:'Aurora Starlit Cat Eye 712', referencia:'712',
+    precio:31000, categoria:'Esmaltes en Gel', subcategoria:'Aurora Starlit Cat Eye',
+    descripcion:'Efecto ojo de gato magnético con destellos estelares. Requiere imán.',
+    imagen:'img/maragel/712.png', agotado:false, best_seller:false, color_blob:''
+  },
+  {
+    id:'m0009', nombre:'Golden Sheen 601', referencia:'601',
+    precio:22900, categoria:'Esmaltes en Gel', subcategoria:'Golden Sheen Translucent Gel',
+    descripcion:'Gel traslúcido con efecto dorado suave. Se aplica sobre cualquier color base.',
+    imagen:'img/maragel/601.png', agotado:false, best_seller:false, color_blob:''
+  },
+  {
+    id:'m0010', nombre:'Top Coat Sin Limpieza', referencia:'TC-01',
+    precio:28000, categoria:'Base y Top Coats', subcategoria:'Base y Top Coats',
+    descripcion:'Sella el color con brillo espejo. Capa sin inhibir.',
+    imagen:'img/maragel/TC-01.png', agotado:false, best_seller:false, color_blob:''
+  },
+  {
+    id:'m0011', nombre:'Base Rubber Rosa', referencia:'BR-01',
+    precio:26000, categoria:'Base y Top Coats', subcategoria:'Base y Top Coats',
+    descripcion:'Base caucho de alta adherencia. Nivela la lámina y prolonga la duración.',
+    imagen:'img/maragel/BR-01.png', agotado:false, best_seller:false, color_blob:''
+  },
+  {
+    id:'m0012', nombre:'Lámpara UV/LED 48W', referencia:'LAMP-48',
+    precio:85000, categoria:'Herramientas', subcategoria:'Lámparas UV',
+    descripcion:'Sensor automático, timer 30/60 seg. Cura todo tipo de gel y base.',
+    imagen:'img/maragel/LAMP-48.png', agotado:false, best_seller:false, color_blob:''
+  },
+  {
+    id:'m0013', nombre:'Alicate Cortacutículas Profesional', referencia:'ALC-01',
+    precio:35000, categoria:'Herramientas', subcategoria:'Cortacutículas y Alicates',
+    descripcion:'Acero inoxidable con filo de precisión. Para cutícula impecable.',
+    imagen:'img/maragel/ALC-01.png', agotado:false, best_seller:false, color_blob:''
+  },
+  {
+    id:'m0014', nombre:'Lima de Vidrio', referencia:'LIMA-V',
+    precio:18000, categoria:'Herramientas', subcategoria:'Limas',
+    imagen:'img/maragel/LIMA-V.png', agotado:false, best_seller:false, color_blob:''
+  },
+  {
+    id:'m0015', nombre:'Set Press On Almendra Natural', referencia:'PO-ALM-01',
+    precio:45000, categoria:'Uñas Soft Gel', subcategoria:'Press On Sets',
+    descripcion:'24 piezas · talla XS a XL · Forma almendra · Acabado gloss natural.',
+    imagen:'img/maragel/PO-ALM-01.png', agotado:false, best_seller:false, color_blob:''
+  },
+  {
+    id:'m0016', nombre:'Soft Gel Stiletto 240 pzs', referencia:'SG-STL',
+    precio:32000, categoria:'Uñas Soft Gel', subcategoria:'Soft Gel por Forma',
+    descripcion:'240 piezas en 12 tamaños. Tip transparente, forma stiletto.',
+    imagen:'img/maragel/SG-STL.png', agotado:false, best_seller:false, color_blob:''
+  },
+  {
+    id:'m0017', nombre:'Apliques Flores 3D', referencia:'APL-FL3D',
+    precio:12000, categoria:'Apliques y Stickers', subcategoria:'Apliques para Uñas',
+    descripcion:'Flores resina 3D. Pack x10 piezas mixtas. Colores variados.',
+    imagen:'img/maragel/APL-FL3D.png', agotado:false, best_seller:false, color_blob:''
+  },
+  {
+    id:'m0018', nombre:'Stickers Mariposas Nail Art', referencia:'STK-MAR',
+    precio:8000, categoria:'Apliques y Stickers', subcategoria:'Stickers',
+    imagen:'img/maragel/STK-MAR.png', agotado:false, best_seller:false, color_blob:''
+  },
+  {
+    id:'m0019', nombre:'Esmalte Semipermanente 290', referencia:'290',
+    precio:22000, precio_mayorista:'pendiente', categoria:'Esmaltes en Gel', subcategoria:'Amarillos y Naranjas',
+    imagen:'img/color/290.jpg', agotado:false, nuevo:true, best_seller:false, color_blob:'',
+    galeria:[
+      {tipo:'foto',  src:'img/color/290.jpg'},
+      {tipo:'foto',  src:'img/esmalte/290.jpg'},
+      {tipo:'video', src:'img/video/290.mp4'}
+    ]
   }
+];
 
-  const precioHTML = (precio === 'pendiente' || precio === null || precio === undefined)
-    ? `<span class="price-pending">Precio pendiente</span>`
-    : `<span class="currency">$</span>${formatPrice(precio)}`;
+/* ── COLORES DEMO ───────────────────────────── */
+const COLORES_DEMO = {
+  '322':      '#C8102E',
+  '219':      '#9B59B6',
+  '044':      '#7B9EDE',
+  '001':      '#E8C9A0',
+  '087':      '#F472B6',
+  '154':      '#27AE60',
+  '033':      '#BAFF3B',
+  '712':      '#6B21A8',
+  '601':      '#D4AF37',
+  'TC-01':    '#C8C8C8',
+  'BR-01':    '#FFDDD6',
+  'LAMP-48':  '#4A4A6A',
+  'ALC-01':   '#B0B8C4',
+  'LIMA-V':   '#A8D4E8',
+  'PO-ALM-01':'#F5E6E6',
+  'SG-STL':   '#DCDCF5',
+  'APL-FL3D': '#FFB6C1',
+  'STK-MAR':  '#B0D4FF',
+};
 
-  const agotadoHTML = p.agotado ? `<div class="agotado-overlay"><span class="agotado-badge">Agotado</span></div>` : "";
-  const hasImg      = p.imagen && p.imagen.trim() !== "";
-  const placeholderIcon = ICONS[p.categoria] || ICONS["Accesorios"];
+/* ── UTILS ──────────────────────────────────── */
+function fmtPrice(p) {
+  if (p === 'pendiente') return 'Consultar precio';
+  return '$' + Number(p).toLocaleString('es-CO');
+}
+function getColor(p) { return COLORES_DEMO[p.referencia] || '#CCCCCC'; }
 
-  const imgHTML = hasImg
-    ? `<img src="${p.imagen}" alt="${p.nombre}" loading="lazy"
-          onclick="openLightbox(this.src,'${p.nombre.replace(/'/g, "\\'")}')"
-          onload="var w=this.closest('.card-img-wrap');w.classList.remove('no-img');w.classList.add('img-loaded')"
-          onerror="this.closest('.card-img-wrap').classList.add('img-error')"/>`
-    : "";
+/* ── PLACEHOLDER SVG (gris neutro mientras no haya foto) ── */
+function swatchSVG() {
+  const s = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 44">
+  <rect x="1" y="1" width="26" height="42" rx="13" fill="#C8C8C8"/>
+</svg>`;
+  return 'data:image/svg+xml,' + encodeURIComponent(s);
+}
 
-  const hasColores = p.colores && p.colores.length > 1;
-  const thumbsHTML = hasColores
-    ? `<div class="card-thumbs">${p.colores.map((c,i) =>
-        `<div class="card-thumb ${i===0?'activo':''}" onclick="cambiarFoto(this,'${c}')"><img src="${c}" loading="lazy"/></div>`
-      ).join('')}</div>` : '';
+function nailRowSVG(hex) {
+  function lighten(h, a=0.18) {
+    const r=parseInt(h.slice(1,3),16), g=parseInt(h.slice(3,5),16), b=parseInt(h.slice(5,7),16);
+    const l=v=>Math.round(v+(255-v)*a).toString(16).padStart(2,'0');
+    return `#${l(r)}${l(g)}${l(b)}`;
+  }
+  const lhex = lighten(hex);
+  const fingers = [0,1,2,3,4].map(i => {
+    const x = 8 + i*39;
+    const uid = 'ng'+i+Math.random().toString(36).slice(2,5);
+    return `<g transform="translate(${x},18)">
+  <defs><linearGradient id="${uid}" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="${hex}"/>
+    <stop offset="100%" stop-color="${lhex}"/>
+  </linearGradient></defs>
+  <rect x="2" y="30" width="27" height="60" rx="13" fill="#F5D0B5"/>
+  <rect x="2" y="11" width="27" height="44" rx="13" fill="url(#${uid})"/>
+  <rect x="2" y="40" width="27" height="15" fill="#F5D0B5"/>
+  <rect x="8" y="16" width="7" height="22" rx="3.5" fill="rgba(255,255,255,0.24)"/>
+</g>`;
+  }).join('');
+  return 'data:image/svg+xml,' + encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 120">${fingers}</svg>`
+  );
+}
 
-  const descHTML  = p.descripcion ? `<p class="card-desc">${p.descripcion}</p>` : "";
-  const dotClass  = CAT_DOTS[p.categoria] || "cat-accesorios";
+function getImgSrc(p, type='swatch') {
+  const c = getColor(p);
+  return type === 'nail' ? nailRowSVG(c) : swatchSVG();
+}
 
-  return `
-  <article class="product-card ${p.agotado ? "is-agotado" : ""}" data-id="${p.id}">
-    <div class="card-img-wrap ${!hasImg ? 'no-img' : ''}">
-      ${imgHTML}
-      <div class="card-placeholder">
-        <div class="card-placeholder-icon">${placeholderIcon}</div>
-        <span class="card-placeholder-ref">${p.referencia}</span>
+/* ── RENDER BEST SELLERS ────────────────────── */
+function renderBS() {
+  const items = PRODUCTOS.filter(p => p.best_seller);
+  document.getElementById('bs-grid').innerHTML = items.map(p => {
+    const swId = 'bssw-' + p.id;
+    const fallback = getImgSrc(p);
+    return `
+    <div class="bs-card" onclick="openModal('${p.id}')">
+      <div class="bs-visual">
+        <div class="bs-ref-ghost">${p.referencia}</div>
+        <div class="bs-swatch" id="${swId}">
+          <img src="${p.imagen}" alt="${p.nombre}"
+               onerror="this.src='${fallback}';document.getElementById('${swId}').classList.add('is-ph')">
+        </div>
       </div>
-      ${thumbsHTML}
-      ${agotadoHTML}
-    </div>
-    <div class="card-body">
-      <span class="card-subcat">${p.subcategoria}</span>
-      <h2 class="card-name">${p.nombre}</h2>
-      <span class="card-ref">Ref. ${p.referencia}</span>
-      ${descHTML}
-    </div>
-    <div class="card-footer">
-      <div class="card-price">${precioHTML}</div>
-      <div class="card-cat-dot ${dotClass}"></div>
-    </div>
-  </article>`;
+      <div class="bs-info">
+        <div class="bs-subcat">${p.subcategoria}</div>
+        <div class="bs-name">${p.nombre}</div>
+        <div class="bs-price">${fmtPrice(p.precio)}</div>
+      </div>
+    </div>`;
+  }).join('');
 }
 
-/* ── Filter ── */
-function filtered() {
-  return allProducts.filter(p => {
-    if (!state.showAgotados && p.agotado) return false;
-    if (state.cat && p.categoria !== state.cat) return false;
-    if (state.subcat && p.subcategoria !== state.subcat) return false;
-    if (state.query) {
-      const q = state.query.toLowerCase();
-      if (!p.nombre.toLowerCase().includes(q) && !p.referencia.toLowerCase().includes(q) && !(p.descripcion||"").toLowerCase().includes(q)) return false;
-    }
-    return true;
+/* ── RENDER CATEGORY NAV ────────────────────── */
+function renderCatNav() {
+  const cats = ['Todos', ...new Set(PRODUCTOS.map(p => p.categoria))];
+  document.getElementById('cat-nav').innerHTML = cats.map(c => `
+    <div class="cat-tab${c==='Todos'?' active':''}" data-cat="${c}" onclick="filterCat('${c}')">${c}</div>
+  `).join('');
+}
+
+function filterCat(cat) {
+  activeCat = cat;
+
+  document.querySelectorAll('.cat-tab')
+    .forEach(t => t.classList.toggle('active', t.dataset.cat === cat));
+  document.querySelectorAll('.cat-section')
+    .forEach(s => { s.style.display = (cat === 'Todos' || s.dataset.cat === cat) ? '' : 'none'; });
+
+  // Restaurar visibilidad de productos
+  document.querySelectorAll('.subcat-divider, .product-grid').forEach(el => el.style.display = '');
+
+  applyVisibility();
+}
+
+/* ── MODO DETAL / MAYORISTA ─────────────────── */
+function getDisplayPrice(p) {
+  if (currentMode === 'mayorista') {
+    if (!p.precio_mayorista || p.precio_mayorista === 'pendiente') return 'Consultar';
+    return fmtPrice(p.precio_mayorista);
+  }
+  return fmtPrice(p.precio);
+}
+
+function setMode(mode) {
+  currentMode = mode;
+  document.getElementById('btn-detal').classList.toggle('active', mode === 'detal');
+  document.getElementById('btn-mayorista').classList.toggle('active', mode === 'mayorista');
+  document.getElementById('modo-banner').classList.toggle('visible', mode === 'mayorista');
+  // Actualizar todos los precios visibles en el DOM
+  document.querySelectorAll('[data-detal]').forEach(el => {
+    el.textContent = mode === 'detal' ? el.dataset.detal : el.dataset.mayorista;
+  });
+  // Actualizar modal si está abierto
+  if (gProd) buildModalInfo();
+}
+
+/* ── FILTROS RÁPIDOS ────────────────────────── */
+function toggleAgotados() {
+  showAgotados = !showAgotados;
+  document.getElementById('toggle-agotados').classList.toggle('on', showAgotados);
+  if (searchQuery) handleSearch(document.getElementById('search-input').value);
+  else applyVisibility();
+}
+
+function toggleNuevos() {
+  soloNuevos = !soloNuevos;
+  document.getElementById('btn-nuevos').classList.toggle('active', soloNuevos);
+  if (searchQuery) handleSearch(document.getElementById('search-input').value);
+  else applyVisibility();
+}
+
+function applyVisibility() {
+  document.querySelectorAll('#products-main .product-card').forEach(card => {
+    const agotado = card.dataset.agotado === 'true';
+    const nuevo   = card.dataset.nuevo === 'true';
+    let show = true;
+    if (!showAgotados && agotado) show = false;
+    if (soloNuevos && !nuevo)    show = false;
+    card.style.display = show ? '' : 'none';
   });
 }
 
-/* ── Render grid ── */
-function renderGrid() {
-  const grid    = document.getElementById("productGrid");
-  const empty   = document.getElementById("emptyState");
-  const counter = document.getElementById("countLabel");
-  const items   = filtered();
+/* ── BÚSQUEDA ───────────────────────────────── */
+function handleSearch(val) {
+  searchQuery = val.trim().toLowerCase();
+  document.getElementById('search-clear').style.display = searchQuery ? 'block' : 'none';
 
-  counter.innerHTML = `<strong>${items.length}</strong> ${items.length === 1 ? "producto" : "productos"}`;
-  if (items.length === 0) { grid.innerHTML = ""; empty.classList.add("visible"); }
-  else { empty.classList.remove("visible"); grid.innerHTML = items.map(renderCard).join(""); }
-}
+  const bsEl  = document.querySelector('.bs-section');
+  const main  = document.getElementById('products-main');
+  const res   = document.getElementById('search-results');
 
-/* ── Subcategories ── */
-function renderSubcats() {
-  const strip = document.getElementById("subcatStrip");
-  const inner = document.getElementById("subcatInner");
-  if (!state.cat) { strip.classList.remove("open"); inner.innerHTML = ""; return; }
-  const subs = SUBCATS[state.cat] || [];
-  strip.classList.add("open");
-  inner.innerHTML = `<button class="sub-pill ${!state.subcat?"active":""}" data-sub="">Todos</button>`
-    + subs.map(s => `<button class="sub-pill ${state.subcat===s?"active":""}" data-sub="${s}">${s}</button>`).join("");
-  inner.querySelectorAll(".sub-pill").forEach(btn => btn.addEventListener("click", () => {
-    state.subcat = btn.dataset.sub; renderSubcats(); renderGrid();
-  }));
-}
+  if (searchQuery) {
+    bsEl.style.display  = 'none';
+    main.style.display  = 'none';
+    res.classList.add('visible');
 
-/* ── Category nav ── */
-document.querySelectorAll(".cat-btn").forEach(btn => btn.addEventListener("click", () => {
-  document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
-  btn.classList.add("active");
-  state.cat = btn.dataset.cat;
-  state.subcat = "";
-  renderSubcats();
-  renderGrid();
-}));
-
-/* ── Search ── */
-function setupSearch(inputId, clearId) {
-  const input   = document.getElementById(inputId);
-  const clearBtn = clearId ? document.getElementById(clearId) : null;
-  input.addEventListener("input", () => {
-    state.query = input.value.trim();
-    if (clearBtn) clearBtn.classList.toggle("visible", state.query.length > 0);
-    ["searchInput","searchInputMobile"].filter(id => id !== inputId).forEach(id => {
-      const el = document.getElementById(id); if (el) el.value = input.value;
+    const found = PRODUCTOS.filter(p => {
+      if (!showAgotados && p.agotado) return false;
+      if (soloNuevos && !p.nuevo)    return false;
+      return (
+        p.nombre.toLowerCase().includes(searchQuery) ||
+        p.referencia.toLowerCase().includes(searchQuery) ||
+        (p.subcategoria && p.subcategoria.toLowerCase().includes(searchQuery))
+      );
     });
-    renderGrid();
-  });
-  if (clearBtn) clearBtn.addEventListener("click", () => {
-    input.value = ""; state.query = ""; clearBtn.classList.remove("visible"); renderGrid();
-  });
-}
-setupSearch("searchInput", "searchClear");
-setupSearch("searchInputMobile");
 
-/* ── Toggle agotados ── */
-document.getElementById("toggleAgotados").addEventListener("change", e => {
-  state.showAgotados = e.target.checked; renderGrid();
-});
-
-/* ─────────────────────────────────────────────────
-   MODE SWITCHING + PIN
-───────────────────────────────────────────────── */
-
-function setMode(newMode) {
-  if (newMode === 'mayorista' && mode !== 'mayorista') {
-    openPinModal();
-  } else if (newMode === 'detal' && mode !== 'detal') {
-    mode = 'detal';
-    updateModeUI();
-    renderGrid();
-  }
-}
-
-function updateModeUI() {
-  const btnDetal  = document.getElementById('btnDetal');
-  const btnMayor  = document.getElementById('btnMayor');
-  const badge     = document.getElementById('modoBadge');
-  const header    = document.getElementById('siteHeader');
-  const footerNote = document.getElementById('footerNote');
-
-  const isMayor = mode === 'mayorista';
-  btnDetal.classList.toggle('active', !isMayor);
-  btnMayor.classList.toggle('active',  isMayor);
-  badge.classList.toggle('visible',    isMayor);
-  header.classList.toggle('mode-mayor', isMayor);
-  footerNote.textContent = isMayor
-    ? 'Mayorista 2026 — Precios exclusivos para mayoristas.'
-    : 'Catálogo 2026 — Solo de consulta. No incluye opciones de pedido.';
-}
-
-/* ── PIN Modal ── */
-function openPinModal() {
-  const overlay = document.getElementById('pinOverlay');
-  const input   = document.getElementById('pinInput');
-  const errMsg  = document.getElementById('pinErrorMsg');
-  input.value   = '';
-  input.classList.remove('error');
-  errMsg.classList.remove('visible');
-  overlay.classList.add('visible');
-  setTimeout(() => input.focus(), 200);
-}
-
-function closePinModal() {
-  document.getElementById('pinOverlay').classList.remove('visible');
-}
-
-function validatePin() {
-  const input  = document.getElementById('pinInput');
-  const errMsg = document.getElementById('pinErrorMsg');
-  if (input.value === PIN_CORRECTO) {
-    mode = 'mayorista';
-    closePinModal();
-    updateModeUI();
-    renderGrid();
+    document.getElementById('search-count').textContent =
+      found.length ? `${found.length} ${found.length===1?'producto':'productos'}` : '';
+    document.getElementById('search-grid').innerHTML = found.length
+      ? found.map(productCard).join('')
+      : `<div class="search-empty">Sin resultados para "${val}"</div>`;
   } else {
-    input.classList.add('error');
-    errMsg.classList.add('visible');
-    input.value = '';
-    input.focus();
-    setTimeout(() => { input.classList.remove('error'); }, 1200);
+    clearSearch();
   }
 }
 
-/* Enter en el PIN input activa validación, Escape cierra */
-document.getElementById('pinInput').addEventListener('keydown', e => {
-  if (e.key === 'Enter')  validatePin();
-  if (e.key === 'Escape') closePinModal();
-});
-/* Clic en el fondo del overlay cierra el modal */
-document.getElementById('pinOverlay').addEventListener('click', e => {
-  if (e.target === e.currentTarget) closePinModal();
-});
-
-/* ─────────────────────────────────────────────────
-   LIGHTBOX
-───────────────────────────────────────────────── */
-function openLightbox(src, alt) {
-  const lb  = document.getElementById('lightbox');
-  const img = document.getElementById('lightboxImg');
-  img.src = src;
-  img.alt = alt || '';
-  lb.classList.add('visible');
+function clearSearch() {
+  searchQuery = '';
+  document.getElementById('search-input').value = '';
+  document.getElementById('search-clear').style.display = 'none';
+  document.querySelector('.bs-section').style.display = '';
+  document.getElementById('products-main').style.display = '';
+  document.getElementById('search-results').classList.remove('visible');
+  filterCat(activeCat);
 }
-function closeLightbox() {
-  document.getElementById('lightbox').classList.remove('visible');
+
+/* ── RENDER PRODUCT CARD ────────────────────── */
+function productCard(p) {
+  const c = getColor(p);
+  const hasMedia = p.galeria && p.galeria.length > 1;
+  const hasVideo = hasMedia && p.galeria.some(g => g.tipo==='video');
+  const pDetal    = fmtPrice(p.precio);
+  const pMay      = (!p.precio_mayorista || p.precio_mayorista === 'pendiente') ? 'Consultar' : fmtPrice(p.precio_mayorista);
+  return `
+  <div class="product-card${p.agotado?' is-agotado':''}"
+       style="--pc:${c}"
+       data-subcat="${p.subcategoria}"
+       data-agotado="${!!p.agotado}"
+       data-nuevo="${!!p.nuevo}"
+       onclick="openModal('${p.id}')">
+    <div class="pc-img-wrap" data-ref="${p.referencia}">
+      <img src="${p.imagen}" alt="${p.nombre}"
+           onload="this.parentElement.classList.add('has-photo')"
+           onerror="this.src='${getImgSrc(p)}';this.classList.add('is-ph')">
+      ${p.nuevo   ? '<div class="badge-nuevo">Nuevo</div>'    : ''}
+      ${p.agotado ? '<div class="badge-agotado">Agotado</div>' : ''}
+      ${hasMedia  ? `<div class="badge-media">${hasVideo?'▶':'⊞'} ${p.galeria.length}</div>` : ''}
+    </div>
+    <div class="pc-info">
+      <div class="pc-name">${p.nombre}</div>
+      <div class="pc-bottom">
+        <div class="pc-price${p.agotado?' sold-out':''}"
+             data-detal="${pDetal}"
+             data-mayorista="${pMay}">
+          ${getDisplayPrice(p)}
+        </div>
+        <div class="pc-ref-small">${p.referencia}</div>
+      </div>
+    </div>
+  </div>`;
 }
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
-    closeLightbox();
-    closePinModal();
-  }
-});
 
-/* ─────────────────────────────────────────────────
-   INIT — carga los dos JSONs en paralelo
-───────────────────────────────────────────────── */
-async function init() {
-  try {
-    const [resD, resM] = await Promise.all([
-      fetch("productos.json"),
-      fetch("productos_mayorista.json")
-    ]);
-    const dataD = await resD.json();
-    const dataM = await resM.json();
+/* ── RENDER PRODUCT SECTIONS ────────────────── */
+/* Marca visualmente el nombre de la categoría:
+   primera palabra normal + resto en itálica */
+function styledCatName(cat) {
+  const parts = cat.split(' ');
+  if (parts.length <= 1) return cat;
+  return `${parts[0]} <em>${parts.slice(1).join(' ')}</em>`;
+}
 
-    allProducts = dataD.productos || [];
+function renderProducts() {
+  const cats = [...new Set(PRODUCTOS.map(p => p.categoria))];
+  document.getElementById('products-main').innerHTML = cats.map(cat => {
+    const cProds = PRODUCTOS.filter(p => p.categoria === cat);
+    const subcats = [...new Set(cProds.map(p => p.subcategoria))];
+    const showSubs = subcats.length > 1;
 
-    // Construir mapa mayorista: referencia → precio
-    for (const p of (dataM.productos || [])) {
-      mayorMap[p.referencia] = p.precio;
+    const inner = showSubs
+      ? subcats.map(sub => {
+          const sProds = cProds.filter(p => p.subcategoria === sub);
+          return `<div class="subcat-divider" data-subcat="${sub}">
+              <span class="subcat-label">${sub}</span>
+              <div class="subcat-rule"></div>
+            </div>
+            <div class="product-grid" data-subcat="${sub}">${sProds.map(productCard).join('')}</div>`;
+        }).join('')
+      : `<div class="product-grid">${cProds.map(productCard).join('')}</div>`;
+
+    return `
+    <section class="cat-section" data-cat="${cat}">
+      <div class="cat-section-head">
+        <div class="cat-section-name">${styledCatName(cat)}</div>
+        <div class="cat-section-rule"></div>
+        <div class="cat-section-count">${cProds.length} ${cProds.length===1?'producto':'productos'}</div>
+      </div>
+      ${inner}
+    </section>`;
+  }).join('');
+}
+
+/* ── MODAL & GALLERY ────────────────────────── */
+let gi=0, gItems=[], gProd=null;
+
+function openModal(id) {
+  gProd = PRODUCTOS.find(p => p.id===id);
+  if (!gProd) return;
+  gItems = gProd.galeria && gProd.galeria.length>0
+    ? gProd.galeria
+    : [{tipo:'foto', src:gProd.imagen}];
+  gi = 0;
+
+  // Set modal accent color
+  document.getElementById('modal-accent').style.background = getColor(gProd);
+
+  buildGallery();
+  buildModalInfo();
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function galVideoError(el, src) {
+  el.closest('.gallery-item').innerHTML =
+    `<div class="video-ph"><div class="video-ph-btn">▶</div><div class="video-ph-label">Video no disponible</div><div class="video-ph-path">${src}</div></div>`;
+}
+
+function buildGallery() {
+  const track  = document.getElementById('gal-track');
+  const dots   = document.getElementById('gal-dots');
+  const thumbs = document.getElementById('gal-thumbs');
+  const ph = getImgSrc(gProd, 'swatch');
+
+  // Slides principales
+  track.innerHTML = gItems.map((item, idx) => {
+    if (item.tipo === 'video') {
+      const mime = item.src.endsWith('.mov') ? 'video/quicktime' : 'video/mp4';
+      return `
+      <div class="gallery-item is-video">
+        <video controls playsinline preload="metadata"
+               onerror="galVideoError(this,'${item.src}')">
+          <source src="${item.src}" type="${mime}"
+                  onerror="galVideoError(this,'${item.src}')">
+        </video>
+      </div>`;
     }
+    return `<div class="gallery-item">
+      <img src="${item.src}" alt="Foto ${idx+1}"
+           onerror="this.src='${ph}';this.classList.add('is-ph')">
+    </div>`;
+  }).join('');
 
-    renderSubcats();
-    renderGrid();
-  } catch (err) {
-    console.error("Error cargando catálogo:", err);
-    document.getElementById("productGrid").innerHTML =
-      `<p style="padding:40px;color:var(--du-gray)">No se pudo cargar el catálogo.</p>`;
+  // Puntos sutiles (solo si hay más de 1)
+  dots.innerHTML = gItems.length > 1
+    ? gItems.map((_,i) => `<div class="gallery-dot${i===0?' active':''}"></div>`).join('')
+    : '';
+
+  // Tira de miniaturas
+  if (gItems.length > 1) {
+    thumbs.style.display = '';
+    thumbs.innerHTML = gItems.map((item, i) => {
+      if (item.tipo === 'video') {
+        return `<div class="gal-thumb${i===0?' active':''}" onclick="goTo(${i})">
+          <div class="gal-thumb-video">▶</div>
+        </div>`;
+      }
+      return `<div class="gal-thumb${i===0?' active':''}" onclick="goTo(${i})">
+        <img src="${item.src}" alt="Miniatura ${i+1}"
+             onerror="this.parentElement.style.background='#d8d8d8';this.remove()">
+      </div>`;
+    }).join('');
+  } else {
+    thumbs.style.display = 'none';
   }
+
+  updateGallery();
 }
 
-init();
+function updateGallery() {
+  document.getElementById('gal-track').style.transform = `translateX(-${gi*100}%)`;
+  document.querySelectorAll('.gallery-dot').forEach((d,i) => d.classList.toggle('active',i===gi));
+  document.querySelectorAll('.gal-thumb').forEach((t,i) => t.classList.toggle('active',i===gi));
+  document.getElementById('gal-prev').disabled = gi===0;
+  document.getElementById('gal-next').disabled = gi===gItems.length-1;
+
+  const tag = document.getElementById('gal-tag');
+  if (gItems.length<=1) { tag.classList.add('hidden'); return; }
+  tag.classList.remove('hidden');
+  const cur = gItems[gi];
+  if (cur.tipo==='video')   tag.textContent = 'Video';
+  else if (gi === 0)        tag.textContent = 'Foto principal';
+  else                      tag.textContent = 'Foto frasco';
+}
+
+function goTo(i) { gi=i; updateGallery(); }
+
+function buildModalInfo() {
+  const p = gProd;
+  const subLabel = p.subcategoria && p.subcategoria!==p.categoria ? p.subcategoria : p.categoria;
+  const pDetal   = fmtPrice(p.precio);
+  const pMay     = (!p.precio_mayorista || p.precio_mayorista === 'pendiente') ? 'Consultar' : fmtPrice(p.precio_mayorista);
+  document.getElementById('modal-info').innerHTML = `
+    <div class="modal-info-top">
+      <div class="modal-cat">${subLabel}</div>
+      <div class="modal-ref-tag">${p.referencia}</div>
+    </div>
+    <div class="modal-name">${p.nombre}</div>
+    <div class="modal-price-row">
+      <div class="modal-price" data-detal="${pDetal}" data-mayorista="${pMay}">${getDisplayPrice(p)}</div>
+    </div>
+    ${p.descripcion ? `<div class="modal-desc">${p.descripcion}</div>` : ''}
+    ${p.agotado ? '<div class="modal-badge-sold">Agotado temporalmente</div>' : ''}
+    ${p.nuevo ? '<div class="modal-badge-sold" style="background:#383838;color:#fff;border-color:#383838">Nuevo</div>' : ''}`;
+}
+
+/* ── ESTADO GLOBAL ──────────────────────────── */
+let activeCat    = 'Todos';
+let searchQuery  = '';
+let currentMode  = 'detal';
+let showAgotados = true;
+let soloNuevos   = false;
+
+/* ── SWIPE (móvil) ──────────────────────────── */
+let swipeX = 0;
+const gEl = document.getElementById('gallery');
+gEl.addEventListener('touchstart', e => { swipeX = e.touches[0].clientX; }, {passive:true});
+gEl.addEventListener('touchend', e => {
+  const dx = swipeX - e.changedTouches[0].clientX;
+  if (Math.abs(dx)>40) goTo(dx>0 ? Math.min(gi+1,gItems.length-1) : Math.max(gi-1,0));
+});
+
+/* ── EVENTOS ────────────────────────────────── */
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-overlay').addEventListener('click', e => {
+  if (e.target===e.currentTarget) closeModal();
+});
+document.getElementById('gal-prev').addEventListener('click', () => goTo(gi-1));
+document.getElementById('gal-next').addEventListener('click', () => goTo(gi+1));
+
+/* ── INIT ───────────────────────────────────── */
+renderBS();
+renderCatNav();
+renderProducts();
 </script>
 </body>
 </html>
