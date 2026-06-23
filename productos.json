@@ -535,8 +535,8 @@
     "imagen": "img/color/54-5.png",
     "agotado": false,
     "nuevo": false,
-    "best_seller": false,
-    "color_blob": "",
+    "best_seller": true,
+    "color_blob": "#E0DFF0",
     "galeria": [
       {
         "tipo": "foto",
@@ -876,8 +876,8 @@
     "imagen": "img/color/B180.jpg",
     "agotado": false,
     "nuevo": false,
-    "best_seller": false,
-    "color_blob": "",
+    "best_seller": true,
+    "color_blob": "#FAE5C0",
     "galeria": [
       {
         "tipo": "foto",
@@ -1601,8 +1601,8 @@
     "imagen": "img/color/B124.jpg",
     "agotado": false,
     "nuevo": false,
-    "best_seller": false,
-    "color_blob": "",
+    "best_seller": true,
+    "color_blob": "#C8D4F0",
     "galeria": [
       {
         "tipo": "foto",
@@ -2227,8 +2227,8 @@
     "imagen": "img/color/B284.jpg",
     "agotado": false,
     "nuevo": false,
-    "best_seller": false,
-    "color_blob": "",
+    "best_seller": true,
+    "color_blob": "#D4F0C8",
     "galeria": [
       {
         "tipo": "foto",
