@@ -218,14 +218,13 @@
     .bs-visual.has-photo .bs-ref-ghost { display: none; }
 
     .bs-swatch {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
+      position: relative; z-index: 2;
+      width: 65%; aspect-ratio: 3 / 4;
       display: flex; align-items: center; justify-content: center;
-      padding: 12%;
       transition: transform 0.5s cubic-bezier(0.34, 1.4, 0.64, 1);
     }
-    .bs-swatch img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
-    .bs-swatch.is-ph { padding: 30%; }
+    .bs-swatch img { width: 100%; height: 100%; object-fit: contain; }
+    .bs-swatch.is-ph { width: 22%; }
 
     .bs-info {}
     .bs-subcat {
@@ -585,13 +584,13 @@
   <div class="search-controls">
     <div class="mode-toggle">
       <button class="mode-btn active" id="btn-detal"     onclick="setMode('detal')">Detal</button>
-      <button class="mode-btn"        id="btn-mayorista" onclick="setMode('mayorista')">Mayorista</button>
+      <button class="mode-btn"        id="btn-mayorista" onclick="openPwModal()">Mayorista</button>
     </div>
     <div class="search-controls-right">
       <button class="btn-solo-nuevos" id="btn-nuevos" onclick="toggleNuevos()">✦ Solo Nuevos</button>
       <div class="toggle-wrap" onclick="toggleAgotados()">
         <span class="toggle-label-text">Agotados</span>
-        <div class="toggle-switch on" id="toggle-agotados"></div>
+        <div class="toggle-switch" id="toggle-agotados"></div>
       </div>
     </div>
   </div>
@@ -1045,7 +1044,7 @@ function buildModalInfo() {
 let activeCat    = 'Todos';
 let searchQuery  = '';
 let currentMode  = 'detal';
-let showAgotados = true;
+let showAgotados = false;
 let soloNuevos   = false;
 
 /* ── SWIPE (móvil) ──────────────────────────── */
@@ -1081,6 +1080,53 @@ fetch('productos.json')
     document.getElementById('products-main').innerHTML =
       '<p style="padding:40px;text-align:center;color:#888">No se pudieron cargar los productos. Verifica que productos.json esté en la misma carpeta.</p>';
   });
+/* ── CONTRASEÑA MAYORISTA ───────────────────── */
+const PW_MAYORISTA = '000000';
+
+function openPwModal() {
+  const overlay = document.getElementById('pw-overlay');
+  overlay.style.display = 'flex';
+  document.getElementById('pw-input').value = '';
+  document.getElementById('pw-error').textContent = '';
+  setTimeout(() => document.getElementById('pw-input').focus(), 80);
+}
+
+function closePwModal() {
+  document.getElementById('pw-overlay').style.display = 'none';
+}
+
+function submitPw() {
+  const val = document.getElementById('pw-input').value;
+  if (val === PW_MAYORISTA) {
+    closePwModal();
+    setMode('mayorista');
+  } else {
+    document.getElementById('pw-error').textContent = 'Contraseña incorrecta';
+    document.getElementById('pw-input').value = '';
+    document.getElementById('pw-input').focus();
+  }
+}
+
+document.getElementById('pw-overlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closePwModal();
+});
+
 </script>
+<!-- Modal contraseña mayorista -->
+<div id="pw-overlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.45); z-index:300; align-items:center; justify-content:center;">
+  <div style="background:#fff; border-radius:14px; padding:36px 32px 28px; width:300px; text-align:center; box-shadow:0 20px 60px rgba(0,0,0,0.15);">
+    <div style="font-size:9.5px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:#585856; margin-bottom:12px;">Modo Mayorista</div>
+    <div style="font-size:0.88rem; color:#383838; margin-bottom:24px; line-height:1.5;">Ingresa la contraseña<br>para ver precios mayoristas</div>
+    <input id="pw-input" type="password" maxlength="6" placeholder="······"
+      style="width:100%; text-align:center; letter-spacing:10px; font-size:1.5rem; border:1px solid #E9E9E9; border-radius:8px; padding:12px 8px; outline:none; font-family:'Instrument Sans',sans-serif; background:#F7F7F7; color:#383838;"
+      onkeydown="if(event.key==='Enter')submitPw()">
+    <div id="pw-error" style="color:#b0392b; font-size:0.76rem; margin-top:10px; min-height:16px; font-style:italic;"></div>
+    <div style="display:flex; gap:8px; margin-top:20px;">
+      <button onclick="closePwModal()" style="flex:1; padding:10px; border:1px solid #E9E9E9; border-radius:8px; background:#fff; cursor:pointer; font-family:'Instrument Sans',sans-serif; font-size:0.82rem; color:#585856;">Cancelar</button>
+      <button onclick="submitPw()" style="flex:1; padding:10px; border:none; border-radius:8px; background:#383838; color:#fff; cursor:pointer; font-family:'Instrument Sans',sans-serif; font-size:0.82rem; font-weight:500;">Ingresar</button>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
