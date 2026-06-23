@@ -4160,5 +4160,77 @@
         "src": "img/color/STICKER3-2_5.png"
       }
     ]
+  },
+  {
+    "id": "pkitmara1",
+    "nombre": "Kit Nailista Essential",
+    "referencia": "KITMARA1",
+    "precio": 250000,
+    "categoria": "Kits Nailistas",
+    "subcategoria": "Kits Nailistas",
+    "descripcion": "",
+    "imagen": "img/color/KITMARA1_1.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/KITMARA1_1.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/color/KITMARA1_2.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/color/KITMARA1_3.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/color/KITMARA1_4.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/color/KITMARA1_5.png"
+      }
+    ]
+  },
+  {
+    "id": "pkitmara2",
+    "nombre": "Kit Nailista Profesional",
+    "referencia": "KITMARA2",
+    "precio": 380000,
+    "categoria": "Kits Nailistas",
+    "subcategoria": "Kits Nailistas",
+    "descripcion": "",
+    "imagen": "img/color/KITMARA2_1.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/KITMARA2_1.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/color/KITMARA2_2.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/color/KITMARA2_3.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/color/KITMARA2_4.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/color/KITMARA2_5.png"
+      }
+    ]
   }
 ]
