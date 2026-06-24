@@ -1031,9 +1031,8 @@ function updateGallery() {
   if (gItems.length<=1) { tag.classList.add('hidden'); return; }
   tag.classList.remove('hidden');
   const cur = gItems[gi];
-  if (cur.tipo==='video')   tag.textContent = 'Video';
-  else if (gi === 0)        tag.textContent = 'Foto principal';
-  else                      tag.textContent = 'Foto frasco';
+  if (cur.tipo==='video')   { tag.textContent = 'Video'; }
+  else                      { tag.classList.add('hidden'); return; }
 }
 
 function goTo(i) { gi=i; updateGallery(); }
