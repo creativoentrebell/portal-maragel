@@ -594,8 +594,9 @@
 <div class="search-wrap">
   <div class="search-controls">
     <div class="mode-toggle">
-      <button class="mode-btn active" id="btn-detal"     onclick="setMode('detal')">Detal</button>
-      <button class="mode-btn"        id="btn-mayorista" onclick="openPwModal()">Mayorista</button>
+      <button class="mode-btn active" id="btn-catalogo"  onclick="setMode('catalogo')">Catálogo</button>
+      <button class="mode-btn"        id="btn-detal"     onclick="clickDetal()"><svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.55;vertical-align:middle;margin-right:3px;margin-bottom:1px"><rect x="1" y="4.5" width="7" height="5" rx="1.2" fill="currentColor"/><path d="M2.5 4.5V3a2 2 0 1 1 4 0v1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Detal</button>
+      <button class="mode-btn"        id="btn-mayorista" onclick="clickMayorista()"><svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.55;vertical-align:middle;margin-right:3px;margin-bottom:1px"><rect x="1" y="4.5" width="7" height="5" rx="1.2" fill="currentColor"/><path d="M2.5 4.5V3a2 2 0 1 1 4 0v1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Mayorista</button>
     </div>
     <div class="search-controls-right">
       <button class="btn-solo-nuevos" id="btn-nuevos" onclick="toggleNuevos()">✦ Solo Nuevos</button>
@@ -740,7 +741,7 @@ function renderBS() {
       <div class="bs-info">
         <div class="bs-subcat">${p.subcategoria}</div>
         <div class="bs-name">${p.nombre}</div>
-        <div class="bs-price" data-ref="${p.referencia}" data-detal="${fmtPrice(p.precio)}">${fmtPrice(p.precio)}</div>
+        <div class="bs-price" data-ref="${p.referencia}" data-detal="${fmtPrice(p.precio)}">${getDisplayPrice(p)}</div>
       </div>
     </div>`;
   }).join('');
@@ -770,6 +771,7 @@ function filterCat(cat) {
 
 /* ── MODO DETAL / MAYORISTA ─────────────────── */
 function getDisplayPrice(p) {
+  if (currentMode === 'catalogo') return '';
   if (currentMode === 'mayorista') {
     const _may = PRECIOS_MAY[p.referencia]; if (!_may || _may === 'pendiente') return 'Consultar'; return fmtPrice(_may);
   }
@@ -778,12 +780,15 @@ function getDisplayPrice(p) {
 
 function setMode(mode) {
   currentMode = mode;
+  document.getElementById('btn-catalogo').classList.toggle('active', mode === 'catalogo');
   document.getElementById('btn-detal').classList.toggle('active', mode === 'detal');
   document.getElementById('btn-mayorista').classList.toggle('active', mode === 'mayorista');
   document.getElementById('modo-banner').classList.toggle('visible', mode === 'mayorista');
   // Actualizar precios en tarjetas y best sellers consultando PRECIOS_MAY directamente
   document.querySelectorAll('.pc-price[data-ref], .bs-price[data-ref]').forEach(el => {
-    if (mode === 'detal') {
+    if (mode === 'catalogo') {
+      el.textContent = '';
+    } else if (mode === 'detal') {
       el.textContent = el.dataset.detal;
     } else {
       const may = PRECIOS_MAY[el.dataset.ref];
@@ -1042,15 +1047,16 @@ function buildModalInfo() {
   const subLabel = p.subcategoria && p.subcategoria!==p.categoria ? p.subcategoria : p.categoria;
   const pDetal   = fmtPrice(p.precio);
   const pMay     = (()=>{ const m=PRECIOS_MAY[p.referencia]; return (!m||m==='pendiente')?'Consultar':fmtPrice(m); })();
+  const showPrice = currentMode !== 'catalogo';
   document.getElementById('modal-info').innerHTML = `
     <div class="modal-info-top">
       <div class="modal-cat">${subLabel}</div>
       <div class="modal-ref-tag">${p.referencia}</div>
     </div>
     <div class="modal-name">${p.nombre}</div>
-    <div class="modal-price-row">
+    ${showPrice ? `<div class="modal-price-row">
       <div class="modal-price" data-detal="${pDetal}" data-mayorista="${pMay}">${getDisplayPrice(p)}</div>
-    </div>
+    </div>` : ''}
     ${p.descripcion ? `<div class="modal-desc">${p.descripcion}</div>` : ''}
     ${p.agotado ? '<div class="modal-badge-sold">Agotado temporalmente</div>' : ''}
     ${p.nuevo ? '<div class="modal-badge-sold" style="background:#383838;color:#fff;border-color:#383838">Nuevo</div>' : ''}`;
@@ -1059,7 +1065,7 @@ function buildModalInfo() {
 /* ── ESTADO GLOBAL ──────────────────────────── */
 let activeCat    = 'Todos';
 let searchQuery  = '';
-let currentMode  = 'detal';
+let currentMode  = 'catalogo';
 let showAgotados = false;
 let soloNuevos   = false;
 
@@ -1099,26 +1105,46 @@ Promise.all([
   document.getElementById('products-main').innerHTML =
     '<p style="padding:40px;text-align:center;color:#888">No se pudieron cargar los productos. Verifica que productos.json y precios-mayorista.json estén en la misma carpeta.</p>';
 });
-/* ── CONTRASEÑA MAYORISTA ───────────────────── */
+/* ── CONTRASEÑAS ────────────────────────────── */
+const PW_DETAL     = '121212';
 const PW_MAYORISTA = '000000';
+let pendingMode    = null;
+
+function clickDetal() {
+  if (currentMode === 'detal') return;
+  pendingMode = 'detal';
+  openPwModal();
+}
+
+function clickMayorista() {
+  if (currentMode === 'mayorista') return;
+  pendingMode = 'mayorista';
+  openPwModal();
+}
 
 function openPwModal() {
-  const overlay = document.getElementById('pw-overlay');
-  overlay.style.display = 'flex';
-  document.getElementById('pw-input').value = '';
+  const esDetal = pendingMode === 'detal';
+  document.getElementById('pw-mode-title').textContent = esDetal ? 'Modo Detal' : 'Modo Mayorista';
+  document.getElementById('pw-mode-desc').innerHTML   = esDetal
+    ? 'Ingresa la contraseña<br>para ver precios detal'
+    : 'Ingresa la contraseña<br>para ver precios mayoristas';
+  document.getElementById('pw-overlay').style.display = 'flex';
+  document.getElementById('pw-input').value  = '';
   document.getElementById('pw-error').textContent = '';
   setTimeout(() => document.getElementById('pw-input').focus(), 80);
 }
 
 function closePwModal() {
   document.getElementById('pw-overlay').style.display = 'none';
+  pendingMode = null;
 }
 
 function submitPw() {
-  const val = document.getElementById('pw-input').value;
-  if (val === PW_MAYORISTA) {
+  const val      = document.getElementById('pw-input').value;
+  const expected = pendingMode === 'detal' ? PW_DETAL : PW_MAYORISTA;
+  if (val === expected) {
     closePwModal();
-    setMode('mayorista');
+    setMode(pendingMode);
   } else {
     document.getElementById('pw-error').textContent = 'Contraseña incorrecta';
     document.getElementById('pw-input').value = '';
@@ -1131,11 +1157,11 @@ document.getElementById('pw-overlay').addEventListener('click', e => {
 });
 
 </script>
-<!-- Modal contraseña mayorista -->
+<!-- Modal contraseña -->
 <div id="pw-overlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.45); z-index:300; align-items:center; justify-content:center;">
   <div style="background:#fff; border-radius:14px; padding:36px 32px 28px; width:300px; text-align:center; box-shadow:0 20px 60px rgba(0,0,0,0.15);">
-    <div style="font-size:9.5px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:#585856; margin-bottom:12px;">Modo Mayorista</div>
-    <div style="font-size:0.88rem; color:#383838; margin-bottom:24px; line-height:1.5;">Ingresa la contraseña<br>para ver precios mayoristas</div>
+    <div id="pw-mode-title" style="font-size:9.5px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:#585856; margin-bottom:12px;">Modo Mayorista</div>
+    <div id="pw-mode-desc" style="font-size:0.88rem; color:#383838; margin-bottom:24px; line-height:1.5;">Ingresa la contraseña<br>para ver precios mayoristas</div>
     <input id="pw-input" type="password" maxlength="6" placeholder="······"
       style="width:100%; text-align:center; letter-spacing:10px; font-size:1.5rem; border:1px solid #E9E9E9; border-radius:8px; padding:12px 8px; outline:none; font-family:'Instrument Sans',sans-serif; background:#F7F7F7; color:#383838;"
       onkeydown="if(event.key==='Enter')submitPw()">
