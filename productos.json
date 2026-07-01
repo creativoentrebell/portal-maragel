@@ -413,7 +413,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Lámparas UV",
     "descripcion": "Lámpara UV LED 9W. Sistema touch 60s y 120s. 17CM x 10CM.",
-    "imagen": "img/color/SG803.webp",
+    "imagen": "img/color/SG803.png",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -421,15 +421,15 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/SG803.webp"
+        "src": "img/color/SG803.png"
       },
       {
         "tipo": "foto",
-        "src": "img/color/SG803 2.webp"
+        "src": "img/color/SG803 2.png"
       },
       {
         "tipo": "foto",
-        "src": "img/color/SG803 3.webp"
+        "src": "img/color/SG803 3.png"
       }
     ]
   },
@@ -479,7 +479,7 @@
     "categoria": "Base y Top Coats",
     "subcategoria": "Base y Top Coats",
     "descripcion": "Top coat de acabado mate. Fórmula mejorada anti-amarillamiento.",
-    "imagen": "img/color/54-3.webp",
+    "imagen": "img/color/54-3.png",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -487,7 +487,7 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/54-3.webp"
+        "src": "img/color/54-3.png"
       },
       {
         "tipo": "foto",
@@ -503,7 +503,7 @@
     "categoria": "Base y Top Coats",
     "subcategoria": "Base y Top Coats",
     "descripcion": "Colores más vivos y radiantes. Efecto cristalino. Mayor resistencia y brillo duradero.",
-    "imagen": "img/color/54-5.webp",
+    "imagen": "img/color/54-5.png",
     "agotado": false,
     "nuevo": false,
     "best_seller": true,
@@ -511,7 +511,7 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/54-5.webp"
+        "src": "img/color/54-5.png"
       },
       {
         "tipo": "foto",
@@ -527,7 +527,7 @@
     "categoria": "Base y Top Coats",
     "subcategoria": "Base y Top Coats",
     "descripcion": "Acabado mate aterciopelado, más suave al tacto. Fórmula mejorada anti-amarillamiento.",
-    "imagen": "img/color/54-6.webp",
+    "imagen": "img/color/54-6.png",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -535,7 +535,7 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/54-6.webp"
+        "src": "img/color/54-6.png"
       },
       {
         "tipo": "foto",
@@ -3881,7 +3881,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "550 piezas en 10 tamaños. Tecnología japonesa.",
-    "imagen": "img/color/PRESQ-S.webp",
+    "imagen": "img/color/PRESQ-S.png",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3895,7 +3895,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "550 piezas en 10 tamaños. Tecnología japonesa.",
-    "imagen": "img/color/PRESQ-M.webp",
+    "imagen": "img/color/PRESQ-M.png",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3909,7 +3909,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "550 piezas en 10 tamaños. Tecnología japonesa.",
-    "imagen": "img/color/PREOV-M.webp",
+    "imagen": "img/color/PREOV-M.png",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
