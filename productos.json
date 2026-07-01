@@ -7,7 +7,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
-    "imagen": "img/color/UCOFM5.jpg",
+    "imagen": "img/color/UCOFM5.webp",
     "agotado": false,
     "nuevo": true,
     "best_seller": false,
@@ -21,7 +21,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
-    "imagen": "img/color/UCOFM6.jpg",
+    "imagen": "img/color/UCOFM6.webp",
     "agotado": false,
     "nuevo": true,
     "best_seller": false,
@@ -35,7 +35,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
-    "imagen": "img/color/UCOFM7.jpg",
+    "imagen": "img/color/UCOFM7.webp",
     "agotado": false,
     "nuevo": true,
     "best_seller": false,
@@ -49,7 +49,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
-    "imagen": "img/color/UCOFM8.jpg",
+    "imagen": "img/color/UCOFM8.webp",
     "agotado": false,
     "nuevo": true,
     "best_seller": false,
@@ -63,7 +63,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
-    "imagen": "img/color/UCOFM9.jpg",
+    "imagen": "img/color/UCOFM9.webp",
     "agotado": false,
     "nuevo": true,
     "best_seller": false,
@@ -77,7 +77,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
-    "imagen": "img/color/USTM5.jpg",
+    "imagen": "img/color/USTM5.webp",
     "agotado": false,
     "nuevo": true,
     "best_seller": false,
@@ -91,7 +91,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
-    "imagen": "img/color/USTM7.jpg",
+    "imagen": "img/color/USTM7.webp",
     "agotado": false,
     "nuevo": true,
     "best_seller": false,
@@ -105,7 +105,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
-    "imagen": "img/color/USTM8.jpg",
+    "imagen": "img/color/USTM8.webp",
     "agotado": false,
     "nuevo": true,
     "best_seller": false,
@@ -119,7 +119,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
-    "imagen": "img/color/USTM9.jpg",
+    "imagen": "img/color/USTM9.webp",
     "agotado": false,
     "nuevo": true,
     "best_seller": false,
@@ -133,7 +133,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Lámparas UV",
     "descripcion": "Lámpara recargable de alta potencia para curar Soft Gel UV.",
-    "imagen": "img/color/GLAM1.png",
+    "imagen": "img/color/GLAM1.webp",
     "agotado": false,
     "nuevo": true,
     "best_seller": false,
@@ -147,7 +147,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Lámparas UV",
     "descripcion": "Lámpara recargable de potencia media para Soft Gel UV.",
-    "imagen": "img/color/GLAM2.png",
+    "imagen": "img/color/GLAM2.webp",
     "agotado": false,
     "nuevo": true,
     "best_seller": false,
@@ -161,7 +161,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Lámparas UV",
     "descripcion": "Lámpara recargable compacta para Soft Gel UV.",
-    "imagen": "img/color/GLAM3.png",
+    "imagen": "img/color/GLAM3.webp",
     "agotado": false,
     "nuevo": true,
     "best_seller": false,
@@ -175,7 +175,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Lámparas UV",
     "descripcion": "Soporte para lámpara de uñas.",
-    "imagen": "img/color/GLAM4.jpg",
+    "imagen": "img/color/GLAM4.webp",
     "agotado": false,
     "nuevo": true,
     "best_seller": false,
@@ -189,7 +189,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Limas",
     "descripcion": "Pack de 5 limas doble cara 180/240.",
-    "imagen": "img/color/LIMG16.png",
+    "imagen": "img/color/LIMG16.webp",
     "agotado": false,
     "nuevo": true,
     "best_seller": false,
@@ -203,7 +203,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "Uñas Soft Gel profesional en 10 tamaños.",
-    "imagen": "img/color/PRECOF-L 1.JPG",
+    "imagen": "img/color/PRECOF-L 1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -211,11 +211,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/PRECOF-L 1.JPG"
+        "src": "img/color/PRECOF-L 1.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/PRECOF-L 3.JPG"
+        "src": "img/color/PRECOF-L 3.webp"
       }
     ]
   },
@@ -227,7 +227,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "Uñas Soft Gel profesional en 10 tamaños.",
-    "imagen": "img/color/PRECOF-M 1.JPG",
+    "imagen": "img/color/PRECOF-M 1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -235,11 +235,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/PRECOF-M 1.JPG"
+        "src": "img/color/PRECOF-M 1.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/PRECOF-M 3.JPG"
+        "src": "img/color/PRECOF-M 3.webp"
       }
     ]
   },
@@ -251,7 +251,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "Uñas Soft Gel profesional en 10 tamaños.",
-    "imagen": "img/color/PRECOF-S 1.JPG",
+    "imagen": "img/color/PRECOF-S 1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -259,11 +259,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/PRECOF-S 1.JPG"
+        "src": "img/color/PRECOF-S 1.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/PRECOF-S 3.JPG"
+        "src": "img/color/PRECOF-S 3.webp"
       }
     ]
   },
@@ -275,7 +275,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "Uñas Soft Gel profesional en 10 tamaños.",
-    "imagen": "img/color/PREES-M 1.JPG",
+    "imagen": "img/color/PREES-M 1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -283,11 +283,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/PREES-M 1.JPG"
+        "src": "img/color/PREES-M 1.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/PREES-M 3.JPG"
+        "src": "img/color/PREES-M 3.webp"
       }
     ]
   },
@@ -299,7 +299,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "Uñas Soft Gel profesional en 10 tamaños.",
-    "imagen": "img/color/PREGAL-S 1.JPG",
+    "imagen": "img/color/PREGAL-S 1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -307,11 +307,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/PREGAL-S 1.JPG"
+        "src": "img/color/PREGAL-S 1.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/PREGAL-S 2.JPG"
+        "src": "img/color/PREGAL-S 2.webp"
       }
     ]
   },
@@ -323,7 +323,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Cortauñas y Guillotinas",
     "descripcion": "Cortauñas curvo de acero de alta calidad. Acabado negro brillante. Dos unidades: grande y pequeño.",
-    "imagen": "img/color/ASTER grande.png",
+    "imagen": "img/color/ASTER grande.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -331,11 +331,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/ASTER grande.png"
+        "src": "img/color/ASTER grande.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/ASTET.png"
+        "src": "img/color/ASTET.webp"
       }
     ]
   },
@@ -347,7 +347,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Cortauñas y Guillotinas",
     "descripcion": "Guillotina para uñas acrílicas, gel, tips y naturales. Acero de alta calidad con filo de precisión.",
-    "imagen": "img/color/CALISTO.png",
+    "imagen": "img/color/CALISTO.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -361,7 +361,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Cortacutículas y Alicates",
     "descripcion": "Diseño en punta para todas las áreas. Mango ergonómico con resorte amortiguador. Filo de 5MM.",
-    "imagen": "img/color/ESPIRAL_1.JPG",
+    "imagen": "img/color/ESPIRAL_1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -369,11 +369,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/ESPIRAL_1.JPG"
+        "src": "img/color/ESPIRAL_1.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/ESPIRAL_2.JPG"
+        "src": "img/color/ESPIRAL_2.webp"
       }
     ]
   },
@@ -385,7 +385,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Cortacutículas y Alicates",
     "descripcion": "Diseño en punta, mango ergonómico estructura cerrada. Corte fino y preciso.",
-    "imagen": "img/color/MOON 1.JPG",
+    "imagen": "img/color/MOON 1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -399,7 +399,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Cortacutículas y Alicates",
     "descripcion": "Alicate en forma de tijera para corte de precisión en cutícula. Acero inoxidable.",
-    "imagen": "img/color/STAR 1.JPG",
+    "imagen": "img/color/STAR 1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -413,7 +413,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Lámparas UV",
     "descripcion": "Lámpara UV LED 9W. Sistema touch 60s y 120s. 17CM x 10CM.",
-    "imagen": "img/color/SG803.png",
+    "imagen": "img/color/SG803.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -421,15 +421,15 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/SG803.png"
+        "src": "img/color/SG803.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/SG803 2.png"
+        "src": "img/color/SG803 2.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/SG803 3.png"
+        "src": "img/color/SG803 3.webp"
       }
     ]
   },
@@ -441,7 +441,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Lámparas UV",
     "descripcion": "Base metálica efecto espejo. Temporizador 10/30/60/99 seg. Sensor de movimiento. Apta para pedicura.",
-    "imagen": "img/color/LGEL1_1.JPG",
+    "imagen": "img/color/LGEL1_1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -449,11 +449,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/LGEL1_1.JPG"
+        "src": "img/color/LGEL1_1.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/LGEL1_2.JPG"
+        "src": "img/color/LGEL1_2.webp"
       }
     ]
   },
@@ -465,7 +465,7 @@
     "categoria": "Base y Top Coats",
     "subcategoria": "Base y Top Coats",
     "descripcion": "Sistema de anclaje semipermanente. Adhesión del color gel a la uña natural.",
-    "imagen": "img/esmalte/54-1-ECOMM.jpg",
+    "imagen": "img/esmalte/54-1-ECOMM.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -479,7 +479,7 @@
     "categoria": "Base y Top Coats",
     "subcategoria": "Base y Top Coats",
     "descripcion": "Top coat de acabado mate. Fórmula mejorada anti-amarillamiento.",
-    "imagen": "img/color/54-3.png",
+    "imagen": "img/color/54-3.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -487,11 +487,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/54-3.png"
+        "src": "img/color/54-3.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/54-3-ECOMM.png"
+        "src": "img/esmalte/54-3-ECOMM.webp"
       }
     ]
   },
@@ -503,7 +503,7 @@
     "categoria": "Base y Top Coats",
     "subcategoria": "Base y Top Coats",
     "descripcion": "Colores más vivos y radiantes. Efecto cristalino. Mayor resistencia y brillo duradero.",
-    "imagen": "img/color/54-5.png",
+    "imagen": "img/color/54-5.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": true,
@@ -511,11 +511,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/54-5.png"
+        "src": "img/color/54-5.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/54-5-ECOMM.png"
+        "src": "img/esmalte/54-5-ECOMM.webp"
       }
     ]
   },
@@ -527,7 +527,7 @@
     "categoria": "Base y Top Coats",
     "subcategoria": "Base y Top Coats",
     "descripcion": "Acabado mate aterciopelado, más suave al tacto. Fórmula mejorada anti-amarillamiento.",
-    "imagen": "img/color/54-6.png",
+    "imagen": "img/color/54-6.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -535,11 +535,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/54-6.png"
+        "src": "img/color/54-6.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/54-6-ECOMM.jpg"
+        "src": "img/esmalte/54-6-ECOMM.webp"
       }
     ]
   },
@@ -551,7 +551,7 @@
     "categoria": "Base y Top Coats",
     "subcategoria": "Removedores",
     "descripcion": "Removedor multipropósito: semipermanente, acrílico, acrigel, gel. Aroma sandía y kiwi.",
-    "imagen": "img/color/REMO120ML.png",
+    "imagen": "img/color/REMO120ML.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -565,7 +565,7 @@
     "categoria": "Base y Top Coats",
     "subcategoria": "Removedores",
     "descripcion": "Removedor multipropósito tamaño profesional. Aroma sandía y kiwi.",
-    "imagen": "img/color/REMO500ML.png",
+    "imagen": "img/color/REMO500ML.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -579,7 +579,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Limas",
     "descripcion": "Lima profesional grano 100/100. Pack x12 unidades. Entre 3.000 y 5.000 pasadas. Materiales alemanes.",
-    "imagen": "img/color/LIMG1.png",
+    "imagen": "img/color/LIMG1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -593,7 +593,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Limas",
     "descripcion": "Lima profesional grano 100/150. Pack x12 unidades. Entre 3.000 y 5.000 pasadas. Materiales alemanes.",
-    "imagen": "img/color/LIMG2.png",
+    "imagen": "img/color/LIMG2.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -607,7 +607,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Limas",
     "descripcion": "Lima profesional grano 100/180. Pack x12 unidades. Entre 3.000 y 5.000 pasadas. Materiales alemanes.",
-    "imagen": "img/color/LIMG3.png",
+    "imagen": "img/color/LIMG3.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -621,7 +621,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Limas",
     "descripcion": "Lima profesional grano 240/240. Pack x12 unidades. Entre 3.000 y 5.000 pasadas. Materiales alemanes.",
-    "imagen": "img/color/LIMG4.png",
+    "imagen": "img/color/LIMG4.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -635,7 +635,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Limas",
     "descripcion": "Lima Maragel Selene. Pack x4 unidades.",
-    "imagen": "img/color/LIMG15.png",
+    "imagen": "img/color/LIMG15.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -649,7 +649,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Limas",
     "descripcion": "Lima Maragel Lunar. Pack x5 unidades.",
-    "imagen": "img/color/LIMG20.png",
+    "imagen": "img/color/LIMG20.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -663,7 +663,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Rojos",
     "descripcion": "",
-    "imagen": "img/color/B034.jpg",
+    "imagen": "img/color/B034.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -671,11 +671,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B034.jpg"
+        "src": "img/color/B034.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/034-ECOMM.jpg"
+        "src": "img/esmalte/034-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -691,7 +691,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Rojos",
     "descripcion": "",
-    "imagen": "img/color/B359.jpg",
+    "imagen": "img/color/B359.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -705,7 +705,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Rojos",
     "descripcion": "",
-    "imagen": "img/color/B057.jpg",
+    "imagen": "img/color/B057.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -713,11 +713,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B057.jpg"
+        "src": "img/color/B057.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/057-ECOMM.jpg"
+        "src": "img/esmalte/057-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -733,7 +733,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Rojos",
     "descripcion": "",
-    "imagen": "img/color/B322.jpg",
+    "imagen": "img/color/B322.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -747,7 +747,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Rojos",
     "descripcion": "",
-    "imagen": "img/color/B321.jpg",
+    "imagen": "img/color/B321.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -755,7 +755,7 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B321.jpg"
+        "src": "img/color/B321.webp"
       },
       {
         "tipo": "video",
@@ -771,7 +771,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Amarillos y Naranjas",
     "descripcion": "",
-    "imagen": "img/color/B252.jpg",
+    "imagen": "img/color/B252.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -779,11 +779,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B252.jpg"
+        "src": "img/color/B252.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/252-ECOMM.jpg"
+        "src": "img/esmalte/252-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -799,7 +799,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Amarillos y Naranjas",
     "descripcion": "",
-    "imagen": "img/color/B250.jpg",
+    "imagen": "img/color/B250.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -807,11 +807,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B250.jpg"
+        "src": "img/color/B250.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/250-ECOMM.jpg"
+        "src": "img/esmalte/250-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -827,7 +827,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Amarillos y Naranjas",
     "descripcion": "",
-    "imagen": "img/color/B180.jpg",
+    "imagen": "img/color/B180.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": true,
@@ -835,11 +835,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B180.jpg"
+        "src": "img/color/B180.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/180-ECOMM.jpg"
+        "src": "img/esmalte/180-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -855,7 +855,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Amarillos y Naranjas",
     "descripcion": "",
-    "imagen": "img/color/B254.jpg",
+    "imagen": "img/color/B254.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -863,11 +863,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B254.jpg"
+        "src": "img/color/B254.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/254-ECOMM.jpg"
+        "src": "img/esmalte/254-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -883,7 +883,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Amarillos y Naranjas",
     "descripcion": "",
-    "imagen": "img/color/B016.jpg",
+    "imagen": "img/color/B016.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -891,11 +891,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B016.jpg"
+        "src": "img/color/B016.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/016-ECOMM.jpg"
+        "src": "img/esmalte/016-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -911,7 +911,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Amarillos y Naranjas",
     "descripcion": "",
-    "imagen": "img/color/B251.jpg",
+    "imagen": "img/color/B251.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -919,11 +919,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B251.jpg"
+        "src": "img/color/B251.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/251-ECOMM.jpg"
+        "src": "img/esmalte/251-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -939,7 +939,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Amarillos y Naranjas",
     "descripcion": "",
-    "imagen": "img/color/B255.jpg",
+    "imagen": "img/color/B255.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -947,11 +947,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B255.jpg"
+        "src": "img/color/B255.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/255-ECOMM.jpg"
+        "src": "img/esmalte/255-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -967,7 +967,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Amarillos y Naranjas",
     "descripcion": "",
-    "imagen": "img/color/B290.jpg",
+    "imagen": "img/color/B290.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -975,11 +975,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B290.jpg"
+        "src": "img/color/B290.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/290-ECOMM.jpg"
+        "src": "img/esmalte/290-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -995,7 +995,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Verdes",
     "descripcion": "",
-    "imagen": "img/color/B242.jpg",
+    "imagen": "img/color/B242.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1003,11 +1003,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B242.jpg"
+        "src": "img/color/B242.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/242-ECOMM.jpg"
+        "src": "img/esmalte/242-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1023,7 +1023,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Verdes",
     "descripcion": "",
-    "imagen": "img/color/B190.jpg",
+    "imagen": "img/color/B190.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1031,11 +1031,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B190.jpg"
+        "src": "img/color/B190.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/190-ECOMM.jpg"
+        "src": "img/esmalte/190-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1051,7 +1051,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Verdes",
     "descripcion": "",
-    "imagen": "img/color/B244.jpg",
+    "imagen": "img/color/B244.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1059,11 +1059,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B244.jpg"
+        "src": "img/color/B244.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/244-ECOMM.jpg"
+        "src": "img/esmalte/244-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1079,7 +1079,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Verdes",
     "descripcion": "",
-    "imagen": "img/color/B241.jpg",
+    "imagen": "img/color/B241.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1087,11 +1087,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B241.jpg"
+        "src": "img/color/B241.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/241-ECOMM.jpg"
+        "src": "img/esmalte/241-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1107,7 +1107,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Verdes",
     "descripcion": "",
-    "imagen": "img/color/B245.jpg",
+    "imagen": "img/color/B245.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1115,11 +1115,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B245.jpg"
+        "src": "img/color/B245.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/245-ECOMM.jpg"
+        "src": "img/esmalte/245-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1135,7 +1135,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Verdes",
     "descripcion": "",
-    "imagen": "img/color/B289.jpg",
+    "imagen": "img/color/B289.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1143,11 +1143,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B289.jpg"
+        "src": "img/color/B289.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/289-ECOMM.jpg"
+        "src": "img/esmalte/289-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1163,7 +1163,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Verdes",
     "descripcion": "",
-    "imagen": "img/color/B112.jpg",
+    "imagen": "img/color/B112.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1171,11 +1171,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B112.jpg"
+        "src": "img/color/B112.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/112-ECOMM.jpg"
+        "src": "img/esmalte/112-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1191,7 +1191,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B243.jpg",
+    "imagen": "img/color/B243.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1199,11 +1199,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B243.jpg"
+        "src": "img/color/B243.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/243-ECOMM.jpg"
+        "src": "img/esmalte/243-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1219,7 +1219,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B232.jpg",
+    "imagen": "img/color/B232.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1227,11 +1227,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B232.jpg"
+        "src": "img/color/B232.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/232-ECOMM.jpg"
+        "src": "img/esmalte/232-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1247,7 +1247,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B074.jpg",
+    "imagen": "img/color/B074.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1255,11 +1255,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B074.jpg"
+        "src": "img/color/B074.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/074-ECOMM.jpg"
+        "src": "img/esmalte/074-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1275,7 +1275,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B193.jpg",
+    "imagen": "img/color/B193.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1283,11 +1283,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B193.jpg"
+        "src": "img/color/B193.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/193-ECOMM.jpg"
+        "src": "img/esmalte/193-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1303,7 +1303,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B235.jpg",
+    "imagen": "img/color/B235.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1311,11 +1311,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B235.jpg"
+        "src": "img/color/B235.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/235-ECOMM.jpg"
+        "src": "img/esmalte/235-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1331,7 +1331,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B236.jpg",
+    "imagen": "img/color/B236.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1339,11 +1339,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B236.jpg"
+        "src": "img/color/B236.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/236-ECOMM.jpg"
+        "src": "img/esmalte/236-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1359,7 +1359,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B234.jpg",
+    "imagen": "img/color/B234.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1367,11 +1367,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B234.jpg"
+        "src": "img/color/B234.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/234-ECOMM.jpg"
+        "src": "img/esmalte/234-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1387,7 +1387,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B238.jpg",
+    "imagen": "img/color/B238.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1395,11 +1395,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B238.jpg"
+        "src": "img/color/B238.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/238-ECOMM.jpg"
+        "src": "img/esmalte/238-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1415,7 +1415,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B072.jpg",
+    "imagen": "img/color/B072.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1423,11 +1423,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B072.jpg"
+        "src": "img/color/B072.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/072-ECOMM.jpg"
+        "src": "img/esmalte/072-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1443,7 +1443,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B237.jpg",
+    "imagen": "img/color/B237.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1451,11 +1451,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B237.jpg"
+        "src": "img/color/B237.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/237-ECOMM.jpg"
+        "src": "img/esmalte/237-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1471,7 +1471,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B233.jpg",
+    "imagen": "img/color/B233.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1479,11 +1479,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B233.jpg"
+        "src": "img/color/B233.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/233-ECOMM.jpg"
+        "src": "img/esmalte/233-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1499,7 +1499,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B062.jpg",
+    "imagen": "img/color/B062.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1507,11 +1507,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B062.jpg"
+        "src": "img/color/B062.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/062-ECOMM.jpg"
+        "src": "img/esmalte/062-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1527,7 +1527,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B124.jpg",
+    "imagen": "img/color/B124.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": true,
@@ -1535,11 +1535,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B124.jpg"
+        "src": "img/color/B124.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/124-ECOMM.jpg"
+        "src": "img/esmalte/124-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1555,7 +1555,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B226.jpg",
+    "imagen": "img/color/B226.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1563,11 +1563,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B226.jpg"
+        "src": "img/color/B226.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/226-ECOMM.jpg"
+        "src": "img/esmalte/226-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1583,7 +1583,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B224.jpg",
+    "imagen": "img/color/B224.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1591,11 +1591,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B224.jpg"
+        "src": "img/color/B224.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/224-ECOMM.jpg"
+        "src": "img/esmalte/224-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1611,7 +1611,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B239.jpg",
+    "imagen": "img/color/B239.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1619,11 +1619,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B239.jpg"
+        "src": "img/color/B239.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/239-ECOMM.jpg"
+        "src": "img/esmalte/239-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1639,7 +1639,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B227.jpg",
+    "imagen": "img/color/B227.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1647,11 +1647,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B227.jpg"
+        "src": "img/color/B227.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/227-ECOMM.jpg"
+        "src": "img/esmalte/227-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1667,7 +1667,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B225.jpg",
+    "imagen": "img/color/B225.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1675,11 +1675,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B225.jpg"
+        "src": "img/color/B225.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/225-ECOMM.jpg"
+        "src": "img/esmalte/225-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1695,7 +1695,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B231.jpg",
+    "imagen": "img/color/B231.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1703,11 +1703,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B231.jpg"
+        "src": "img/color/B231.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/231-ECOMM.jpg"
+        "src": "img/esmalte/231-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1723,7 +1723,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B230.jpg",
+    "imagen": "img/color/B230.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1731,11 +1731,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B230.jpg"
+        "src": "img/color/B230.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/230-ECOMM.jpg"
+        "src": "img/esmalte/230-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1751,7 +1751,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B229.jpg",
+    "imagen": "img/color/B229.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1759,11 +1759,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B229.jpg"
+        "src": "img/color/B229.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/229-ECOMM.jpg"
+        "src": "img/esmalte/229-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1779,7 +1779,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B223.jpg",
+    "imagen": "img/color/B223.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1787,11 +1787,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B223.jpg"
+        "src": "img/color/B223.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/223-ECOMM.jpg"
+        "src": "img/esmalte/223-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1807,7 +1807,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Azules y Lilas",
     "descripcion": "",
-    "imagen": "img/color/B228.jpg",
+    "imagen": "img/color/B228.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1815,11 +1815,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B228.jpg"
+        "src": "img/color/B228.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/228-ECOMM.jpg"
+        "src": "img/esmalte/228-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1835,7 +1835,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Rosas",
     "descripcion": "",
-    "imagen": "img/color/B221.jpg",
+    "imagen": "img/color/B221.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1843,11 +1843,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B221.jpg"
+        "src": "img/color/B221.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/221-ECOMM.jpg"
+        "src": "img/esmalte/221-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1863,7 +1863,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Rosas",
     "descripcion": "",
-    "imagen": "img/color/B220.jpg",
+    "imagen": "img/color/B220.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1871,11 +1871,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B220.jpg"
+        "src": "img/color/B220.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/220-ECOMM.jpg"
+        "src": "img/esmalte/220-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1891,7 +1891,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Rosas",
     "descripcion": "",
-    "imagen": "img/color/B037.jpg",
+    "imagen": "img/color/B037.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1899,11 +1899,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B037.jpg"
+        "src": "img/color/B037.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/037-ECOMM.jpg"
+        "src": "img/esmalte/037-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1919,7 +1919,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Rosas",
     "descripcion": "",
-    "imagen": "img/color/B008.jpg",
+    "imagen": "img/color/B008.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1927,11 +1927,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B008.jpg"
+        "src": "img/color/B008.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/008-ECOMM.jpg"
+        "src": "img/esmalte/008-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1947,7 +1947,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Rosas",
     "descripcion": "",
-    "imagen": "img/color/B011.jpg",
+    "imagen": "img/color/B011.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1955,11 +1955,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B011.jpg"
+        "src": "img/color/B011.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/011-ECOMM.jpg"
+        "src": "img/esmalte/011-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -1975,7 +1975,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Rosas",
     "descripcion": "",
-    "imagen": "img/color/B219.jpg",
+    "imagen": "img/color/B219.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -1983,11 +1983,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B219.jpg"
+        "src": "img/color/B219.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/219-ECOMM.jpg"
+        "src": "img/esmalte/219-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -2003,7 +2003,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Rosas",
     "descripcion": "",
-    "imagen": "img/color/B137.jpg",
+    "imagen": "img/color/B137.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2011,11 +2011,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B137.jpg"
+        "src": "img/color/B137.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/137 ECOMM.jpg"
+        "src": "img/esmalte/137 ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -2031,7 +2031,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Rosas",
     "descripcion": "",
-    "imagen": "img/color/B117.jpg",
+    "imagen": "img/color/B117.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2039,11 +2039,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B117.jpg"
+        "src": "img/color/B117.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/117-ECOMM.jpg"
+        "src": "img/esmalte/117-ECOMM.webp"
       },
       {
         "tipo": "video",
@@ -2059,7 +2059,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Neones",
     "descripcion": "",
-    "imagen": "img/color/B222.jpg",
+    "imagen": "img/color/B222.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2067,11 +2067,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B222.jpg"
+        "src": "img/color/B222.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/222-ECOMM.jpg"
+        "src": "img/esmalte/222-ECOMM.webp"
       }
     ]
   },
@@ -2083,7 +2083,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Neones",
     "descripcion": "",
-    "imagen": "img/color/B253.jpg",
+    "imagen": "img/color/B253.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2091,11 +2091,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B253.jpg"
+        "src": "img/color/B253.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/253-ECOMM.jpg"
+        "src": "img/esmalte/253-ECOMM.webp"
       }
     ]
   },
@@ -2107,7 +2107,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Neones",
     "descripcion": "",
-    "imagen": "img/color/B248.jpg",
+    "imagen": "img/color/B248.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2115,11 +2115,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B248.jpg"
+        "src": "img/color/B248.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/248-ECOMM.jpg"
+        "src": "img/esmalte/248-ECOMM.webp"
       }
     ]
   },
@@ -2131,7 +2131,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Neones",
     "descripcion": "",
-    "imagen": "img/color/B284.jpg",
+    "imagen": "img/color/B284.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": true,
@@ -2139,11 +2139,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B284.jpg"
+        "src": "img/color/B284.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/284-ECOMM.jpg"
+        "src": "img/esmalte/284-ECOMM.webp"
       }
     ]
   },
@@ -2155,7 +2155,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Neones",
     "descripcion": "",
-    "imagen": "img/color/B258.jpg",
+    "imagen": "img/color/B258.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2163,11 +2163,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B258.jpg"
+        "src": "img/color/B258.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/258-ECOMM.jpg"
+        "src": "img/esmalte/258-ECOMM.webp"
       }
     ]
   },
@@ -2179,7 +2179,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Neones",
     "descripcion": "",
-    "imagen": "img/color/B249.jpg",
+    "imagen": "img/color/B249.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2187,11 +2187,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B249.jpg"
+        "src": "img/color/B249.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/249-ECOMM.jpg"
+        "src": "img/esmalte/249-ECOMM.webp"
       }
     ]
   },
@@ -2203,7 +2203,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Neones",
     "descripcion": "",
-    "imagen": "img/color/B283.jpg",
+    "imagen": "img/color/B283.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2211,11 +2211,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B283.jpg"
+        "src": "img/color/B283.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/283-ECOMM.jpg"
+        "src": "img/esmalte/283-ECOMM.webp"
       }
     ]
   },
@@ -2227,7 +2227,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Neones",
     "descripcion": "",
-    "imagen": "img/color/B282.jpg",
+    "imagen": "img/color/B282.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2235,11 +2235,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B282.jpg"
+        "src": "img/color/B282.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/282-ECOMM.jpg"
+        "src": "img/esmalte/282-ECOMM.webp"
       }
     ]
   },
@@ -2251,7 +2251,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Neones",
     "descripcion": "",
-    "imagen": "img/color/B247.jpg",
+    "imagen": "img/color/B247.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2259,11 +2259,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B247.jpg"
+        "src": "img/color/B247.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/247-ECOMM.jpg"
+        "src": "img/esmalte/247-ECOMM.webp"
       }
     ]
   },
@@ -2275,7 +2275,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Neones",
     "descripcion": "",
-    "imagen": "img/color/B246.jpg",
+    "imagen": "img/color/B246.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2283,11 +2283,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B246.jpg"
+        "src": "img/color/B246.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/246-ECOMM.jpg"
+        "src": "img/esmalte/246-ECOMM.webp"
       }
     ]
   },
@@ -2299,7 +2299,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Neones",
     "descripcion": "",
-    "imagen": "img/color/B087.jpg",
+    "imagen": "img/color/B087.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2307,11 +2307,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B087.jpg"
+        "src": "img/color/B087.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/087-ECOMM.jpg"
+        "src": "img/esmalte/087-ECOMM.webp"
       }
     ]
   },
@@ -2323,7 +2323,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Neones",
     "descripcion": "",
-    "imagen": "img/color/B039.jpg",
+    "imagen": "img/color/B039.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2331,11 +2331,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B039.jpg"
+        "src": "img/color/B039.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/039-ECOMM.jpg"
+        "src": "img/esmalte/039-ECOMM.webp"
       }
     ]
   },
@@ -2347,7 +2347,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Neones",
     "descripcion": "",
-    "imagen": "img/color/B285.jpg",
+    "imagen": "img/color/B285.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2355,11 +2355,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B285.jpg"
+        "src": "img/color/B285.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/285-ECOMM.jpg"
+        "src": "img/esmalte/285-ECOMM.webp"
       }
     ]
   },
@@ -2371,7 +2371,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Neones",
     "descripcion": "",
-    "imagen": "img/color/B131.jpg",
+    "imagen": "img/color/B131.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2379,11 +2379,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B131.jpg"
+        "src": "img/color/B131.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/131-ECOMM.jpg"
+        "src": "img/esmalte/131-ECOMM.webp"
       }
     ]
   },
@@ -2395,7 +2395,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Neones",
     "descripcion": "",
-    "imagen": "img/color/B050.jpg",
+    "imagen": "img/color/B050.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2403,11 +2403,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B050.jpg"
+        "src": "img/color/B050.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/050-ECOMM.jpg"
+        "src": "img/esmalte/050-ECOMM.webp"
       }
     ]
   },
@@ -2419,7 +2419,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Neones",
     "descripcion": "",
-    "imagen": "img/color/B257.jpg",
+    "imagen": "img/color/B257.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2427,11 +2427,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B257.jpg"
+        "src": "img/color/B257.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/257-ECOMM.jpg"
+        "src": "img/esmalte/257-ECOMM.webp"
       }
     ]
   },
@@ -2443,7 +2443,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Neones",
     "descripcion": "",
-    "imagen": "img/color/B256.jpg",
+    "imagen": "img/color/B256.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2451,11 +2451,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B256.jpg"
+        "src": "img/color/B256.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/256-ECOMM.jpg"
+        "src": "img/esmalte/256-ECOMM.webp"
       }
     ]
   },
@@ -2467,7 +2467,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes",
     "descripcion": "",
-    "imagen": "img/color/B081.jpg",
+    "imagen": "img/color/B081.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2475,11 +2475,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B081.jpg"
+        "src": "img/color/B081.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/081-ECOMM.jpg"
+        "src": "img/esmalte/081-ECOMM.webp"
       }
     ]
   },
@@ -2491,7 +2491,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes",
     "descripcion": "",
-    "imagen": "img/color/B005.jpg",
+    "imagen": "img/color/B005.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2499,11 +2499,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B005.jpg"
+        "src": "img/color/B005.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/005-ECOMM.jpg"
+        "src": "img/esmalte/005-ECOMM.webp"
       }
     ]
   },
@@ -2515,7 +2515,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes",
     "descripcion": "",
-    "imagen": "img/color/B187.jpg",
+    "imagen": "img/color/B187.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2523,11 +2523,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B187.jpg"
+        "src": "img/color/B187.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/187-ECOMM.jpg"
+        "src": "img/esmalte/187-ECOMM.webp"
       }
     ]
   },
@@ -2539,7 +2539,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes",
     "descripcion": "",
-    "imagen": "img/color/B015.jpg",
+    "imagen": "img/color/B015.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2547,11 +2547,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B015.jpg"
+        "src": "img/color/B015.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/015-ECOMM.jpg"
+        "src": "img/esmalte/015-ECOMM.webp"
       }
     ]
   },
@@ -2563,7 +2563,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes",
     "descripcion": "",
-    "imagen": "img/color/B113.jpg",
+    "imagen": "img/color/B113.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2571,11 +2571,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B113.jpg"
+        "src": "img/color/B113.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/113-ECOMM.jpg"
+        "src": "img/esmalte/113-ECOMM.webp"
       }
     ]
   },
@@ -2587,7 +2587,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes",
     "descripcion": "",
-    "imagen": "img/color/B044.jpg",
+    "imagen": "img/color/B044.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2595,11 +2595,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B044.jpg"
+        "src": "img/color/B044.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/044-ECOMM.jpg"
+        "src": "img/esmalte/044-ECOMM.webp"
       }
     ]
   },
@@ -2611,7 +2611,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes",
     "descripcion": "",
-    "imagen": "img/color/B022.jpg",
+    "imagen": "img/color/B022.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2619,11 +2619,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B022.jpg"
+        "src": "img/color/B022.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/022-ECOMM.jpg"
+        "src": "img/esmalte/022-ECOMM.webp"
       }
     ]
   },
@@ -2635,7 +2635,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes",
     "descripcion": "",
-    "imagen": "img/color/B189.jpg",
+    "imagen": "img/color/B189.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2643,11 +2643,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B189.jpg"
+        "src": "img/color/B189.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/189-ECOMM.jpg"
+        "src": "img/esmalte/189-ECOMM.webp"
       }
     ]
   },
@@ -2659,7 +2659,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes",
     "descripcion": "",
-    "imagen": "img/color/B185.jpg",
+    "imagen": "img/color/B185.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2667,11 +2667,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B185.jpg"
+        "src": "img/color/B185.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/185-ECOMM.jpg"
+        "src": "img/esmalte/185-ECOMM.webp"
       }
     ]
   },
@@ -2683,7 +2683,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes",
     "descripcion": "",
-    "imagen": "img/color/B060.jpg",
+    "imagen": "img/color/B060.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2691,11 +2691,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B060.jpg"
+        "src": "img/color/B060.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/060-ECOMM.jpg"
+        "src": "img/esmalte/060-ECOMM.webp"
       }
     ]
   },
@@ -2707,7 +2707,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes",
     "descripcion": "",
-    "imagen": "img/color/B007.jpg",
+    "imagen": "img/color/B007.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2715,11 +2715,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B007.jpg"
+        "src": "img/color/B007.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/007-ECOMM.jpg"
+        "src": "img/esmalte/007-ECOMM.webp"
       }
     ]
   },
@@ -2731,7 +2731,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes",
     "descripcion": "",
-    "imagen": "img/color/B013.jpg",
+    "imagen": "img/color/B013.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2739,11 +2739,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B013.jpg"
+        "src": "img/color/B013.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/013-ECOMM.jpg"
+        "src": "img/esmalte/013-ECOMM.webp"
       }
     ]
   },
@@ -2755,7 +2755,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes",
     "descripcion": "",
-    "imagen": "img/color/B134.jpg",
+    "imagen": "img/color/B134.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2763,11 +2763,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B134.jpg"
+        "src": "img/color/B134.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/134-ECOMM.jpg"
+        "src": "img/esmalte/134-ECOMM.webp"
       }
     ]
   },
@@ -2779,7 +2779,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes",
     "descripcion": "",
-    "imagen": "img/color/B179.jpg",
+    "imagen": "img/color/B179.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2787,11 +2787,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B179.jpg"
+        "src": "img/color/B179.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/179-ECOMM.jpg"
+        "src": "img/esmalte/179-ECOMM.webp"
       }
     ]
   },
@@ -2803,7 +2803,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes",
     "descripcion": "",
-    "imagen": "img/color/B135.jpg",
+    "imagen": "img/color/B135.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2811,11 +2811,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B135.jpg"
+        "src": "img/color/B135.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/135-ECOMM.jpg"
+        "src": "img/esmalte/135-ECOMM.webp"
       }
     ]
   },
@@ -2827,7 +2827,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes Grises",
     "descripcion": "",
-    "imagen": "img/color/B023.jpg",
+    "imagen": "img/color/B023.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2835,11 +2835,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B023.jpg"
+        "src": "img/color/B023.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/023-ECOMM.jpg"
+        "src": "img/esmalte/023-ECOMM.webp"
       }
     ]
   },
@@ -2851,7 +2851,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes Grises",
     "descripcion": "",
-    "imagen": "img/color/B017.jpg",
+    "imagen": "img/color/B017.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2859,11 +2859,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B017.jpg"
+        "src": "img/color/B017.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/017-ECOMM.jpg"
+        "src": "img/esmalte/017-ECOMM.webp"
       }
     ]
   },
@@ -2875,7 +2875,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes Grises",
     "descripcion": "",
-    "imagen": "img/color/B025.jpg",
+    "imagen": "img/color/B025.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2883,11 +2883,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B025.jpg"
+        "src": "img/color/B025.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/025-ECOMM.jpg"
+        "src": "img/esmalte/025-ECOMM.webp"
       }
     ]
   },
@@ -2899,7 +2899,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Nudes Grises",
     "descripcion": "",
-    "imagen": "img/color/B021.jpg",
+    "imagen": "img/color/B021.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2907,11 +2907,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B021.jpg"
+        "src": "img/color/B021.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/021-ECOMM.jpg"
+        "src": "img/esmalte/021-ECOMM.webp"
       }
     ]
   },
@@ -2923,7 +2923,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Básicos",
     "descripcion": "",
-    "imagen": "img/color/B047.jpg",
+    "imagen": "img/color/B047.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2931,11 +2931,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B047.jpg"
+        "src": "img/color/B047.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/047-ECOMM.jpg"
+        "src": "img/esmalte/047-ECOMM.webp"
       }
     ]
   },
@@ -2947,7 +2947,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Básicos",
     "descripcion": "",
-    "imagen": "img/color/B026.jpg",
+    "imagen": "img/color/B026.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2955,11 +2955,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B026.jpg"
+        "src": "img/color/B026.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/026-ECOMM.jpg"
+        "src": "img/esmalte/026-ECOMM.webp"
       }
     ]
   },
@@ -2971,7 +2971,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Básicos",
     "descripcion": "",
-    "imagen": "img/color/B001.jpg",
+    "imagen": "img/color/B001.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -2979,11 +2979,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B001.jpg"
+        "src": "img/color/B001.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/001-ECOMM.jpg"
+        "src": "img/esmalte/001-ECOMM.webp"
       }
     ]
   },
@@ -2995,7 +2995,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Traslúcidos con Brillo",
     "descripcion": "",
-    "imagen": "img/color/B269.jpg",
+    "imagen": "img/color/B269.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3003,11 +3003,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B269.jpg"
+        "src": "img/color/B269.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/269-ECOMM.jpg"
+        "src": "img/esmalte/269-ECOMM.webp"
       }
     ]
   },
@@ -3019,7 +3019,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Traslúcidos con Brillo",
     "descripcion": "",
-    "imagen": "img/color/B268.jpg",
+    "imagen": "img/color/B268.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3027,11 +3027,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B268.jpg"
+        "src": "img/color/B268.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/268-ECOMM.jpg"
+        "src": "img/esmalte/268-ECOMM.webp"
       }
     ]
   },
@@ -3043,7 +3043,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Traslúcidos con Brillo",
     "descripcion": "",
-    "imagen": "img/color/B270.jpg",
+    "imagen": "img/color/B270.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3051,11 +3051,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B270.jpg"
+        "src": "img/color/B270.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/270-ECOMM.jpg"
+        "src": "img/esmalte/270-ECOMM.webp"
       }
     ]
   },
@@ -3067,7 +3067,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Traslúcidos con Brillo",
     "descripcion": "",
-    "imagen": "img/color/B267.jpg",
+    "imagen": "img/color/B267.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3075,11 +3075,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B267.jpg"
+        "src": "img/color/B267.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/267-ECOMM.jpg"
+        "src": "img/esmalte/267-ECOMM.webp"
       }
     ]
   },
@@ -3091,7 +3091,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Traslúcidos",
     "descripcion": "",
-    "imagen": "img/color/B293.jpg",
+    "imagen": "img/color/B293.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3105,7 +3105,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Traslúcidos",
     "descripcion": "",
-    "imagen": "img/color/B099.jpg",
+    "imagen": "img/color/B099.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3119,7 +3119,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Traslúcidos",
     "descripcion": "",
-    "imagen": "img/color/B291.jpg",
+    "imagen": "img/color/B291.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3133,7 +3133,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Escarcha",
     "descripcion": "",
-    "imagen": "img/color/B213.jpg",
+    "imagen": "img/color/B213.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3141,11 +3141,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B213.jpg"
+        "src": "img/color/B213.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/213-ECOMM.jpg"
+        "src": "img/esmalte/213-ECOMM.webp"
       }
     ]
   },
@@ -3157,7 +3157,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Escarcha",
     "descripcion": "",
-    "imagen": "img/color/B275.jpg",
+    "imagen": "img/color/B275.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3165,11 +3165,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B275.jpg"
+        "src": "img/color/B275.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/275-ECOMM.jpg"
+        "src": "img/esmalte/275-ECOMM.webp"
       }
     ]
   },
@@ -3181,7 +3181,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Escarcha",
     "descripcion": "",
-    "imagen": "img/color/B148.jpg",
+    "imagen": "img/color/B148.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3189,11 +3189,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B148.jpg"
+        "src": "img/color/B148.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/148-ECOMM.jpg"
+        "src": "img/esmalte/148-ECOMM.webp"
       }
     ]
   },
@@ -3205,7 +3205,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Escarcha",
     "descripcion": "",
-    "imagen": "img/color/B259.jpg",
+    "imagen": "img/color/B259.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3213,11 +3213,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B259.jpg"
+        "src": "img/color/B259.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/259-ECOMM.jpg"
+        "src": "img/esmalte/259-ECOMM.webp"
       }
     ]
   },
@@ -3229,7 +3229,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Escarcha",
     "descripcion": "",
-    "imagen": "img/color/B162.jpg",
+    "imagen": "img/color/B162.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3237,11 +3237,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B162.jpg"
+        "src": "img/color/B162.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/162-ECOMM.jpg"
+        "src": "img/esmalte/162-ECOMM.webp"
       }
     ]
   },
@@ -3253,7 +3253,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Escarcha",
     "descripcion": "",
-    "imagen": "img/color/B276.jpg",
+    "imagen": "img/color/B276.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3261,11 +3261,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B276.jpg"
+        "src": "img/color/B276.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/276-ECOMM.jpg"
+        "src": "img/esmalte/276-ECOMM.webp"
       }
     ]
   },
@@ -3277,7 +3277,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Escarcha",
     "descripcion": "",
-    "imagen": "img/color/B279.jpg",
+    "imagen": "img/color/B279.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3285,11 +3285,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B279.jpg"
+        "src": "img/color/B279.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/esmalte/279-ECOMM.jpg"
+        "src": "img/esmalte/279-ECOMM.webp"
       }
     ]
   },
@@ -3301,7 +3301,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Aurora",
     "descripcion": "",
-    "imagen": "img/color/B294.jpg",
+    "imagen": "img/color/B294.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3315,7 +3315,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Aurora",
     "descripcion": "",
-    "imagen": "img/color/B297.jpg",
+    "imagen": "img/color/B297.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3329,7 +3329,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Aurora",
     "descripcion": "",
-    "imagen": "img/color/B295.jpg",
+    "imagen": "img/color/B295.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3343,7 +3343,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Aurora",
     "descripcion": "",
-    "imagen": "img/color/B298.jpg",
+    "imagen": "img/color/B298.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3357,7 +3357,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Aurora",
     "descripcion": "",
-    "imagen": "img/color/B296.jpg",
+    "imagen": "img/color/B296.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3371,7 +3371,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Aurora",
     "descripcion": "",
-    "imagen": "img/color/B299.jpg",
+    "imagen": "img/color/B299.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3385,7 +3385,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Aurora Starlit Cat Eye",
     "descripcion": "",
-    "imagen": "img/color/B323.jpg",
+    "imagen": "img/color/B323.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3399,7 +3399,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Aurora Starlit Cat Eye",
     "descripcion": "",
-    "imagen": "img/color/B326.jpg",
+    "imagen": "img/color/B326.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3413,7 +3413,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Aurora Starlit Cat Eye",
     "descripcion": "",
-    "imagen": "img/color/B324.jpg",
+    "imagen": "img/color/B324.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3427,7 +3427,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Aurora Starlit Cat Eye",
     "descripcion": "",
-    "imagen": "img/color/B327.jpg",
+    "imagen": "img/color/B327.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3441,7 +3441,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Aurora Starlit Cat Eye",
     "descripcion": "",
-    "imagen": "img/color/B325.jpg",
+    "imagen": "img/color/B325.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3455,7 +3455,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Aurora Starlit Cat Eye",
     "descripcion": "",
-    "imagen": "img/color/B328.jpg",
+    "imagen": "img/color/B328.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3469,7 +3469,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Aurora Starlit Cat Eye",
     "descripcion": "",
-    "imagen": "img/color/B333.jpg",
+    "imagen": "img/color/B333.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3483,7 +3483,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Aurora Starlit Cat Eye",
     "descripcion": "",
-    "imagen": "img/color/B334.jpg",
+    "imagen": "img/color/B334.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3497,7 +3497,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Aurora Starlit Cat Eye",
     "descripcion": "",
-    "imagen": "img/color/B329.jpg",
+    "imagen": "img/color/B329.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3511,7 +3511,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Aurora Starlit Cat Eye",
     "descripcion": "",
-    "imagen": "img/color/B330.jpg",
+    "imagen": "img/color/B330.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3525,7 +3525,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Aurora Starlit Cat Eye",
     "descripcion": "",
-    "imagen": "img/color/B331.jpg",
+    "imagen": "img/color/B331.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3539,7 +3539,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B335.jpg",
+    "imagen": "img/color/B335.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3553,7 +3553,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B338.jpg",
+    "imagen": "img/color/B338.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3567,7 +3567,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B341.jpg",
+    "imagen": "img/color/B341.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3581,7 +3581,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B336.jpg",
+    "imagen": "img/color/B336.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3595,7 +3595,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B339.jpg",
+    "imagen": "img/color/B339.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3609,7 +3609,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B342.jpg",
+    "imagen": "img/color/B342.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3623,7 +3623,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B337.jpg",
+    "imagen": "img/color/B337.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3637,7 +3637,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B340.jpg",
+    "imagen": "img/color/B340.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3651,7 +3651,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B343.jpg",
+    "imagen": "img/color/B343.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3665,7 +3665,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B344.jpg",
+    "imagen": "img/color/B344.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3679,7 +3679,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B347.jpg",
+    "imagen": "img/color/B347.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3693,7 +3693,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B350.jpg",
+    "imagen": "img/color/B350.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3707,7 +3707,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B345.jpg",
+    "imagen": "img/color/B345.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3721,7 +3721,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B348.jpg",
+    "imagen": "img/color/B348.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3735,7 +3735,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B351.jpg",
+    "imagen": "img/color/B351.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3749,7 +3749,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B346.jpg",
+    "imagen": "img/color/B346.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3763,7 +3763,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B349.jpg",
+    "imagen": "img/color/B349.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3777,7 +3777,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Golden Sheen Translucent Gel",
     "descripcion": "",
-    "imagen": "img/color/B352.jpg",
+    "imagen": "img/color/352.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3785,7 +3785,7 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B352.jpg"
+        "src": "img/color/352.webp"
       },
       {
         "tipo": "video",
@@ -3801,7 +3801,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Imanes",
     "descripcion": "Imán multifuncional 5 en 1: punta plana ancha, redonda, flor central, T y doble cuadrada.",
-    "imagen": "img/color/C821_1.png",
+    "imagen": "img/color/C821_1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3809,11 +3809,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/C821_1.png"
+        "src": "img/color/C821_1.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/C821_2.png"
+        "src": "img/color/C821_2.webp"
       }
     ]
   },
@@ -3825,7 +3825,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Imanes",
     "descripcion": "Imán 3 en 1 con potente campo magnético. Punta redonda, punta plana y efecto flor.",
-    "imagen": "img/color/CT1_1.png",
+    "imagen": "img/color/CT1_1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3833,15 +3833,15 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/CT1_1.png"
+        "src": "img/color/CT1_1.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/CT1_2.png"
+        "src": "img/color/CT1_2.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/CT1_3.png"
+        "src": "img/color/CT1_3.webp"
       }
     ]
   },
@@ -3853,7 +3853,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Imanes",
     "descripcion": "Imán rectangular para efectos tridimensionales. Hasta 10 efectos distintos.",
-    "imagen": "img/color/CT2.png",
+    "imagen": "img/color/CT2.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3867,7 +3867,7 @@
     "categoria": "Herramientas",
     "subcategoria": "Imanes",
     "descripcion": "Imán de doble cabezal multidireccional. Efectos: rayo, S, media luna, X, ola y más.",
-    "imagen": "img/color/CT3.png",
+    "imagen": "img/color/CT3.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3881,7 +3881,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "550 piezas en 10 tamaños. Tecnología japonesa.",
-    "imagen": "img/color/PRESQ-S.png",
+    "imagen": "img/color/PRESQ-S.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3895,7 +3895,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "550 piezas en 10 tamaños. Tecnología japonesa.",
-    "imagen": "img/color/PRESQ-M.png",
+    "imagen": "img/color/PRESQ-M.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3909,7 +3909,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "550 piezas en 10 tamaños. Tecnología japonesa.",
-    "imagen": "img/color/PREOV-M.png",
+    "imagen": "img/color/PREOV-M.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3923,7 +3923,7 @@
     "categoria": "Uñas Soft Gel",
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "440 piezas en 10 tamaños. Tecnología japonesa.",
-    "imagen": "img/color/PREES-L 1.JPG",
+    "imagen": "img/color/PREES-L 1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3937,7 +3937,7 @@
     "categoria": "Apliques y Stickers",
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
-    "imagen": "img/color/MNG1.jpg",
+    "imagen": "img/color/MNG1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3951,7 +3951,7 @@
     "categoria": "Apliques y Stickers",
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
-    "imagen": "img/color/MNG2.jpg",
+    "imagen": "img/color/MNG2.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3965,7 +3965,7 @@
     "categoria": "Apliques y Stickers",
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
-    "imagen": "img/color/MNG3.jpg",
+    "imagen": "img/color/MNG3.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3979,7 +3979,7 @@
     "categoria": "Apliques y Stickers",
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
-    "imagen": "img/color/MNG4.jpg",
+    "imagen": "img/color/MNG4.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -3993,7 +3993,7 @@
     "categoria": "Apliques y Stickers",
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
-    "imagen": "img/color/MNG5.jpg",
+    "imagen": "img/color/MNG5.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -4007,7 +4007,7 @@
     "categoria": "Apliques y Stickers",
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
-    "imagen": "img/color/MNG6.jpg",
+    "imagen": "img/color/MNG6.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -4021,7 +4021,7 @@
     "categoria": "Apliques y Stickers",
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
-    "imagen": "img/color/MNG7.jpg",
+    "imagen": "img/color/MNG7.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -4035,7 +4035,7 @@
     "categoria": "Apliques y Stickers",
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
-    "imagen": "img/color/MNG8.jpg",
+    "imagen": "img/color/MNG8.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -4049,7 +4049,7 @@
     "categoria": "Apliques y Stickers",
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
-    "imagen": "img/color/MNG9.jpg",
+    "imagen": "img/color/MNG9.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -4063,7 +4063,7 @@
     "categoria": "Apliques y Stickers",
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
-    "imagen": "img/color/MNG14.jpg",
+    "imagen": "img/color/MNG14.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -4077,7 +4077,7 @@
     "categoria": "Apliques y Stickers",
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
-    "imagen": "img/color/MNG17.jpg",
+    "imagen": "img/color/MNG17.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -4091,7 +4091,7 @@
     "categoria": "Apliques y Stickers",
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
-    "imagen": "img/color/MNG18.jpg",
+    "imagen": "img/color/MNG18.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -4105,7 +4105,7 @@
     "categoria": "Apliques y Stickers",
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
-    "imagen": "img/color/MNG19.jpg",
+    "imagen": "img/color/MNG19.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -4119,7 +4119,7 @@
     "categoria": "Apliques y Stickers",
     "subcategoria": "Stickers",
     "descripcion": "",
-    "imagen": "img/color/STICKER1_1.png",
+    "imagen": "img/color/STICKER1_1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -4133,7 +4133,7 @@
     "categoria": "Apliques y Stickers",
     "subcategoria": "Stickers",
     "descripcion": "",
-    "imagen": "img/color/STICKER3-2_1.png",
+    "imagen": "img/color/STICKER3-2_1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -4141,23 +4141,23 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/STICKER3-2_1.png"
+        "src": "img/color/STICKER3-2_1.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/STICKER3-2_2.png"
+        "src": "img/color/STICKER3-2_2.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/STICKER3-2_3.png"
+        "src": "img/color/STICKER3-2_3.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/STICKER3-2_4.png"
+        "src": "img/color/STICKER3-2_4.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/STICKER3-2_5.png"
+        "src": "img/color/STICKER3-2_5.webp"
       }
     ]
   },
@@ -4169,7 +4169,7 @@
     "categoria": "Kits Nailistas",
     "subcategoria": "Kits Nailistas",
     "descripcion": "<p>Lo esencial para empezar bien y trabajar mejor. Incluye:</p><ul><li>Base Coat (Ref. 54-1)</li><li>Top Coat Tempered (Ref. 54-5)</li><li>4 esmaltes en gel: 001, 294, 026 y 335</li><li>4 limas profesionales: 100/100, 100/150, 100/180 y 240/240</li><li>Lámpara UV/LED profesional (Ref. LGEL1)</li><li>Pusher profesional (Ref. PUS22)</li><li>Cortacutícula moon (Ref. MOON)</li><li>Imán (Ref. CT3)</li><li>Bolsa Maragel de regalo</li></ul>",
-    "imagen": "img/color/KITMARA1_1.png",
+    "imagen": "img/color/KITMARA1_1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -4177,23 +4177,23 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/KITMARA1_1.png"
+        "src": "img/color/KITMARA1_1.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/KITMARA1_2.png"
+        "src": "img/color/KITMARA1_2.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/KITMARA1_3.png"
+        "src": "img/color/KITMARA1_3.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/KITMARA1_4.png"
+        "src": "img/color/KITMARA1_4.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/KITMARA1_5.png"
+        "src": "img/color/KITMARA1_5.webp"
       }
     ]
   },
@@ -4205,7 +4205,7 @@
     "categoria": "Kits Nailistas",
     "subcategoria": "Kits Nailistas",
     "descripcion": "<p>El que no improvisa, el que rinde, el que eleva tu mesa. Incluye:</p><ul><li>Base Coat (Ref. 54-1)</li><li>Top Coat Tempered (Ref. 54-5)</li><li>Matte Top Coat (Ref. 54-3)</li><li>5 esmaltes en gel: 299, 294, 026, 001 y 335</li><li>4 limas profesionales: 100/100, 100/150, 100/180 y 240/240</li><li>Lámpara UV/LED profesional (Ref. LGEL1)</li><li>Imán (Ref. CT3)</li><li>Pusher profesional (Ref. PUS22)</li><li>Cortacutícula espiral (Ref. ESPIRAL)</li><li>Tijera rusa Star (Ref. STAR)</li><li>Removedor (Ref. REMO120ML)</li><li>Papel aluminio (Ref. ALU02)</li><li>Bolsa Maragel de regalo</li></ul>",
-    "imagen": "img/color/KITMARA2_1.png",
+    "imagen": "img/color/KITMARA2_1.webp",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -4213,23 +4213,23 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/KITMARA2_1.png"
+        "src": "img/color/KITMARA2_1.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/KITMARA2_2.png"
+        "src": "img/color/KITMARA2_2.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/KITMARA2_3.png"
+        "src": "img/color/KITMARA2_3.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/KITMARA2_4.png"
+        "src": "img/color/KITMARA2_4.webp"
       },
       {
         "tipo": "foto",
-        "src": "img/color/KITMARA2_5.png"
+        "src": "img/color/KITMARA2_5.webp"
       }
     ]
   }

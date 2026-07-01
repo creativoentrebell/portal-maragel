@@ -680,6 +680,15 @@
 let PRODUCTOS = [];
 let PRECIOS_MAY = {};
 
+/* ── LAZY LOADING + INFINITE SCROLL ─────────── */
+const BATCH_SIZE  = 48;   // productos por lote
+const EAGER_LIMIT = 12;   // primeras N imágenes: carga inmediata
+let renderQueue   = [];   // lista plana ordenada de productos
+let renderCursor  = 0;    // posición actual en la cola
+const renderedSet = new Set(); // ids ya insertados en el DOM
+let imgObserver   = null;
+let sentinelObs   = null;
+
 
 
 /* ── UTILS ──────────────────────────────────── */
@@ -763,6 +772,9 @@ function renderCatNav() {
 
 function filterCat(cat) {
   activeCat = cat;
+
+  // Si se filtra a una categoría específica, garantizar que esté renderizada
+  if (cat !== 'Todos') ensureCatRendered(cat);
 
   document.querySelectorAll('.cat-tab')
     .forEach(t => t.classList.toggle('active', t.dataset.cat === cat));
@@ -857,9 +869,11 @@ function handleSearch(val) {
 
     document.getElementById('search-count').textContent =
       found.length ? `${found.length} ${found.length===1?'producto':'productos'}` : '';
-    document.getElementById('search-grid').innerHTML = found.length
-      ? found.map(productCard).join('')
+    const searchGrid = document.getElementById('search-grid');
+    searchGrid.innerHTML = found.length
+      ? found.map((p, i) => productCard(p, i)).join('')
       : `<div class="search-empty">Sin resultados para "${val}"</div>`;
+    if (found.length) observeLazy(searchGrid);
   } else {
     clearSearch();
   }
@@ -876,11 +890,15 @@ function clearSearch() {
 }
 
 /* ── RENDER PRODUCT CARD ────────────────────── */
-function productCard(p) {
+function productCard(p, globalIdx = 0) {
   const c = getColor(p);
   const hasMedia = p.galeria && p.galeria.length > 1;
   const hasVideo = hasMedia && p.galeria.some(g => g.tipo==='video');
   const pDetal    = fmtPrice(p.precio);
+  const fallback  = getImgSrc(p);
+  const imgAttrs  = globalIdx < EAGER_LIMIT
+    ? `src="${p.imagen}"`
+    : `data-src="${p.imagen}"`;
   return `
   <div class="product-card${p.agotado?' is-agotado':''}"
        style="--pc:${c}"
@@ -890,9 +908,9 @@ function productCard(p) {
        data-nuevo="${!!p.nuevo}"
        onclick="openModal('${p.id}')">
     <div class="pc-img-wrap" data-ref="${p.referencia}">
-      <img src="${p.imagen}" alt="${p.nombre}"
+      <img ${imgAttrs} alt="${p.nombre}"
            onload="this.parentElement.classList.add('has-photo')"
-           onerror="this.src='${getImgSrc(p)}';this.classList.add('is-ph')">
+           onerror="this.src='${fallback}';this.classList.add('is-ph')">
       ${p.nuevo   ? '<div class="badge-nuevo">Nuevo</div>'    : ''}
       ${p.agotado ? '<div class="badge-agotado">Agotado</div>' : ''}
       ${hasMedia  ? `<div class="badge-media">${hasVideo?'▶':'⊞'} ${p.galeria.length}</div>` : ''}
@@ -921,23 +939,20 @@ function styledCatName(cat) {
 }
 
 function renderProducts() {
+  /* 1 — Skeleton: secciones + divisores + grids vacíos */
   const cats = [...new Set(PRODUCTOS.map(p => p.categoria))];
   document.getElementById('products-main').innerHTML = cats.map(cat => {
-    const cProds = PRODUCTOS.filter(p => p.categoria === cat);
+    const cProds  = PRODUCTOS.filter(p => p.categoria === cat);
     const subcats = [...new Set(cProds.map(p => p.subcategoria))];
     const showSubs = subcats.length > 1;
-
     const inner = showSubs
-      ? subcats.map(sub => {
-          const sProds = cProds.filter(p => p.subcategoria === sub);
-          return `<div class="subcat-divider" data-subcat="${sub}">
-              <span class="subcat-label">${sub}</span>
-              <div class="subcat-rule"></div>
-            </div>
-            <div class="product-grid" data-subcat="${sub}">${sProds.map(productCard).join('')}</div>`;
-        }).join('')
-      : `<div class="product-grid">${cProds.map(productCard).join('')}</div>`;
-
+      ? subcats.map(sub => `
+          <div class="subcat-divider" data-subcat="${sub}">
+            <span class="subcat-label">${sub}</span>
+            <div class="subcat-rule"></div>
+          </div>
+          <div class="product-grid" data-subcat="${sub}"></div>`).join('')
+      : `<div class="product-grid"></div>`;
     return `
     <section class="cat-section" data-cat="${cat}">
       <div class="cat-section-head">
@@ -948,6 +963,104 @@ function renderProducts() {
       ${inner}
     </section>`;
   }).join('');
+
+  /* 2 — Cola plana ordenada por categoría */
+  buildRenderQueue();
+
+  /* 3 — Primer lote + centinela */
+  renderNextBatch();
+  setupSentinel();
+}
+
+/* ── LAZY IMAGES ────────────────────────────── */
+function setupLazyImages() {
+  imgObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const img = e.target;
+      img.src = img.dataset.src;
+      img.removeAttribute('data-src');
+      imgObserver.unobserve(img);
+    });
+  }, { rootMargin: '400px 0px' });
+}
+
+function observeLazy(root) {
+  if (!imgObserver) return;
+  root.querySelectorAll('img[data-src]').forEach(img => imgObserver.observe(img));
+}
+
+/* ── INFINITE SCROLL ────────────────────────── */
+function buildRenderQueue() {
+  renderQueue  = [];
+  renderCursor = 0;
+  renderedSet.clear();
+  const cats = [...new Set(PRODUCTOS.map(p => p.categoria))];
+  cats.forEach(cat => {
+    const cProds  = PRODUCTOS.filter(p => p.categoria === cat);
+    const subcats = [...new Set(cProds.map(p => p.subcategoria))];
+    const showSubs = subcats.length > 1;
+    cProds.forEach(p => renderQueue.push({ p, cat, showSubs }));
+  });
+}
+
+function renderItem(item, queueIdx) {
+  const { p, cat, showSubs } = item;
+  const main = document.getElementById('products-main');
+  const section = [...main.querySelectorAll('.cat-section')]
+    .find(s => s.dataset.cat === cat);
+  const grid = showSubs
+    ? [...section.querySelectorAll('.product-grid')]
+        .find(g => g.dataset.subcat === p.subcategoria)
+    : section.querySelector('.product-grid');
+  const tmp = document.createElement('div');
+  tmp.innerHTML = productCard(p, queueIdx);
+  const card = tmp.firstElementChild;
+  if ((!showAgotados && p.agotado) || (soloNuevos && !p.nuevo))
+    card.style.display = 'none';
+  grid.appendChild(card);
+  renderedSet.add(p.id);
+}
+
+function renderNextBatch() {
+  let added = 0;
+  while (added < BATCH_SIZE && renderCursor < renderQueue.length) {
+    const item = renderQueue[renderCursor];
+    if (!renderedSet.has(item.p.id)) {
+      renderItem(item, renderCursor);
+      added++;
+    }
+    renderCursor++;
+  }
+  observeLazy(document.getElementById('products-main'));
+  if (renderCursor >= renderQueue.length) {
+    sentinelObs && sentinelObs.disconnect();
+    const s = document.getElementById('infinite-sentinel');
+    if (s) s.remove();
+  }
+}
+
+function setupSentinel() {
+  const sentinel = document.createElement('div');
+  sentinel.id = 'infinite-sentinel';
+  sentinel.style.cssText = 'height:1px;';
+  document.getElementById('products-main').appendChild(sentinel);
+  sentinelObs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) renderNextBatch();
+  }, { rootMargin: '200px 0px' });
+  sentinelObs.observe(sentinel);
+}
+
+/* Garantiza que una categoría específica esté completamente
+   renderizada (p.ej. cuando el usuario cambia de pestaña). */
+function ensureCatRendered(cat) {
+  let added = false;
+  renderQueue.forEach((item, idx) => {
+    if (item.cat !== cat || renderedSet.has(item.p.id)) return;
+    renderItem(item, idx);
+    added = true;
+  });
+  if (added) observeLazy(document.getElementById('products-main'));
 }
 
 /* ── MODAL & GALLERY ────────────────────────── */
@@ -1095,6 +1208,7 @@ document.getElementById('gal-next').addEventListener('click', () => goTo(gi+1));
 /* ── INIT ───────────────────────────────────── */
 function init(data) {
   PRODUCTOS = data;
+  setupLazyImages();
   renderBS();
   renderCatNav();
   renderProducts();
