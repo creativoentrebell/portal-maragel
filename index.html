@@ -277,6 +277,29 @@
     }
     .cat-tab:hover:not(.active) { color: var(--text); }
 
+    /* ── SUBCATEGORY NAV ─────────────────────────── */
+    .subcat-nav {
+      display: none;
+      overflow-x: auto; scrollbar-width: none;
+      padding: 0 28px 10px; gap: 6px;
+      border-top: 1px solid var(--border);
+    }
+    .subcat-nav.visible { display: flex; }
+    .subcat-nav::-webkit-scrollbar { display: none; }
+
+    .subcat-pill {
+      flex-shrink: 0; padding: 4px 13px;
+      font-size: 0.7rem; font-weight: 500;
+      border: 1px solid var(--border); border-radius: 20px;
+      cursor: pointer; background: var(--bg); color: var(--text-sec);
+      white-space: nowrap; transition: all 0.15s;
+      font-family: 'Instrument Sans', system-ui, sans-serif;
+    }
+    .subcat-pill:hover:not(.active) { color: var(--text); border-color: #b0b0b0; }
+    .subcat-pill.active {
+      background: var(--text); color: #fff; border-color: var(--text);
+    }
+
     /* ── PRODUCT SECTIONS ───────────────────────── */
     .products-main { padding: 0 28px 100px; }
     .cat-section { margin-top: 72px; }
@@ -567,6 +590,7 @@
     @media (max-width: 580px) {
       .banner, .search-wrap, .products-main, .bs-section, footer { padding-left: 16px; padding-right: 16px; }
       .cat-nav { padding: 0 16px; }
+      .subcat-nav { padding: 0 16px 10px; }
       .banner { flex-direction: column; gap: 20px; }
       .banner-right { flex-direction: row; align-items: center; justify-content: space-between; width: 100%; }
       .banner-catalog-year { text-align: left; }
@@ -638,6 +662,7 @@
 <!-- ── CATEGORY NAV ───────────────────────────── -->
 <div class="cat-nav-wrap">
   <nav class="cat-nav" id="cat-nav"></nav>
+  <div class="subcat-nav" id="subcat-nav"></div>
 </div>
 
 <!-- ── SEARCH RESULTS ───────────────────────────── -->
@@ -784,7 +809,46 @@ function filterCat(cat) {
   // Restaurar visibilidad de productos
   document.querySelectorAll('.subcat-divider, .product-grid').forEach(el => el.style.display = '');
 
+  renderSubcatNav(cat);
   applyVisibility();
+}
+
+/* ── SUBCATEGORY NAV ─────────────────────────── */
+function renderSubcatNav(cat) {
+  const nav = document.getElementById('subcat-nav');
+  if (cat === 'Todos') {
+    nav.classList.remove('visible');
+    nav.innerHTML = '';
+    return;
+  }
+  const subcats = [...new Set(
+    PRODUCTOS.filter(p => p.categoria === cat).map(p => p.subcategoria)
+  )];
+  if (subcats.length <= 1) {
+    nav.classList.remove('visible');
+    nav.innerHTML = '';
+    return;
+  }
+  nav.innerHTML = subcats.map(sub =>
+    `<button class="subcat-pill" data-sub="${sub.replace(/"/g,'&quot;')}" onclick="jumpToSubcat(this)">${sub}</button>`
+  ).join('');
+  nav.classList.add('visible');
+}
+
+function jumpToSubcat(btn) {
+  const sub = btn.dataset.sub;
+  // Marcar pill activo
+  document.querySelectorAll('.subcat-pill').forEach(p => p.classList.toggle('active', p === btn));
+  // Buscar el divisor en la sección activa
+  const section = document.querySelector(`.cat-section[data-cat="${activeCat}"]`);
+  if (!section) return;
+  const divider = section.querySelector(`.subcat-divider[data-subcat="${sub}"]`);
+  if (!divider) return;
+  // Calcular offset: altura de todos los elementos sticky sobre el divider
+  const headerH = document.querySelector('.search-wrap').offsetHeight
+                + document.querySelector('.cat-nav-wrap').offsetHeight;
+  const top = divider.getBoundingClientRect().top + window.scrollY - headerH - 12;
+  window.scrollTo({ top, behavior: 'smooth' });
 }
 
 /* ── MODO DETAL / MAYORISTA ─────────────────── */
