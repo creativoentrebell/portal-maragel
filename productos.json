@@ -4241,7 +4241,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Traslúcidos",
     "descripcion": "",
-    "imagen": "img/color/B004.webp",
+    "imagen": "img/color/004.png",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -4255,7 +4255,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Traslúcidos",
     "descripcion": "",
-    "imagen": "img/color/B033.webp",
+    "imagen": "img/color/033.png",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -4273,7 +4273,21 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B288.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/color/288.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/288.png"
+      }
+    ]
   },
   {
     "id": "p360",
@@ -4287,7 +4301,17 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B360.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/color/360.webp"
+      }
+    ]
   },
   {
     "id": "p300",
@@ -4371,7 +4395,17 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B305.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/color/305.webp"
+      }
+    ]
   },
   {
     "id": "p306",
@@ -4497,7 +4531,17 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B353.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/color/353.webp"
+      }
+    ]
   },
   {
     "id": "pustm6",
