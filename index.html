@@ -908,8 +908,12 @@ function applyVisibility() {
 }
 
 /* ── BÚSQUEDA ───────────────────────────────── */
+function normalizeText(s) {
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
 function handleSearch(val) {
-  searchQuery = val.trim().toLowerCase();
+  searchQuery = normalizeText(val.trim());
   document.getElementById('search-clear').style.display = searchQuery ? 'block' : 'none';
 
   const bsEl  = document.querySelector('.bs-section');
@@ -925,9 +929,9 @@ function handleSearch(val) {
       if (!showAgotados && p.agotado) return false;
       if (soloNuevos && !p.nuevo)    return false;
       return (
-        p.nombre.toLowerCase().includes(searchQuery) ||
-        p.referencia.toLowerCase().includes(searchQuery) ||
-        (p.subcategoria && p.subcategoria.toLowerCase().includes(searchQuery))
+        normalizeText(p.nombre).includes(searchQuery) ||
+        normalizeText(p.referencia).includes(searchQuery) ||
+        (p.subcategoria && normalizeText(p.subcategoria).includes(searchQuery))
       );
     });
 
