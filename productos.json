@@ -8,8 +8,8 @@
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
     "imagen": "img/color/UCOFM5.webp",
-    "agotado": false,
-    "nuevo": true,
+    "agotado": true,
+    "nuevo": false,
     "best_seller": false,
     "color_blob": ""
   },
@@ -22,8 +22,8 @@
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
     "imagen": "img/color/UCOFM6.webp",
-    "agotado": false,
-    "nuevo": true,
+    "agotado": true,
+    "nuevo": false,
     "best_seller": false,
     "color_blob": ""
   },
@@ -36,8 +36,8 @@
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
     "imagen": "img/color/UCOFM7.webp",
-    "agotado": false,
-    "nuevo": true,
+    "agotado": true,
+    "nuevo": false,
     "best_seller": false,
     "color_blob": ""
   },
@@ -50,8 +50,8 @@
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
     "imagen": "img/color/UCOFM8.webp",
-    "agotado": false,
-    "nuevo": true,
+    "agotado": true,
+    "nuevo": false,
     "best_seller": false,
     "color_blob": ""
   },
@@ -64,8 +64,8 @@
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
     "imagen": "img/color/UCOFM9.webp",
-    "agotado": false,
-    "nuevo": true,
+    "agotado": true,
+    "nuevo": false,
     "best_seller": false,
     "color_blob": ""
   },
@@ -79,7 +79,7 @@
     "descripcion": "",
     "imagen": "img/color/USTM5.webp",
     "agotado": true,
-    "nuevo": true,
+    "nuevo": false,
     "best_seller": false,
     "color_blob": ""
   },
@@ -92,8 +92,8 @@
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
     "imagen": "img/color/USTM7.webp",
-    "agotado": false,
-    "nuevo": true,
+    "agotado": true,
+    "nuevo": false,
     "best_seller": false,
     "color_blob": ""
   },
@@ -106,8 +106,8 @@
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
     "imagen": "img/color/USTM8.webp",
-    "agotado": false,
-    "nuevo": true,
+    "agotado": true,
+    "nuevo": false,
     "best_seller": false,
     "color_blob": ""
   },
@@ -120,8 +120,8 @@
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
     "imagen": "img/color/USTM9.webp",
-    "agotado": false,
-    "nuevo": true,
+    "agotado": true,
+    "nuevo": false,
     "best_seller": false,
     "color_blob": ""
   },
@@ -135,7 +135,7 @@
     "descripcion": "Lámpara recargable de alta potencia para curar Soft Gel UV.",
     "imagen": "img/color/GLAM1.webp",
     "agotado": true,
-    "nuevo": true,
+    "nuevo": false,
     "best_seller": false,
     "color_blob": ""
   },
@@ -149,7 +149,7 @@
     "descripcion": "Lámpara recargable de potencia media para Soft Gel UV.",
     "imagen": "img/color/GLAM2.webp",
     "agotado": true,
-    "nuevo": true,
+    "nuevo": false,
     "best_seller": false,
     "color_blob": ""
   },
@@ -163,7 +163,7 @@
     "descripcion": "Lámpara recargable compacta para Soft Gel UV.",
     "imagen": "img/color/GLAM3.webp",
     "agotado": true,
-    "nuevo": true,
+    "nuevo": false,
     "best_seller": false,
     "color_blob": ""
   },
@@ -177,7 +177,7 @@
     "descripcion": "Soporte para lámpara de uñas.",
     "imagen": "img/color/GLAM4.webp",
     "agotado": true,
-    "nuevo": true,
+    "nuevo": false,
     "best_seller": false,
     "color_blob": ""
   },
@@ -190,8 +190,8 @@
     "subcategoria": "Limas",
     "descripcion": "Pack de 5 limas doble cara 180/240.",
     "imagen": "img/color/LIMG16.webp",
-    "agotado": true,
-    "nuevo": true,
+    "agotado": false,
+    "nuevo": false,
     "best_seller": false,
     "color_blob": ""
   },
@@ -204,7 +204,7 @@
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "Uñas Soft Gel profesional en 10 tamaños.",
     "imagen": "img/color/PRECOF-L 1.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
@@ -228,7 +228,7 @@
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "Uñas Soft Gel profesional en 10 tamaños.",
     "imagen": "img/color/PRECOF-M 1.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
@@ -252,7 +252,7 @@
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "Uñas Soft Gel profesional en 10 tamaños.",
     "imagen": "img/color/PRECOF-S 1.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
@@ -276,7 +276,7 @@
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "Uñas Soft Gel profesional en 10 tamaños.",
     "imagen": "img/color/PREES-M 1.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
@@ -300,7 +300,7 @@
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "Uñas Soft Gel profesional en 10 tamaños.",
     "imagen": "img/color/PREGAL-S 1.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
@@ -324,7 +324,7 @@
     "subcategoria": "Cortauñas y Guillotinas",
     "descripcion": "Cortauñas curvo de acero de alta calidad. Acabado negro brillante. Dos unidades: grande y pequeño.",
     "imagen": "img/color/ASTER grande.webp",
-    "agotado": false,
+    "agotado": true,
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
@@ -348,7 +348,7 @@
     "subcategoria": "Cortauñas y Guillotinas",
     "descripcion": "Guillotina para uñas acrílicas, gel, tips y naturales. Acero de alta calidad con filo de precisión.",
     "imagen": "img/color/CALISTO.webp",
-    "agotado": false,
+    "agotado": true,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -386,7 +386,7 @@
     "subcategoria": "Cortacutículas y Alicates",
     "descripcion": "Diseño en punta, mango ergonómico estructura cerrada. Corte fino y preciso.",
     "imagen": "img/color/MOON 1.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -400,7 +400,7 @@
     "subcategoria": "Cortacutículas y Alicates",
     "descripcion": "Alicate en forma de tijera para corte de precisión en cutícula. Acero inoxidable.",
     "imagen": "img/color/STAR 1.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -414,7 +414,7 @@
     "subcategoria": "Lámparas UV",
     "descripcion": "Lámpara UV LED 9W. Sistema touch 60s y 120s. 17CM x 10CM.",
     "imagen": "img/color/SG803.png",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
@@ -442,7 +442,7 @@
     "subcategoria": "Lámparas UV",
     "descripcion": "Base metálica efecto espejo. Temporizador 10/30/60/99 seg. Sensor de movimiento. Apta para pedicura.",
     "imagen": "img/color/LGEL1_1.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
@@ -580,7 +580,7 @@
     "subcategoria": "Limas",
     "descripcion": "Lima profesional grano 100/100. Pack x12 unidades. Entre 3.000 y 5.000 pasadas. Materiales alemanes.",
     "imagen": "img/color/LIMG1.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -594,7 +594,7 @@
     "subcategoria": "Limas",
     "descripcion": "Lima profesional grano 100/150. Pack x12 unidades. Entre 3.000 y 5.000 pasadas. Materiales alemanes.",
     "imagen": "img/color/LIMG2.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -608,7 +608,7 @@
     "subcategoria": "Limas",
     "descripcion": "Lima profesional grano 100/180. Pack x12 unidades. Entre 3.000 y 5.000 pasadas. Materiales alemanes.",
     "imagen": "img/color/LIMG3.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -622,35 +622,35 @@
     "subcategoria": "Limas",
     "descripcion": "Lima profesional grano 240/240. Pack x12 unidades. Entre 3.000 y 5.000 pasadas. Materiales alemanes.",
     "imagen": "img/color/LIMG4.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
   },
   {
-    "id": "plimsele",
+    "id": "plimg20",
     "nombre": "Lima Selene x4 und",
-    "referencia": "LIMSELE",
+    "referencia": "LIMG20",
     "precio": 16000,
     "categoria": "Herramientas",
     "subcategoria": "Limas",
     "descripcion": "Lima Maragel Selene. Pack x4 unidades.",
     "imagen": "img/color/LIMG15.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
   },
   {
-    "id": "plimlunar",
+    "id": "plimg15",
     "nombre": "Lima Lunar x5 und",
-    "referencia": "LIMLUNAR",
+    "referencia": "LIMG15",
     "precio": 15000,
     "categoria": "Herramientas",
     "subcategoria": "Limas",
     "descripcion": "Lima Maragel Lunar. Pack x5 unidades.",
     "imagen": "img/color/LIMG20.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -3344,7 +3344,7 @@
     "subcategoria": "Aurora",
     "descripcion": "",
     "imagen": "img/color/B298.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -3802,7 +3802,7 @@
     "subcategoria": "Imanes",
     "descripcion": "Imán multifuncional 5 en 1: punta plana ancha, redonda, flor central, T y doble cuadrada.",
     "imagen": "img/color/C821_1.webp",
-    "agotado": false,
+    "agotado": true,
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
@@ -3826,7 +3826,7 @@
     "subcategoria": "Imanes",
     "descripcion": "Imán 3 en 1 con potente campo magnético. Punta redonda, punta plana y efecto flor.",
     "imagen": "img/color/CT1_1.webp",
-    "agotado": false,
+    "agotado": true,
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
@@ -3854,7 +3854,7 @@
     "subcategoria": "Imanes",
     "descripcion": "Imán rectangular para efectos tridimensionales. Hasta 10 efectos distintos.",
     "imagen": "img/color/CT2.webp",
-    "agotado": false,
+    "agotado": true,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -3868,7 +3868,7 @@
     "subcategoria": "Imanes",
     "descripcion": "Imán de doble cabezal multidireccional. Efectos: rayo, S, media luna, X, ola y más.",
     "imagen": "img/color/CT3.webp",
-    "agotado": false,
+    "agotado": true,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -3882,7 +3882,7 @@
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "550 piezas en 10 tamaños. Tecnología japonesa.",
     "imagen": "img/color/PRESQ-S.png",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -3896,7 +3896,7 @@
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "550 piezas en 10 tamaños. Tecnología japonesa.",
     "imagen": "img/color/PRESQ-M.png",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -3910,7 +3910,7 @@
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "550 piezas en 10 tamaños. Tecnología japonesa.",
     "imagen": "img/color/PREOV-M.png",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -3924,7 +3924,7 @@
     "subcategoria": "Soft Gel por Forma",
     "descripcion": "440 piezas en 10 tamaños. Tecnología japonesa.",
     "imagen": "img/color/PREES-L 1.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -3938,7 +3938,7 @@
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
     "imagen": "img/color/MNG1.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -3952,7 +3952,7 @@
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
     "imagen": "img/color/MNG2.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -3966,7 +3966,7 @@
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
     "imagen": "img/color/MNG3.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -3980,7 +3980,7 @@
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
     "imagen": "img/color/MNG4.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -3994,7 +3994,7 @@
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
     "imagen": "img/color/MNG5.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -4008,7 +4008,7 @@
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
     "imagen": "img/color/MNG6.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -4022,7 +4022,7 @@
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
     "imagen": "img/color/MNG7.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -4036,7 +4036,7 @@
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
     "imagen": "img/color/MNG8.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -4050,7 +4050,7 @@
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
     "imagen": "img/color/MNG9.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -4064,7 +4064,7 @@
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
     "imagen": "img/color/MNG14.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -4078,7 +4078,7 @@
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
     "imagen": "img/color/MNG17.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -4092,7 +4092,7 @@
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
     "imagen": "img/color/MNG18.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -4106,60 +4106,10 @@
     "subcategoria": "Apliques para Uñas",
     "descripcion": "",
     "imagen": "img/color/MNG19.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
-  },
-  {
-    "id": "psticker1",
-    "nombre": "Sticker Nail Art 1",
-    "referencia": "STICKER1",
-    "precio": 2000,
-    "categoria": "Apliques y Stickers",
-    "subcategoria": "Stickers",
-    "descripcion": "",
-    "imagen": "img/color/STICKER1_1.webp",
-    "agotado": true,
-    "nuevo": false,
-    "best_seller": false,
-    "color_blob": ""
-  },
-  {
-    "id": "psticker32",
-    "nombre": "Sticker Nail Art 3-2",
-    "referencia": "STICKER3-2",
-    "precio": 10000,
-    "categoria": "Apliques y Stickers",
-    "subcategoria": "Stickers",
-    "descripcion": "",
-    "imagen": "img/color/STICKER3-2_1.webp",
-    "agotado": true,
-    "nuevo": false,
-    "best_seller": false,
-    "color_blob": "",
-    "galeria": [
-      {
-        "tipo": "foto",
-        "src": "img/color/STICKER3-2_1.webp"
-      },
-      {
-        "tipo": "foto",
-        "src": "img/color/STICKER3-2_2.webp"
-      },
-      {
-        "tipo": "foto",
-        "src": "img/color/STICKER3-2_3.webp"
-      },
-      {
-        "tipo": "foto",
-        "src": "img/color/STICKER3-2_4.webp"
-      },
-      {
-        "tipo": "foto",
-        "src": "img/color/STICKER3-2_5.webp"
-      }
-    ]
   },
   {
     "id": "pkitmara1",
@@ -4552,7 +4502,7 @@
     "subcategoria": "Soft Gel Individual",
     "descripcion": "",
     "imagen": "img/color/USTM6.webp",
-    "agotado": false,
+    "agotado": true,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
