@@ -4361,11 +4361,21 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Cat Eye",
     "descripcion": "",
-    "imagen": "",
+    "imagen": "img/color/B300.jpg",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B300.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/300.jpg"
+      }
+    ]
   },
   {
     "id": "p301",
@@ -4375,11 +4385,21 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Cat Eye",
     "descripcion": "",
-    "imagen": "",
+    "imagen": "img/color/B301.jpg",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B301.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/301.jpg"
+      }
+    ]
   },
   {
     "id": "p302",
@@ -4389,11 +4409,21 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Cat Eye",
     "descripcion": "",
-    "imagen": "",
+    "imagen": "img/color/B302.jpg",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B302.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/302.jpg"
+      }
+    ]
   },
   {
     "id": "p303",
@@ -4403,11 +4433,21 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Cat Eye",
     "descripcion": "",
-    "imagen": "",
+    "imagen": "img/color/B303.jpg",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B303.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/303.jpg"
+      }
+    ]
   },
   {
     "id": "p304",
@@ -4417,11 +4457,21 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Cat Eye",
     "descripcion": "",
-    "imagen": "",
+    "imagen": "img/color/B304.jpg",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B304.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/304.jpg"
+      }
+    ]
   },
   {
     "id": "p305",
@@ -4431,7 +4481,7 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Cat Eye",
     "descripcion": "",
-    "imagen": "img/color/B305.webp",
+    "imagen": "img/color/B305.jpg",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
@@ -4439,11 +4489,11 @@
     "galeria": [
       {
         "tipo": "foto",
-        "src": "img/color/B305.webp"
+        "src": "img/color/B305.jpg"
       },
       {
         "tipo": "foto",
-        "src": "img/color/305.webp"
+        "src": "img/esmalte/305.jpg"
       }
     ]
   },
@@ -4455,11 +4505,21 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Cat Eye",
     "descripcion": "",
-    "imagen": "",
+    "imagen": "img/color/B306.jpg",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B306.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/306.jpg"
+      }
+    ]
   },
   {
     "id": "p307",
@@ -4469,11 +4529,21 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Cat Eye",
     "descripcion": "",
-    "imagen": "",
+    "imagen": "img/color/B307.jpg",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B307.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/307.jpg"
+      }
+    ]
   },
   {
     "id": "p308",
@@ -4483,11 +4553,21 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Cat Eye",
     "descripcion": "",
-    "imagen": "",
+    "imagen": "img/color/B308.jpg",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B308.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/308.jpg"
+      }
+    ]
   },
   {
     "id": "p309",
@@ -4497,11 +4577,21 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Cat Eye",
     "descripcion": "",
-    "imagen": "",
+    "imagen": "img/color/B309.jpg",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B309.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/309.jpg"
+      }
+    ]
   },
   {
     "id": "p316",
@@ -4525,11 +4615,21 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Cat Eye",
     "descripcion": "",
-    "imagen": "",
+    "imagen": "img/color/B310.jpg",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B310.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/310.jpg"
+      }
+    ]
   },
   {
     "id": "p312",
@@ -4539,11 +4639,21 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Cat Eye",
     "descripcion": "",
-    "imagen": "",
+    "imagen": "img/color/B312.jpg",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B312.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/312.jpg"
+      }
+    ]
   },
   {
     "id": "p313",
@@ -4553,11 +4663,21 @@
     "categoria": "Esmaltes en Gel",
     "subcategoria": "Cat Eye",
     "descripcion": "",
-    "imagen": "",
+    "imagen": "img/color/B313.jpg",
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B313.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/313.jpg"
+      }
+    ]
   },
   {
     "id": "p353",
