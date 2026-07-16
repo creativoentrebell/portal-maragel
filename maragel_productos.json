@@ -324,7 +324,7 @@
     "subcategoria": "Cortauñas y Guillotinas",
     "descripcion": "Cortauñas curvo de acero de alta calidad. Acabado negro brillante. Dos unidades: grande y pequeño.",
     "imagen": "img/color/ASTER grande.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
@@ -348,7 +348,7 @@
     "subcategoria": "Cortauñas y Guillotinas",
     "descripcion": "Guillotina para uñas acrílicas, gel, tips y naturales. Acero de alta calidad con filo de precisión.",
     "imagen": "img/color/CALISTO.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -586,6 +586,20 @@
     "color_blob": ""
   },
   {
+    "id": "plimg1u",
+    "nombre": "Lima Kepler 100/100 x1 und",
+    "referencia": "LIMG1-U",
+    "precio": 4000,
+    "categoria": "Herramientas",
+    "subcategoria": "Limas",
+    "descripcion": "",
+    "imagen": "img/color/LIMG1.webp",
+    "agotado": false,
+    "nuevo": true,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
     "id": "plimg2",
     "nombre": "Lima Kepler 100/150 x12 und",
     "referencia": "LIMG2",
@@ -596,6 +610,20 @@
     "imagen": "img/color/LIMG2.webp",
     "agotado": false,
     "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "plimg2u",
+    "nombre": "Lima Kepler 100/150 x1 und",
+    "referencia": "LIMG2-U",
+    "precio": 4000,
+    "categoria": "Herramientas",
+    "subcategoria": "Limas",
+    "descripcion": "",
+    "imagen": "img/color/LIMG2.webp",
+    "agotado": false,
+    "nuevo": true,
     "best_seller": false,
     "color_blob": ""
   },
@@ -614,6 +642,20 @@
     "color_blob": ""
   },
   {
+    "id": "plimg3u",
+    "nombre": "Lima Kepler 100/180 x1 und",
+    "referencia": "LIMG3-U",
+    "precio": 4000,
+    "categoria": "Herramientas",
+    "subcategoria": "Limas",
+    "descripcion": "",
+    "imagen": "img/color/LIMG3.webp",
+    "agotado": false,
+    "nuevo": true,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
     "id": "plimg4",
     "nombre": "Lima Kepler 240/240 x12 und",
     "referencia": "LIMG4",
@@ -624,6 +666,20 @@
     "imagen": "img/color/LIMG4.webp",
     "agotado": false,
     "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "plimg4u",
+    "nombre": "Lima Kepler 240/240 x1 und",
+    "referencia": "LIMG4-U",
+    "precio": 4000,
+    "categoria": "Herramientas",
+    "subcategoria": "Limas",
+    "descripcion": "",
+    "imagen": "img/color/LIMG4.webp",
+    "agotado": false,
+    "nuevo": true,
     "best_seller": false,
     "color_blob": ""
   },
@@ -642,6 +698,20 @@
     "color_blob": ""
   },
   {
+    "id": "plimg20u",
+    "nombre": "Lima Selene x1 und",
+    "referencia": "LIMG20-U",
+    "precio": 4000,
+    "categoria": "Herramientas",
+    "subcategoria": "Limas",
+    "descripcion": "",
+    "imagen": "img/color/LIMG20.webp",
+    "agotado": false,
+    "nuevo": true,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
     "id": "plimg15",
     "nombre": "Lima Lunar x5 und",
     "referencia": "LIMG15",
@@ -652,6 +722,48 @@
     "imagen": "img/color/LIMG15.webp",
     "agotado": false,
     "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "plimg15u",
+    "nombre": "Lima Lunar x1 und",
+    "referencia": "LIMG15-U",
+    "precio": 3000,
+    "categoria": "Herramientas",
+    "subcategoria": "Limas",
+    "descripcion": "",
+    "imagen": "img/color/LIMG15.webp",
+    "agotado": false,
+    "nuevo": true,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "p018b",
+    "nombre": "Barra Esmeril x20 und",
+    "referencia": "018B",
+    "precio": 15000,
+    "categoria": "Herramientas",
+    "subcategoria": "Limas",
+    "descripcion": "",
+    "imagen": "img/color/018B.png",
+    "agotado": false,
+    "nuevo": true,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "pcartaefectos",
+    "nombre": "Carta de Efectos Maragel",
+    "referencia": "CARTAEFECTOS",
+    "precio": 399000,
+    "categoria": "Herramientas",
+    "subcategoria": "Accesorios",
+    "descripcion": "",
+    "imagen": "",
+    "agotado": false,
+    "nuevo": true,
     "best_seller": false,
     "color_blob": ""
   },
@@ -4142,6 +4254,20 @@
     "imagen": "img/color/MNG9.webp",
     "agotado": false,
     "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "pmng11",
+    "nombre": "Aplique para Uñas MNG11",
+    "referencia": "MNG11",
+    "precio": 9000,
+    "categoria": "Apliques y Stickers",
+    "subcategoria": "Apliques para Uñas",
+    "descripcion": "",
+    "imagen": "img/color/MNG11.jpg",
+    "agotado": false,
+    "nuevo": true,
     "best_seller": false,
     "color_blob": ""
   },

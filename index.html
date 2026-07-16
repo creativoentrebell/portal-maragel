@@ -699,8 +699,8 @@
 
 <script>
 /* ──────────────────────────────────────────────────────────────
-   PRODUCTOS — cargado desde productos.json vía fetch()
-   PRECIOS_MAY — cargado desde precios-mayorista.json vía fetch()
+   PRODUCTOS — cargado desde maragel_productos.json vía fetch()
+   PRECIOS_MAY — cargado desde maragel_precios-mayorista.json vía fetch()
 ──────────────────────────────────────────────────────────────── */
 let PRODUCTOS = [];
 let PRECIOS_MAY = {};
@@ -1283,15 +1283,15 @@ function init(data) {
 }
 
 Promise.all([
-  fetch('productos.json').then(r => r.json()),
-  fetch('precios-mayorista.json').then(r => r.json())
+  fetch('maragel_productos.json').then(r => r.json()),
+  fetch('maragel_precios-mayorista.json').then(r => r.json())
 ]).then(([productos, precios]) => {
   PRECIOS_MAY = precios;
   init(productos);
 }).catch(err => {
   console.error('Error cargando datos:', err);
   document.getElementById('products-main').innerHTML =
-    '<p style="padding:40px;text-align:center;color:#888">No se pudieron cargar los productos. Verifica que productos.json y precios-mayorista.json estén en la misma carpeta.</p>';
+    '<p style="padding:40px;text-align:center;color:#888">No se pudieron cargar los productos. Verifica que maragel_productos.json y maragel_precios-mayorista.json estén en la misma carpeta.</p>';
 });
 /* ── CONTRASEÑAS ────────────────────────────── */
 const PW_DETAL     = '121212';
