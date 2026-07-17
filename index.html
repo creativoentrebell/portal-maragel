@@ -583,6 +583,196 @@
       padding: 5px 12px; border-radius: 4px;
     }
 
+    /* ── CARRITO: BOTÓN HEADER ──────────────────── */
+    .cart-btn {
+      position: relative; display: flex; align-items: center; justify-content: center;
+      width: 32px; height: 30px; border: 1px solid var(--border); border-radius: 8px;
+      background: var(--bg); color: var(--text-sec); cursor: pointer;
+      transition: all 0.15s; flex-shrink: 0; padding: 0;
+    }
+    .cart-btn:hover { border-color: var(--text-sec); color: var(--text); }
+    .cart-count {
+      position: absolute; top: -6px; right: -6px;
+      min-width: 15px; height: 15px; padding: 0 4px;
+      border-radius: 8px; font-size: 9px; font-weight: 600;
+      display: none; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #E088BE, #9878D8, #78A0D8, #78D4C0, #D4CC78, #E088BE);
+      background-size: 300% 300%; animation: shimmer 3.5s ease infinite;
+      color: #fff; line-height: 1;
+    }
+    .cart-count.visible { display: flex; }
+
+    /* ── CARRITO: ZONA DE PEDIDO EN MODAL ───────── */
+    .order-zone {
+      margin-top: 18px; padding-top: 18px;
+      border-top: 1px solid var(--border);
+    }
+    .order-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .order-label {
+      font-size: 9.5px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--text-sec);
+    }
+    .qty-selector {
+      display: flex; align-items: center; border: 1px solid var(--border);
+      border-radius: 8px; overflow: hidden; background: var(--bg);
+    }
+    .qty-btn {
+      width: 34px; height: 34px; border: none; background: var(--card-bg);
+      color: var(--text); font-size: 1.05rem; cursor: pointer; line-height: 1;
+      font-family: 'Instrument Sans', system-ui, sans-serif; transition: background 0.15s;
+    }
+    .qty-btn:hover { background: var(--border); }
+    .qty-btn:disabled { color: #C0C0C0; cursor: default; background: var(--card-bg); }
+    .qty-value {
+      width: 38px; text-align: center; font-size: 0.9rem; font-weight: 600;
+      color: var(--text); user-select: none;
+    }
+    .order-note {
+      width: 100%; padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px;
+      font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 0.82rem;
+      color: var(--text); background: var(--card-bg); outline: none;
+      transition: border-color 0.15s; margin-bottom: 12px;
+    }
+    .order-note:focus { border-color: var(--text-sec); }
+    .order-note::placeholder { color: #A8A8A6; }
+    .btn-add-cart {
+      width: 100%; padding: 12px; border: none; border-radius: 8px;
+      background: var(--text); color: #fff; cursor: pointer;
+      font-family: 'Instrument Sans', system-ui, sans-serif;
+      font-size: 0.85rem; font-weight: 500; letter-spacing: 0.3px;
+      transition: opacity 0.15s;
+    }
+    .btn-add-cart:hover { opacity: 0.88; }
+    .btn-add-cart.added {
+      background: linear-gradient(135deg, #E088BE, #9878D8, #78A0D8, #78D4C0, #D4CC78, #E088BE);
+      background-size: 300% 300%; animation: shimmer 3.5s ease infinite;
+    }
+    .order-price-note { font-size: 0.75rem; color: var(--text-sec); font-style: italic; margin-bottom: 12px; }
+
+    /* ── CARRITO: DRAWER ────────────────────────── */
+    .cart-overlay {
+      position: fixed; inset: 0; background: rgba(30,30,30,0.4); z-index: 200;
+      opacity: 0; pointer-events: none; transition: opacity 0.25s;
+    }
+    .cart-overlay.open { opacity: 1; pointer-events: all; }
+    .cart-drawer {
+      position: fixed; top: 0; right: 0; bottom: 0; z-index: 201;
+      width: min(400px, 100vw); background: var(--bg);
+      display: flex; flex-direction: column;
+      transform: translateX(100%); transition: transform 0.28s cubic-bezier(0.22,1,0.36,1);
+      box-shadow: -12px 0 40px rgba(0,0,0,0.12);
+    }
+    .cart-overlay.open .cart-drawer { transform: translateX(0); }
+    .cart-head {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 22px 16px; border-bottom: 1px solid var(--border);
+    }
+    .cart-title { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.2px; }
+    .cart-title small { font-size: 0.72rem; font-weight: 400; color: var(--text-sec); margin-left: 6px; }
+    .cart-close {
+      background: none; border: none; font-size: 22px; color: var(--text-sec);
+      cursor: pointer; line-height: 1; padding: 4px 6px;
+    }
+    .cart-items { flex: 1; overflow-y: auto; padding: 6px 22px; }
+    .cart-empty {
+      padding: 60px 20px; text-align: center; color: var(--text-sec); font-size: 0.85rem;
+    }
+    .cart-item {
+      display: flex; gap: 12px; padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .cart-item:last-child { border-bottom: none; }
+    .ci-img {
+      width: 54px; height: 54px; border-radius: 8px; background: var(--card-bg);
+      flex-shrink: 0; overflow: hidden;
+    }
+    .ci-img img { width: 100%; height: 100%; object-fit: cover; }
+    .ci-body { flex: 1; min-width: 0; }
+    .ci-name { font-size: 0.84rem; font-weight: 600; line-height: 1.3; }
+    .ci-ref  { font-size: 0.7rem; color: var(--text-sec); margin-top: 2px; }
+    .ci-nota { font-size: 0.72rem; color: var(--text-sec); font-style: italic; margin-top: 3px;
+               overflow-wrap: anywhere; }
+    .ci-controls { display: flex; align-items: center; justify-content: space-between; margin-top: 9px; }
+    .ci-qty { display: flex; align-items: center; border: 1px solid var(--border); border-radius: 7px; overflow: hidden; }
+    .ci-qty button {
+      width: 26px; height: 26px; border: none; background: var(--card-bg);
+      color: var(--text); font-size: 0.9rem; cursor: pointer; line-height: 1;
+      font-family: 'Instrument Sans', system-ui, sans-serif;
+    }
+    .ci-qty span { width: 30px; text-align: center; font-size: 0.8rem; font-weight: 600; }
+    .ci-prices { text-align: right; }
+    .ci-unit { font-size: 0.7rem; color: var(--text-sec); }
+    .ci-sub  { font-size: 0.84rem; font-weight: 600; }
+    .ci-del {
+      background: none; border: none; color: var(--text-sec); cursor: pointer;
+      font-size: 0.7rem; text-decoration: underline; padding: 0; margin-top: 6px;
+      font-family: 'Instrument Sans', system-ui, sans-serif;
+    }
+    .ci-del:hover { color: #b0392b; }
+    .cart-foot {
+      border-top: 1px solid var(--border); padding: 16px 22px 20px;
+      background: var(--bg);
+    }
+    .cart-total-row {
+      display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;
+    }
+    .cart-total-label { font-size: 0.78rem; color: var(--text-sec); }
+    .cart-total-value { font-size: 1.15rem; font-weight: 600; }
+    .cart-total-note { font-size: 0.72rem; color: var(--text-sec); font-style: italic; margin-bottom: 10px; }
+    .btn-send-wa {
+      width: 100%; padding: 13px; border: none; border-radius: 8px;
+      background: var(--text); color: #fff; cursor: pointer;
+      font-family: 'Instrument Sans', system-ui, sans-serif;
+      font-size: 0.86rem; font-weight: 500; letter-spacing: 0.3px;
+      transition: opacity 0.15s; margin-top: 6px;
+    }
+    .btn-send-wa:hover { opacity: 0.88; }
+    .btn-clear-cart {
+      width: 100%; padding: 9px; border: none; background: none;
+      color: var(--text-sec); cursor: pointer; font-size: 0.74rem;
+      text-decoration: underline; margin-top: 8px;
+      font-family: 'Instrument Sans', system-ui, sans-serif;
+    }
+    .btn-clear-cart:hover { color: var(--text); }
+
+    /* ── CARRITO: MENÚ DESTINOS WHATSAPP ────────── */
+    .wa-overlay {
+      position: fixed; inset: 0; background: rgba(30,30,30,0.45); z-index: 210;
+      display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .wa-overlay.open { display: flex; }
+    .wa-menu {
+      background: var(--bg); border-radius: 14px; width: min(400px, 100%);
+      max-height: 78vh; display: flex; flex-direction: column;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.18); overflow: hidden;
+    }
+    .wa-menu-head {
+      padding: 20px 22px 14px; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .wa-menu-title { font-size: 0.95rem; font-weight: 600; }
+    .wa-menu-list { overflow-y: auto; padding: 8px 14px 16px; }
+    .wa-group-label {
+      font-size: 9.5px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--text-sec); padding: 14px 8px 6px;
+    }
+    .wa-dest {
+      display: flex; align-items: center; gap: 12px; width: 100%;
+      padding: 12px 10px; border: none; background: none; border-radius: 10px;
+      cursor: pointer; text-align: left; transition: background 0.15s;
+      font-family: 'Instrument Sans', system-ui, sans-serif;
+    }
+    .wa-dest:hover { background: var(--card-bg); }
+    .wa-dest-icon {
+      width: 34px; height: 34px; border-radius: 50%; background: var(--card-bg);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      color: var(--text-sec);
+    }
+    .wa-dest-info { flex: 1; min-width: 0; }
+    .wa-dest-label { font-size: 0.83rem; font-weight: 500; color: var(--text); line-height: 1.3; }
+    .wa-dest-sub   { font-size: 0.71rem; color: var(--text-sec); margin-top: 1px; }
+
     /* ── RESPONSIVE ─────────────────────────────── */
     @media (max-width: 960px) {
       .bs-grid      { grid-template-columns: repeat(2, 1fr); }
@@ -635,6 +825,10 @@
         <span class="toggle-label-text">Agotados</span>
         <div class="toggle-switch on" id="toggle-agotados"></div>
       </div>
+      <button class="cart-btn" id="cart-btn" onclick="openCart()" aria-label="Ver pedido">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 7V6a6 6 0 1 1 12 0v1h2.2a1 1 0 0 1 1 .93l1 13.5a1 1 0 0 1-1 1.07H2.8a1 1 0 0 1-1-1.07l1-13.5a1 1 0 0 1 1-.93H6Zm2 0h8V6a4 4 0 0 0-8 0v1Z" fill="currentColor"/></svg>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
     </div>
   </div>
   <div class="search-inner">
@@ -695,6 +889,29 @@
     </div>
     <div class="gal-thumbs" id="gal-thumbs"></div>
     <div class="modal-info" id="modal-info"></div>
+  </div>
+</div>
+
+<!-- ── CARRITO: DRAWER ────────────────────────── -->
+<div class="cart-overlay" id="cart-overlay">
+  <div class="cart-drawer" onclick="event.stopPropagation()">
+    <div class="cart-head">
+      <div class="cart-title">Tu pedido<small id="cart-head-count"></small></div>
+      <button class="cart-close" onclick="closeCart()" aria-label="Cerrar">×</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-foot" id="cart-foot"></div>
+  </div>
+</div>
+
+<!-- ── CARRITO: MENÚ DESTINOS WHATSAPP ────────── -->
+<div class="wa-overlay" id="wa-overlay">
+  <div class="wa-menu" onclick="event.stopPropagation()">
+    <div class="wa-menu-head">
+      <div class="wa-menu-title">¿A quién enviamos tu pedido?</div>
+      <button class="cart-close" onclick="closeWaMenu()" aria-label="Cerrar">×</button>
+    </div>
+    <div class="wa-menu-list" id="wa-menu-list"></div>
   </div>
 </div>
 
@@ -880,6 +1097,8 @@ function setMode(mode) {
   });
   // Actualizar modal si está abierto
   if (gProd) buildModalInfo();
+  // Recalcular precios del carrito según el nuevo modo (si el drawer está abierto)
+  if (document.getElementById('cart-overlay').classList.contains('open')) renderCart();
 }
 
 /* ── FILTROS RÁPIDOS ────────────────────────── */
@@ -1146,6 +1365,9 @@ function openModal(id) {
   // Set modal accent color
   document.getElementById('modal-accent').style.background = getColor(gProd);
 
+  // Reset de la zona de pedido (evita heredar cantidad/nota de otro producto)
+  document.getElementById('modal-info').innerHTML = '';
+
   buildGallery();
   buildModalInfo();
   document.getElementById('modal-overlay').classList.add('open');
@@ -1236,6 +1458,13 @@ function buildModalInfo() {
   const pDetal   = fmtPrice(p.precio);
   const pMay     = (()=>{ const m=PRECIOS_MAY[p.referencia]; return (!m||m==='pendiente')?'Consultar':fmtPrice(m); })();
   const showPrice = currentMode !== 'catalogo';
+
+  // Preservar cantidad y nota si el modal se re-renderiza (p. ej. cambio de modo)
+  const prevQtyEl  = document.getElementById('order-qty');
+  const prevNoteEl = document.getElementById('order-note');
+  const keepQty  = prevQtyEl  ? parseInt(prevQtyEl.textContent, 10) || 1 : 1;
+  const keepNote = prevNoteEl ? prevNoteEl.value : '';
+
   document.getElementById('modal-info').innerHTML = `
     <div class="modal-info-top">
       <div class="modal-cat">${subLabel}</div>
@@ -1247,8 +1476,315 @@ function buildModalInfo() {
     </div>` : ''}
     ${p.descripcion ? `<div class="modal-desc">${p.descripcion}</div>` : ''}
     ${p.agotado ? '<div class="modal-badge-sold">Agotado temporalmente</div>' : ''}
-    ${p.nuevo ? '<div class="modal-badge-sold" style="background:#383838;color:#fff;border-color:#383838">Nuevo</div>' : ''}`;
+    ${p.nuevo ? '<div class="modal-badge-sold" style="background:#383838;color:#fff;border-color:#383838">Nuevo</div>' : ''}
+    ${p.agotado ? '' : `
+    <div class="order-zone">
+      <div class="order-row">
+        <span class="order-label">Cantidad</span>
+        <div class="qty-selector">
+          <button class="qty-btn" id="order-qty-minus" onclick="orderQtyStep(-1)">−</button>
+          <span class="qty-value" id="order-qty">${keepQty}</span>
+          <button class="qty-btn" onclick="orderQtyStep(1)">+</button>
+        </div>
+      </div>
+      <input type="text" class="order-note" id="order-note" maxlength="140"
+             placeholder="Color / Nota (opcional) — Ej. color turquesa, o alguna observación para tu asesora…">
+      ${currentMode === 'catalogo' ? '<div class="order-price-note">Precios a confirmar con tu asesora.</div>' : ''}
+      <button class="btn-add-cart" id="btn-add-cart" onclick="cartAddFromModal()">Agregar al pedido</button>
+    </div>`}`;
+
+  if (!p.agotado) {
+    document.getElementById('order-note').value = keepNote;
+    document.getElementById('order-qty-minus').disabled = keepQty <= 1;
+  }
 }
+
+function orderQtyStep(d) {
+  const el = document.getElementById('order-qty');
+  let v = (parseInt(el.textContent, 10) || 1) + d;
+  if (v < 1) v = 1;
+  if (v > 999) v = 999;
+  el.textContent = v;
+  document.getElementById('order-qty-minus').disabled = v <= 1;
+}
+
+/* ══════════════════════════════════════════════
+   CARRITO DE PEDIDOS
+══════════════════════════════════════════════ */
+const CART_KEY = 'maragel_carrito';
+const CATALOG_NAME = 'MARAGEL';
+let CART = [];   // [{ id, cantidad, nota }]
+
+const WHATSAPP_DESTINOS = {
+  sinprecios: [ { label: 'Elegir entre tus contactos', numero: null } ],
+  detal: [
+    { label: 'Elegir entre tus contactos', numero: null },
+    { label: 'Asesora', numero: '573217337623' }
+  ],
+  mayorista: [
+    { label: 'Elegir entre tus contactos', numero: null },
+    { grupo: 'Antioquia', label: 'Sur Medellín, Nordeste, Occidente y Suroeste', asesora: 'Yuri', numero: '573245402583' },
+    { grupo: 'Antioquia', label: 'Centro Medellín', asesora: 'Aide Isabel', numero: '573042343068' },
+    { grupo: 'Antioquia', label: 'Norte', asesora: 'Gloria', numero: '573013408198' },
+    { grupo: 'Antioquia', label: 'Oriente', asesora: 'Gloria', numero: '573013405737' },
+    { grupo: 'Costa y Eje Cafetero', label: 'Costa (Córdoba, Sucre)', asesora: 'Doly', numero: '573007556223' },
+    { grupo: 'Costa y Eje Cafetero', label: 'Costa Atlántico', asesora: 'Doly', numero: '573013406153' },
+    { grupo: 'Costa y Eje Cafetero', label: 'Eje Cafetero', asesora: 'Doly', numero: '573013409222' },
+    { grupo: 'Bogotá y Llanos', label: 'Centro Bogotá', asesora: 'Leydi', numero: '573013408038' },
+    { grupo: 'Bogotá y Llanos', label: 'Periferia Bogotá', asesora: 'Leydi', numero: '573245391366' },
+    { grupo: 'Bogotá y Llanos', label: 'Llanos Orientales (Villavicencio)', asesora: 'Leydi', numero: '573013404640' }
+  ]
+};
+
+/* ── Persistencia ── */
+function cartSave() {
+  try { localStorage.setItem(CART_KEY, JSON.stringify(CART)); } catch(e) {}
+}
+function cartLoad() {
+  try {
+    const raw = localStorage.getItem(CART_KEY);
+    if (raw) CART = JSON.parse(raw).filter(it => it && it.id && it.cantidad > 0);
+  } catch(e) { CART = []; }
+}
+// Depurar ítems cuyo producto ya no existe o está agotado (se llama tras cargar PRODUCTOS)
+function cartPrune() {
+  const before = CART.length;
+  CART = CART.filter(it => {
+    const p = PRODUCTOS.find(x => x.id === it.id);
+    return p && !p.agotado;
+  });
+  if (CART.length !== before) cartSave();
+}
+
+function cartProduct(it) { return PRODUCTOS.find(p => p.id === it.id); }
+
+/* ── Precio unitario según modo (null = sin precio / a confirmar) ── */
+function cartUnitPrice(p) {
+  if (currentMode === 'catalogo') return null;
+  if (currentMode === 'mayorista') {
+    const m = PRECIOS_MAY[p.referencia];
+    return (!m || m === 'pendiente') ? null : Number(m);
+  }
+  return Number(p.precio);
+}
+
+/* ── Agregar desde el modal ── */
+function cartAddFromModal() {
+  if (!gProd || gProd.agotado) return;
+  const qty  = parseInt(document.getElementById('order-qty').textContent, 10) || 1;
+  const nota = (document.getElementById('order-note').value || '').trim();
+
+  // Mismo producto + misma nota → sumar cantidades; nota distinta → línea propia
+  const existing = CART.find(it => it.id === gProd.id && it.nota === nota);
+  if (existing) existing.cantidad = Math.min(existing.cantidad + qty, 999);
+  else CART.push({ id: gProd.id, cantidad: qty, nota });
+
+  cartSave();
+  updateCartCount();
+
+  // Feedback visual en el botón
+  const btn = document.getElementById('btn-add-cart');
+  btn.textContent = 'Agregado ✓';
+  btn.classList.add('added');
+  setTimeout(() => {
+    const b = document.getElementById('btn-add-cart');
+    if (b) { b.textContent = 'Agregar al pedido'; b.classList.remove('added'); }
+  }, 1300);
+}
+
+/* ── Contador del header ── */
+function updateCartCount() {
+  const n = CART.reduce((s, it) => s + it.cantidad, 0);
+  const el = document.getElementById('cart-count');
+  el.textContent = n > 99 ? '99+' : n;
+  el.classList.toggle('visible', n > 0);
+}
+
+/* ── Drawer ── */
+function openCart()  { renderCart(); document.getElementById('cart-overlay').classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeCart() { document.getElementById('cart-overlay').classList.remove('open'); document.body.style.overflow = ''; }
+
+function escHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function renderCart() {
+  const itemsEl = document.getElementById('cart-items');
+  const footEl  = document.getElementById('cart-foot');
+  const headEl  = document.getElementById('cart-head-count');
+
+  if (CART.length === 0) {
+    headEl.textContent = '';
+    itemsEl.innerHTML = '<div class="cart-empty">Tu pedido está vacío.<br>Abre un producto y pulsa "Agregar al pedido".</div>';
+    footEl.innerHTML = '';
+    return;
+  }
+
+  const nProd = CART.length;
+  const nUnid = CART.reduce((s, it) => s + it.cantidad, 0);
+  headEl.textContent = `${nProd} producto${nProd!==1?'s':''} · ${nUnid} unidad${nUnid!==1?'es':''}`;
+
+  let total = 0, hayPendientes = false;
+
+  itemsEl.innerHTML = CART.map((it, idx) => {
+    const p = cartProduct(it);
+    if (!p) return '';
+    const unit = cartUnitPrice(p);
+    let priceHtml;
+    if (currentMode === 'catalogo') {
+      priceHtml = '<div class="ci-unit" style="font-style:italic">Precio a confirmar</div>';
+    } else if (unit === null) {
+      hayPendientes = true;
+      priceHtml = '<div class="ci-sub">Consultar</div>';
+    } else {
+      const sub = unit * it.cantidad; total += sub;
+      priceHtml = `<div class="ci-unit">${it.cantidad} × ${fmtPrice(unit)}</div><div class="ci-sub">${fmtPrice(sub)}</div>`;
+    }
+    return `
+    <div class="cart-item">
+      <div class="ci-img"><img src="${p.imagen}" alt="" onerror="this.remove()"></div>
+      <div class="ci-body">
+        <div class="ci-name">${escHtml(p.nombre)}</div>
+        <div class="ci-ref">Ref: ${escHtml(p.referencia)}</div>
+        ${it.nota ? `<div class="ci-nota">${escHtml(it.nota)}</div>` : ''}
+        <div class="ci-controls">
+          <div class="ci-qty">
+            <button onclick="cartQtyStep(${idx},-1)">−</button>
+            <span>${it.cantidad}</span>
+            <button onclick="cartQtyStep(${idx},1)">+</button>
+          </div>
+          <div class="ci-prices">${priceHtml}</div>
+        </div>
+        <button class="ci-del" onclick="cartRemove(${idx})">Eliminar</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  if (currentMode === 'catalogo') {
+    footEl.innerHTML = `
+      <div class="cart-total-note">Precios a confirmar con tu asesora.</div>
+      <button class="btn-send-wa" onclick="openWaMenu()">Enviar pedido por WhatsApp</button>
+      <button class="btn-clear-cart" onclick="cartClear()">Vaciar pedido</button>`;
+  } else {
+    footEl.innerHTML = `
+      <div class="cart-total-row">
+        <span class="cart-total-label">Total (${currentMode === 'detal' ? 'Detal' : 'Mayorista'})</span>
+        <span class="cart-total-value">${fmtPrice(total)}</span>
+      </div>
+      ${hayPendientes ? '<div class="cart-total-note">Los ítems "Consultar" no suman al total; tu asesora confirmará su precio.</div>' : ''}
+      <button class="btn-send-wa" onclick="openWaMenu()">Enviar pedido por WhatsApp</button>
+      <button class="btn-clear-cart" onclick="cartClear()">Vaciar pedido</button>`;
+  }
+}
+
+function cartQtyStep(idx, d) {
+  const it = CART[idx]; if (!it) return;
+  it.cantidad += d;
+  if (it.cantidad < 1) it.cantidad = 1;
+  if (it.cantidad > 999) it.cantidad = 999;
+  cartSave(); updateCartCount(); renderCart();
+}
+function cartRemove(idx) {
+  CART.splice(idx, 1);
+  cartSave(); updateCartCount(); renderCart();
+}
+function cartClear() {
+  CART = [];
+  cartSave(); updateCartCount(); renderCart();
+}
+
+/* ── Menú de destinos WhatsApp ── */
+function openWaMenu() {
+  if (CART.length === 0) return;
+  const destinos = currentMode === 'catalogo' ? WHATSAPP_DESTINOS.sinprecios
+                 : currentMode === 'detal'    ? WHATSAPP_DESTINOS.detal
+                 : WHATSAPP_DESTINOS.mayorista;
+  const list = document.getElementById('wa-menu-list');
+  let html = '', lastGrupo = null;
+  destinos.forEach((d, i) => {
+    if (d.grupo && d.grupo !== lastGrupo) {
+      html += `<div class="wa-group-label">${escHtml(d.grupo)}</div>`;
+      lastGrupo = d.grupo;
+    }
+    const icon = d.numero
+      ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.2.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.7-.1 1.4Z"/></svg>'
+      : '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.8-3 3-4.5 5.5-4.5s4.7 1.5 5.5 4.5"/><circle cx="16.5" cy="9" r="2.5"/><path d="M15.5 14.7c2 .2 3.9 1.5 4.6 4"/></svg>';
+    const sub = d.asesora ? `${escHtml(d.asesora)} · ${d.numero}` : (d.numero ? d.numero : 'Abre WhatsApp y tú eliges a quién');
+    html += `
+    <button class="wa-dest" onclick="sendWa(${i})">
+      <div class="wa-dest-icon">${icon}</div>
+      <div class="wa-dest-info">
+        <div class="wa-dest-label">${escHtml(d.label)}</div>
+        <div class="wa-dest-sub">${sub}</div>
+      </div>
+    </button>`;
+  });
+  list.innerHTML = html;
+  document.getElementById('wa-overlay').classList.add('open');
+}
+function closeWaMenu() { document.getElementById('wa-overlay').classList.remove('open'); }
+
+/* ── Construcción del mensaje ── */
+function buildWaMessage() {
+  const SEP = '━━━━━━━━━━━━━━━━━━━';
+  const modeLabel = currentMode === 'detal' ? 'Detal' : currentMode === 'mayorista' ? 'Mayorista' : null;
+
+  let msg = `*NUEVO PEDIDO — ${CATALOG_NAME}*\n`;
+  msg += modeLabel ? `Lista de precios: *${modeLabel}*\n` : 'Precios a confirmar con tu asesora\n';
+  msg += SEP + '\n';
+
+  let total = 0, nUnid = 0, hayPendientes = false;
+
+  CART.forEach((it, i) => {
+    const p = cartProduct(it); if (!p) return;
+    const unit = cartUnitPrice(p);
+    nUnid += it.cantidad;
+    msg += `\n*${i+1}. ${p.nombre}*\n`;
+    msg += `- Ref: ${p.referencia}\n`;
+    if (it.nota) msg += `- Nota: ${it.nota}\n`;
+    if (currentMode === 'catalogo') {
+      msg += `- Cantidad: ${it.cantidad}\n`;
+    } else if (unit === null) {
+      hayPendientes = true;
+      msg += `- Cantidad: ${it.cantidad}\n`;
+      msg += `- Subtotal: *Precio a confirmar*\n`;
+    } else {
+      const sub = unit * it.cantidad; total += sub;
+      msg += `- Cantidad: ${it.cantidad} × ${fmtPrice(unit)}\n`;
+      msg += `- Subtotal: *${fmtPrice(sub)}*\n`;
+    }
+  });
+
+  msg += '\n' + SEP + '\n';
+  msg += `Productos: ${CART.length}  ·  Unidades: ${nUnid}\n`;
+  if (currentMode === 'catalogo') {
+    msg += `*TOTAL: a confirmar*\n`;
+  } else {
+    msg += `*TOTAL: ${fmtPrice(total)}*`;
+    msg += hayPendientes ? ' (sin ítems por confirmar)\n' : '\n';
+  }
+  msg += `\n_Enviado desde el Catálogo Maragel_`;
+  return msg;
+}
+
+function sendWa(destIdx) {
+  const destinos = currentMode === 'catalogo' ? WHATSAPP_DESTINOS.sinprecios
+                 : currentMode === 'detal'    ? WHATSAPP_DESTINOS.detal
+                 : WHATSAPP_DESTINOS.mayorista;
+  const d = destinos[destIdx]; if (!d) return;
+  const text = encodeURIComponent(buildWaMessage());
+  const url = d.numero ? `https://wa.me/${d.numero}?text=${text}` : `https://wa.me/?text=${text}`;
+  window.open(url, '_blank', 'noopener');
+  closeWaMenu();
+}
+
+/* ── Eventos de cierre ── */
+document.getElementById('cart-overlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeCart();
+});
+document.getElementById('wa-overlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeWaMenu();
+});
 
 /* ── ESTADO GLOBAL ──────────────────────────── */
 let activeCat    = 'Todos';
@@ -1281,6 +1817,10 @@ function init(data) {
   renderBS();
   renderCatNav();
   renderProducts();
+  // Carrito: restaurar desde localStorage y depurar productos inexistentes/agotados
+  cartLoad();
+  cartPrune();
+  updateCartCount();
 }
 
 Promise.all([
@@ -1332,8 +1872,9 @@ function submitPw() {
   const val      = document.getElementById('pw-input').value;
   const expected = pendingMode === 'detal' ? PW_DETAL : PW_MAYORISTA;
   if (val === expected) {
+    const modo = pendingMode;   // capturar antes: closePwModal() pone pendingMode en null
     closePwModal();
-    setMode(pendingMode);
+    setMode(modo);
   } else {
     document.getElementById('pw-error').textContent = 'Contraseña incorrecta';
     document.getElementById('pw-input').value = '';
@@ -1341,8 +1882,9 @@ function submitPw() {
   }
 }
 
-document.getElementById('pw-overlay').addEventListener('click', e => {
-  if (e.target === e.currentTarget) closePwModal();
+// Delegación: #pw-overlay se define después de este script, no se puede referenciar directo aquí
+document.addEventListener('click', e => {
+  if (e.target && e.target.id === 'pw-overlay') closePwModal();
 });
 
 </script>
