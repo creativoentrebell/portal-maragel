@@ -1211,7 +1211,7 @@ function applyVisibility() {
 
 /* ── BÚSQUEDA ───────────────────────────────── */
 function normalizeText(s) {
-  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[\s\-]+/g, '');
 }
 
 function handleSearch(val) {
