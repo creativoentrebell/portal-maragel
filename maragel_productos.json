@@ -3914,7 +3914,7 @@
     "subcategoria": "Imanes",
     "descripcion": "Imán multifuncional 5 en 1: punta plana ancha, redonda, flor central, T y doble cuadrada.",
     "imagen": "img/color/C821_1.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
@@ -3938,7 +3938,7 @@
     "subcategoria": "Imanes",
     "descripcion": "Imán 3 en 1 con potente campo magnético. Punta redonda, punta plana y efecto flor.",
     "imagen": "img/color/CT1_1.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
@@ -3966,7 +3966,7 @@
     "subcategoria": "Imanes",
     "descripcion": "Imán rectangular para efectos tridimensionales. Hasta 10 efectos distintos.",
     "imagen": "img/color/CT2.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -3980,7 +3980,7 @@
     "subcategoria": "Imanes",
     "descripcion": "Imán de doble cabezal multidireccional. Efectos: rayo, S, media luna, X, ola y más.",
     "imagen": "img/color/CT3.webp",
-    "agotado": true,
+    "agotado": false,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -4842,5 +4842,43 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
+  },
+  {
+    "id": "pc822",
+    "nombre": "Barrita Corazón x12",
+    "referencia": "C822",
+    "precio": 24000,
+    "categoria": "Herramientas",
+    "subcategoria": "Imanes",
+    "descripcion": "",
+    "imagen": "img/color/C822.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "pct4",
+    "nombre": "Imán Clásico",
+    "referencia": "CT4",
+    "precio": 8000,
+    "categoria": "Herramientas",
+    "subcategoria": "Imanes",
+    "descripcion": "",
+    "imagen": "img/color/CT4_1.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/CT4_1.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/color/CT4_2.png"
+      }
+    ]
   }
 ]
