@@ -4512,7 +4512,7 @@
     "subcategoria": "Cat Eye",
     "descripcion": "",
     "imagen": "img/color/B301.jpg",
-    "agotado": false,
+    "agotado": true,
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
