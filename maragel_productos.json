@@ -196,6 +196,20 @@
     "color_blob": ""
   },
   {
+    "id": "plimg16u",
+    "nombre": "Lima 180/240 x1 und",
+    "referencia": "LIMG16-U",
+    "precio": 4000,
+    "categoria": "Herramientas",
+    "subcategoria": "Limas",
+    "descripcion": "",
+    "imagen": "img/color/LIMG16.webp",
+    "agotado": false,
+    "nuevo": true,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
     "id": "pprecofl",
     "nombre": "Soft Gel Coffin Large Maragel x440 pcs",
     "referencia": "PRECOF-L",
