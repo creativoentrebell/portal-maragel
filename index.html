@@ -1306,6 +1306,16 @@ function normalizeText(s) {
   return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[\s\-]+/g, '');
 }
 
+/* Nombre/marca: sin tildes, guion = espacio, y sin importar el orden de las palabras */
+function matchNombre(texto, val) {
+  if (!texto) return false;
+  const base = texto.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const pegado = base.replace(/[\s\-]+/g, '');
+  const palabras = val.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .split(/[\s\-]+/).filter(Boolean);
+  return palabras.length > 0 && palabras.every(w => pegado.includes(w));
+}
+
 function handleSearch(val) {
   searchQuery = normalizeText(val.trim());
   document.getElementById('search-clear').style.display = searchQuery ? 'block' : 'none';
@@ -1323,9 +1333,8 @@ function handleSearch(val) {
       if (!showAgotados && p.agotado) return false;
       if (soloNuevos && !p.nuevo)    return false;
       return (
-        normalizeText(p.nombre).includes(searchQuery) ||
-        normalizeText(p.referencia).includes(searchQuery) ||
-        (p.subcategoria && normalizeText(p.subcategoria).includes(searchQuery))
+        matchNombre([p.nombre, p.marca, p.subcategoria].filter(Boolean).join(' '), val) ||
+        normalizeText(p.referencia).includes(searchQuery)
       );
     });
 
