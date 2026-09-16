@@ -376,7 +376,7 @@
     "subcategoria": "Cortacutículas y Alicates",
     "descripcion": "Diseño en punta para todas las áreas. Mango ergonómico con resorte amortiguador. Filo de 5MM.",
     "imagen": "img/color/ESPIRAL_1.webp",
-    "agotado": false,
+    "agotado": true,
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
@@ -400,7 +400,7 @@
     "subcategoria": "Cortacutículas y Alicates",
     "descripcion": "Diseño en punta, mango ergonómico estructura cerrada. Corte fino y preciso.",
     "imagen": "img/color/MOON 1.webp",
-    "agotado": false,
+    "agotado": true,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -414,7 +414,7 @@
     "subcategoria": "Cortacutículas y Alicates",
     "descripcion": "Alicate en forma de tijera para corte de precisión en cutícula. Acero inoxidable.",
     "imagen": "img/color/STAR 1.webp",
-    "agotado": false,
+    "agotado": true,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
@@ -4866,7 +4866,7 @@
     "subcategoria": "Imanes",
     "descripcion": "",
     "imagen": "img/color/C822.png",
-    "agotado": false,
+    "agotado": true,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
