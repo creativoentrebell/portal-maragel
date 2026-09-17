@@ -830,6 +830,41 @@
     }
     .cf-btn-continue:hover { opacity: 0.88; }
 
+    /* Pregunta agente retenedor (solo Mayorista) */
+    .cf-retenedor-row { margin-bottom: 14px; }
+    .cf-retenedor-label { font-size: 0.8rem; color: var(--text); margin-bottom: 8px; }
+    .cf-retenedor-btns { display: flex; gap: 8px; }
+    .cf-ret-btn {
+      flex: 1; padding: 9px; border: 1px solid var(--border); border-radius: 8px;
+      background: var(--bg); color: var(--text-sec); cursor: pointer;
+      font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 0.82rem; font-weight: 500;
+      transition: all 0.15s;
+    }
+    .cf-ret-btn.active { background: var(--text); color: #fff; border-color: var(--text); }
+    .cf-retenedor-row.error .cf-retenedor-label { color: #b0392b; }
+    .cf-retenedor-row.error .cf-ret-btn { border-color: #b0392b; }
+
+    /* Aviso "pendiente verificar unidades" (solo Mayorista) */
+    .banner-unidades-notice {
+      display: none; align-items: center; gap: 6px;
+      font-size: 0.72rem; color: var(--text-sec); margin-top: 8px;
+    }
+    .banner-unidades-notice.visible { display: flex; }
+    .banner-unidades-notice svg { flex-shrink: 0; }
+    .modal-unidades-notice {
+      display: none; align-items: center; gap: 6px;
+      background: #FFF6D8; border: 1px solid #F0DFA0; border-radius: 8px;
+      padding: 8px 10px; font-size: 0.74rem; color: #6b5a1a; margin-top: 10px;
+    }
+    .modal-unidades-notice.visible { display: flex; }
+    .modal-unidades-notice svg { flex-shrink: 0; }
+    .cart-unidades-notice {
+      display: flex; align-items: center; gap: 6px;
+      background: #FFF6D8; border: 1px solid #F0DFA0; border-radius: 8px;
+      padding: 8px 10px; font-size: 0.74rem; color: #6b5a1a; margin: 10px 0;
+    }
+    .cart-unidades-notice svg { flex-shrink: 0; }
+
     /* ── RESPONSIVE ─────────────────────────────── */
     @media (max-width: 960px) {
       .bs-grid      { grid-template-columns: repeat(2, 1fr); }
@@ -943,6 +978,10 @@
   <div class="banner-left">
     <h2 class="banner-title">Color y calidad<br class="bt-br"><span class="bt-sp"> </span><em>que evolucionan.</em></h2>
     <p class="banner-desc">Catálogo de consulta para asesoras y clientes. Precios en COP. Para pedidos, comunícate con tu asesor DU.</p>
+    <div class="banner-unidades-notice" id="banner-unidades-notice">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><line x1="12" y1="10.5" x2="12" y2="16.5"/><circle cx="12" cy="7.3" r="0.9" fill="currentColor" stroke="none"/></svg>
+      <span>Pendiente verificar unidades disponibles con tu asesora.</span>
+    </div>
   </div>
   <div class="banner-right">
     <img src="img/Logo_Maragel-Negro.png" alt="Maragel" class="banner-logo">
@@ -1078,6 +1117,13 @@
       <div class="cf-row">
         <input type="text" class="cf-input" id="cf-telefono" placeholder="Teléfono de contacto" oninput="this.classList.remove('error')">
       </div>
+      <div class="cf-retenedor-row" id="cf-retenedor-row" style="display:none">
+        <div class="cf-retenedor-label">¿Eres agente retenedor en la fuente?</div>
+        <div class="cf-retenedor-btns">
+          <button type="button" class="cf-ret-btn" id="cf-ret-si" onclick="setRetenedor(true)">Sí</button>
+          <button type="button" class="cf-ret-btn" id="cf-ret-no" onclick="setRetenedor(false)">No</button>
+        </div>
+      </div>
       <div class="cf-error-msg" id="cf-error"></div>
     </div>
     <div class="cf-foot">
@@ -1096,6 +1142,11 @@
 ──────────────────────────────────────────────────────────────── */
 let PRODUCTOS = [];
 let PRECIOS_MAY = {};
+
+/* ── RETENCIÓN EN LA FUENTE (solo Mayorista) ── */
+const RETENCION_TARIFA       = 0.025;   // 2.5%
+const RETENCION_BASE_MINIMA  = 524000;  // pesos
+const IVA                    = 1.19;    // 19%
 
 /* ── LAZY LOADING + INFINITE SCROLL ─────────── */
 const BATCH_SIZE  = 48;   // productos por lote
@@ -1258,6 +1309,7 @@ function setMode(mode) {
   document.getElementById('btn-detal').classList.toggle('active', mode === 'detal');
   document.getElementById('btn-mayorista').classList.toggle('active', mode === 'mayorista');
   document.getElementById('modo-banner').classList.toggle('visible', mode === 'mayorista');
+  document.getElementById('banner-unidades-notice').classList.toggle('visible', mode === 'mayorista');
   // Actualizar precios en tarjetas y best sellers consultando PRECIOS_MAY directamente
   document.querySelectorAll('.pc-price[data-ref], .bs-price[data-ref]').forEach(el => {
     if (mode === 'catalogo') {
@@ -1674,6 +1726,10 @@ function buildModalInfo() {
              placeholder="Color / Nota (opcional) — Ej. color turquesa, o alguna observación para tu asesora…">
       ${currentMode === 'catalogo' ? '<div class="order-price-note">Precios a confirmar con tu asesora.</div>' : ''}
       <button class="btn-add-cart" id="btn-add-cart" onclick="cartAddFromModal()">Agregar al pedido</button>
+      ${currentMode === 'mayorista' ? `<div class="modal-unidades-notice visible">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><line x1="12" y1="10.5" x2="12" y2="16.5"/><circle cx="12" cy="7.3" r="0.9" fill="currentColor" stroke="none"/></svg>
+        <span>Pendiente verificar unidades disponibles con tu asesora.</span>
+      </div>` : ''}
     </div>`}`;
 
   if (!p.agotado) {
@@ -1856,6 +1912,10 @@ function renderCart() {
         <span class="cart-total-value">${fmtPrice(total)}</span>
       </div>
       ${hayPendientes ? '<div class="cart-total-note">Los ítems "Consultar" no suman al total; tu asesora confirmará su precio.</div>' : ''}
+      ${currentMode === 'mayorista' ? `<div class="cart-unidades-notice">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><line x1="12" y1="10.5" x2="12" y2="16.5"/><circle cx="12" cy="7.3" r="0.9" fill="currentColor" stroke="none"/></svg>
+        <span>Pendiente verificar unidades disponibles con tu asesora.</span>
+      </div>` : ''}
       <button class="btn-send-wa" onclick="openClientForm()">Enviar pedido por WhatsApp</button>
       <button class="btn-clear-cart" onclick="cartClear()">Vaciar pedido</button>`;
   }
@@ -1911,7 +1971,14 @@ function closeWaMenu() { document.getElementById('wa-overlay').classList.remove(
 /* ── Formulario de datos del cliente ── */
 // Variable global: conserva lo escrito durante toda la sesión, aunque el
 // cliente cierre el formulario/carrito y agregue más productos después.
-let CLIENT_DATA = { cedula: '', nombre: '', direccion: '', ciudad: '', telefono: '' };
+let CLIENT_DATA = { cedula: '', nombre: '', direccion: '', ciudad: '', telefono: '', agenteRetenedor: null };
+
+function setRetenedor(val) {
+  CLIENT_DATA.agenteRetenedor = val;
+  document.getElementById('cf-ret-si').classList.toggle('active', val === true);
+  document.getElementById('cf-ret-no').classList.toggle('active', val === false);
+  document.getElementById('cf-retenedor-row').classList.remove('error');
+}
 
 function openClientForm() {
   if (CART.length === 0) return;
@@ -1921,6 +1988,13 @@ function openClientForm() {
   document.getElementById('cf-ciudad').value    = CLIENT_DATA.ciudad;
   document.getElementById('cf-telefono').value  = CLIENT_DATA.telefono;
   document.getElementById('cf-error').textContent = '';
+
+  const retRow = document.getElementById('cf-retenedor-row');
+  retRow.style.display = currentMode === 'mayorista' ? 'block' : 'none';
+  retRow.classList.remove('error');
+  document.getElementById('cf-ret-si').classList.toggle('active', CLIENT_DATA.agenteRetenedor === true);
+  document.getElementById('cf-ret-no').classList.toggle('active', CLIENT_DATA.agenteRetenedor === false);
+
   ['cf-cedula','cf-nombre','cf-direccion','cf-ciudad','cf-telefono'].forEach(id => {
     document.getElementById(id).classList.remove('error');
   });
@@ -1960,6 +2034,13 @@ function submitClientForm() {
     return;
   }
 
+  if (currentMode === 'mayorista' && CLIENT_DATA.agenteRetenedor === null) {
+    document.getElementById('cf-retenedor-row').classList.add('error');
+    document.getElementById('cf-error').textContent = 'Indica si eres agente retenedor en la fuente.';
+    return;
+  }
+
+  valores.agenteRetenedor = CLIENT_DATA.agenteRetenedor;
   CLIENT_DATA = valores;
   document.getElementById('cf-error').textContent = '';
   closeClientForm();
@@ -1985,6 +2066,9 @@ function buildWaMessage() {
   msg += `• Dirección: ${CLIENT_DATA.direccion}\n`;
   msg += `• Ciudad: ${CLIENT_DATA.ciudad}\n`;
   msg += `• Teléfono: ${CLIENT_DATA.telefono}\n`;
+  if (currentMode === 'mayorista') {
+    msg += `• Agente retenedor: ${CLIENT_DATA.agenteRetenedor ? 'Sí' : 'No'}\n`;
+  }
   msg += SEP + '\n';
 
   let total = 0, nUnid = 0, hayPendientes = false;
@@ -2017,7 +2101,31 @@ function buildWaMessage() {
     msg += `*TOTAL: ${fmtPrice(total)}*`;
     msg += hayPendientes ? ' (sin ítems por confirmar)\n' : '\n';
   }
+
+  if (currentMode === 'mayorista' && CLIENT_DATA.agenteRetenedor === true) {
+    const SEP_RET = '━━━━━━━━━━━━━━━';
+    if (hayPendientes) {
+      msg += `\nRetención a calcular por la asesora\n`;
+    } else {
+      const base = Math.round(total / IVA);
+      if (base >= RETENCION_BASE_MINIMA) {
+        const retencion  = Math.round(base * RETENCION_TARIFA);
+        const valorFinal = total - retencion;
+        msg += `\nBase a aplicar retención: ${fmtPrice(base)}\n`;
+        msg += `Retención en la fuente (2,5%): ${fmtPrice(retencion)}\n`;
+        msg += `${SEP_RET}\n`;
+        msg += `➤ VALOR FINAL A PAGAR: ${fmtPrice(valorFinal)}\n`;
+        msg += `${SEP_RET}\n`;
+      } else {
+        msg += `\nRetención en la fuente: no aplica (base inferior a ${fmtPrice(RETENCION_BASE_MINIMA)})\n`;
+      }
+    }
+  }
+
   msg += `\n_Enviado desde el Catálogo Maragel_`;
+  if (currentMode === 'mayorista') {
+    msg += `\n\n*Pendiente verificar unidades disponibles con tu asesora.*`;
+  }
   return msg;
 }
 
@@ -2027,7 +2135,9 @@ function sendWa(destIdx) {
                  : WHATSAPP_DESTINOS.mayorista;
   const d = destinos[destIdx]; if (!d) return;
   const text = encodeURIComponent(buildWaMessage());
-  const url = d.numero ? `https://wa.me/${d.numero}?text=${text}` : `https://wa.me/?text=${text}`;
+  const url = d.numero
+    ? `https://api.whatsapp.com/send?phone=${d.numero}&text=${text}`
+    : `https://api.whatsapp.com/send?text=${text}`;
   window.open(url, '_blank', 'noopener');
   closeWaMenu();
 }
