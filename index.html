@@ -144,7 +144,7 @@
     /* ── BANNER ─────────────────────────────────── */
     .banner {
       background: linear-gradient(to right, #222222, #555555);
-      padding: 48px 28px 52px;
+      padding: 48px 28px 30px;
       display: flex; justify-content: space-between;
       align-items: flex-start; gap: 32px;
     }
@@ -635,7 +635,8 @@
     .qty-btn:disabled { color: #C0C0C0; cursor: default; background: var(--card-bg); }
     .qty-value {
       width: 38px; text-align: center; font-size: 0.9rem; font-weight: 600;
-      color: var(--text); user-select: none;
+      color: var(--text); border: none; background: transparent; outline: none;
+      font-family: 'Instrument Sans', system-ui, sans-serif; height: 34px;
     }
     .order-note {
       width: 100%; padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px;
@@ -846,8 +847,10 @@
 
     /* Aviso "pendiente verificar unidades" (solo Mayorista) */
     .banner-unidades-notice {
-      display: none; align-items: center; gap: 6px;
-      font-size: 0.72rem; color: var(--text-sec); margin-top: 8px;
+      display: none; align-items: center; gap: 6px; width: fit-content;
+      font-size: 0.72rem; color: #fff; margin-top: 10px;
+      background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 6px; padding: 5px 10px 5px 8px;
     }
     .banner-unidades-notice.visible { display: flex; }
     .banner-unidades-notice svg { flex-shrink: 0; }
@@ -878,7 +881,7 @@
       /* ── BANNER COMPACTO ───────────────────── */
       .banner {
         flex-direction: column; gap: 16px;
-        padding-top: 30px; padding-bottom: 26px;
+        padding-top: 30px; padding-bottom: 18px;
       }
       /* Título en UNA sola línea: el tamaño se adapta al ancho del celular */
       .banner-title {
@@ -1697,7 +1700,7 @@ function buildModalInfo() {
   // Preservar cantidad y nota si el modal se re-renderiza (p. ej. cambio de modo)
   const prevQtyEl  = document.getElementById('order-qty');
   const prevNoteEl = document.getElementById('order-note');
-  const keepQty  = prevQtyEl  ? parseInt(prevQtyEl.textContent, 10) || 1 : 1;
+  const keepQty  = prevQtyEl  ? parseInt(prevQtyEl.value, 10) || 1 : 1;
   const keepNote = prevNoteEl ? prevNoteEl.value : '';
 
   document.getElementById('modal-info').innerHTML = `
@@ -1718,7 +1721,10 @@ function buildModalInfo() {
         <span class="order-label">Cantidad</span>
         <div class="qty-selector">
           <button class="qty-btn" id="order-qty-minus" onclick="orderQtyStep(-1)">−</button>
-          <span class="qty-value" id="order-qty">${keepQty}</span>
+          <input type="text" inputmode="numeric" class="qty-value" id="order-qty" value="${keepQty}"
+                 oninput="this.value = this.value.replace(/[^0-9]/g,'')"
+                 onblur="orderQtySet(this.value)"
+                 onkeydown="if(event.key==='Enter'){this.blur();}">
           <button class="qty-btn" onclick="orderQtyStep(1)">+</button>
         </div>
       </div>
@@ -1740,10 +1746,19 @@ function buildModalInfo() {
 
 function orderQtyStep(d) {
   const el = document.getElementById('order-qty');
-  let v = (parseInt(el.textContent, 10) || 1) + d;
+  let v = (parseInt(el.value, 10) || 1) + d;
   if (v < 1) v = 1;
   if (v > 999) v = 999;
-  el.textContent = v;
+  el.value = v;
+  document.getElementById('order-qty-minus').disabled = v <= 1;
+}
+
+function orderQtySet(raw) {
+  const el = document.getElementById('order-qty');
+  let v = parseInt(raw, 10);
+  if (!v || v < 1) v = 1;
+  if (v > 999) v = 999;
+  el.value = v;
   document.getElementById('order-qty-minus').disabled = v <= 1;
 }
 
@@ -1811,7 +1826,7 @@ function cartUnitPrice(p) {
 /* ── Agregar desde el modal ── */
 function cartAddFromModal() {
   if (!gProd || gProd.agotado) return;
-  const qty  = parseInt(document.getElementById('order-qty').textContent, 10) || 1;
+  const qty  = parseInt(document.getElementById('order-qty').value, 10) || 1;
   const nota = (document.getElementById('order-note').value || '').trim();
 
   // Mismo producto + misma nota → sumar cantidades; nota distinta → línea propia
@@ -2123,9 +2138,6 @@ function buildWaMessage() {
   }
 
   msg += `\n_Enviado desde el Catálogo Maragel_`;
-  if (currentMode === 'mayorista') {
-    msg += `\n\n*Pendiente verificar unidades disponibles con tu asesora.*`;
-  }
   return msg;
 }
 
