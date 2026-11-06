@@ -3232,7 +3232,7 @@
     "subcategoria": "Traslúcidos",
     "descripcion": "",
     "imagen": "img/color/B099.webp",
-    "agotado": false,
+    "agotado": true,
     "nuevo": false,
     "best_seller": false,
     "color_blob": ""
