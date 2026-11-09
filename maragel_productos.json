@@ -192,7 +192,7 @@
     "imagen": "img/color/LIMG16.webp",
     "agotado": false,
     "nuevo": false,
-    "best_seller": false,
+    "best_seller": 13,
     "color_blob": ""
   },
   {
@@ -220,7 +220,7 @@
     "imagen": "img/color/PRECOF-L 1.webp",
     "agotado": false,
     "nuevo": false,
-    "best_seller": false,
+    "best_seller": 9,
     "color_blob": "",
     "galeria": [
       {
@@ -482,7 +482,7 @@
     "imagen": "img/esmalte/54-1-ECOMM.webp",
     "agotado": false,
     "nuevo": false,
-    "best_seller": false,
+    "best_seller": 2,
     "color_blob": ""
   },
   {
@@ -520,8 +520,8 @@
     "imagen": "img/color/54-5.png",
     "agotado": false,
     "nuevo": false,
-    "best_seller": true,
-    "color_blob": "#E0DFF0",
+    "best_seller": 1,
+    "color_blob": "",
     "galeria": [
       {
         "tipo": "foto",
@@ -596,7 +596,7 @@
     "imagen": "img/color/LIMG1.webp",
     "agotado": false,
     "nuevo": false,
-    "best_seller": false,
+    "best_seller": 11,
     "color_blob": ""
   },
   {
@@ -624,7 +624,7 @@
     "imagen": "img/color/LIMG2.webp",
     "agotado": false,
     "nuevo": false,
-    "best_seller": false,
+    "best_seller": 12,
     "color_blob": ""
   },
   {
@@ -652,7 +652,7 @@
     "imagen": "img/color/LIMG3.webp",
     "agotado": false,
     "nuevo": false,
-    "best_seller": false,
+    "best_seller": 6,
     "color_blob": ""
   },
   {
@@ -680,7 +680,7 @@
     "imagen": "img/color/LIMG4.webp",
     "agotado": false,
     "nuevo": false,
-    "best_seller": false,
+    "best_seller": 10,
     "color_blob": ""
   },
   {
@@ -708,7 +708,7 @@
     "imagen": "img/color/LIMG20.webp",
     "agotado": false,
     "nuevo": false,
-    "best_seller": false,
+    "best_seller": 7,
     "color_blob": ""
   },
   {
@@ -736,7 +736,7 @@
     "imagen": "img/color/LIMG15.webp",
     "agotado": false,
     "nuevo": false,
-    "best_seller": false,
+    "best_seller": 5,
     "color_blob": ""
   },
   {
@@ -956,8 +956,8 @@
     "imagen": "img/color/B180.webp",
     "agotado": true,
     "nuevo": false,
-    "best_seller": true,
-    "color_blob": "#FAE5C0",
+    "best_seller": false,
+    "color_blob": "",
     "galeria": [
       {
         "tipo": "foto",
@@ -1656,8 +1656,8 @@
     "imagen": "img/color/B124.webp",
     "agotado": false,
     "nuevo": false,
-    "best_seller": true,
-    "color_blob": "#C8D4F0",
+    "best_seller": false,
+    "color_blob": "",
     "galeria": [
       {
         "tipo": "foto",
@@ -2260,8 +2260,8 @@
     "imagen": "img/color/B284.webp",
     "agotado": false,
     "nuevo": false,
-    "best_seller": true,
-    "color_blob": "#F5C0C0",
+    "best_seller": false,
+    "color_blob": "",
     "galeria": [
       {
         "tipo": "foto",
@@ -3076,7 +3076,7 @@
     "imagen": "img/color/B026.webp",
     "agotado": false,
     "nuevo": false,
-    "best_seller": false,
+    "best_seller": 4,
     "color_blob": "",
     "galeria": [
       {
@@ -3100,7 +3100,7 @@
     "imagen": "img/color/B001.webp",
     "agotado": false,
     "nuevo": false,
-    "best_seller": false,
+    "best_seller": 3,
     "color_blob": "",
     "galeria": [
       {
@@ -4114,7 +4114,7 @@
     "imagen": "img/color/PRESQ-M.png",
     "agotado": false,
     "nuevo": false,
-    "best_seller": false,
+    "best_seller": 8,
     "color_blob": ""
   },
   {

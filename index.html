@@ -205,7 +205,26 @@
       font-style: italic;
     }
 
-    .bs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    /* Carrusel de Best Sellers: 4 visibles en desktop, desliza horizontal */
+    .bs-carousel { position: relative; }
+    .bs-grid {
+      display: grid; grid-auto-flow: column;
+      grid-auto-columns: calc((100% - 3 * 18px) / 4); gap: 18px;
+      overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+      scrollbar-width: none; -webkit-overflow-scrolling: touch;
+    }
+    .bs-grid::-webkit-scrollbar { display: none; }
+    .bs-grid .bs-card { scroll-snap-align: start; }
+    .bs-arrow {
+      position: absolute; top: 38%; transform: translateY(-50%); z-index: 5;
+      width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--border);
+      background: #fff; color: var(--text); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08); transition: opacity 0.2s;
+    }
+    .bs-arrow.bs-prev { left: -14px; }
+    .bs-arrow.bs-next { right: -14px; }
+    .bs-arrow[disabled] { opacity: 0; pointer-events: none; }
 
     /* BS card */
     .bs-card { cursor: pointer; display: flex; flex-direction: column; }
@@ -870,7 +889,7 @@
 
     /* ── RESPONSIVE ─────────────────────────────── */
     @media (max-width: 960px) {
-      .bs-grid      { grid-template-columns: repeat(2, 1fr); }
+      .bs-grid      { grid-auto-columns: calc((100% - 18px) / 2); }
       .product-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 580px) {
@@ -935,7 +954,9 @@
       .bs-note-sp { display: inline; }
       .sec-eyebrow { font-size: 9px; letter-spacing: 2px; margin-bottom: 6px; }
       .sec-title { font-size: 1.85rem; letter-spacing: -0.6px; }
-      .bs-grid { gap: 12px; }
+      /* Móvil: 2 tarjetas y un pedacito de la siguiente, para invitar a deslizar */
+      .bs-grid { gap: 12px; grid-auto-columns: calc((100% - 2 * 12px) / 2.25); }
+      .bs-arrow { display: none; }
       .bs-visual { margin-bottom: 10px; border-radius: 8px; }
       .bs-subcat { font-size: 9px; letter-spacing: 1.4px; margin-bottom: 3px; }
       .bs-name { font-size: 0.8rem; line-height: 1.25; margin-bottom: 4px; }
@@ -1032,7 +1053,15 @@
     </div>
     <div class="bs-heading-note">Los tonos favoritos<br class="bs-note-br"><span class="bs-note-sp"> </span>de la temporada</div>
   </div>
-  <div class="bs-grid" id="bs-grid"></div>
+  <div class="bs-carousel">
+    <button class="bs-arrow bs-prev" aria-label="Anterior" onclick="bsScroll(-1)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="bs-grid" id="bs-grid" onscroll="bsUpdateArrows()"></div>
+    <button class="bs-arrow bs-next" aria-label="Siguiente" onclick="bsScroll(1)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
 </section>
 
 <!-- ── CATEGORY NAV ───────────────────────────── -->
@@ -1210,7 +1239,10 @@ function getImgSrc(p, type='swatch') {
 
 /* ── RENDER BEST SELLERS ────────────────────── */
 function renderBS() {
-  const items = PRODUCTOS.filter(p => p.best_seller);
+  // best_seller puede ser un número (1 = el más vendido) para ordenar el carrusel
+  const rank = p => typeof p.best_seller === 'number' ? p.best_seller : 9999;
+  const items = PRODUCTOS.filter(p => p.best_seller).sort((a, b) => rank(a) - rank(b));
+  requestAnimationFrame(bsUpdateArrows);
   document.getElementById('bs-grid').innerHTML = items.map(p => {
     const swId = 'bssw-' + p.id;
     const fallback = getImgSrc(p);
@@ -1232,6 +1264,20 @@ function renderBS() {
     </div>`;
   }).join('');
 }
+
+/* ── CARRUSEL BEST SELLERS ──────────────────── */
+function bsScroll(dir) {
+  const g = document.getElementById('bs-grid');
+  g.scrollBy({ left: dir * g.clientWidth, behavior: 'smooth' });
+}
+function bsUpdateArrows() {
+  const g = document.getElementById('bs-grid');
+  if (!g) return;
+  const max = g.scrollWidth - g.clientWidth - 2;
+  document.querySelector('.bs-prev').disabled = g.scrollLeft <= 2;
+  document.querySelector('.bs-next').disabled = g.scrollLeft >= max;
+}
+window.addEventListener('resize', bsUpdateArrows);
 
 /* ── RENDER CATEGORY NAV ────────────────────── */
 function renderCatNav() {
