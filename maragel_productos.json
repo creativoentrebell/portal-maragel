@@ -1116,6 +1116,31 @@
     ]
   },
   {
+    "id": "p114",
+    "nombre": "Esmalte Semipermanente 114",
+    "referencia": "114",
+    "precio": 21000,
+    "categoria": "Esmaltes en Gel",
+    "subcategoria": "Amarillos y Naranjas",
+    "descripcion": "",
+    "imagen": "img/color/B114.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "preventa": true,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B114.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/114-ECOMM.webp"
+      }
+    ]
+  },
+  {
     "id": "p242",
     "nombre": "Esmalte Semipermanente 242",
     "referencia": "242",
@@ -2951,6 +2976,56 @@
     ]
   },
   {
+    "id": "p012",
+    "nombre": "Esmalte Semipermanente 012",
+    "referencia": "012",
+    "precio": 21000,
+    "categoria": "Esmaltes en Gel",
+    "subcategoria": "Nudes",
+    "descripcion": "",
+    "imagen": "img/color/B012.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "preventa": true,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B012.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/012-ECOMM.webp"
+      }
+    ]
+  },
+  {
+    "id": "p058",
+    "nombre": "Esmalte Semipermanente 058",
+    "referencia": "058",
+    "precio": 21000,
+    "categoria": "Esmaltes en Gel",
+    "subcategoria": "Nudes",
+    "descripcion": "",
+    "imagen": "img/color/B058.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "preventa": true,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B058.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/058-ECOMM.webp"
+      }
+    ]
+  },
+  {
     "id": "p023",
     "nombre": "Esmalte Semipermanente 023",
     "referencia": "023",
@@ -3044,6 +3119,56 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/021-ECOMM.webp"
+      }
+    ]
+  },
+  {
+    "id": "p024",
+    "nombre": "Esmalte Semipermanente 024",
+    "referencia": "024",
+    "precio": 21000,
+    "categoria": "Esmaltes en Gel",
+    "subcategoria": "Nudes Grises",
+    "descripcion": "",
+    "imagen": "img/color/B024.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "preventa": true,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B024.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/024-ECOMM.webp"
+      }
+    ]
+  },
+  {
+    "id": "p082",
+    "nombre": "Esmalte Semipermanente 082",
+    "referencia": "082",
+    "precio": 21000,
+    "categoria": "Esmaltes en Gel",
+    "subcategoria": "Nudes Grises",
+    "descripcion": "",
+    "imagen": "img/color/B082.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "preventa": true,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B082.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/esmalte/082-ECOMM.webp"
       }
     ]
   },
@@ -4477,6 +4602,21 @@
     ]
   },
   {
+    "id": "p098",
+    "nombre": "Esmalte Semipermanente 098",
+    "referencia": "098",
+    "precio": 21000,
+    "categoria": "Esmaltes en Gel",
+    "subcategoria": "Traslúcidos",
+    "descripcion": "",
+    "imagen": "img/color/B098.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "preventa": true,
+    "color_blob": ""
+  },
+  {
     "id": "p360",
     "nombre": "Esmalte Semipermanente 360",
     "referencia": "360",
@@ -4851,6 +4991,126 @@
         "src": "img/color/353.webp"
       }
     ]
+  },
+  {
+    "id": "p317",
+    "nombre": "Cat Eye 317",
+    "referencia": "317",
+    "precio": 31000,
+    "categoria": "Esmaltes en Gel",
+    "subcategoria": "Cat Eye",
+    "descripcion": "",
+    "imagen": "img/color/B317.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "preventa": true,
+    "color_blob": ""
+  },
+  {
+    "id": "p318",
+    "nombre": "Cat Eye 318",
+    "referencia": "318",
+    "precio": 31000,
+    "categoria": "Esmaltes en Gel",
+    "subcategoria": "Cat Eye",
+    "descripcion": "",
+    "imagen": "img/color/B318.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "preventa": true,
+    "color_blob": ""
+  },
+  {
+    "id": "p319",
+    "nombre": "Cat Eye 319",
+    "referencia": "319",
+    "precio": 31000,
+    "categoria": "Esmaltes en Gel",
+    "subcategoria": "Cat Eye",
+    "descripcion": "",
+    "imagen": "img/color/B319.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "preventa": true,
+    "color_blob": ""
+  },
+  {
+    "id": "p354",
+    "nombre": "Starry Cat's Eye Gel 354",
+    "referencia": "354",
+    "precio": 31000,
+    "categoria": "Esmaltes en Gel",
+    "subcategoria": "Cat Eye",
+    "descripcion": "",
+    "imagen": "img/color/B354.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "preventa": true,
+    "color_blob": ""
+  },
+  {
+    "id": "p355",
+    "nombre": "Starry Cat's Eye Gel 355",
+    "referencia": "355",
+    "precio": 31000,
+    "categoria": "Esmaltes en Gel",
+    "subcategoria": "Cat Eye",
+    "descripcion": "",
+    "imagen": "img/color/B355.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "preventa": true,
+    "color_blob": ""
+  },
+  {
+    "id": "p356",
+    "nombre": "Starry Cat's Eye Gel 356",
+    "referencia": "356",
+    "precio": 31000,
+    "categoria": "Esmaltes en Gel",
+    "subcategoria": "Cat Eye",
+    "descripcion": "",
+    "imagen": "img/color/B356.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "preventa": true,
+    "color_blob": ""
+  },
+  {
+    "id": "p357",
+    "nombre": "Starry Cat's Eye Gel 357",
+    "referencia": "357",
+    "precio": 31000,
+    "categoria": "Esmaltes en Gel",
+    "subcategoria": "Cat Eye",
+    "descripcion": "",
+    "imagen": "img/color/B357.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "preventa": true,
+    "color_blob": ""
+  },
+  {
+    "id": "p358",
+    "nombre": "Starry Cat's Eye Gel 358",
+    "referencia": "358",
+    "precio": 31000,
+    "categoria": "Esmaltes en Gel",
+    "subcategoria": "Cat Eye",
+    "descripcion": "",
+    "imagen": "img/color/B358.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "preventa": true,
+    "color_blob": ""
   },
   {
     "id": "pustm6",
