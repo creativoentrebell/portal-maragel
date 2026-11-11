@@ -134,6 +134,15 @@
       padding: 3px 7px; border-radius: 3px;
     }
 
+    /* Badge Preventa */
+    .badge-preventa {
+      position: absolute; top: 9px; right: 9px; z-index: 3;
+      background: linear-gradient(90deg, #E088BE, #9878D8); color: #fff;
+      font-size: 9px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;
+      padding: 3px 7px; border-radius: 3px;
+    }
+    .bs-visual .badge-preventa { top: 12px; right: 12px; }
+
     /* ── TORNASOL / IRIDISCENTE ─────────────────── */
     @keyframes shimmer {
       0%   { background-position: 0% 50%; }
@@ -1064,6 +1073,26 @@
   </div>
 </section>
 
+<!-- ── PREVENTA ───────────────────────────────── -->
+<section class="bs-section" id="pv-section" style="padding-top:0">
+  <div class="bs-heading">
+    <div class="bs-heading-left">
+      <div class="sec-eyebrow">Aparta el tuyo</div>
+      <div class="sec-title"><em>Preventa</em></div>
+    </div>
+    <div class="bs-heading-note">Reserva hoy<br class="bs-note-br"><span class="bs-note-sp"> </span>antes de que lleguen</div>
+  </div>
+  <div class="bs-carousel">
+    <button class="bs-arrow bs-prev" aria-label="Anterior" onclick="bsScroll(-1, 'pv-grid')">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="bs-grid" id="pv-grid" onscroll="bsUpdateArrows('pv-grid')"></div>
+    <button class="bs-arrow bs-next" aria-label="Siguiente" onclick="bsScroll(1, 'pv-grid')">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+</section>
+
 <!-- ── CATEGORY NAV ───────────────────────────── -->
 <div class="cat-nav-wrap">
   <nav class="cat-nav" id="cat-nav"></nav>
@@ -1242,14 +1271,29 @@ function renderBS() {
   // best_seller puede ser un número (1 = el más vendido) para ordenar el carrusel
   const rank = p => typeof p.best_seller === 'number' ? p.best_seller : 9999;
   const items = PRODUCTOS.filter(p => p.best_seller).sort((a, b) => rank(a) - rank(b));
-  requestAnimationFrame(bsUpdateArrows);
-  document.getElementById('bs-grid').innerHTML = items.map(p => {
-    const swId = 'bssw-' + p.id;
+  requestAnimationFrame(() => bsUpdateArrows('bs-grid'));
+  document.getElementById('bs-grid').innerHTML = items.map(bsCard).join('');
+}
+
+/* ── RENDER PREVENTA ────────────────────────── */
+function renderPreventa() {
+  const items = PRODUCTOS.filter(p => p.preventa);
+  const sec = document.getElementById('pv-section');
+  sec.dataset.empty = items.length ? '' : '1';
+  sec.style.display = items.length ? '' : 'none';
+  document.getElementById('pv-grid').innerHTML = items.map(bsCard).join('');
+  requestAnimationFrame(() => bsUpdateArrows('pv-grid'));
+}
+
+/* Tarjeta compartida por Best Sellers y Preventa */
+function bsCard(p) {
+    const swId = 'bssw-' + p.id + '-' + Math.random().toString(36).slice(2, 7);
     const fallback = getImgSrc(p);
     return `
     <div class="bs-card" data-ref="${p.referencia}" data-cat="${p.categoria}" onclick="openModal('${p.id}')">
       <div class="bs-visual">
         <div class="bs-ref-ghost">${p.referencia}</div>
+        ${p.preventa ? '<div class="badge-preventa">Preventa</div>' : ''}
         <div class="bs-swatch" id="${swId}">
           <img src="${p.imagen}" alt="${p.nombre}"
                onload="this.closest('.bs-visual').classList.add('has-photo')"
@@ -1262,22 +1306,22 @@ function renderBS() {
         <div class="bs-price" data-ref="${p.referencia}" data-detal="${fmtPrice(p.precio)}">${getDisplayPrice(p)}</div>
       </div>
     </div>`;
-  }).join('');
 }
 
 /* ── CARRUSEL BEST SELLERS ──────────────────── */
-function bsScroll(dir) {
-  const g = document.getElementById('bs-grid');
+function bsScroll(dir, gridId = 'bs-grid') {
+  const g = document.getElementById(gridId);
   g.scrollBy({ left: dir * g.clientWidth, behavior: 'smooth' });
 }
-function bsUpdateArrows() {
-  const g = document.getElementById('bs-grid');
+function bsUpdateArrows(gridId = 'bs-grid') {
+  const g = document.getElementById(gridId);
   if (!g) return;
+  const wrap = g.closest('.bs-carousel');
   const max = g.scrollWidth - g.clientWidth - 2;
-  document.querySelector('.bs-prev').disabled = g.scrollLeft <= 2;
-  document.querySelector('.bs-next').disabled = g.scrollLeft >= max;
+  wrap.querySelector('.bs-prev').disabled = g.scrollLeft <= 2;
+  wrap.querySelector('.bs-next').disabled = g.scrollLeft >= max;
 }
-window.addEventListener('resize', bsUpdateArrows);
+window.addEventListener('resize', () => { bsUpdateArrows('bs-grid'); bsUpdateArrows('pv-grid'); });
 
 /* ── RENDER CATEGORY NAV ────────────────────── */
 function renderCatNav() {
@@ -1421,12 +1465,12 @@ function handleSearch(val) {
   searchQuery = normalizeText(val.trim());
   document.getElementById('search-clear').style.display = searchQuery ? 'block' : 'none';
 
-  const bsEl  = document.querySelector('.bs-section');
+  const bsEls = document.querySelectorAll('.bs-section');
   const main  = document.getElementById('products-main');
   const res   = document.getElementById('search-results');
 
   if (searchQuery) {
-    bsEl.style.display  = 'none';
+    bsEls.forEach(el => el.style.display = 'none');
     main.style.display  = 'none';
     res.classList.add('visible');
 
@@ -1455,7 +1499,7 @@ function clearSearch() {
   searchQuery = '';
   document.getElementById('search-input').value = '';
   document.getElementById('search-clear').style.display = 'none';
-  document.querySelector('.bs-section').style.display = '';
+  document.querySelectorAll('.bs-section').forEach(el => el.style.display = el.dataset.empty ? 'none' : '');
   document.getElementById('products-main').style.display = '';
   document.getElementById('search-results').classList.remove('visible');
   filterCat(activeCat);
@@ -1485,6 +1529,7 @@ function productCard(p, globalIdx = 0) {
            onerror="this.src='${fallback}';this.classList.add('is-ph')">
       ${p.nuevo   ? '<div class="badge-nuevo">Nuevo</div>'    : ''}
       ${p.agotado ? '<div class="badge-agotado">Agotado</div>' : ''}
+      ${p.preventa && !p.agotado ? '<div class="badge-preventa">Preventa</div>' : ''}
       ${hasMedia  ? `<div class="badge-media">${hasVideo?'▶':'⊞'} ${p.galeria.length}</div>` : ''}
     </div>
     <div class="pc-info">
@@ -1761,6 +1806,7 @@ function buildModalInfo() {
     ${p.descripcion ? `<div class="modal-desc">${p.descripcion}</div>` : ''}
     ${p.agotado ? '<div class="modal-badge-sold">Agotado temporalmente</div>' : ''}
     ${p.nuevo ? '<div class="modal-badge-sold" style="background:#383838;color:#fff;border-color:#383838">Nuevo</div>' : ''}
+    ${p.preventa ? '<div class="modal-badge-sold" style="background:linear-gradient(90deg,#E088BE,#9878D8);color:#fff;border-color:transparent">Preventa</div>' : ''}
     ${p.agotado ? '' : `
     <div class="order-zone">
       <div class="order-row">
@@ -2139,7 +2185,7 @@ function buildWaMessage() {
     const unit = cartUnitPrice(p);
     nUnid += it.cantidad;
     msg += `\n*${i+1}. ${p.nombre}*\n`;
-    msg += `- Ref: ${p.referencia}\n`;
+    msg += `- Ref: ${p.referencia}${p.preventa ? ' _(Preventa)_' : ''}\n`;
     if (it.nota) msg += `- Nota: ${it.nota}\n`;
     if (currentMode === 'catalogo') {
       msg += `- Cantidad: ${it.cantidad}\n`;
@@ -2237,6 +2283,7 @@ function init(data) {
   PRODUCTOS = data;
   setupLazyImages();
   renderBS();
+  renderPreventa();
   renderCatNav();
   renderProducts();
   // Carrito: restaurar desde localStorage y depurar productos inexistentes/agotados
