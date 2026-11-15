@@ -1507,7 +1507,7 @@
       font-size: 22px; line-height: 1; color: var(--text); cursor: pointer;
     }
     .cw-body {
-      flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 410px;
+      flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 470px;
       max-width: 1320px; width: 100%; margin: 0 auto;
     }
     .cw-left { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 14px 20px; min-height: 0; }
@@ -1529,13 +1529,15 @@
     }
     .cw-sheet-close { display: none; }
     .cw-media { position: relative; width: 100%; display: flex; align-items: center; justify-content: center; }
-    .cw-stage { position: relative; width: 300px; height: 300px; flex-shrink: 0; }
+    .cw-stage { position: relative; width: 360px; height: 450px; max-height: calc(100vh - 360px); min-height: 300px; aspect-ratio: 4 / 5; flex-shrink: 0; }
+    .cw-slide img { object-fit: cover; }
+    .cw-slide.fit img { object-fit: contain; background: #fff; }
     .cw-slide { position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity 0.35s; display: flex; align-items: center; justify-content: center; }
     .cw-slide.on { opacity: 1; pointer-events: auto; }
-    .cw-slide img { width: 100%; height: 100%; object-fit: contain; border-radius: 18px; background: var(--card-bg); }
+    .cw-slide img { width: 100%; height: 100%; border-radius: 18px; background: var(--card-bg); }
     .cw-slide.is-video video { width: 100%; height: 100%; object-fit: cover; border-radius: 18px; background: #181818; }
     .cw-novid { width: 100%; height: 100%; border-radius: 18px; background: #181818; color: rgba(255,255,255,.7); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; }
-    .cw-halo { position: absolute; inset: 6%; border-radius: 50%; }
+    .cw-halo { position: absolute; left: 4%; right: 4%; top: 50%; aspect-ratio: 1; transform: translateY(-50%); border-radius: 50%; }
     .cw-big { position: relative; height: 96%; width: auto; overflow: visible; }
     .cw-arrow {
       position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
@@ -1602,7 +1604,7 @@
         font-family: inherit; font-size: 0.74rem; color: var(--text-sec);
       }
       .cw-sheet-close::before { content: ''; width: 40px; height: 4px; border-radius: 2px; background: #D4D4D4; }
-      .cw-stage { width: 210px; height: 210px; }
+      .cw-stage { width: 210px; height: 210px; min-height: 0; max-height: none; aspect-ratio: auto; }
       .cw-arrow { width: 38px; height: 38px; }
       .cw-play { flex-direction: row; gap: 8px; margin-top: 4px; }
       .cw-play span { width: 36px; height: 36px; font-size: 12px; }
@@ -3455,7 +3457,10 @@ function cwSelect(id) {
     if (on) { const g = n.parentNode; g.parentNode.appendChild(g); }   // la elegida queda encima
   });
   const g = (p.galeria && p.galeria.length ? p.galeria : [{ tipo: 'foto', src: p.imagen }]);
-  cwSlides = [{ tipo: 'render' }, ...g.filter(x => x.tipo === 'foto'), ...g.filter(x => x.tipo === 'video')];
+  const fotos = g.filter(x => x.tipo === 'foto');
+  const brocha = fotos.filter(x => /img\/color\//.test(x.src));          // foto de brocha (carpeta "color")
+  if (!brocha.length && p.imagen) brocha.push({ tipo: 'foto', src: p.imagen });
+  cwSlides = [...brocha, ...g.filter(x => x.tipo === 'video'), ...fotos.filter(x => !brocha.includes(x))];   // brocha → video → frasco
   cwIdx = 0;
   cwRenderPanel();
   document.getElementById('cw-panel').classList.add('open');
@@ -3470,8 +3475,8 @@ function cwRenderPanel() {
         <svg class="cw-big" viewBox="-80 -330 160 350"><g filter="url(#cwbig)" transform="rotate(-24 0 -150)">${nailSVG(p.tono, 132, 300, 'big' + p.id, p.agotado)}</g>
         <defs><filter id="cwbig" x="-40%" y="-20%" width="180%" height="140%"><feDropShadow dx="6" dy="10" stdDeviation="8" flood-opacity=".22"/></filter></defs></svg></div>`;
     if (s.tipo === 'video') return `<div class="cw-slide is-video${i === cwIdx ? ' on' : ''}">
-        <video playsinline controls preload="none" src="${s.src}" onerror="this.parentElement.innerHTML='<div class=&quot;cw-novid&quot;>Video no disponible</div>'"></video></div>`;
-    return `<div class="cw-slide${i === cwIdx ? ' on' : ''}"><img src="${s.src}" alt="Foto del esmalte ${escHtml(p.referencia)}" loading="lazy"
+        <video playsinline controls muted preload="metadata" src="${s.src}#t=0.1" onerror="this.parentElement.innerHTML='<div class=&quot;cw-novid&quot;>Video no disponible</div>'"></video></div>`;
+    return `<div class="cw-slide${i === cwIdx ? ' on' : ''}${/ECOMM/i.test(s.src) ? ' fit' : ''}"><img src="${s.src}" alt="Foto del esmalte ${escHtml(p.referencia)}" loading="lazy"
         onerror="this.closest('.cw-slide').remove();cwSlides.splice(${i},1);"></div>`;
   }).join('');
   document.getElementById('cw-dots').innerHTML = cwSlides.length > 1
@@ -3501,6 +3506,8 @@ function cwGo(i) {
   cwIdx = (i + cwSlides.length) % cwSlides.length;
   document.querySelectorAll('#cw-stage .cw-slide').forEach((s, k) => s.classList.toggle('on', k === cwIdx));
   document.querySelectorAll('#cw-dots .cw-dot').forEach((d, k) => d.classList.toggle('on', k === cwIdx));
+  const v = document.querySelectorAll('#cw-stage .cw-slide')[cwIdx]?.querySelector('video');
+  if (v) v.play().catch(() => {});   // al llegar al video, arranca solo (sin sonido)
 }
 function cwPlay() {
   const i = cwSlides.findIndex(s => s.tipo === 'video'); if (i < 0) return;
