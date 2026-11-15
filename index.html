@@ -1369,12 +1369,6 @@
     .wl-go:hover { opacity: 0.9; }
     .wl-foot { font-size: 0.72rem; color: var(--text-sec); text-align: center; margin-top: 10px; }
 
-    @media (min-width: 1500px) {
-      .product-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-    }
-    @media (max-width: 1100px) {
-      .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    }
     @media (max-width: 960px) {
       .search-wrap {
         grid-template-columns: minmax(0, 1fr) auto auto;
@@ -1403,6 +1397,36 @@
       .mode-btn { padding: 9px 9px; font-size: 0.68rem; }
     }
 
+
+    /* ── Contenido centrado (ancho máximo, como Monogoto) ── */
+    :root { --maxw: 1180px; }
+    .banner, .search-wrap, .modo-banner, footer {
+      padding-left:  max(28px, calc((100% - var(--maxw)) / 2));
+      padding-right: max(28px, calc((100% - var(--maxw)) / 2));
+    }
+    .banner-right { margin-right: 0; }
+    .cat-nav { padding-left: max(28px, calc((100% - var(--maxw)) / 2)); padding-right: max(28px, calc((100% - var(--maxw)) / 2)); }
+    .cat-tab:first-child { padding-left: 0; }
+    .cat-tab:first-child.active::after { left: 0; }
+    .catalog { max-width: calc(var(--maxw) + 56px); margin: 0 auto; }
+
+    /* ── Más vendidos y Preventa dentro de la columna de resultados ── */
+    .results .bs-section {
+      padding: 28px 26px 30px; border-radius: 18px; margin-bottom: 26px;
+    }
+    .results #pv-section { background: var(--card-bg); }
+    .results .bs-heading { margin-bottom: 22px; }
+    .results .sec-title { font-size: 2.2rem; }
+    .results .bs-band .sec-title { font-size: 2.4rem; }
+    .results .bs-arrow.bs-prev { left: -20px; }
+    .results .bs-arrow.bs-next { right: -20px; }
+    .results #pv-section .bs-visual { background: #fff; }
+    @media (max-width: 960px) {
+      .banner, .search-wrap, .modo-banner, footer { padding-left: 16px; padding-right: 16px; }
+      .cat-nav { padding-left: 16px; padding-right: 16px; }
+      .results .bs-section { padding: 22px 16px 24px; border-radius: 14px; margin-bottom: 20px; }
+      .results .sec-title, .results .bs-band .sec-title { font-size: 1.85rem; }
+    }
     .search-input::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
   </style>
 </head>
@@ -1461,46 +1485,6 @@
 <!-- ── BANNER MODO MAYORISTA ─────────────────── -->
 <div class="modo-banner" id="modo-banner">Precios Mayoristas — para uso interno</div>
 
-<!-- ── BEST SELLERS (franja oscura) ───────────── -->
-<section class="bs-section bs-band featured" id="bs-section">
-  <div class="bs-heading">
-    <div class="bs-heading-left">
-      <div class="sec-eyebrow">Lo más amado</div>
-      <div class="sec-title">Best <em>Sellers</em></div>
-    </div>
-    <div class="bs-heading-note">Los tonos favoritos<br class="bs-note-br"><span class="bs-note-sp"> </span>de la temporada</div>
-  </div>
-  <div class="bs-carousel">
-    <button class="bs-arrow bs-prev" aria-label="Anterior" onclick="bsScroll(-1)">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-    </button>
-    <div class="bs-grid" id="bs-grid" onscroll="bsUpdateArrows()"></div>
-    <button class="bs-arrow bs-next" aria-label="Siguiente" onclick="bsScroll(1)">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-    </button>
-  </div>
-</section>
-
-<!-- ── PREVENTA ───────────────────────────────── -->
-<section class="bs-section featured" id="pv-section">
-  <div class="bs-heading">
-    <div class="bs-heading-left">
-      <div class="sec-eyebrow">Aparta el tuyo</div>
-      <div class="sec-title"><em>Preventa</em></div>
-    </div>
-    <div class="bs-heading-note">Reserva hoy<br class="bs-note-br"><span class="bs-note-sp"> </span>antes de que lleguen</div>
-  </div>
-  <div class="bs-carousel">
-    <button class="bs-arrow bs-prev" aria-label="Anterior" onclick="bsScroll(-1, 'pv-grid')">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-    </button>
-    <div class="bs-grid" id="pv-grid" onscroll="bsUpdateArrows('pv-grid')"></div>
-    <button class="bs-arrow bs-next" aria-label="Siguiente" onclick="bsScroll(1, 'pv-grid')">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-    </button>
-  </div>
-</section>
-
 <!-- ── CATEGORY NAV ───────────────────────────── -->
 <div class="cat-nav-wrap">
   <nav class="cat-nav" id="cat-nav"></nav>
@@ -1511,6 +1495,45 @@
   <aside class="sidebar" id="sidebar"></aside>
   <div class="results">
     <div class="results-top" id="results-top"></div>
+<!-- ── BEST SELLERS (franja oscura) ───────────── -->
+    <section class="bs-section bs-band featured" id="bs-section">
+      <div class="bs-heading">
+        <div class="bs-heading-left">
+          <div class="sec-eyebrow">Lo más amado</div>
+          <div class="sec-title">Best <em>Sellers</em></div>
+        </div>
+        <div class="bs-heading-note">Los tonos favoritos<br class="bs-note-br"><span class="bs-note-sp"> </span>de la temporada</div>
+      </div>
+      <div class="bs-carousel">
+        <button class="bs-arrow bs-prev" aria-label="Anterior" onclick="bsScroll(-1)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="bs-grid" id="bs-grid" onscroll="bsUpdateArrows()"></div>
+        <button class="bs-arrow bs-next" aria-label="Siguiente" onclick="bsScroll(1)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </section>
+    
+    <!-- ── PREVENTA ───────────────────────────────── -->
+    <section class="bs-section featured" id="pv-section">
+      <div class="bs-heading">
+        <div class="bs-heading-left">
+          <div class="sec-eyebrow">Aparta el tuyo</div>
+          <div class="sec-title"><em>Preventa</em></div>
+        </div>
+        <div class="bs-heading-note">Reserva hoy<br class="bs-note-br"><span class="bs-note-sp"> </span>antes de que lleguen</div>
+      </div>
+      <div class="bs-carousel">
+        <button class="bs-arrow bs-prev" aria-label="Anterior" onclick="bsScroll(-1, 'pv-grid')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="bs-grid" id="pv-grid" onscroll="bsUpdateArrows('pv-grid')"></div>
+        <button class="bs-arrow bs-next" aria-label="Siguiente" onclick="bsScroll(1, 'pv-grid')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </section>
     <div class="product-grid" id="grid"></div>
     <div class="pager" id="pager"></div>
     <section class="recent" id="recent" style="display:none"></section>
