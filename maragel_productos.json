@@ -794,6 +794,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#4C0A2B",
     "galeria": [
       {
         "tipo": "foto",
@@ -822,7 +823,18 @@
     "nuevo": false,
     "best_seller": false,
     "preventa": true,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#4A1220",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B359.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 359.mp4"
+      }
+    ]
   },
   {
     "id": "p057",
@@ -837,6 +849,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#87013E",
     "galeria": [
       {
         "tipo": "foto",
@@ -864,7 +877,18 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#281C17",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/color/B322.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 322.mp4"
+      }
+    ]
   },
   {
     "id": "p321",
@@ -879,6 +903,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#80020C",
     "galeria": [
       {
         "tipo": "foto",
@@ -903,6 +928,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FD6747",
     "galeria": [
       {
         "tipo": "foto",
@@ -931,6 +957,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FE9155",
     "galeria": [
       {
         "tipo": "foto",
@@ -959,6 +986,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#EEC874",
     "galeria": [
       {
         "tipo": "foto",
@@ -987,6 +1015,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FD7151",
     "galeria": [
       {
         "tipo": "foto",
@@ -1015,6 +1044,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FD9668",
     "galeria": [
       {
         "tipo": "foto",
@@ -1043,6 +1073,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FE944A",
     "galeria": [
       {
         "tipo": "foto",
@@ -1071,6 +1102,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FD8443",
     "galeria": [
       {
         "tipo": "foto",
@@ -1100,6 +1132,7 @@
     "best_seller": false,
     "preventa": true,
     "color_blob": "",
+    "tono": "#F9EFAD",
     "galeria": [
       {
         "tipo": "foto",
@@ -1129,6 +1162,7 @@
     "best_seller": false,
     "preventa": true,
     "color_blob": "",
+    "tono": "#EBE48D",
     "galeria": [
       {
         "tipo": "foto",
@@ -1137,6 +1171,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/114-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 114.mp4"
       }
     ]
   },
@@ -1153,6 +1191,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#86FEB3",
     "galeria": [
       {
         "tipo": "foto",
@@ -1181,6 +1220,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#92E1DC",
     "galeria": [
       {
         "tipo": "foto",
@@ -1209,6 +1249,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#84E9DE",
     "galeria": [
       {
         "tipo": "foto",
@@ -1237,6 +1278,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#85EECD",
     "galeria": [
       {
         "tipo": "foto",
@@ -1265,6 +1307,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#A8D6D4",
     "galeria": [
       {
         "tipo": "foto",
@@ -1293,6 +1336,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#E4F5B7",
     "galeria": [
       {
         "tipo": "foto",
@@ -1321,6 +1365,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#B3FDE0",
     "galeria": [
       {
         "tipo": "foto",
@@ -1349,6 +1394,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#2D6484",
     "galeria": [
       {
         "tipo": "foto",
@@ -1377,6 +1423,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#9EDFF6",
     "galeria": [
       {
         "tipo": "foto",
@@ -1405,6 +1452,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#9DCAD8",
     "galeria": [
       {
         "tipo": "foto",
@@ -1433,6 +1481,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#D6ECE8",
     "galeria": [
       {
         "tipo": "foto",
@@ -1461,6 +1510,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#9ABCE1",
     "galeria": [
       {
         "tipo": "foto",
@@ -1489,6 +1539,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#B8C9E3",
     "galeria": [
       {
         "tipo": "foto",
@@ -1517,6 +1568,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#BDDEEB",
     "galeria": [
       {
         "tipo": "foto",
@@ -1545,6 +1597,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#4994D9",
     "galeria": [
       {
         "tipo": "foto",
@@ -1573,6 +1626,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#87D4EB",
     "galeria": [
       {
         "tipo": "foto",
@@ -1601,6 +1655,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#C0DAF7",
     "galeria": [
       {
         "tipo": "foto",
@@ -1629,6 +1684,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#ACBAE5",
     "galeria": [
       {
         "tipo": "foto",
@@ -1657,6 +1713,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#DDD3EC",
     "galeria": [
       {
         "tipo": "foto",
@@ -1685,6 +1742,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#4E78DB",
     "galeria": [
       {
         "tipo": "foto",
@@ -1713,6 +1771,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#D3C6E6",
     "galeria": [
       {
         "tipo": "foto",
@@ -1741,6 +1800,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#8482D9",
     "galeria": [
       {
         "tipo": "foto",
@@ -1769,6 +1829,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#94DBF8",
     "galeria": [
       {
         "tipo": "foto",
@@ -1797,6 +1858,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#B577C4",
     "galeria": [
       {
         "tipo": "foto",
@@ -1825,6 +1887,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#BFB4E9",
     "galeria": [
       {
         "tipo": "foto",
@@ -1853,6 +1916,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#F1EAF6",
     "galeria": [
       {
         "tipo": "foto",
@@ -1881,6 +1945,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#E2DCF0",
     "galeria": [
       {
         "tipo": "foto",
@@ -1909,6 +1974,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#DCC7E8",
     "galeria": [
       {
         "tipo": "foto",
@@ -1938,6 +2004,7 @@
     "best_seller": false,
     "preventa": true,
     "color_blob": "",
+    "tono": "#BF9BDA",
     "galeria": [
       {
         "tipo": "foto",
@@ -1966,6 +2033,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#D3C7EA",
     "galeria": [
       {
         "tipo": "foto",
@@ -1994,6 +2062,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#E186C0",
     "galeria": [
       {
         "tipo": "foto",
@@ -2022,6 +2091,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FEC2B3",
     "galeria": [
       {
         "tipo": "foto",
@@ -2050,6 +2120,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#F7A0BF",
     "galeria": [
       {
         "tipo": "foto",
@@ -2078,6 +2149,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#F5BFB6",
     "galeria": [
       {
         "tipo": "foto",
@@ -2106,6 +2178,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FDB1BE",
     "galeria": [
       {
         "tipo": "foto",
@@ -2134,6 +2207,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#F7A9C1",
     "galeria": [
       {
         "tipo": "foto",
@@ -2162,6 +2236,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FBC4CE",
     "galeria": [
       {
         "tipo": "foto",
@@ -2190,6 +2265,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#F6A2AA",
     "galeria": [
       {
         "tipo": "foto",
@@ -2218,6 +2294,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#8E2BB3",
     "galeria": [
       {
         "tipo": "foto",
@@ -2226,6 +2303,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/222-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 222.mp4"
       }
     ]
   },
@@ -2242,6 +2323,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FD837D",
     "galeria": [
       {
         "tipo": "foto",
@@ -2250,6 +2332,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/253-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 253.mp4"
       }
     ]
   },
@@ -2266,6 +2352,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#AAFE68",
     "galeria": [
       {
         "tipo": "foto",
@@ -2274,6 +2361,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/248-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 248.mp4"
       }
     ]
   },
@@ -2290,6 +2381,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#F93B4A",
     "galeria": [
       {
         "tipo": "foto",
@@ -2298,6 +2390,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/284-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 284.mp4"
       }
     ]
   },
@@ -2314,6 +2410,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FC7185",
     "galeria": [
       {
         "tipo": "foto",
@@ -2322,6 +2419,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/258-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 258.mp4"
       }
     ]
   },
@@ -2338,6 +2439,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#9EFB81",
     "galeria": [
       {
         "tipo": "foto",
@@ -2346,6 +2448,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/249-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 249.mp4"
       }
     ]
   },
@@ -2362,6 +2468,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FC3B5D",
     "galeria": [
       {
         "tipo": "foto",
@@ -2370,6 +2477,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/283-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 283.mp4"
       }
     ]
   },
@@ -2386,6 +2497,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FD54B1",
     "galeria": [
       {
         "tipo": "foto",
@@ -2394,6 +2506,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/282-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 282.mp4"
       }
     ]
   },
@@ -2410,6 +2526,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#F1FE66",
     "galeria": [
       {
         "tipo": "foto",
@@ -2418,6 +2535,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/247-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 247.mp4"
       }
     ]
   },
@@ -2434,6 +2555,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#E4FD4C",
     "galeria": [
       {
         "tipo": "foto",
@@ -2442,6 +2564,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/246-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 246.mp4"
       }
     ]
   },
@@ -2458,6 +2584,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FC4887",
     "galeria": [
       {
         "tipo": "foto",
@@ -2466,6 +2593,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/087-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 087.mp4"
       }
     ]
   },
@@ -2482,6 +2613,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FD8ABB",
     "galeria": [
       {
         "tipo": "foto",
@@ -2490,6 +2622,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/039-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 039.mp4"
       }
     ]
   },
@@ -2506,6 +2642,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#EE40A5",
     "galeria": [
       {
         "tipo": "foto",
@@ -2514,6 +2651,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/285-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 285.mp4"
       }
     ]
   },
@@ -2530,6 +2671,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FD538C",
     "galeria": [
       {
         "tipo": "foto",
@@ -2538,6 +2680,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/131-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 131.mp4"
       }
     ]
   },
@@ -2554,6 +2700,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FEA9B1",
     "galeria": [
       {
         "tipo": "foto",
@@ -2562,6 +2709,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/050-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 050.mp4"
       }
     ]
   },
@@ -2578,6 +2729,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FD5D88",
     "galeria": [
       {
         "tipo": "foto",
@@ -2586,6 +2738,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/257-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 257.mp4"
       }
     ]
   },
@@ -2602,6 +2758,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#FD6989",
     "galeria": [
       {
         "tipo": "foto",
@@ -2610,6 +2767,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/256-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 256.mp4"
       }
     ]
   },
@@ -2626,6 +2787,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#D3B298",
     "galeria": [
       {
         "tipo": "foto",
@@ -2634,6 +2796,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/081-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 081.mp4"
       }
     ]
   },
@@ -2650,6 +2816,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#F0E8DD",
     "galeria": [
       {
         "tipo": "foto",
@@ -2658,6 +2825,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/005-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 005.mp4"
       }
     ]
   },
@@ -2674,6 +2845,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#D9A4AC",
     "galeria": [
       {
         "tipo": "foto",
@@ -2682,6 +2854,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/187-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 187.mp4"
       }
     ]
   },
@@ -2699,6 +2875,7 @@
     "best_seller": false,
     "preventa": true,
     "color_blob": "",
+    "tono": "#CB9785",
     "galeria": [
       {
         "tipo": "foto",
@@ -2707,6 +2884,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/015-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 015.mp4"
       }
     ]
   },
@@ -2723,6 +2904,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#F9E2DB",
     "galeria": [
       {
         "tipo": "foto",
@@ -2731,6 +2913,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/113-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 113.mp4"
       }
     ]
   },
@@ -2747,6 +2933,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#E8C3A8",
     "galeria": [
       {
         "tipo": "foto",
@@ -2755,6 +2942,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/044-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 044.mp4"
       }
     ]
   },
@@ -2771,6 +2962,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#F9E3C5",
     "galeria": [
       {
         "tipo": "foto",
@@ -2779,6 +2971,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/022-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 022.mp4"
       }
     ]
   },
@@ -2795,6 +2991,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#DC7690",
     "galeria": [
       {
         "tipo": "foto",
@@ -2803,6 +3000,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/189-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 189.mp4"
       }
     ]
   },
@@ -2819,6 +3020,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#E0B38D",
     "galeria": [
       {
         "tipo": "foto",
@@ -2827,6 +3029,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/185-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 185.mp4"
       }
     ]
   },
@@ -2843,6 +3049,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#826E6A",
     "galeria": [
       {
         "tipo": "foto",
@@ -2851,6 +3058,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/060-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 060.mp4"
       }
     ]
   },
@@ -2868,6 +3079,7 @@
     "best_seller": false,
     "preventa": true,
     "color_blob": "",
+    "tono": "#C6B7A5",
     "galeria": [
       {
         "tipo": "foto",
@@ -2876,6 +3088,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/007-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 007.mp4"
       }
     ]
   },
@@ -2892,6 +3108,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#B6AE94",
     "galeria": [
       {
         "tipo": "foto",
@@ -2900,6 +3117,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/013-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 013.mp4"
       }
     ]
   },
@@ -2916,6 +3137,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#AC6457",
     "galeria": [
       {
         "tipo": "foto",
@@ -2924,6 +3146,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/134-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 134.mp4"
       }
     ]
   },
@@ -2940,6 +3166,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#E3B19A",
     "galeria": [
       {
         "tipo": "foto",
@@ -2948,6 +3175,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/179-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 179.mp4"
       }
     ]
   },
@@ -2964,6 +3195,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#EFCFC8",
     "galeria": [
       {
         "tipo": "foto",
@@ -2972,6 +3204,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/135-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 135.mp4"
       }
     ]
   },
@@ -2989,6 +3225,7 @@
     "best_seller": false,
     "preventa": true,
     "color_blob": "",
+    "tono": "#CA8373",
     "galeria": [
       {
         "tipo": "foto",
@@ -2997,6 +3234,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/012-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 012.mp4"
       }
     ]
   },
@@ -3014,6 +3255,7 @@
     "best_seller": false,
     "preventa": true,
     "color_blob": "",
+    "tono": "#9C7B71",
     "galeria": [
       {
         "tipo": "foto",
@@ -3022,6 +3264,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/058-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 058.mp4"
       }
     ]
   },
@@ -3039,6 +3285,7 @@
     "best_seller": false,
     "preventa": true,
     "color_blob": "",
+    "tono": "#B09C85",
     "galeria": [
       {
         "tipo": "foto",
@@ -3047,6 +3294,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/023-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 023.mp4"
       }
     ]
   },
@@ -3063,6 +3314,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#675F55",
     "galeria": [
       {
         "tipo": "foto",
@@ -3071,6 +3323,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/017-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 017.mp4"
       }
     ]
   },
@@ -3087,6 +3343,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#625B4E",
     "galeria": [
       {
         "tipo": "foto",
@@ -3095,6 +3352,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/025-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 025.mp4"
       }
     ]
   },
@@ -3111,6 +3372,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#555B56",
     "galeria": [
       {
         "tipo": "foto",
@@ -3119,6 +3381,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/021-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 021.mp4"
       }
     ]
   },
@@ -3136,6 +3402,7 @@
     "best_seller": false,
     "preventa": true,
     "color_blob": "",
+    "tono": "#937C65",
     "galeria": [
       {
         "tipo": "foto",
@@ -3144,6 +3411,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/024-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 024.mp4"
       }
     ]
   },
@@ -3161,6 +3432,7 @@
     "best_seller": false,
     "preventa": true,
     "color_blob": "",
+    "tono": "#685548",
     "galeria": [
       {
         "tipo": "foto",
@@ -3169,6 +3441,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/082-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 082.mp4"
       }
     ]
   },
@@ -3185,6 +3461,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#6B7470",
     "galeria": [
       {
         "tipo": "foto",
@@ -3193,6 +3470,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/047-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 047.mp4"
       }
     ]
   },
@@ -3209,6 +3490,7 @@
     "nuevo": false,
     "best_seller": 4,
     "color_blob": "",
+    "tono": "#030705",
     "galeria": [
       {
         "tipo": "foto",
@@ -3217,6 +3499,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/026-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 026.mp4"
       }
     ]
   },
@@ -3233,6 +3519,7 @@
     "nuevo": false,
     "best_seller": 3,
     "color_blob": "",
+    "tono": "#F8F9F8",
     "galeria": [
       {
         "tipo": "foto",
@@ -3241,6 +3528,10 @@
       {
         "tipo": "foto",
         "src": "img/esmalte/001-ECOMM.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 001.mp4"
       }
     ]
   },
@@ -4630,6 +4921,7 @@
     "best_seller": false,
     "preventa": true,
     "color_blob": "",
+    "tono": "#330501",
     "galeria": [
       {
         "tipo": "foto",
@@ -4638,6 +4930,10 @@
       {
         "tipo": "foto",
         "src": "img/color/360.webp"
+      },
+      {
+        "tipo": "video",
+        "src": "img/video/Ref 360.mp4"
       }
     ]
   },

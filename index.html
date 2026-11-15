@@ -1427,6 +1427,189 @@
       .results .bs-section { padding: 22px 16px 24px; border-radius: 14px; margin-bottom: 20px; }
       .results .sec-title, .results .bs-band .sec-title { font-size: 1.85rem; }
     }
+
+    /* ── Detalle del producto: foto a la izquierda, info y compra a la derecha (escritorio) ── */
+    .modal-rel { padding: 0 22px 26px; }
+    .modal-rel .rel { margin-top: 0; }
+    @media (min-width: 769px) {
+      .modal {
+        max-width: 920px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: start; max-height: 88vh;
+      }
+      .modal-accent { grid-column: 1 / -1; }
+      .modal-media  { grid-column: 1; grid-row: 2; position: sticky; top: 0; }
+      .modal-info   { grid-column: 2; grid-row: 2; padding: 34px 30px 28px; border-left: 1px solid var(--border); min-height: 100%; }
+      .modal-rel    { grid-column: 1 / -1; grid-row: 3; padding: 22px 26px 28px; border-top: 1px solid var(--border); }
+      .modal-rel .rel { border-top: none; padding-top: 0; }
+      .modal-rel .mini-row { grid-auto-columns: calc((100% - 3 * 12px) / 4); }
+      .modal-info .modal-info-top { padding-right: 36px; }
+      .modal-name { font-size: 1.45rem; }
+      .modal-price { font-size: 1.7rem; }
+      .gal-thumbs { border-bottom: none; }
+    }
+    @media (max-width: 768px) {
+      .gallery-item { aspect-ratio: 4 / 3; }
+      .gal-thumbs { padding: 8px 14px; }
+      .gal-thumb { width: 46px; height: 46px; }
+      .modal-info { padding-top: 18px; }
+      .modal-name { margin-bottom: 10px; }
+      .modal-price-row { margin-bottom: 10px; }
+    }
+
+    /* ══ CÍRCULO DE COLORES ══════════════════════════════════ */
+    /* Banner de invitación (dentro de la columna de resultados) */
+    .cw-banner {
+      position: relative; overflow: hidden; cursor: pointer;
+      display: grid; grid-template-columns: minmax(0, 1fr) 300px; align-items: center;
+      min-height: 250px; margin-bottom: 26px; padding: 30px 0 30px 32px; border-radius: 18px;
+      background: linear-gradient(120deg, #FCF8FB 0%, #F6F4FC 55%, #F2F8F8 100%);
+      border: 1px solid #EEE9F1;
+    }
+    .cw-banner:hover .cwb-wheel { transform: rotate(8deg) scale(1.03); }
+    .cwb-title { font-size: 2.3rem; font-weight: 600; letter-spacing: -0.8px; line-height: 1.05; color: var(--text); margin: 6px 0 10px; }
+    .cwb-title em {
+      font-weight: 400; font-style: italic;
+      background: var(--tornasol); background-size: 200% auto; -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; animation: shimmer 4s linear infinite;
+    }
+    .cwb-text p { font-size: 0.86rem; color: var(--text-sec); line-height: 1.55; max-width: 380px; margin-bottom: 18px; }
+    .cwb-count { font-weight: 600; color: var(--text); }
+    .cwb-btn {
+      display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border: none; border-radius: 24px;
+      font-family: inherit; font-size: 0.86rem; font-weight: 600; cursor: pointer;
+    }
+    .cwb-wheel { width: 340px; height: 340px; margin: -40px -60px -40px 0; transition: transform 0.8s cubic-bezier(.2,.8,.2,1); }
+    .cwb-wheel svg { width: 100%; height: 100%; display: block; }
+
+    /* Vista completa */
+    .cw-overlay {
+      position: fixed; inset: 0; z-index: 500; background: #FFFFFF;
+      display: none; flex-direction: column;
+    }
+    .cw-overlay.open { display: flex; animation: cwIn 0.35s ease; }
+    @keyframes cwIn { from { opacity: 0; transform: scale(0.985); } to { opacity: 1; transform: none; } }
+    .cw-top {
+      height: 68px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 0 max(24px, calc((100% - 1320px) / 2)); border-bottom: 1px solid var(--border);
+    }
+    .cw-brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
+    .cw-logo { height: 26px; width: auto; display: block; }
+    .cw-tag { font-size: 0.7rem; letter-spacing: 2.4px; text-transform: uppercase; color: var(--text-sec); white-space: nowrap; }
+    .cw-actions { display: flex; align-items: center; gap: 10px; }
+    .cw-cartbtn {
+      position: relative; display: flex; align-items: center; gap: 8px; padding: 9px 14px;
+      border: 1px solid var(--border); border-radius: 22px; background: #fff; cursor: pointer;
+      font-family: inherit; font-size: 0.8rem; font-weight: 500; color: var(--text);
+    }
+    .cw-cartbtn .cart-count { top: -6px; right: -6px; }
+    .cw-x {
+      width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border); background: #fff;
+      font-size: 22px; line-height: 1; color: var(--text); cursor: pointer;
+    }
+    .cw-body {
+      flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 410px;
+      max-width: 1320px; width: 100%; margin: 0 auto;
+    }
+    .cw-left { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 14px 20px; min-height: 0; }
+    .cw-wheel { width: min(100%, calc(100vh - 150px)); aspect-ratio: 1; }
+    .cw-wheel svg { width: 100%; height: 100%; display: block; overflow: visible; }
+    .cw-nail { cursor: pointer; transition: transform 0.25s cubic-bezier(.3,1.4,.6,1); transform-box: fill-box; transform-origin: 50% 100%; outline: none; }
+    .cw-nail:hover, .cw-nail:focus-visible { transform: scale(1.14); }
+    .cw-nail.sel { transform: scale(1.38); }
+    .cw-foot {
+      position: absolute; left: 20px; right: 20px; bottom: 16px; display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.68rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text-sec); pointer-events: none;
+    }
+    .cw-legend { display: flex; align-items: center; gap: 6px; letter-spacing: 1px; }
+    .cw-legend i { width: 10px; height: 16px; border-radius: 5px 5px 4px 4px; background: #D6D6D4; display: inline-block; }
+
+    .cw-panel {
+      border-left: 1px solid var(--border); padding: 26px 30px 24px; overflow-y: auto;
+      display: flex; flex-direction: column; align-items: center; text-align: center; min-height: 0;
+    }
+    .cw-sheet-close { display: none; }
+    .cw-media { position: relative; width: 100%; display: flex; align-items: center; justify-content: center; }
+    .cw-stage { position: relative; width: 300px; height: 300px; flex-shrink: 0; }
+    .cw-slide { position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity 0.35s; display: flex; align-items: center; justify-content: center; }
+    .cw-slide.on { opacity: 1; pointer-events: auto; }
+    .cw-slide img { width: 100%; height: 100%; object-fit: contain; border-radius: 18px; background: var(--card-bg); }
+    .cw-slide.is-video video { width: 100%; height: 100%; object-fit: cover; border-radius: 18px; background: #181818; }
+    .cw-novid { width: 100%; height: 100%; border-radius: 18px; background: #181818; color: rgba(255,255,255,.7); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; }
+    .cw-halo { position: absolute; inset: 6%; border-radius: 50%; }
+    .cw-big { position: relative; height: 96%; width: auto; overflow: visible; }
+    .cw-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
+      width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--border); background: #fff;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.10); cursor: pointer; font-size: 22px; line-height: 1; color: var(--text);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .cw-arrow.prev { left: -4px; } .cw-arrow.next { right: -4px; }
+    .cw-dots { display: flex; gap: 7px; justify-content: center; margin: 14px 0 4px; min-height: 8px; }
+    .cw-dot { width: 8px; height: 8px; border-radius: 50%; border: none; background: #D9D9D9; cursor: pointer; padding: 0; }
+    .cw-dot.vid { border-radius: 2px; }
+    .cw-dot.on { background: var(--tornasol); background-size: 300% 300%; animation: shimmer 3.5s ease infinite; transform: scale(1.25); }
+    .cw-play {
+      display: flex; flex-direction: column; align-items: center; gap: 6px; margin-top: 8px;
+      border: none; background: none; cursor: pointer; font-family: inherit; font-size: 0.8rem; color: var(--text);
+    }
+    .cw-play span {
+      width: 48px; height: 48px; border-radius: 50%; background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      display: flex; align-items: center; justify-content: center; font-size: 15px; padding-left: 3px;
+    }
+    .cw-info { width: 100%; margin-top: 14px; }
+    .cw-fam { font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-sec); }
+    .cw-name { font-size: 1.55rem; font-weight: 600; letter-spacing: -0.4px; line-height: 1.15; margin: 6px 0 4px; font-style: italic; }
+    .cw-ref { font-size: 0.74rem; letter-spacing: 2.5px; color: var(--text-sec); }
+    .cw-price { font-size: 1.45rem; font-weight: 600; margin: 12px 0 14px; }
+    .cw-price.sold { color: var(--text-sec); text-decoration: line-through; }
+    .cw-out { display: inline-block; padding: 8px 14px; border-radius: 8px; background: var(--card-bg); border: 1px solid var(--border); font-size: 0.8rem; color: var(--text-sec); }
+    .cw-buy { display: flex; gap: 10px; align-items: stretch; }
+    .cw-buy .qty-selector { flex-shrink: 0; }
+    .cw-buy .qty-btn, .cw-buy .qty-value { height: 44px; }
+    .cw-buy .btn-add-cart { flex: 1; padding: 0 12px; min-height: 44px; }
+    .cw-back {
+      margin-top: auto; padding: 12px 26px; border: 1.5px solid var(--text); border-radius: 26px; background: #fff;
+      font-family: inherit; font-size: 0.84rem; font-weight: 500; color: var(--text); cursor: pointer; margin-bottom: 4px;
+    }
+    .cw-back-wrap { width: 100%; padding-top: 22px; margin-top: auto; }
+    /* El carrito y sus ventanas quedan por encima del círculo */
+    .cart-overlay { z-index: 520; } .cart-drawer { z-index: 521; } .wa-overlay { z-index: 530; } .cf-overlay { z-index: 540; }
+
+    .cw-hint { display: none; margin-top: 4px; font-size: 0.8rem; color: var(--text-sec); }
+    @media (max-width: 960px) {
+      .cw-banner { grid-template-columns: minmax(0, 1fr) 150px; min-height: 0; padding: 22px 0 22px 20px; }
+      .cwb-title { font-size: 1.6rem; }
+      .cwb-text p { font-size: 0.8rem; margin-bottom: 14px; }
+      .cwb-wheel { width: 220px; height: 220px; margin: -30px -80px -30px 0; }
+      .cw-top { height: 58px; padding: 0 14px; }
+      .cw-tag { display: none; }
+      .cw-cartbtn .cw-cart-lbl { display: none; }
+      .cw-body { display: block; overflow-y: auto; }
+      .cw-left { padding: 10px 8px 70px; justify-content: flex-start; }
+      .cw-wheel { width: 100%; }
+      .cw-foot { bottom: 22px; font-size: 0.6rem; letter-spacing: 1.6px; }
+      .cw-hint { display: block; }
+      .cw-panel {
+        position: fixed; left: 0; right: 0; bottom: 0; z-index: 510; max-height: 88vh;
+        border-left: none; border-radius: 20px 20px 0 0; background: #fff; padding: 8px 20px 18px;
+        box-shadow: 0 -14px 40px rgba(0,0,0,0.16);
+        transform: translateY(105%); transition: transform 0.32s cubic-bezier(.22,1,.36,1);
+      }
+      .cw-panel.open { transform: none; }
+      .cw-sheet-close {
+        display: flex; flex-direction: column; align-items: center; gap: 4px; width: 100%;
+        border: none; background: none; cursor: pointer; padding: 4px 0 10px;
+        font-family: inherit; font-size: 0.74rem; color: var(--text-sec);
+      }
+      .cw-sheet-close::before { content: ''; width: 40px; height: 4px; border-radius: 2px; background: #D4D4D4; }
+      .cw-stage { width: 210px; height: 210px; }
+      .cw-arrow { width: 38px; height: 38px; }
+      .cw-play { flex-direction: row; gap: 8px; margin-top: 4px; }
+      .cw-play span { width: 36px; height: 36px; font-size: 12px; }
+      .cw-name { font-size: 1.25rem; }
+      .cw-price { margin: 8px 0 12px; font-size: 1.25rem; }
+      .cw-back-wrap { display: none; }
+    }
     .search-input::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
   </style>
 </head>
@@ -1495,6 +1678,17 @@
   <aside class="sidebar" id="sidebar"></aside>
   <div class="results">
     <div class="results-top" id="results-top"></div>
+<!-- ── INVITACIÓN AL CÍRCULO DE COLORES ─────── -->
+    <section class="cw-banner" id="cw-banner" onclick="openWheel()" role="button" tabindex="0" aria-label="Abrir el círculo de colores"
+             onkeydown="if(event.key==='Enter')openWheel()">
+      <div class="cwb-text">
+        <div class="sec-eyebrow">Nuevo · Explora</div>
+        <div class="cwb-title">Nuestro círculo de <em>colores</em></div>
+        <p><span class="cwb-count">96</span> tonos en un solo lugar. Toca una uña, mira cómo se aplica y agrégala a tu pedido.</p>
+        <button class="cwb-btn tornasol" type="button">Ver los colores <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="cwb-wheel"></div>
+    </section>
 <!-- ── BEST SELLERS (franja oscura) ───────────── -->
     <section class="bs-section bs-band featured" id="bs-section">
       <div class="bs-heading">
@@ -1608,6 +1802,7 @@
   <div class="modal" id="modal">
     <div class="modal-accent" id="modal-accent"></div>
     <button class="modal-close-btn" id="modal-close">×</button>
+    <div class="modal-media">
     <div class="gallery" id="gallery">
       <div class="gallery-track" id="gal-track"></div>
       <div class="gal-type-tag hidden" id="gal-tag"></div>
@@ -1616,7 +1811,9 @@
       <button class="gal-btn gal-next" id="gal-next">›</button>
     </div>
     <div class="gal-thumbs" id="gal-thumbs"></div>
+    </div>
     <div class="modal-info" id="modal-info"></div>
+    <div class="modal-rel" id="modal-rel"></div>
   </div>
 </div>
 
@@ -1682,6 +1879,43 @@
         <button class="cf-btn-continue" onclick="submitClientForm()">Continuar</button>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- ── CÍRCULO DE COLORES (vista completa) ────── -->
+<div class="cw-overlay" id="cw-overlay" role="dialog" aria-modal="true" aria-label="Círculo de colores Maragel">
+  <div class="cw-top">
+    <div class="cw-brand">
+      <img src="img/Logo_Maragel-Negro.png" alt="Maragel" class="cw-logo" onerror="this.style.display='none'">
+      <span class="cw-tag">Círculo de colores</span>
+    </div>
+    <div class="cw-actions">
+      <button class="cw-cartbtn" onclick="openCart()" aria-label="Ver pedido">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M6 7V6a6 6 0 1 1 12 0v1h2.2a1 1 0 0 1 1 .93l1 13.5a1 1 0 0 1-1 1.07H2.8a1 1 0 0 1-1-1.07l1-13.5a1 1 0 0 1 1-.93H6Zm2 0h8V6a4 4 0 0 0-8 0v1Z" fill="currentColor"/></svg>
+        <span class="cw-cart-lbl">Tu pedido</span>
+        <span class="cart-count" id="cw-cart-count">0</span>
+      </button>
+      <button class="cw-x" onclick="closeWheel()" aria-label="Cerrar y volver al catálogo">×</button>
+    </div>
+  </div>
+  <div class="cw-body">
+    <div class="cw-left">
+      <div class="cw-wheel" id="cw-wheel"></div>
+      <div class="cw-hint">Toca una uña para ver su color</div>
+      <div class="cw-foot"><span>Color y calidad que evolucionan</span><span class="cw-legend"><i></i>Agotado</span></div>
+    </div>
+    <aside class="cw-panel" id="cw-panel">
+      <button class="cw-sheet-close" onclick="cwCloseSheet()">Ver todos los colores</button>
+      <div class="cw-media">
+        <button class="cw-arrow prev" id="cw-prev" onclick="cwGo(cwIdx-1)" aria-label="Anterior">‹</button>
+        <div class="cw-stage" id="cw-stage"></div>
+        <button class="cw-arrow next" id="cw-next" onclick="cwGo(cwIdx+1)" aria-label="Siguiente">›</button>
+      </div>
+      <div class="cw-dots" id="cw-dots"></div>
+      <button class="cw-play" id="cw-play" onclick="cwPlay()"><span>▶</span>Ver aplicación</button>
+      <div class="cw-info" id="cw-info"></div>
+      <div class="cw-back-wrap"><button class="cw-back" onclick="closeWheel()">↺ &nbsp;Volver al catálogo</button></div>
+    </aside>
   </div>
 </div>
 
@@ -1993,6 +2227,9 @@ function render(opts = {}) {
   const showFeat = page === 1 && !filtersActive();
   document.querySelectorAll('.featured').forEach(el => el.classList.toggle('hidden', !showFeat));
   if (showFeat) { requestAnimationFrame(() => { bsUpdateArrows('bs-grid'); bsUpdateArrows('pv-grid'); }); }
+  /* Invitación al círculo: en el inicio y también en la categoría Esmaltes en Gel */
+  const cwb = document.getElementById('cw-banner');
+  if (cwb) cwb.style.display = (page === 1 && !searchOn() && (showFeat || (activeCat === 'Esmaltes en Gel' && !activeSub))) && cwProducts().length ? '' : 'none';
 
   document.querySelectorAll('.cat-tab').forEach(t => t.classList.toggle('active', t.dataset.cat === activeCat));
 
@@ -2394,6 +2631,7 @@ function setMode(mode) {
   priceMin = priceMax = null;   // los rangos cambian entre detal y mayorista
   if (PRODUCTOS.length) { renderBS(); renderPreventa(); render(); }
   if (gProd && modalIsOpen) buildModalInfo();
+  if (cwSel) cwRenderPanel();
   if (document.getElementById('cart-overlay').classList.contains('open')) renderCart();
 }
 function clickDetal() {
@@ -2450,6 +2688,7 @@ function wlSubmit() {
   afterWelcome();
 }
 function afterWelcome() {
+  if (location.hash === '#colores') { history.replaceState(null, '', location.pathname + location.search); openWheel(); return; }
   const id = decodeURIComponent(location.hash.slice(1));
   if (id && PRODUCTOS.some(p => p.id === id)) {
     history.replaceState(null, '', location.pathname + location.search);
@@ -2459,6 +2698,8 @@ function afterWelcome() {
 
 /* ── ENLACE PROPIO POR PRODUCTO + BOTÓN ATRÁS ── */
 window.addEventListener('popstate', () => {
+  if (location.hash === '#colores') { if (modalIsOpen) closeModal(true); openWheel(true); return; }
+  if (cwOpen) closeWheel(true);
   const id = decodeURIComponent(location.hash.slice(1));
   if (id && PRODUCTOS.some(p => p.id === id)) openModal(id, true);
   else if (modalIsOpen) closeModal(true);
@@ -2466,6 +2707,7 @@ window.addEventListener('popstate', () => {
 document.addEventListener('keydown', e => {
   if (e.key !== 'Escape') return;
   if (modalIsOpen) closeModal();
+  else if (cwOpen) { const pn = document.getElementById('cw-panel'); if (window.innerWidth <= 960 && pn.classList.contains('open')) cwCloseSheet(); else closeWheel(); }
   else if (fpOpen) closeFilters();
   else closeSort();
 });
@@ -2631,8 +2873,8 @@ function buildModalInfo() {
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><line x1="12" y1="10.5" x2="12" y2="16.5"/><circle cx="12" cy="7.3" r="0.9" fill="currentColor" stroke="none"/></svg>
         <span>Pendiente verificar unidades disponibles con tu asesora.</span>
       </div>` : ''}
-    </div>`}
-    ${relatedHTML(p)}`;
+    </div>`}`;
+  document.getElementById('modal-rel').innerHTML = relatedHTML(p);
 
   if (!p.agotado) {
     document.getElementById('order-note').value = keepNote;
@@ -2750,6 +2992,7 @@ function updateCartCount() {
   const el = document.getElementById('cart-count');
   el.textContent = n > 99 ? '99+' : n;
   el.classList.toggle('visible', n > 0);
+  cwUpdateCart();
 }
 
 /* ── Drawer ── */
@@ -3083,12 +3326,230 @@ document.getElementById('modal-overlay').addEventListener('click', e => {
 document.getElementById('gal-prev').addEventListener('click', () => goTo(gi-1));
 document.getElementById('gal-next').addEventListener('click', () => goTo(gi+1));
 
+/* ══════════════════════════════════════════════════════════
+   CÍRCULO DE COLORES — esmaltes de color dibujados como uñas
+   (usa el campo "tono" del JSON; los agotados se ven en gris)
+══════════════════════════════════════════════════════════ */
+function hexRgb(h){return [1,3,5].map(i=>parseInt(h.slice(i,i+2),16));}
+function rgbHsl([r,g,b]){r/=255;g/=255;b/=255;const M=Math.max(r,g,b),m=Math.min(r,g,b),l=(M+m)/2;let h=0,s=0;if(M!==m){const d=M-m;s=l>.5?d/(2-M-m):d/(M+m);h=M===r?((g-b)/d+(g<b?6:0)):M===g?(b-r)/d+2:(r-g)/d+4;h*=60;}return [h,s*100,l*100];}
+function rgbLab([r,g,b]){const f=c=>{c/=255;return c>.04045?Math.pow((c+.055)/1.055,2.4):c/12.92};r=f(r);g=f(g);b=f(b);let x=(r*.4124+g*.3576+b*.1805)/.95047,y=(r*.2126+g*.7152+b*.0722),z=(r*.0193+g*.1192+b*.9505)/1.08883;const t=v=>v>.008856?Math.cbrt(v):7.787*v+16/116;x=t(x);y=t(y);z=t(z);return [116*y-16,500*(x-y),200*(y-z)];}
+function shade(hex,k){const c=hexRgb(hex).map(v=>Math.max(0,Math.min(255,Math.round(k>0?v+(255-v)*k:v*(1+k)))));return '#'+c.map(v=>v.toString(16).padStart(2,'0')).join('');}
+
+/* Uña: forma bailarina, cutícula redondeada, volumen y brillo. Base en y=0, punta en y=-h */
+function nailShape(w,h){
+  const X=v=>(v*w).toFixed(2), Y=v=>(v*h).toFixed(2);
+  return `M${X(-.5)},${Y(-.24)} C${X(-.5)},${Y(-.58)} ${X(-.43)},${Y(-.86)} ${X(-.35)},${Y(-.975)} `+
+         `Q${X(-.32)},${Y(-1)} ${X(-.23)},${Y(-1)} L${X(.23)},${Y(-1)} Q${X(.32)},${Y(-1)} ${X(.35)},${Y(-.975)} `+
+         `C${X(.43)},${Y(-.86)} ${X(.5)},${Y(-.58)} ${X(.5)},${Y(-.24)} C${X(.5)},${Y(.06)} ${X(-.5)},${Y(.06)} ${X(-.5)},${Y(-.24)} Z`;
+}
+function nailSVG(hex,w,h,uid,agot){
+  const base = agot ? '#D6D6D4' : hex, d = nailShape(w,h);
+  const X=v=>(v*w).toFixed(2), Y=v=>(v*h).toFixed(2);
+  return `<defs>
+    <linearGradient id="g${uid}" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="${shade(base,-0.24)}"/><stop offset=".22" stop-color="${shade(base,-0.02)}"/>
+      <stop offset=".5" stop-color="${shade(base,0.07)}"/><stop offset=".8" stop-color="${shade(base,-0.06)}"/>
+      <stop offset="1" stop-color="${shade(base,-0.3)}"/></linearGradient>
+    <linearGradient id="v${uid}" x1="0" x2="0" y1="1" y2="0">
+      <stop offset="0" stop-color="#000" stop-opacity=".16"/><stop offset=".25" stop-color="#000" stop-opacity="0"/>
+      <stop offset=".85" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity=".18"/></linearGradient></defs>
+  <path d="${d}" fill="url(#g${uid})"/><path d="${d}" fill="url(#v${uid})"/>
+  <path d="M${X(-.2)},${Y(-.2)} C${X(-.27)},${Y(-.45)} ${X(-.24)},${Y(-.72)} ${X(-.13)},${Y(-.9)}" fill="none" stroke="#fff" stroke-opacity="${agot?.35:.62}" stroke-width="${X(.13)}" stroke-linecap="round"/>
+  <path d="M${X(-.1)},${Y(-.86)} C${X(-.05)},${Y(-.91)} ${X(.06)},${Y(-.93)} ${X(.14)},${Y(-.92)}" fill="none" stroke="#fff" stroke-opacity="${agot?.2:.4}" stroke-width="${X(.06)}" stroke-linecap="round"/>
+  <ellipse cx="${X(.22)}" cy="${Y(-.42)}" rx="${X(.05)}" ry="${Y(.14)}" fill="#fff" fill-opacity="${agot?.08:.16}"/>
+  <path d="${d}" fill="none" stroke="#000" stroke-opacity=".10" stroke-width="${Math.max(.5,w*.02).toFixed(2)}"/>`;
+}
+
+/* Organización: 3 anillos de color (vivos afuera → pasteles adentro) + anillo interior de nudes y neutros.
+   Cada anillo va en orden de tono y se gira para quedar alineado con los demás. */
+const CW_NEUTRAS = new Set(['Nudes', 'Nudes Grises', 'Básicos']);
+function wheelLayout(prods){
+  const it = prods.map(p => { const rgb=hexRgb(p.tono), [h,s,l]=rgbHsl(rgb), [L,A,B]=rgbLab(rgb);
+    return { p, h, L, C: Math.hypot(A,B) }; });
+  const neutral = it.filter(o => CW_NEUTRAS.has(o.p.subcategoria) || (o.C < 16 && o.L < 22));
+  const chrom = it.filter(o => !neutral.includes(o)).sort((a,b) => b.C - a.C);
+  const n = chrom.length, c1 = Math.round(n*.42), c2 = Math.round(n*.33);
+  const rings = [chrom.slice(0,c1), chrom.slice(c1,c1+c2), chrom.slice(c1+c2)];
+  const hk = o => (o.h + 352) % 360;
+  rings.forEach(r => r.sort((a,b) => hk(a) - hk(b)));
+  neutral.sort((a,b) => (b.L + (b.C>18?-8:0)) - (a.L + (a.C>18?-8:0)));
+  return [...rings, neutral];
+}
+function wheelSVG(prods, opt = {}){
+  const S = 760, cx = S/2, cy = S/2, pre = opt.prefix || 'w', rings = wheelLayout(prods);
+  const radii = [S*.395, S*.31, S*.232, S*.158];
+  const sizes = [[S*.044,S*.084],[S*.041,S*.076],[S*.038,S*.068],[S*.026,S*.056]];
+  let g = '';
+  rings.forEach((ring,k) => {
+    const R = radii[k], [w,h] = sizes[k], N = ring.length; if (!N) return;
+    const base = ring.map((o,j) => j*2*Math.PI/N);
+    let off = -Math.PI/2;
+    if (k < 3) {
+      const t = ring.map(o => -Math.PI/2 + (hk2(o)/360)*2*Math.PI);
+      let bestE = 1e9;
+      for (let q = 0; q < 720; q++) { const o2 = -Math.PI/2 + q*Math.PI/360; let e = 0;
+        for (let j = 0; j < N; j++) { let d = base[j] + o2 - t[j]; d = Math.atan2(Math.sin(d), Math.cos(d)); e += d*d; }
+        if (e < bestE) { bestE = e; off = o2; } }
+    }
+    ring.forEach((o,j) => {
+      const a = base[j] + off, x = cx + R*Math.cos(a), y = cy + R*Math.sin(a), deg = a*180/Math.PI + 90;
+      const p = o.p;
+      g += `<g transform="translate(${x.toFixed(1)},${y.toFixed(1)}) rotate(${deg.toFixed(1)}) translate(0,${(h/2).toFixed(1)})">
+        <g class="cw-nail${p.agotado ? ' agot' : ''}" data-id="${p.id}" tabindex="${opt.interactive ? 0 : -1}" role="${opt.interactive ? 'button' : 'img'}" aria-label="Esmalte ${escHtml(p.referencia)}${p.agotado ? ' (agotado)' : ''}">
+          <rect x="${(-w*.75).toFixed(1)}" y="${(-h*1.08).toFixed(1)}" width="${(w*1.5).toFixed(1)}" height="${(h*1.16).toFixed(1)}" fill="transparent"/>
+          ${nailSVG(p.tono, w, h, pre + p.id, p.agotado)}</g></g>`;
+    });
+  });
+  function hk2(o){ return (o.h + 352) % 360; }
+  const center = opt.center === false ? '' :
+    `<text x="${cx}" y="${cy+8}" text-anchor="middle" font-size="58" font-weight="600" fill="#383838" font-family="Instrument Sans, system-ui, sans-serif" letter-spacing="-1">${prods.length}</text>
+     <text x="${cx}" y="${cy+36}" text-anchor="middle" font-size="13" letter-spacing="5" fill="#585856" font-family="Instrument Sans, system-ui, sans-serif">COLORES</text>
+     <line x1="${cx-22}" x2="${cx+22}" y1="${cy+52}" y2="${cy+52}" stroke="url(#${pre}tor)" stroke-width="2.5" stroke-linecap="round"/>`;
+  return `<svg viewBox="0 0 ${S} ${S}" xmlns="http://www.w3.org/2000/svg" class="cw-svg">
+    <defs><filter id="${pre}sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2.5" stdDeviation="2.2" flood-color="#000" flood-opacity=".18"/></filter>
+    <linearGradient id="${pre}tor" x1="0" x2="1"><stop offset="0" stop-color="#E088BE"/><stop offset=".33" stop-color="#9878D8"/><stop offset=".66" stop-color="#78A0D8"/><stop offset="1" stop-color="#78D4C0"/></linearGradient></defs>
+    <g filter="url(#${pre}sh)">${g}</g>${center}</svg>`;
+}
+
+/* ── Estado de la vista ── */
+let cwOpen = false, cwSel = null, cwSlides = [], cwIdx = 0, cwWheelBuilt = false;
+function cwProducts() { return PRODUCTOS.filter(p => p.tono); }
+
+function renderCwBanner() {
+  const el = document.getElementById('cw-banner'); if (!el) return;
+  const prods = cwProducts();
+  if (!prods.length) { el.style.display = 'none'; return; }
+  el.querySelector('.cwb-count').textContent = prods.length;
+  el.querySelector('.cwb-wheel').innerHTML = wheelSVG(prods, { prefix: 'b', center: false });
+}
+function openWheel(fromHistory) {
+  const ov = document.getElementById('cw-overlay');
+  if (!cwWheelBuilt) {
+    document.getElementById('cw-wheel').innerHTML = wheelSVG(cwProducts(), { prefix: 'c', interactive: true });
+    cwWheelBuilt = true;
+  }
+  ov.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  if (fromHistory !== true && location.hash !== '#colores') history.pushState({ cw: 1 }, '', '#colores');
+  cwOpen = true;
+  cwUpdateCart();
+  if (!cwSel && window.innerWidth > 960) {
+    const first = cwProducts().find(p => !p.agotado && /Rojos|Neones/.test(p.subcategoria)) || cwProducts()[0];
+    cwSelect(first.id);
+  }
+}
+function closeWheel(fromHistory) {
+  if (fromHistory !== true && history.state && history.state.cw) { history.back(); return; }
+  if (fromHistory !== true && location.hash === '#colores') history.replaceState(null, '', location.pathname + location.search);
+  cwPauseVideo();
+  document.getElementById('cw-overlay').classList.remove('open');
+  document.getElementById('cw-panel').classList.remove('open');
+  document.body.style.overflow = '';
+  cwOpen = false;
+}
+function cwSelect(id) {
+  const p = PRODUCTOS.find(x => x.id === id); if (!p) return;
+  cwSel = p; addRecent(id);
+  document.querySelectorAll('#cw-wheel .cw-nail').forEach(n => {
+    const on = n.dataset.id === id; n.classList.toggle('sel', on);
+    if (on) { const g = n.parentNode; g.parentNode.appendChild(g); }   // la elegida queda encima
+  });
+  const g = (p.galeria && p.galeria.length ? p.galeria : [{ tipo: 'foto', src: p.imagen }]);
+  cwSlides = [{ tipo: 'render' }, ...g.filter(x => x.tipo === 'foto'), ...g.filter(x => x.tipo === 'video')];
+  cwIdx = 0;
+  cwRenderPanel();
+  document.getElementById('cw-panel').classList.add('open');
+}
+function cwHasVideo() { return cwSlides.some(s => s.tipo === 'video'); }
+function cwRenderPanel() {
+  const p = cwSel, tint = p.agotado ? '#EDEDED' : shade(p.tono, 0.72);
+  const price = getDisplayPrice(p);
+  document.getElementById('cw-stage').innerHTML = cwSlides.map((s, i) => {
+    if (s.tipo === 'render') return `<div class="cw-slide${i === cwIdx ? ' on' : ''}">
+        <div class="cw-halo" style="background: radial-gradient(circle at 40% 35%, ${shade(tint,0.4)}, ${tint} 60%, ${shade(tint,-0.04)})"></div>
+        <svg class="cw-big" viewBox="-80 -330 160 350"><g filter="url(#cwbig)" transform="rotate(-24 0 -150)">${nailSVG(p.tono, 132, 300, 'big' + p.id, p.agotado)}</g>
+        <defs><filter id="cwbig" x="-40%" y="-20%" width="180%" height="140%"><feDropShadow dx="6" dy="10" stdDeviation="8" flood-opacity=".22"/></filter></defs></svg></div>`;
+    if (s.tipo === 'video') return `<div class="cw-slide is-video${i === cwIdx ? ' on' : ''}">
+        <video playsinline controls preload="none" src="${s.src}" onerror="this.parentElement.innerHTML='<div class=&quot;cw-novid&quot;>Video no disponible</div>'"></video></div>`;
+    return `<div class="cw-slide${i === cwIdx ? ' on' : ''}"><img src="${s.src}" alt="Foto del esmalte ${escHtml(p.referencia)}" loading="lazy"
+        onerror="this.closest('.cw-slide').remove();cwSlides.splice(${i},1);"></div>`;
+  }).join('');
+  document.getElementById('cw-dots').innerHTML = cwSlides.length > 1
+    ? cwSlides.map((s, i) => `<button class="cw-dot${i === cwIdx ? ' on' : ''}${s.tipo === 'video' ? ' vid' : ''}" onclick="cwGo(${i})" aria-label="${s.tipo === 'video' ? 'Video' : 'Imagen ' + (i + 1)}"></button>`).join('') : '';
+  document.getElementById('cw-prev').style.visibility = cwSlides.length > 1 ? '' : 'hidden';
+  document.getElementById('cw-next').style.visibility = cwSlides.length > 1 ? '' : 'hidden';
+  document.getElementById('cw-play').style.display = cwHasVideo() ? '' : 'none';
+  document.getElementById('cw-info').innerHTML = `
+    <div class="cw-fam">${escHtml(p.subcategoria)}</div>
+    <div class="cw-name">${escHtml(p.nombre)}</div>
+    <div class="cw-ref">REFERENCIA ${escHtml(p.referencia)}</div>
+    <div class="cw-price${p.agotado ? ' sold' : ''}">${price}</div>
+    ${p.agotado ? '<div class="cw-out">Agotado temporalmente</div>' : `
+    <div class="cw-buy">
+      <div class="qty-selector">
+        <button class="qty-btn" id="cw-qminus" onclick="cwQty(-1)" disabled aria-label="Menos">−</button>
+        <input type="text" inputmode="numeric" class="qty-value" id="cw-qty" value="1" aria-label="Cantidad"
+               oninput="this.value=this.value.replace(/[^0-9]/g,'')" onblur="cwQty(0)">
+        <button class="qty-btn" onclick="cwQty(1)" aria-label="Más">+</button>
+      </div>
+      <button class="btn-add-cart" id="cw-add" onclick="cwAdd()">Agregar al pedido</button>
+    </div>`}`;
+}
+function cwGo(i) {
+  if (!cwSlides.length) return;
+  cwPauseVideo();
+  cwIdx = (i + cwSlides.length) % cwSlides.length;
+  document.querySelectorAll('#cw-stage .cw-slide').forEach((s, k) => s.classList.toggle('on', k === cwIdx));
+  document.querySelectorAll('#cw-dots .cw-dot').forEach((d, k) => d.classList.toggle('on', k === cwIdx));
+}
+function cwPlay() {
+  const i = cwSlides.findIndex(s => s.tipo === 'video'); if (i < 0) return;
+  cwGo(i);
+  const v = document.querySelectorAll('#cw-stage .cw-slide')[i].querySelector('video');
+  if (v) { v.play().catch(() => {}); }
+}
+function cwPauseVideo() { document.querySelectorAll('#cw-stage video').forEach(v => v.pause()); }
+function cwQty(d) {
+  const el = document.getElementById('cw-qty'); let v = (parseInt(el.value, 10) || 1) + d;
+  v = Math.max(1, Math.min(999, v)); el.value = v;
+  document.getElementById('cw-qminus').disabled = v <= 1;
+}
+function cwAdd() {
+  const p = cwSel; if (!p || p.agotado) return;
+  const qty = parseInt(document.getElementById('cw-qty').value, 10) || 1;
+  const it = CART.find(x => x.id === p.id && x.nota === '');
+  if (it) it.cantidad = Math.min(it.cantidad + qty, 999); else CART.push({ id: p.id, cantidad: qty, nota: '' });
+  cartSave(); updateCartCount(); cwUpdateCart();
+  const b = document.getElementById('cw-add'); b.textContent = 'Agregado ✓'; b.classList.add('added');
+  setTimeout(() => { const x = document.getElementById('cw-add'); if (x) { x.textContent = 'Agregar al pedido'; x.classList.remove('added'); } }, 1300);
+}
+function cwUpdateCart() {
+  const n = CART.reduce((s, it) => s + it.cantidad, 0), el = document.getElementById('cw-cart-count');
+  if (el) { el.textContent = n > 99 ? '99+' : n; el.classList.toggle('visible', n > 0); }
+}
+document.getElementById('cw-wheel').addEventListener('click', e => {
+  const n = e.target.closest('.cw-nail'); if (n) cwSelect(n.dataset.id);
+});
+document.getElementById('cw-wheel').addEventListener('keydown', e => {
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('.cw-nail')) { e.preventDefault(); cwSelect(e.target.closest('.cw-nail').dataset.id); }
+});
+/* Deslizar las fotos con el dedo */
+(function () {
+  let sx = 0; const st = document.getElementById('cw-stage');
+  st.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, { passive: true });
+  st.addEventListener('touchend', e => { const dx = sx - e.changedTouches[0].clientX; if (Math.abs(dx) > 40) cwGo(cwIdx + (dx > 0 ? 1 : -1)); });
+})();
+
+function cwCloseSheet() { cwPauseVideo(); document.getElementById('cw-panel').classList.remove('open');
+  document.querySelectorAll('#cw-wheel .cw-nail.sel').forEach(n => n.classList.remove('sel')); cwSel = null; }
+
 /* ── INIT ───────────────────────────────────── */
 function init(data) {
   PRODUCTOS = data;
   renderBS();
   renderPreventa();
   renderCatNav();
+  renderCwBanner();
   render();
   // Carrito: restaurar desde localStorage y depurar productos inexistentes/agotados
   cartLoad();
