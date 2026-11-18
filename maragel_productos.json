@@ -3548,6 +3548,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#ABA0B5",
     "galeria": [
       {
         "tipo": "foto",
@@ -3572,6 +3573,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#C88B82",
     "galeria": [
       {
         "tipo": "foto",
@@ -3596,6 +3598,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#A8A79E",
     "galeria": [
       {
         "tipo": "foto",
@@ -3620,6 +3623,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#A9AAA1",
     "galeria": [
       {
         "tipo": "foto",
@@ -3643,7 +3647,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#B0AFA7"
   },
   {
     "id": "p099",
@@ -3658,7 +3663,8 @@
     "nuevo": false,
     "best_seller": false,
     "preventa": true,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#C388A4"
   },
   {
     "id": "p291",
@@ -3672,7 +3678,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#D7DDD5"
   },
   {
     "id": "p213",
@@ -3687,6 +3694,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#A6827A",
     "galeria": [
       {
         "tipo": "foto",
@@ -3711,6 +3719,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#A39AB6",
     "galeria": [
       {
         "tipo": "foto",
@@ -3735,6 +3744,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#94727C",
     "galeria": [
       {
         "tipo": "foto",
@@ -3759,6 +3769,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#A79487",
     "galeria": [
       {
         "tipo": "foto",
@@ -3783,6 +3794,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#799F9D",
     "galeria": [
       {
         "tipo": "foto",
@@ -3807,6 +3819,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#A6949B",
     "galeria": [
       {
         "tipo": "foto",
@@ -3831,6 +3844,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#5C705E",
     "galeria": [
       {
         "tipo": "foto",
@@ -3854,7 +3868,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#B6A79F"
   },
   {
     "id": "p297",
@@ -3868,7 +3883,8 @@
     "agotado": true,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#B3AEA7"
   },
   {
     "id": "p295",
@@ -3882,7 +3898,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#A9A79E"
   },
   {
     "id": "p298",
@@ -3896,7 +3913,8 @@
     "agotado": true,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#A7A79F"
   },
   {
     "id": "p296",
@@ -3910,7 +3928,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#DEDCD4"
   },
   {
     "id": "p299",
@@ -3924,7 +3943,8 @@
     "agotado": true,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#B3ABA1"
   },
   {
     "id": "p323",
@@ -3938,7 +3958,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#957451"
   },
   {
     "id": "p326",
@@ -3952,7 +3973,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#8D5050"
   },
   {
     "id": "p324",
@@ -3966,7 +3988,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#90784B"
   },
   {
     "id": "p327",
@@ -3980,7 +4003,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#856168"
   },
   {
     "id": "p325",
@@ -3994,7 +4018,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#866150"
   },
   {
     "id": "p328",
@@ -4008,7 +4033,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#5F4E53"
   },
   {
     "id": "p333",
@@ -4022,7 +4048,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#557160"
   },
   {
     "id": "p334",
@@ -4036,7 +4063,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#656A53"
   },
   {
     "id": "p329",
@@ -4050,7 +4078,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#6C6666"
   },
   {
     "id": "p330",
@@ -4064,7 +4093,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#626A51"
   },
   {
     "id": "p331",
@@ -4078,7 +4108,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#6B6A43"
   },
   {
     "id": "p335",
@@ -4092,7 +4123,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#B8A98A"
   },
   {
     "id": "p338",
@@ -4106,7 +4138,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#91967B"
   },
   {
     "id": "p341",
@@ -4120,7 +4153,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#A18E79"
   },
   {
     "id": "p336",
@@ -4134,7 +4168,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#CEB799"
   },
   {
     "id": "p339",
@@ -4148,7 +4183,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#A1A499"
   },
   {
     "id": "p342",
@@ -4162,7 +4198,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#B19D97"
   },
   {
     "id": "p337",
@@ -4176,7 +4213,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#B0A394"
   },
   {
     "id": "p340",
@@ -4190,7 +4228,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#B8AC83"
   },
   {
     "id": "p343",
@@ -4204,7 +4243,8 @@
     "agotado": true,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#C5918C"
   },
   {
     "id": "p344",
@@ -4218,7 +4258,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#ACAA9E"
   },
   {
     "id": "p347",
@@ -4232,7 +4273,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#AAA6B2"
   },
   {
     "id": "p350",
@@ -4246,7 +4288,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#ADE3CE"
   },
   {
     "id": "p345",
@@ -4260,7 +4303,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#D9BAD1"
   },
   {
     "id": "p348",
@@ -4274,7 +4318,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#C4757F"
   },
   {
     "id": "p351",
@@ -4288,7 +4333,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#8DB7D7"
   },
   {
     "id": "p346",
@@ -4302,7 +4348,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#BAA4BC"
   },
   {
     "id": "p349",
@@ -4316,7 +4363,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#C6ABA0"
   },
   {
     "id": "p352",
@@ -4331,6 +4379,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#8DB6D5",
     "galeria": [
       {
         "tipo": "foto",
@@ -4848,7 +4897,8 @@
     "agotado": true,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#EDEDEB"
   },
   {
     "id": "p033",
@@ -4862,7 +4912,8 @@
     "agotado": true,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#E8E6E9"
   },
   {
     "id": "p288",
@@ -4877,6 +4928,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#A39DA8",
     "galeria": [
       {
         "tipo": "foto",
@@ -4905,7 +4957,8 @@
     "nuevo": false,
     "best_seller": false,
     "preventa": true,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#C0887F"
   },
   {
     "id": "p360",
@@ -4950,6 +5003,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#7D817B",
     "galeria": [
       {
         "tipo": "foto",
@@ -4974,6 +5028,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#737771",
     "galeria": [
       {
         "tipo": "foto",
@@ -4998,6 +5053,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#767971",
     "galeria": [
       {
         "tipo": "foto",
@@ -5022,6 +5078,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#757265",
     "galeria": [
       {
         "tipo": "foto",
@@ -5046,6 +5103,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#7F6968",
     "galeria": [
       {
         "tipo": "foto",
@@ -5070,6 +5128,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#727670",
     "galeria": [
       {
         "tipo": "foto",
@@ -5094,6 +5153,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#383A33",
     "galeria": [
       {
         "tipo": "foto",
@@ -5118,6 +5178,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#685348",
     "galeria": [
       {
         "tipo": "foto",
@@ -5142,6 +5203,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#6E5048",
     "galeria": [
       {
         "tipo": "foto",
@@ -5166,6 +5228,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#1C1F23",
     "galeria": [
       {
         "tipo": "foto",
@@ -5189,7 +5252,8 @@
     "agotado": false,
     "nuevo": false,
     "best_seller": false,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#8F8A90"
   },
   {
     "id": "p310",
@@ -5204,6 +5268,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#648084",
     "galeria": [
       {
         "tipo": "foto",
@@ -5228,6 +5293,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#986E66",
     "galeria": [
       {
         "tipo": "foto",
@@ -5252,6 +5318,7 @@
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
+    "tono": "#8C6F71",
     "galeria": [
       {
         "tipo": "foto",
@@ -5277,6 +5344,7 @@
     "best_seller": false,
     "preventa": true,
     "color_blob": "",
+    "tono": "#97958D",
     "galeria": [
       {
         "tipo": "foto",
@@ -5301,7 +5369,8 @@
     "nuevo": false,
     "best_seller": false,
     "preventa": true,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#857258"
   },
   {
     "id": "p318",
@@ -5316,7 +5385,8 @@
     "nuevo": false,
     "best_seller": false,
     "preventa": true,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#796F6A"
   },
   {
     "id": "p319",
@@ -5331,7 +5401,8 @@
     "nuevo": false,
     "best_seller": false,
     "preventa": true,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#6B685F"
   },
   {
     "id": "p354",
@@ -5346,7 +5417,8 @@
     "nuevo": false,
     "best_seller": false,
     "preventa": true,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#AD9C92"
   },
   {
     "id": "p355",
@@ -5361,7 +5433,8 @@
     "nuevo": false,
     "best_seller": false,
     "preventa": true,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#9F9698"
   },
   {
     "id": "p356",
@@ -5376,7 +5449,8 @@
     "nuevo": false,
     "best_seller": false,
     "preventa": true,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#9B8292"
   },
   {
     "id": "p357",
@@ -5391,7 +5465,8 @@
     "nuevo": false,
     "best_seller": false,
     "preventa": true,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#BB898A"
   },
   {
     "id": "p358",
@@ -5406,7 +5481,8 @@
     "nuevo": false,
     "best_seller": false,
     "preventa": true,
-    "color_blob": ""
+    "color_blob": "",
+    "tono": "#90817B"
   },
   {
     "id": "pustm6",
