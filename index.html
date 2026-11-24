@@ -1690,6 +1690,8 @@
       display: inline-flex; align-items: center; gap: 7px; margin-top: 12px; padding: 5px 11px; border-radius: 999px;
       font-size: 0.7rem; font-weight: 500; color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.18);
     }
+    .bf-unid { margin-left: 6px; }
+    @media (max-width: 960px) { .bf-unid { margin-left: 0; margin-top: 6px; } }
     .bf-cond::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--tornasol); }
     .bf-cd-label { margin-top: 24px; font-size: 9.5px; font-weight: 500; letter-spacing: 2.4px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
     .bf-cd { display: flex; align-items: flex-start; gap: 8px; margin-top: 10px; }
@@ -1817,6 +1819,7 @@
       <h2 class="bf-title"><span>Black</span><span class="bf-iri">Days</span></h2>
       <p class="bf-sub">Descuentos especiales por categoría. <strong>El precio con descuento ya está aplicado</strong> en el catálogo.</p>
       <p class="bf-cond">Válido solo para pagos de contado</p>
+      <p class="bf-cond bf-unid" id="bf-unidades">Pendiente verificar unidades disponibles con tu asesora</p>
       <div class="bf-cd-label" id="bf-cd-label">La oferta termina en</div>
       <div class="bf-cd" id="bf-cd" aria-live="off"></div>
     </div>
@@ -4062,7 +4065,7 @@ document.addEventListener('click', e => {
 ───────────────────────────────────────────────── */
 const BF_ACTIVO = true;                                     // ← true = campaña visible · false = oculta
 const BF_FIN    = new Date('2026-12-01T00:00:00-05:00');    // termina el 30/nov a medianoche
-const BF_MODOS  = ['detal'];                                // agregar 'mayorista' si también aplica allá
+const BF_MODOS  = ['detal', 'mayorista'];                   // modos donde aplica el descuento
 const BF_GRUPOS = [                                         // el primero que coincida manda
   { id: 'esm', pct: 10, titulo: 'Limas y esmaltes', cat: 'Esmaltes en Gel',
     aplica: p => p.categoria === 'Esmaltes en Gel' || p.subcategoria === 'Limas' },
@@ -4089,7 +4092,10 @@ function bfHTMLPrecio(p, lista) {   // precio con descuento + precio tachado
   if (!pct || lista == null || isNaN(lista)) return null;
   return `<span class="bf-now">${fmtPrice(bfPrecio(lista, pct))}</span><s class="bf-old">${fmtPrice(lista)}</s>`;
 }
-function bfAplicarModo() { document.body.classList.toggle('bf-on', bfModoActivo()); }
+function bfAplicarModo() {
+  document.body.classList.toggle('bf-on', bfModoActivo());
+  const u = document.getElementById('bf-unidades'); if (u) u.style.display = currentMode === 'mayorista' ? '' : 'none';
+}
 function bfIr(id) {
   const g = BF_GRUPOS.find(x => x.id === id); if (!g) return;
   pickGroup(g.cat);
