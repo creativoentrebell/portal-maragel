@@ -1686,6 +1686,11 @@
     .bf-title span { display: block; font-size: clamp(48px, 6.6vw, 86px); }
     .bf-sub { margin-top: 16px; font-size: 0.82rem; line-height: 1.6; color: rgba(255,255,255,0.6); max-width: 380px; }
     .bf-sub strong { color: #fff; font-weight: 500; }
+    .bf-cond {
+      display: inline-flex; align-items: center; gap: 7px; margin-top: 12px; padding: 5px 11px; border-radius: 999px;
+      font-size: 0.7rem; font-weight: 500; color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.18);
+    }
+    .bf-cond::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--tornasol); }
     .bf-cd-label { margin-top: 24px; font-size: 9.5px; font-weight: 500; letter-spacing: 2.4px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
     .bf-cd { display: flex; align-items: flex-start; gap: 8px; margin-top: 10px; }
     .bf-cd > div {
@@ -1811,6 +1816,7 @@
       <div class="bf-eyebrow"><i></i>Maragel · Solo por esta semana</div>
       <h2 class="bf-title"><span>Black</span><span class="bf-iri">Days</span></h2>
       <p class="bf-sub">Descuentos especiales por categoría. <strong>El precio con descuento ya está aplicado</strong> en el catálogo.</p>
+      <p class="bf-cond">Válido solo para pagos de contado</p>
       <div class="bf-cd-label" id="bf-cd-label">La oferta termina en</div>
       <div class="bf-cd" id="bf-cd" aria-live="off"></div>
     </div>
@@ -3275,7 +3281,7 @@ function renderCart() {
   } else {
     const bfAh = bfAhorroCarrito();
     footEl.innerHTML = `
-      ${bfAh > 0 ? `<div class="bf-cart-row on"><span><b>Black Days</b> · descuento aplicado</span><span>Ahorras ${fmtPrice(bfAh)}</span></div>` : ''}
+      ${bfAh > 0 ? `<div class="bf-cart-row on"><span><b>Black Days</b> · solo pago de contado</span><span>Ahorras ${fmtPrice(bfAh)}</span></div>` : ''}
       <div class="cart-total-row">
         <span class="cart-total-label">Total (${currentMode === 'detal' ? 'Detal' : 'Mayorista'})</span>
         <span class="cart-total-value">${fmtPrice(total)}</span>
@@ -3427,7 +3433,7 @@ function buildWaMessage() {
 
   let msg = `*NUEVO PEDIDO — ${CATALOG_NAME}*\n`;
   msg += modeLabel ? `Lista de precios: *${modeLabel}*\n` : 'Precios a confirmar con tu asesora\n';
-  if (bfModoActivo()) msg += 'Promoción: *BLACK DAYS* (precios con descuento ya aplicados)\n';
+  if (bfModoActivo()) msg += 'Promoción: *BLACK DAYS* (precios con descuento ya aplicados · válido solo para pagos de contado)\n';
   msg += SEP + '\n';
 
   msg += `*Datos del cliente*\n`;
@@ -3459,7 +3465,8 @@ function buildWaMessage() {
     } else {
       const sub = unit * it.cantidad; total += sub;
       const lis = cartListPrice(p);
-      msg += `- Cantidad: ${it.cantidad} × ${fmtPrice(unit)}${(lis != null && lis > unit) ? ` _(Black Days -${bfPct(p)}%, antes ${fmtPrice(lis)})_` : ''}\n`;
+      msg += `- Cantidad: ${it.cantidad} × ${fmtPrice(unit)}${(lis != null && lis > unit) ? ` _(antes ${fmtPrice(lis)})_` : ''}\n`;
+      if (lis != null && lis > unit) msg += `- Registrar en observaciones: BLACK DAYS ${bfPct(p)}%\n`;
       msg += `- Subtotal: *${fmtPrice(sub)}*\n`;
     }
   });
