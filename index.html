@@ -1645,6 +1645,145 @@
       .cw-panel.dragging { transition: none; }
     }
     .search-input::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
+
+    /* ══════════════════════════════════════════════════════════
+       BLACK FRIDAY — campaña 23–30 nov 2026 (descuentos por categoría)
+       Reemplaza el banner mientras está activa (solo en Detal)
+    ══════════════════════════════════════════════════════════ */
+    .bf-hero, .bf-modal, .bf-cart-row { display: none; }
+    body.bf-on .bf-hero { display: block; }
+    body.bf-on .banner  { display: none; }
+    .bf-iri {
+      background: var(--tornasol); background-size: 300% 300%; animation: shimmer 6s ease infinite;
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
+    }
+    .bf-hero {
+      position: relative; overflow: hidden; color: #fff;
+      background:
+        radial-gradient(55% 110% at 92% 0%,  rgba(152,120,216,0.30) 0%, rgba(152,120,216,0) 60%),
+        radial-gradient(45% 90%  at 70% 110%, rgba(120,212,192,0.18) 0%, rgba(120,212,192,0) 60%),
+        radial-gradient(40% 80%  at 0% 100%,  rgba(224,136,190,0.22) 0%, rgba(224,136,190,0) 60%),
+        linear-gradient(160deg, #1d1d1f 0%, #0c0c0d 100%);
+    }
+    .bf-hero::before {   /* textura de líneas finas */
+      content: ''; position: absolute; inset: 0; opacity: .05; pointer-events: none;
+      background-image: repeating-linear-gradient(115deg, #fff 0 1px, transparent 1px 22px);
+    }
+    .bf-hero::after {    /* línea tornasol inferior */
+      content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
+      background: var(--tornasol); background-size: 300% 300%; animation: shimmer 6s ease infinite;
+    }
+    .bf-inner {
+      position: relative; max-width: calc(var(--maxw) + 56px); margin: 0 auto; padding: 40px 28px 42px;
+      display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center;
+    }
+    .bf-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 10px; font-weight: 600; letter-spacing: 2.8px; text-transform: uppercase; color: rgba(255,255,255,0.6);
+    }
+    .bf-eyebrow i { width: 22px; height: 2px; border-radius: 2px; background: var(--tornasol); background-size: 300% 300%; animation: shimmer 6s ease infinite; }
+    .bf-title { margin-top: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: -0.04em; line-height: .86; }
+    .bf-title span { display: block; font-size: clamp(48px, 6.6vw, 86px); }
+    .bf-sub { margin-top: 16px; font-size: 0.82rem; line-height: 1.6; color: rgba(255,255,255,0.6); max-width: 380px; }
+    .bf-sub strong { color: #fff; font-weight: 500; }
+    .bf-cd-label { margin-top: 24px; font-size: 9.5px; font-weight: 500; letter-spacing: 2.4px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .bf-cd { display: flex; align-items: flex-start; gap: 8px; margin-top: 10px; }
+    .bf-cd > div {
+      min-width: 64px; padding: 10px 6px 8px; border-radius: 14px; text-align: center;
+      border: 1px solid transparent;
+      background: linear-gradient(#1b1b1d, #1b1b1d) padding-box, var(--tornasol) border-box;
+    }
+    .bf-cd b { display: block; font-size: 1.65rem; font-weight: 600; line-height: 1.05; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+    .bf-cd span { display: block; margin-top: 3px; font-size: 8.5px; letter-spacing: 1.8px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .bf-cd .bf-colon { min-width: 0; padding: 10px 0 0; border: 0; background: none; font-size: 1.4rem; font-weight: 300; color: rgba(255,255,255,0.3); }
+
+    .bf-tiers { display: flex; flex-direction: column; gap: 12px; }
+    .bf-tier {
+      display: flex; align-items: center; gap: 18px; width: 100%; text-align: left; cursor: pointer;
+      padding: 14px 20px 14px 18px; border-radius: 18px; color: #fff; font-family: inherit;
+      border: 1px solid rgba(255,255,255,0.10); background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+      transition: transform .25s cubic-bezier(.32,.72,0,1), border-color .25s, background .25s;
+    }
+    .bf-tier:hover { transform: translateX(-4px); background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.22); }
+    .bf-tier.top {
+      border-color: transparent;
+      background: linear-gradient(#222125, #18171a) padding-box, var(--tornasol) border-box;
+      box-shadow: 0 14px 40px -18px rgba(152,120,216,0.7);
+    }
+    .bf-pct { display: flex; align-items: flex-start; flex-shrink: 0; min-width: 104px; line-height: .8; font-weight: 600; letter-spacing: -0.05em; }
+    .bf-pct b { font-size: 3.6rem; font-weight: 600; }
+    .bf-pct em { font-style: normal; font-size: 1.6rem; margin-top: 4px; margin-left: 2px; }
+    .bf-tier-txt { flex: 1; min-width: 0; }
+    .bf-tier-txt strong { display: block; font-size: 1.05rem; font-weight: 600; letter-spacing: -0.01em; }
+    .bf-tier-txt small { display: block; margin-top: 3px; font-size: 0.72rem; color: rgba(255,255,255,0.55); }
+    .bf-tier-go {
+      flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      border: 1px solid rgba(255,255,255,0.18); transition: background .25s, border-color .25s;
+    }
+    .bf-tier:hover .bf-tier-go, .bf-tier.top .bf-tier-go { border-color: transparent; background: var(--tornasol); background-size: 300% 300%; animation: shimmer 3.5s ease infinite; }
+
+    @media (max-width: 960px) {
+      .bf-inner { grid-template-columns: 1fr; gap: 22px; padding: 28px 16px 30px; }
+      .bf-title span { font-size: 54px; }
+      .bf-sub { font-size: 0.76rem; margin-top: 12px; }
+      .bf-cd-label { margin-top: 18px; }
+      .bf-cd > div { min-width: 0; flex: 1; padding: 8px 4px 7px; border-radius: 12px; }
+      .bf-cd b { font-size: 1.35rem; }
+      .bf-cd .bf-colon { flex: 0 0 auto; padding-top: 8px; font-size: 1.1rem; }
+      .bf-tiers { flex-direction: row; gap: 8px; }
+      .bf-tier { flex: 1; flex-direction: column; align-items: flex-start; gap: 8px; padding: 14px 12px 12px; border-radius: 16px; }
+      .bf-tier:hover { transform: none; }
+      .bf-pct { min-width: 0; }
+      .bf-pct b { font-size: 2.5rem; }
+      .bf-pct em { font-size: 1.1rem; margin-top: 2px; }
+      .bf-tier-txt strong { font-size: 0.8rem; line-height: 1.2; }
+      .bf-tier-txt small { font-size: 0.64rem; }
+      .bf-tier-go { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) { .bf-iri, .bf-hero::after, .bf-eyebrow i, .bf-tier-go { animation: none !important; } }
+
+    /* Precio con descuento (tarjetas, carruseles, buscador, detalle, laboratorio) */
+    .bf-old { font-size: .78em; font-weight: 400; color: #9a9a98; text-decoration: line-through; margin-left: 6px; white-space: nowrap; }
+    .bs-band .bf-old { color: rgba(255,255,255,0.45); }
+    .mini-price .bf-old, .sg-price .bf-old { display: block; margin-left: 0; }
+    @media (max-width: 640px) { .pc-price .bf-old { display: block; margin-left: 0; } }
+    .modal-price .bf-old { font-size: .6em; margin-left: 10px; }
+
+    /* Sello de descuento en la foto */
+    .bf-tag {
+      position: absolute; top: 8px; right: 8px; z-index: 4;
+      width: 50px; height: 50px; border-radius: 50%; transform: rotate(-10deg);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1;
+      color: #fff; border: 2px solid transparent;
+      background: linear-gradient(#161616, #161616) padding-box, var(--tornasol) border-box;
+      box-shadow: 0 6px 14px -4px rgba(0,0,0,0.35);
+    }
+    .bf-tag b { font-size: 14px; font-weight: 600; letter-spacing: -0.03em; }
+    .bf-tag span { margin-top: 2px; font-size: 5.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; line-height: 1.15; }
+    .bs-visual .bf-tag { top: 12px; right: 12px; }
+    .bs-visual .badge-preventa ~ .bf-tag, .bs-visual .bf-tag.low { top: auto; bottom: 12px; }
+    @media (max-width: 640px) {
+      .bf-tag { width: 44px; height: 44px; top: 6px; right: 6px; }
+      .bf-tag b { font-size: 12.5px; }
+      .bf-tag span { font-size: 5px; }
+    }
+
+    /* Detalle del producto y carrito */
+    body.bf-on .bf-modal.on {
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 4px 0 14px;
+      padding: 9px 12px; border-radius: 10px; background: #161616; color: #fff; font-size: 0.74rem;
+    }
+    .bf-modal b { font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+    .bf-modal .bf-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--tornasol); }
+    .bf-modal .bf-cd-txt { color: rgba(255,255,255,0.6); font-variant-numeric: tabular-nums; }
+    .ci-unit .bf-old { margin-left: 4px; }
+    body.bf-on .bf-cart-row.on {
+      display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px;
+      padding: 10px 12px; border-radius: 10px; background: #161616; color: #fff; font-size: 0.76rem;
+    }
+    .bf-cart-row b { font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+    .bf-cart-row span:last-child { font-weight: 600; }
   </style>
 </head>
 <body>
@@ -1664,6 +1803,20 @@
     <span class="banner-catalog-year">Catálogo 2026</span>
   </div>
 </div>
+
+<!-- ── BLACK FRIDAY: banner protagonista (solo Detal, mientras esté activa) ── -->
+<section class="bf-hero" id="bf-hero" aria-label="Black Friday Maragel">
+  <div class="bf-inner">
+    <div class="bf-left">
+      <div class="bf-eyebrow"><i></i>Maragel · Solo por esta semana</div>
+      <h2 class="bf-title"><span>Black</span><span class="bf-iri">Friday</span></h2>
+      <p class="bf-sub">Descuentos especiales por categoría. <strong>El precio con descuento ya está aplicado</strong> en el catálogo.</p>
+      <div class="bf-cd-label" id="bf-cd-label">La oferta termina en</div>
+      <div class="bf-cd" id="bf-cd" aria-live="off"></div>
+    </div>
+    <div class="bf-tiers" id="bf-tiers"></div>
+  </div>
+</section>
 
 <!-- ── SEARCH & CONTROLS ───────────────────────── -->
 <div class="search-wrap">
@@ -2060,7 +2213,7 @@ function bsCard(p, rankNum) {
       <div class="bs-visual">
         <div class="bs-ref-ghost">${p.referencia}</div>
         ${rankNum ? `<div class="bs-rank tornasol">#${rankNum}</div>` : ''}
-        ${p.preventa ? '<div class="badge-preventa">Preventa</div>' : ''}
+        ${p.preventa ? '<div class="badge-preventa">Preventa</div>' : ''}${bfTag(p)}
         <div class="bs-swatch" id="${swId}">
           <img src="${p.imagen}" alt="${p.nombre}"
                onload="this.closest('.bs-visual').classList.add('has-photo')"
@@ -2124,18 +2277,24 @@ const ICON = {
 
 /* ── PRECIO SEGÚN MODO ── */
 function getDisplayPrice(p) {
+  const bf = bfHTMLPrecio(p, priceListOf(p));
+  if (bf) return bf;
   if (currentMode === 'mayorista') {
     const m = PRECIOS_MAY[p.referencia];
     return (!m || m === 'pendiente') ? 'Consultar' : fmtPrice(m);
   }
   return fmtPrice(p.precio);
 }
-function priceOf(p) {
+function priceListOf(p) {   // precio de lista (sin Black Friday)
   if (currentMode === 'mayorista') {
     const m = PRECIOS_MAY[p.referencia];
     return (m == null || m === 'pendiente') ? null : Number(m);
   }
   return Number(p.precio);
+}
+function priceOf(p) {       // precio que se cobra (con Black Friday si aplica)
+  const v = priceListOf(p), pct = bfPct(p);
+  return (v != null && pct) ? bfPrecio(v, pct) : v;
 }
 
 /* ── BÚSQUEDA TOLERANTE A ERRORES ── */
@@ -2586,7 +2745,7 @@ function productCard(p, i = 0) {
       <img src="${p.imagen || fallback}" ${i >= EAGER_LIMIT ? 'loading="lazy"' : ''} alt="${escHtml(p.nombre)}"
            onload="this.parentElement.classList.add('has-photo')"
            onerror="this.src='${fallback}';this.classList.add('is-ph')">
-      ${badgesHTML(p)}
+      ${badgesHTML(p)}${bfTag(p)}
       ${hasMedia ? `<div class="badge-media">${hasVideo ? '▶' : '⊞'} ${p.galeria.length}</div>` : ''}
     </div>
     <div class="pc-info">
@@ -2667,6 +2826,7 @@ document.getElementById('ss-overlay').addEventListener('click', e => { if (e.tar
 /* ── MODOS DE PRECIO (sin modo "Catálogo") ── */
 function setMode(mode) {
   currentMode = mode;
+  bfAplicarModo();
   document.getElementById('btn-detal').classList.toggle('active', mode === 'detal');
   document.getElementById('btn-mayorista').classList.toggle('active', mode === 'mayorista');
   document.getElementById('modo-banner').classList.toggle('visible', mode === 'mayorista');
@@ -2893,6 +3053,7 @@ function buildModalInfo() {
     ${showPrice ? `<div class="modal-price-row">
       <div class="modal-price" data-detal="${pDetal}" data-mayorista="${pMay}">${getDisplayPrice(p)}</div>
     </div>` : ''}
+    ${bfPct(p) ? `<div class="bf-modal on"><b>Black Friday · ${bfPct(p)}% de descuento</b></div>` : ''}
     ${p.descripcion ? `<div class="modal-desc">${p.descripcion}</div>` : ''}
     ${p.agotado ? '<div class="modal-badge-sold">Agotado temporalmente</div>' : ''}
     ${p.nuevo ? '<div class="modal-badge-sold" style="background:#383838;color:#fff;border-color:#383838">Nuevo</div>' : ''}
@@ -2999,6 +3160,10 @@ function cartProduct(it) { return PRODUCTOS.find(p => p.id === it.id); }
 
 /* ── Precio unitario según modo (null = sin precio / a confirmar) ── */
 function cartUnitPrice(p) {
+  const l = cartListPrice(p), pct = bfPct(p);
+  return (l != null && pct) ? bfPrecio(l, pct) : l;
+}
+function cartListPrice(p) {
   if (currentMode === 'catalogo') return null;
   if (currentMode === 'mayorista') {
     const m = PRECIOS_MAY[p.referencia];
@@ -3078,7 +3243,9 @@ function renderCart() {
       priceHtml = '<div class="ci-sub">Consultar</div>';
     } else {
       const sub = unit * it.cantidad; total += sub;
-      priceHtml = `<div class="ci-unit">${it.cantidad} × ${fmtPrice(unit)}</div><div class="ci-sub">${fmtPrice(sub)}</div>`;
+      const lis = cartListPrice(p);
+      const tach = (lis != null && lis > unit) ? `<s class="bf-old">${fmtPrice(lis)}</s>` : '';
+      priceHtml = `<div class="ci-unit">${it.cantidad} × ${fmtPrice(unit)}${tach}</div><div class="ci-sub">${fmtPrice(sub)}</div>`;
     }
     return `
     <div class="cart-item">
@@ -3106,7 +3273,9 @@ function renderCart() {
       <button class="btn-send-wa" onclick="openClientForm()">Enviar pedido por WhatsApp</button>
       <button class="btn-clear-cart" onclick="cartClear()">Vaciar pedido</button>`;
   } else {
+    const bfAh = bfAhorroCarrito();
     footEl.innerHTML = `
+      ${bfAh > 0 ? `<div class="bf-cart-row on"><span><b>Black Friday</b> · descuento aplicado</span><span>Ahorras ${fmtPrice(bfAh)}</span></div>` : ''}
       <div class="cart-total-row">
         <span class="cart-total-label">Total (${currentMode === 'detal' ? 'Detal' : 'Mayorista'})</span>
         <span class="cart-total-value">${fmtPrice(total)}</span>
@@ -3258,6 +3427,7 @@ function buildWaMessage() {
 
   let msg = `*NUEVO PEDIDO — ${CATALOG_NAME}*\n`;
   msg += modeLabel ? `Lista de precios: *${modeLabel}*\n` : 'Precios a confirmar con tu asesora\n';
+  if (bfModoActivo()) msg += 'Promoción: *BLACK FRIDAY* (precios con descuento ya aplicados)\n';
   msg += SEP + '\n';
 
   msg += `*Datos del cliente*\n`;
@@ -3288,7 +3458,8 @@ function buildWaMessage() {
       msg += `- Subtotal: *Precio a confirmar*\n`;
     } else {
       const sub = unit * it.cantidad; total += sub;
-      msg += `- Cantidad: ${it.cantidad} × ${fmtPrice(unit)}\n`;
+      const lis = cartListPrice(p);
+      msg += `- Cantidad: ${it.cantidad} × ${fmtPrice(unit)}${(lis != null && lis > unit) ? ` _(Black Friday -${bfPct(p)}%, antes ${fmtPrice(lis)})_` : ''}\n`;
       msg += `- Subtotal: *${fmtPrice(sub)}*\n`;
     }
   });
@@ -3298,6 +3469,8 @@ function buildWaMessage() {
   if (currentMode === 'catalogo') {
     msg += `*TOTAL: a confirmar*\n`;
   } else {
+    const bfAh = bfAhorroCarrito();
+    if (bfAh > 0) msg += `Ahorro Black Friday: -${fmtPrice(bfAh)}\n`;
     msg += `*TOTAL: ${fmtPrice(total)}*`;
     msg += hayPendientes ? ' (sin ítems por confirmar)\n' : '\n';
   }
@@ -3873,6 +4046,97 @@ document.addEventListener('click', e => {
    Mantiene sincronizados los offsets de la nav de categorías y
    del banner de mayorista, tanto en desktop (1 fila) como en
    móvil (2 filas). */
+/* ─────────────────────────────────────────────────
+   BLACK FRIDAY — campaña 23–30 nov 2026 (descuentos por categoría)
+   · Se prende/apaga a mano con BF_ACTIVO.
+   · Se apaga sola al llegar BF_FIN (hora Colombia).
+   · ?blackfriday en la URL la muestra aunque esté apagada (vista previa).
+   · El descuento se calcula aquí: los JSON NO se tocan.
+───────────────────────────────────────────────── */
+const BF_ACTIVO = true;                                     // ← true = campaña visible · false = oculta
+const BF_FIN    = new Date('2026-12-01T00:00:00-05:00');    // termina el 30/nov a medianoche
+const BF_MODOS  = ['detal'];                                // agregar 'mayorista' si también aplica allá
+const BF_GRUPOS = [                                         // el primero que coincida manda
+  { id: 'esm', pct: 10, titulo: 'Limas y esmaltes', cat: 'Esmaltes en Gel',
+    aplica: p => p.categoria === 'Esmaltes en Gel' || p.subcategoria === 'Limas' },
+  { id: 'her', pct: 20, titulo: 'Herramientas', cat: 'Herramientas',
+    aplica: p => p.categoria === 'Herramientas' },
+  { id: 'gem', pct: 40, titulo: 'Gemas y stickers', cat: 'Apliques y Stickers',
+    aplica: p => p.categoria === 'Apliques y Stickers' },
+];
+const BF_PREVIEW = new URLSearchParams(location.search).has('blackfriday');
+function bfEncendida() { return BF_PREVIEW || (BF_ACTIVO && Date.now() < BF_FIN.getTime()); }
+function bfModoActivo() { return bfEncendida() && BF_MODOS.includes(currentMode); }
+function bfGrupo(p) { return BF_GRUPOS.find(g => g.aplica(p)) || null; }
+function bfPct(p) {
+  if (!p || p.agotado || !bfModoActivo()) return 0;
+  const g = bfGrupo(p); return g ? g.pct : 0;
+}
+function bfPrecio(n, pct) { return Math.round(n * (1 - pct / 100)); }
+function bfTag(p) {
+  const pct = bfPct(p);
+  return pct ? `<div class="bf-tag" title="Black Friday · ${pct}% de descuento"><b>-${pct}%</b><span>Black<br>Friday</span></div>` : '';
+}
+function bfHTMLPrecio(p, lista) {   // precio con descuento + precio tachado
+  const pct = bfPct(p);
+  if (!pct || lista == null || isNaN(lista)) return null;
+  return `<span class="bf-now">${fmtPrice(bfPrecio(lista, pct))}</span><s class="bf-old">${fmtPrice(lista)}</s>`;
+}
+function bfAplicarModo() { document.body.classList.toggle('bf-on', bfModoActivo()); }
+function bfIr(id) {
+  const g = BF_GRUPOS.find(x => x.id === id); if (!g) return;
+  pickGroup(g.cat);
+}
+function bfRestante() {
+  let s = Math.max(0, Math.floor((BF_FIN.getTime() - Date.now()) / 1000));
+  const d = Math.floor(s / 86400); s %= 86400;
+  const h = Math.floor(s / 3600); s %= 3600;
+  const m = Math.floor(s / 60); s %= 60;
+  return { d, h, m, s };
+}
+const bfDos = n => String(n).padStart(2, '0');
+function bfTextoRestante() {
+  const r = bfRestante();
+  return 'Termina en ' + (r.d ? r.d + 'd ' : '') + bfDos(r.h) + 'h ' + bfDos(r.m) + 'm ' + bfDos(r.s) + 's';
+}
+function bfAhorroCarrito() {
+  let a = 0;
+  for (const it of CART) {
+    const p = cartProduct(it); if (!p) continue;
+    const l = cartListPrice(p), v = cartUnitPrice(p);
+    if (l != null && v != null && l > v) a += (l - v) * it.cantidad;
+  }
+  return a;
+}
+(function bfMontar() {
+  const tiers = document.getElementById('bf-tiers');
+  const max = Math.max(...BF_GRUPOS.map(g => g.pct));
+  const flecha = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  tiers.innerHTML = BF_GRUPOS.map(g => `
+    <button type="button" class="bf-tier${g.pct === max ? ' top' : ''}" onclick="bfIr('${g.id}')" aria-label="${g.pct}% de descuento en ${g.titulo}">
+      <span class="bf-pct bf-iri"><b>${g.pct}</b><em>%</em></span>
+      <span class="bf-tier-txt"><strong>${g.titulo}</strong><small>de descuento · Ver productos</small></span>
+      <span class="bf-tier-go">${flecha}</span>
+    </button>`).join('');
+  const cd = document.getElementById('bf-cd');
+  let estaba = bfEncendida();
+  function tick() {
+    const on = bfEncendida();
+    if (on !== estaba) {            // se acabó la campaña: volver a precios normales
+      estaba = on; bfAplicarModo();
+      if (PRODUCTOS.length) setMode(currentMode);
+    }
+    if (!on) return;
+    const r = bfRestante();
+    cd.innerHTML = [[r.d, 'Días'], [r.h, 'Horas'], [r.m, 'Min'], [r.s, 'Seg']]
+      .map(([n, t]) => `<div><b>${bfDos(n)}</b><span>${t}</span></div>`)
+      .join('<div class="bf-colon">:</div>');
+    const txt = bfTextoRestante();
+    document.querySelectorAll('.bf-cd-txt').forEach(el => { el.textContent = txt; });
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
 (function () {
   var bar = document.querySelector('.search-wrap');
   if (!bar) return;
