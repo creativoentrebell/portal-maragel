@@ -1647,7 +1647,7 @@
     .search-input::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
 
     /* ══════════════════════════════════════════════════════════
-       BLACK FRIDAY — campaña 23–30 nov 2026 (descuentos por categoría)
+       BLACK DAYS — campaña 23–30 nov 2026 (descuentos por categoría)
        Reemplaza el banner mientras está activa (solo en Detal)
     ══════════════════════════════════════════════════════════ */
     .bf-hero, .bf-modal, .bf-cart-row { display: none; }
@@ -1804,12 +1804,12 @@
   </div>
 </div>
 
-<!-- ── BLACK FRIDAY: banner protagonista (solo Detal, mientras esté activa) ── -->
-<section class="bf-hero" id="bf-hero" aria-label="Black Friday Maragel">
+<!-- ── BLACK DAYS: banner protagonista (solo Detal, mientras esté activa) ── -->
+<section class="bf-hero" id="bf-hero" aria-label="Black Days Maragel">
   <div class="bf-inner">
     <div class="bf-left">
       <div class="bf-eyebrow"><i></i>Maragel · Solo por esta semana</div>
-      <h2 class="bf-title"><span>Black</span><span class="bf-iri">Friday</span></h2>
+      <h2 class="bf-title"><span>Black</span><span class="bf-iri">Days</span></h2>
       <p class="bf-sub">Descuentos especiales por categoría. <strong>El precio con descuento ya está aplicado</strong> en el catálogo.</p>
       <div class="bf-cd-label" id="bf-cd-label">La oferta termina en</div>
       <div class="bf-cd" id="bf-cd" aria-live="off"></div>
@@ -2285,14 +2285,14 @@ function getDisplayPrice(p) {
   }
   return fmtPrice(p.precio);
 }
-function priceListOf(p) {   // precio de lista (sin Black Friday)
+function priceListOf(p) {   // precio de lista (sin Black Days)
   if (currentMode === 'mayorista') {
     const m = PRECIOS_MAY[p.referencia];
     return (m == null || m === 'pendiente') ? null : Number(m);
   }
   return Number(p.precio);
 }
-function priceOf(p) {       // precio que se cobra (con Black Friday si aplica)
+function priceOf(p) {       // precio que se cobra (con Black Days si aplica)
   const v = priceListOf(p), pct = bfPct(p);
   return (v != null && pct) ? bfPrecio(v, pct) : v;
 }
@@ -3053,7 +3053,7 @@ function buildModalInfo() {
     ${showPrice ? `<div class="modal-price-row">
       <div class="modal-price" data-detal="${pDetal}" data-mayorista="${pMay}">${getDisplayPrice(p)}</div>
     </div>` : ''}
-    ${bfPct(p) ? `<div class="bf-modal on"><b>Black Friday · ${bfPct(p)}% de descuento</b></div>` : ''}
+    ${bfPct(p) ? `<div class="bf-modal on"><b>Black Days · ${bfPct(p)}% de descuento</b></div>` : ''}
     ${p.descripcion ? `<div class="modal-desc">${p.descripcion}</div>` : ''}
     ${p.agotado ? '<div class="modal-badge-sold">Agotado temporalmente</div>' : ''}
     ${p.nuevo ? '<div class="modal-badge-sold" style="background:#383838;color:#fff;border-color:#383838">Nuevo</div>' : ''}
@@ -3275,7 +3275,7 @@ function renderCart() {
   } else {
     const bfAh = bfAhorroCarrito();
     footEl.innerHTML = `
-      ${bfAh > 0 ? `<div class="bf-cart-row on"><span><b>Black Friday</b> · descuento aplicado</span><span>Ahorras ${fmtPrice(bfAh)}</span></div>` : ''}
+      ${bfAh > 0 ? `<div class="bf-cart-row on"><span><b>Black Days</b> · descuento aplicado</span><span>Ahorras ${fmtPrice(bfAh)}</span></div>` : ''}
       <div class="cart-total-row">
         <span class="cart-total-label">Total (${currentMode === 'detal' ? 'Detal' : 'Mayorista'})</span>
         <span class="cart-total-value">${fmtPrice(total)}</span>
@@ -3427,7 +3427,7 @@ function buildWaMessage() {
 
   let msg = `*NUEVO PEDIDO — ${CATALOG_NAME}*\n`;
   msg += modeLabel ? `Lista de precios: *${modeLabel}*\n` : 'Precios a confirmar con tu asesora\n';
-  if (bfModoActivo()) msg += 'Promoción: *BLACK FRIDAY* (precios con descuento ya aplicados)\n';
+  if (bfModoActivo()) msg += 'Promoción: *BLACK DAYS* (precios con descuento ya aplicados)\n';
   msg += SEP + '\n';
 
   msg += `*Datos del cliente*\n`;
@@ -3459,7 +3459,7 @@ function buildWaMessage() {
     } else {
       const sub = unit * it.cantidad; total += sub;
       const lis = cartListPrice(p);
-      msg += `- Cantidad: ${it.cantidad} × ${fmtPrice(unit)}${(lis != null && lis > unit) ? ` _(Black Friday -${bfPct(p)}%, antes ${fmtPrice(lis)})_` : ''}\n`;
+      msg += `- Cantidad: ${it.cantidad} × ${fmtPrice(unit)}${(lis != null && lis > unit) ? ` _(Black Days -${bfPct(p)}%, antes ${fmtPrice(lis)})_` : ''}\n`;
       msg += `- Subtotal: *${fmtPrice(sub)}*\n`;
     }
   });
@@ -3470,7 +3470,7 @@ function buildWaMessage() {
     msg += `*TOTAL: a confirmar*\n`;
   } else {
     const bfAh = bfAhorroCarrito();
-    if (bfAh > 0) msg += `Ahorro Black Friday: -${fmtPrice(bfAh)}\n`;
+    if (bfAh > 0) msg += `Ahorro Black Days: -${fmtPrice(bfAh)}\n`;
     msg += `*TOTAL: ${fmtPrice(total)}*`;
     msg += hayPendientes ? ' (sin ítems por confirmar)\n' : '\n';
   }
@@ -4047,10 +4047,10 @@ document.addEventListener('click', e => {
    del banner de mayorista, tanto en desktop (1 fila) como en
    móvil (2 filas). */
 /* ─────────────────────────────────────────────────
-   BLACK FRIDAY — campaña 23–30 nov 2026 (descuentos por categoría)
+   BLACK DAYS — campaña 23–30 nov 2026 (descuentos por categoría)
    · Se prende/apaga a mano con BF_ACTIVO.
    · Se apaga sola al llegar BF_FIN (hora Colombia).
-   · ?blackfriday en la URL la muestra aunque esté apagada (vista previa).
+   · ?blackdays en la URL la muestra aunque esté apagada (vista previa).
    · El descuento se calcula aquí: los JSON NO se tocan.
 ───────────────────────────────────────────────── */
 const BF_ACTIVO = true;                                     // ← true = campaña visible · false = oculta
@@ -4064,7 +4064,7 @@ const BF_GRUPOS = [                                         // el primero que co
   { id: 'gem', pct: 40, titulo: 'Gemas y stickers', cat: 'Apliques y Stickers',
     aplica: p => p.categoria === 'Apliques y Stickers' },
 ];
-const BF_PREVIEW = new URLSearchParams(location.search).has('blackfriday');
+const BF_PREVIEW = new URLSearchParams(location.search).has('blackdays');
 function bfEncendida() { return BF_PREVIEW || (BF_ACTIVO && Date.now() < BF_FIN.getTime()); }
 function bfModoActivo() { return bfEncendida() && BF_MODOS.includes(currentMode); }
 function bfGrupo(p) { return BF_GRUPOS.find(g => g.aplica(p)) || null; }
@@ -4075,7 +4075,7 @@ function bfPct(p) {
 function bfPrecio(n, pct) { return Math.round(n * (1 - pct / 100)); }
 function bfTag(p) {
   const pct = bfPct(p);
-  return pct ? `<div class="bf-tag" title="Black Friday · ${pct}% de descuento"><b>-${pct}%</b><span>Black<br>Friday</span></div>` : '';
+  return pct ? `<div class="bf-tag" title="Black Days · ${pct}% de descuento"><b>-${pct}%</b><span>Black<br>Days</span></div>` : '';
 }
 function bfHTMLPrecio(p, lista) {   // precio con descuento + precio tachado
   const pct = bfPct(p);
