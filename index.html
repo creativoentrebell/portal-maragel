@@ -3846,9 +3846,10 @@ function cwSelect(id) {
   const fotos = g.filter(x => x.tipo === 'foto');
   const brocha = fotos.filter(x => /img\/color\//.test(x.src));          // foto de brocha (carpeta "color")
   if (!brocha.length && p.imagen) brocha.push({ tipo: 'foto', src: p.imagen });
-  cwSlides = [...brocha, ...g.filter(x => x.tipo === 'video'), ...fotos.filter(x => !brocha.includes(x))];   // brocha → video → frasco
+  cwSlides = [...g.filter(x => x.tipo === 'video'), ...brocha, ...fotos.filter(x => !brocha.includes(x))];   // video → brocha → frasco
   cwIdx = 0;
   cwRenderPanel();
+  if (cwHasVideo()) cwGo(0);   // el video arranca solo (sin sonido) al tocar la uña
   const pn = document.getElementById('cw-panel');
   if (window.innerWidth <= 960 && !pn.classList.contains('open')) history.pushState({ cw: 1, sheet: 1 }, '', '#colores');
   pn.classList.add('open'); pn.scrollTop = 0;
