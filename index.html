@@ -1791,6 +1791,42 @@
     }
     .bf-cart-row b { font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
     .bf-cart-row span:last-child { font-weight: 600; }
+    /* ══════════════════════════════════════════════════════════
+       MARCA DU — categoría "Uñas DU" dentro del catálogo Maragel
+       · Etiqueta azul DU en todo producto de DU (campo "marca": "DU")
+       · Al entrar a la categoría, el tornasol pasa a azul DU
+    ══════════════════════════════════════════════════════════ */
+    :root { --du: #A7D9F3; --du-ink: #16324A; --du-grad: linear-gradient(135deg, #A7D9F3, #6FB6E2, #CDEBFA, #8CC8EC, #A7D9F3); }
+    .bdg-du { background: var(--du); color: var(--du-ink); letter-spacing: 1px; }
+    .du-chip { display: inline-block; font-size: 8.5px; font-weight: 700; letter-spacing: 1px; line-height: 1;
+      padding: 3px 6px; border-radius: 4px; background: var(--du); color: var(--du-ink); vertical-align: middle; }
+    .mini-img { position: relative; }
+    .mini .du-chip { position: absolute; top: 6px; left: 6px; z-index: 2; }
+    .modal-info-top .du-chip { margin-right: 8px; }
+    .cat-tab.du-tab::before { content: ''; display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+      background: var(--du); margin-right: 7px; vertical-align: 1px; }
+    /* Apartado DU: todo lo "activo" se vuelve azul DU */
+    body.du-on { --tornasol: var(--du-grad); }
+    body.du-on .mode-btn.active, body.du-on .toggle-switch.on, body.du-on .cart-count,
+    body.du-on .btn-add-cart.added { background: var(--du-grad); background-size: 300% 300%; }
+    body.du-on .mode-btn.active, body.du-on .cart-count { color: var(--du-ink); }
+    body.du-on .cat-tab.active::after { background: var(--du-grad); background-size: 200% auto; }
+    body.du-on .search-input:focus { border-color: #6FB6E2; box-shadow: 0 0 0 3px rgba(111,182,226,0.2); }
+    body.du-on .tornasol, body.du-on .pg-btn.tornasol, body.du-on .m-badge { color: var(--du-ink); }
+    body.du-on .btn-add-cart, body.du-on .fp-see, body.du-on .btn-send-wa { background: var(--du-ink); }
+    /* Franja de bienvenida al apartado DU */
+    .du-hero { display: none; position: relative; overflow: hidden; margin-bottom: 22px; padding: 26px 28px;
+      border-radius: 18px; background: linear-gradient(120deg, #EAF6FD 0%, #D6EEFB 55%, #C3E5F8 100%); border: 1px solid #CBE6F6; }
+    body.du-on .du-hero { display: block; }
+    .du-hero-mark { position: absolute; right: -10px; bottom: -38px; font-size: 9rem; font-weight: 700; letter-spacing: -8px;
+      color: rgba(22,50,74,0.07); line-height: 1; pointer-events: none; user-select: none; }
+    .du-hero .sec-eyebrow { color: #3D6B8C; }
+    .du-hero-title { font-size: 2rem; font-weight: 600; letter-spacing: -0.6px; line-height: 1.05; color: var(--du-ink); margin: 4px 0 8px; }
+    .du-hero-title em { font-weight: 400; font-style: italic; }
+    .du-hero p { position: relative; font-size: 0.84rem; color: #3D5A70; line-height: 1.55; max-width: 460px; }
+    @media (max-width: 960px) { .du-hero { padding: 20px 18px; border-radius: 14px; } .du-hero-title { font-size: 1.55rem; } .du-hero-mark { font-size: 6.5rem; } }
+    /* Black Days: la tarjeta de DU va en azul */
+    .bf-tier.du .bf-pct { background: var(--du-grad); background-size: 300% 300%; -webkit-background-clip: text; background-clip: text; }
   </style>
 </head>
 <body>
@@ -1874,6 +1910,13 @@
   <aside class="sidebar" id="sidebar"></aside>
   <div class="results">
     <div class="results-top" id="results-top"></div>
+<!-- ── APARTADO DU (solo se ve dentro de la categoría Uñas DU) ── -->
+    <section class="du-hero" id="du-hero" aria-label="Productos de uñas DU">
+      <div class="du-hero-mark" aria-hidden="true">DU</div>
+      <div class="sec-eyebrow">Marca aliada · Entrebell</div>
+      <div class="du-hero-title">Uñas <em>DU</em></div>
+      <p>Accesorios, efectos, gemas y stickers de DU. Se agregan al mismo pedido y los atiende la misma asesora.</p>
+    </section>
 <!-- ── INVITACIÓN AL CÍRCULO DE COLORES ─────── -->
     <section class="cw-banner" id="cw-banner" onclick="openWheel()" role="button" tabindex="0" aria-label="Abrir el laboratorio de colores"
              onkeydown="if(event.key==='Enter')openWheel()">
@@ -2258,8 +2301,8 @@ window.addEventListener('resize', () => { bsUpdateArrows('bs-grid'); bsUpdateArr
 const PER_PAGE   = 48;
 /* ⚠ Repo de PRUEBAS: nombres propios para no mezclarse con el catálogo principal.
    Al pasar al principal cambiar a 'maragel_bienvenida' y 'maragel_vistos'. */
-const PREF_KEY   = 'maragel_pruebas_bienvenida';
-const RECENT_KEY = 'maragel_pruebas_vistos';
+const PREF_KEY   = 'maragel_bienvenida';
+const RECENT_KEY = 'maragel_vistos';
 
 let activeSub = null, soloPreventa = false, priceMin = null, priceMax = null;
 let sortBy = 'relevantes', page = 1, searchRaw = '';
@@ -2299,7 +2342,7 @@ function priceListOf(p) {   // precio de lista (sin Black Days)
     const m = PRECIOS_MAY[p.referencia];
     return (m == null || m === 'pendiente') ? null : Number(m);
   }
-  return Number(p.precio);
+  return (p.precio == null || p.precio === 'pendiente') ? null : Number(p.precio);
 }
 function priceOf(p) {       // precio que se cobra (con Black Days si aplica)
   const v = priceListOf(p), pct = bfPct(p);
@@ -2421,10 +2464,13 @@ function styledCatName(cat) {
   if (parts.length <= 1) return escHtml(cat);
   return `${escHtml(parts[0])} <em>${escHtml(parts.slice(1).join(' '))}</em>`;
 }
+const DU_CAT = 'Uñas DU';
+const isDU = p => p && p.marca === 'DU';
+const duChip = p => isDU(p) ? '<span class="du-chip">DU</span>' : '';
 function renderCatNav() {
   const cats = ['Todos', ...new Set(PRODUCTOS.map(p => p.categoria))];
   document.getElementById('cat-nav').innerHTML = cats.map(c =>
-    `<div class="cat-tab" data-cat="${escHtml(c)}" onclick="navCat(this.dataset.cat)">${escHtml(c)}</div>`).join('');
+    `<div class="cat-tab${c === DU_CAT ? ' du-tab' : ''}" data-cat="${escHtml(c)}" onclick="navCat(this.dataset.cat)">${escHtml(c)}</div>`).join('');
 }
 
 let lastCount = 0;
@@ -2443,6 +2489,7 @@ function render(opts = {}) {
   if (cwb) cwb.style.display = (page === 1 && !searchOn() && (showFeat || (activeCat === 'Esmaltes en Gel' && !activeSub))) && cwProducts().length ? '' : 'none';
 
   document.querySelectorAll('.cat-tab').forEach(t => t.classList.toggle('active', t.dataset.cat === activeCat));
+  document.body.classList.toggle('du-on', activeCat === DU_CAT && !searchOn());
 
   const head = headHTML(list.length);
   document.getElementById('sidebar').innerHTML = head + filtersHTML(scores);
@@ -2717,7 +2764,7 @@ function renderSuggest() {
       <button class="sg-item" onclick="pickProduct('${p.id}')">
         <span class="sg-thumb"><img src="${p.imagen || getImgSrc(p)}" alt="" loading="lazy" onerror="this.src='${getImgSrc(p)}'"></span>
         <span class="sg-body"><div class="sg-name">${escHtml(p.nombre)}</div>
-          <div class="sg-meta">Ref ${escHtml(p.referencia)}${p.agotado ? ' · Agotado' : ''}</div></span>
+          <div class="sg-meta">${isDU(p) ? 'DU · ' : ''}Ref ${escHtml(p.referencia)}${p.agotado ? ' · Agotado' : ''}</div></span>
         <span class="sg-price">${getDisplayPrice(p)}</span></button>`).join('');
   }
   h += `<button class="sg-all" onclick="commitSearch()">${ICON.lupa} &nbsp;Ver ${total} resultado${total === 1 ? '' : 's'} para “${escHtml(searchRaw.trim())}”</button>`;
@@ -2735,6 +2782,7 @@ document.addEventListener('click', e => { if (!e.target.closest('.search-inner')
 /* ── TARJETA DE PRODUCTO ── */
 function badgesHTML(p) {
   const b = [];
+  if (isDU(p))       b.push('<span class="bdg bdg-du">DU</span>');
   if (p.best_seller) b.push(`<span class="bdg tornasol">${ICON.star}Más vendido</span>`);
   if (p.nuevo)       b.push(`<span class="bdg bdg-new">${ICON.spark}Nuevo</span>`);
   if (p.preventa)    b.push(`<span class="bdg bdg-pre">${ICON.clock}Preventa</span>`);
@@ -2772,7 +2820,7 @@ function productCard(p, i = 0) {
 function miniCard(p) {
   const ph = getImgSrc(p);
   return `<div class="mini" data-cat="${escHtml(p.categoria)}" onclick="openModal('${p.id}')">
-    <div class="mini-img"><img src="${p.imagen || ph}" loading="lazy" alt="" onerror="this.src='${ph}'"></div>
+    <div class="mini-img">${duChip(p)}<img src="${p.imagen || ph}" loading="lazy" alt="" onerror="this.src='${ph}'"></div>
     <div class="mini-name">${escHtml(p.nombre)}</div>
     <div class="mini-price">${getDisplayPrice(p)}</div></div>`;
 }
@@ -3055,7 +3103,7 @@ function buildModalInfo() {
 
   document.getElementById('modal-info').innerHTML = `
     <div class="modal-info-top">
-      <div class="modal-cat">${subLabel}</div>
+      <div class="modal-cat">${duChip(p)}${subLabel}</div>
       <div class="modal-ref-tag">${p.referencia}</div>
     </div>
     <div class="modal-name">${p.nombre}</div>
@@ -3119,7 +3167,7 @@ function orderQtySet(raw) {
    CARRITO DE PEDIDOS
 ══════════════════════════════════════════════ */
 /* ⚠ Repo de PRUEBAS: al pasar al principal volver a 'maragel_carrito' */
-const CART_KEY = 'maragel_pruebas_carrito';
+const CART_KEY = 'maragel_carrito';
 const CATALOG_NAME = 'MARAGEL';
 let CART = [];   // [{ id, cantidad, nota }]
 
@@ -3178,7 +3226,7 @@ function cartListPrice(p) {
     const m = PRECIOS_MAY[p.referencia];
     return (!m || m === 'pendiente') ? null : Number(m);
   }
-  return Number(p.precio);
+  return (p.precio == null || p.precio === 'pendiente') ? null : Number(p.precio);
 }
 
 /* ── Agregar desde el modal ── */
@@ -3261,7 +3309,7 @@ function renderCart() {
       <div class="ci-img"><img src="${p.imagen}" alt="" onerror="this.remove()"></div>
       <div class="ci-body">
         <div class="ci-name">${escHtml(p.nombre)}</div>
-        <div class="ci-ref">Ref: ${escHtml(p.referencia)}</div>
+        <div class="ci-ref">${isDU(p) ? '<span class="du-chip">DU</span> ' : ''}Ref: ${escHtml(p.referencia)}</div>
         ${it.nota ? `<div class="ci-nota">${escHtml(it.nota)}</div>` : ''}
         <div class="ci-controls">
           <div class="ci-qty">
@@ -3457,6 +3505,7 @@ function buildWaMessage() {
     const unit = cartUnitPrice(p);
     nUnid += it.cantidad;
     msg += `\n*${i+1}. ${p.nombre}*\n`;
+    if (isDU(p)) msg += `- Marca: *DU*\n`;
     msg += `- Ref: ${p.referencia}${p.preventa ? ' _(Preventa)_' : ''}\n`;
     if (it.nota) msg += `- Nota: ${it.nota}\n`;
     if (currentMode === 'catalogo') {
@@ -4076,6 +4125,8 @@ const BF_GRUPOS = [                                         // el primero que co
     aplica: p => p.categoria === 'Uñas Soft Gel' },
   { id: 'gem', pct: 40, titulo: 'Gemas y stickers', cat: 'Apliques y Stickers',
     aplica: p => p.categoria === 'Apliques y Stickers' },
+  { id: 'du', pct: 20, titulo: 'Todo DU uñas', cat: 'Uñas DU',
+    aplica: p => p.marca === 'DU' },
 ];
 const BF_PREVIEW = new URLSearchParams(location.search).has('blackdays');
 function bfEncendida() { return BF_PREVIEW || (BF_ACTIVO && Date.now() < BF_FIN.getTime()); }
@@ -4129,7 +4180,7 @@ function bfAhorroCarrito() {
   const max = Math.max(...BF_GRUPOS.map(g => g.pct));
   const flecha = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
   tiers.innerHTML = BF_GRUPOS.map(g => `
-    <button type="button" class="bf-tier${g.pct === max ? ' top' : ''}" onclick="bfIr('${g.id}')" aria-label="${g.pct}% de descuento en ${g.titulo}">
+    <button type="button" class="bf-tier${g.pct === max ? ' top' : ''}${g.id === 'du' ? ' du' : ''}" onclick="bfIr('${g.id}')" aria-label="${g.pct}% de descuento en ${g.titulo}">
       <span class="bf-pct bf-iri"><b>${g.pct}</b><em>%</em></span>
       <span class="bf-tier-txt"><strong>${g.titulo}</strong><small>de descuento · Ver productos</small></span>
       <span class="bf-tier-go">${flecha}</span>

@@ -4472,20 +4472,6 @@
     "color_blob": ""
   },
   {
-    "id": "pblacky",
-    "nombre": "Guillotina Blacky",
-    "referencia": "BLACKY",
-    "precio": 22000,
-    "categoria": "Herramientas",
-    "subcategoria": "Cortauñas y Guillotinas",
-    "descripcion": "",
-    "imagen": "img/color/BLACKY.png",
-    "agotado": false,
-    "nuevo": false,
-    "best_seller": false,
-    "color_blob": ""
-  },
-  {
     "id": "pceleste",
     "nombre": "Pusher Celeste Punta de Lanza",
     "referencia": "CELESTE",
@@ -4510,54 +4496,6 @@
       {
         "tipo": "foto",
         "src": "img/color/CELESTE_3.png"
-      }
-    ]
-  },
-  {
-    "id": "ppads2",
-    "nombre": "Pads Limpiadores Corazón",
-    "referencia": "PADS2",
-    "precio": 8000,
-    "categoria": "Herramientas",
-    "subcategoria": "Accesorios",
-    "descripcion": "",
-    "imagen": "img/color/PADS2_1.png",
-    "agotado": false,
-    "nuevo": false,
-    "best_seller": false,
-    "color_blob": "",
-    "galeria": [
-      {
-        "tipo": "foto",
-        "src": "img/color/PADS2_1.png"
-      },
-      {
-        "tipo": "foto",
-        "src": "img/color/PADS2_2.png"
-      }
-    ]
-  },
-  {
-    "id": "ppads3",
-    "nombre": "Pads Limpiadores",
-    "referencia": "PADS3",
-    "precio": 8000,
-    "categoria": "Herramientas",
-    "subcategoria": "Accesorios",
-    "descripcion": "",
-    "imagen": "img/color/PADS3_1.png",
-    "agotado": false,
-    "nuevo": false,
-    "best_seller": false,
-    "color_blob": "",
-    "galeria": [
-      {
-        "tipo": "foto",
-        "src": "img/color/PADS3_1.png"
-      },
-      {
-        "tipo": "foto",
-        "src": "img/color/PADS3_2.png"
       }
     ]
   },
@@ -5535,5 +5473,4630 @@
         "src": "img/color/CT4_2.png"
       }
     ]
+  },
+  {
+    "id": "du0243",
+    "nombre": "Glitter Gruesa x12 — P-MIREZ",
+    "referencia": "P-MIREZ",
+    "precio": 33000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Kit de glitter x12 unidades con los que puedes crear hermosos diseños para todo tipo de técnicas.",
+    "imagen": "img/unas/p-mirez1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0244",
+    "nombre": "Polvo Espejo Oro Rosa — PCOLOR",
+    "referencia": "PCOLOR",
+    "precio": 11000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Polvo espejo oro rosa. Efecto metalizado muy brillante e intenso. Ideal para semipermanente.",
+    "imagen": "img/unas/REF PCOLOR.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0245",
+    "nombre": "Glitter Mix G1",
+    "referencia": "G1",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Glitter mix, mezcla de glitter y escamas con reflejos holográficos de diversos tamaños.",
+    "imagen": "img/unas/G1_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0246",
+    "nombre": "Glitter Mix G3",
+    "referencia": "G3",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Glitter mix con reflejos holográficos.",
+    "imagen": "img/unas/G3_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0247",
+    "nombre": "Glitter Mix G4",
+    "referencia": "G4",
+    "precio": 5000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Glitter mix con reflejos holográficos.",
+    "imagen": "img/unas/G4_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0248",
+    "nombre": "Glitter Mix G5",
+    "referencia": "G5",
+    "precio": 5000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Glitter mix con reflejos holográficos.",
+    "imagen": "img/unas/G5.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0249",
+    "nombre": "Glitter Mix G6",
+    "referencia": "G6",
+    "precio": 4000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Glitter mix con reflejos holográficos.",
+    "imagen": "img/unas/G6_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0250",
+    "nombre": "Glitter Mix G7",
+    "referencia": "G7",
+    "precio": 5000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Glitter mix con reflejos holográficos.",
+    "imagen": "img/unas/IMG_7404.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0251",
+    "nombre": "Glitter Mix G8",
+    "referencia": "G8",
+    "precio": 5000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Glitter mix con reflejos holográficos.",
+    "imagen": "img/unas/G8 _1 _2 _3 _4 _5 _6.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0252",
+    "nombre": "Glitter Mix G9",
+    "referencia": "G9",
+    "precio": 5000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Glitter mix con reflejos holográficos.",
+    "imagen": "img/unas/G9_10.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0253",
+    "nombre": "Glitter Mix G10",
+    "referencia": "G10",
+    "precio": 5000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Glitter mix con reflejos holográficos.",
+    "imagen": "img/unas/G10 - 1 (1).webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0254",
+    "nombre": "Glitter Mix G12",
+    "referencia": "G12",
+    "precio": 5000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Glitter mix con reflejos holográficos.",
+    "imagen": "img/unas/G12 _1 _2 _3.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0255",
+    "nombre": "Glitter Mix G13",
+    "referencia": "G13",
+    "precio": 5000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Glitter mix con reflejos holográficos.",
+    "imagen": "img/unas/G1_3.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0256",
+    "nombre": "Glitter Mix G14",
+    "referencia": "G14",
+    "precio": 5000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Glitter mix con reflejos holográficos.",
+    "imagen": "img/unas/G14 1 (1).webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0257",
+    "nombre": "Glitter Mix G15",
+    "referencia": "G15",
+    "precio": 5000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Glitter mix con reflejos holográficos.",
+    "imagen": "img/unas/G15 3 (2).webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0258",
+    "nombre": "Efecto Espejo — PESPEJO",
+    "referencia": "PESPEJO",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Efecto espejo en polvo. Efecto metalizado de máximo brillo para técnicas profesionales.",
+    "imagen": "img/unas/PESPEJO.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0259",
+    "nombre": "Glitter de Colores DG01",
+    "referencia": "DG01",
+    "precio": 5000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Glitter de colores con destellos holográficos para todo tipo de técnica.",
+    "imagen": "img/unas/DG01_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0260",
+    "nombre": "Polvo Aurora DG02",
+    "referencia": "DG02",
+    "precio": 20000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Polvo aurora que da efecto iridiscente y realza el color de base.",
+    "imagen": "img/unas/DG02-1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0261",
+    "nombre": "Glitter de Colores DG04",
+    "referencia": "DG04",
+    "precio": 7000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Mezcla de colores en glitter con destellos holográficos.",
+    "imagen": "img/unas/DG04-1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0262",
+    "nombre": "Glitter de Colores DG05",
+    "referencia": "DG05",
+    "precio": 7000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Glitter de colores con destellos holográficos.",
+    "imagen": "img/unas/DG05-1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0263",
+    "nombre": "Efecto Espejo Compacto DG06",
+    "referencia": "DG06",
+    "precio": 40000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Efecto espejo compacto para técnicas profesionales. Efecto metalizado muy brillante.",
+    "imagen": "img/unas/DG 06_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0264",
+    "nombre": "Espejo Compacto DG08",
+    "referencia": "DG08",
+    "precio": 17000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Efecto espejo compacto. Efecto metalizado brillante e intenso.",
+    "imagen": "img/unas/DG08.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0265",
+    "nombre": "Polvo Aurora DG09",
+    "referencia": "DG09",
+    "precio": 15000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Polvo aurora con efecto iridiscente holográfico.",
+    "imagen": "img/unas/DG09.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0266",
+    "nombre": "Dijes para Uñas GEM3060",
+    "referencia": "GEM3060",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Dijes surtidos para colocar en uñas y crear todo tipo de diseños.",
+    "imagen": "img/unas/GEM3060-1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0267",
+    "nombre": "Micro Glitter x12 PMIRE",
+    "referencia": "PMIRE",
+    "precio": 60000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Micro glitter x12 unidades con reflejos holográficos para todo tipo de técnica.",
+    "imagen": "img/unas/P-MIRE-1-.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0268",
+    "nombre": "Aplique 3D GEM1221",
+    "referencia": "GEM1221",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Aplique decorativo 3D con diferentes formas (osos, estrellas, etc.).",
+    "imagen": "img/unas/GEM1221.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0269",
+    "nombre": "Concha de Nácar GEM1219",
+    "referencia": "GEM1219",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Concha de nácar decorativa 3D para uñas.",
+    "imagen": "img/unas/GEM1219.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0270",
+    "nombre": "Aplique Flores GEM1225",
+    "referencia": "GEM1225",
+    "precio": 11000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Aplique decorativo de flores para uñas.",
+    "imagen": "img/unas/GEM1225.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0271",
+    "nombre": "Perlas Delgadas GEM1220",
+    "referencia": "GEM1220",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Perlas delgadas compactas tipo 'perlas de caviar' para uñas.",
+    "imagen": "img/unas/GEM1220-1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0272",
+    "nombre": "Cola de Sirena GEM1201",
+    "referencia": "GEM1201",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Cola de sirena mix con destellos holográficos de diversos tamaños y colores.",
+    "imagen": "img/unas/GEM 1201_10.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0273",
+    "nombre": "Cola de Sirena GEM1202",
+    "referencia": "GEM1202",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Cola de sirena mix holográfica.",
+    "imagen": "img/unas/GEM1202_10.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0274",
+    "nombre": "Cola de Sirena GEM1203",
+    "referencia": "GEM1203",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Cola de sirena mix holográfica.",
+    "imagen": "img/unas/GEM1203_.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0275",
+    "nombre": "Aurora Traslúcido GEM1204",
+    "referencia": "GEM1204",
+    "precio": 20000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Polvo traslúcido efecto aurora, da efecto iridiscente y realza el color de base.",
+    "imagen": "img/unas/GEM1204_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0276",
+    "nombre": "Polvo Traslúcido GEM1205",
+    "referencia": "GEM1205",
+    "precio": 20000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Polvo traslúcido con toques perlados, acabado muy brillante.",
+    "imagen": "img/unas/GEM1205_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0277",
+    "nombre": "Hojuelas Delgadas Verde GEM1206",
+    "referencia": "GEM1206",
+    "precio": 21000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Flake it hojuelas delgadas asimétricas, pigmentos metálicos e iridiscentes en tonos verdes.",
+    "imagen": "img/unas/GEM1206_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0278",
+    "nombre": "Hojuelas Delgadas Violeta GEM1207",
+    "referencia": "GEM1207",
+    "precio": 20000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Flake it hojuelas delgadas asimétricas, pigmentos metálicos en tonos violetas.",
+    "imagen": "img/unas/GEM1207_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0279",
+    "nombre": "Hojuelas Delgadas GEM1208",
+    "referencia": "GEM1208",
+    "precio": 20000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Flake it hojuelas delgadas asimétricas en diferentes tonalidades.",
+    "imagen": "img/unas/GEM1208_11.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0280",
+    "nombre": "Micro Glitter GEM1209",
+    "referencia": "GEM1209",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Micro glitter con reflejos holográficos para diferentes técnicas.",
+    "imagen": "img/unas/GEM1209_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0281",
+    "nombre": "Pigmentos GEM1210",
+    "referencia": "GEM1210",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Pigmentos de colores para diferentes técnicas y diseños.",
+    "imagen": "img/unas/GEM1210_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0282",
+    "nombre": "Micro Glitter GEM1211",
+    "referencia": "GEM1211",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Micro glitter con reflejos holográficos.",
+    "imagen": "img/unas/GEM1211_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0283",
+    "nombre": "Micro Glitter Blanco GEM1212",
+    "referencia": "GEM1212",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Micro glitter blanco con reflejos holográficos.",
+    "imagen": "img/unas/GEM1212.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0284",
+    "nombre": "Moonlight GEM1213",
+    "referencia": "GEM1213",
+    "precio": 30000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Polvo efecto Moonlight. Crea un efecto perlado metalizado para uñas.",
+    "imagen": "img/unas/GEM1213.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0290",
+    "nombre": "GEM1222 Papel Oro",
+    "referencia": "GEM1222",
+    "precio": 4000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Papel oro, finas hojas para efecto de acabado metálico.",
+    "imagen": "img/unas/GEM1222_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0295",
+    "nombre": "Gemas GM3061",
+    "referencia": "GM3061",
+    "precio": 12000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería brillante para uñas. Set x12. Ideal para semipermanente y acrílico.",
+    "imagen": "img/unas/GM3061.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0296",
+    "nombre": "Gemas GM3062",
+    "referencia": "GM3062",
+    "precio": 12000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería brillante para uñas. Set x12.",
+    "imagen": "img/unas/GM3062.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0297",
+    "nombre": "Gemas GM3085",
+    "referencia": "GM3085",
+    "precio": 17000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas.",
+    "imagen": "img/unas/GM3085.webp",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0298",
+    "nombre": "Gemas GM3088",
+    "referencia": "GM3088",
+    "precio": 12000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería brillante. Set x12.",
+    "imagen": "img/unas/GM3088.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0299",
+    "nombre": "Gemas GM3090",
+    "referencia": "GM3090",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas.",
+    "imagen": "img/unas/GM3090.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0300",
+    "nombre": "Gemas GM3092",
+    "referencia": "GM3092",
+    "precio": 12000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas. Set x12.",
+    "imagen": "img/unas/3092.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0301",
+    "nombre": "Gemas GM3095",
+    "referencia": "GM3095",
+    "precio": 12000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas. Set x12.",
+    "imagen": "img/unas/GM3095.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0302",
+    "nombre": "Gemas GM3112",
+    "referencia": "GM3112",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas.",
+    "imagen": "img/unas/GM3112.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0303",
+    "nombre": "Gemas GM3114",
+    "referencia": "GM3114",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas.",
+    "imagen": "img/unas/GM3114.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0304",
+    "nombre": "Gemas GM3119",
+    "referencia": "GM3119",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas.",
+    "imagen": "img/unas/GM3119.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0305",
+    "nombre": "Gemas GM3120",
+    "referencia": "GM3120",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas.",
+    "imagen": "img/unas/GM3120.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0306",
+    "nombre": "Gemas GM3121",
+    "referencia": "GM3121",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas.",
+    "imagen": "img/unas/GM3121.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0307",
+    "nombre": "Gemas GM3122",
+    "referencia": "GM3122",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas.",
+    "imagen": "img/unas/GM3122.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0308",
+    "nombre": "Gemas GM3126",
+    "referencia": "GM3126",
+    "precio": 12000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas. Set x12.",
+    "imagen": "img/unas/GM3126.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0309",
+    "nombre": "Gemas GM3130",
+    "referencia": "GM3130",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas.",
+    "imagen": "img/unas/GM3130.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0310",
+    "nombre": "Gemas GM3150",
+    "referencia": "GM3150",
+    "precio": 12000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas. Set x12.",
+    "imagen": "img/unas/GM3150.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0311",
+    "nombre": "Gemas GM3151",
+    "referencia": "GM3151",
+    "precio": 12000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas. Set x12.",
+    "imagen": "img/unas/GM3151.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0312",
+    "nombre": "Gemas GM3152",
+    "referencia": "GM3152",
+    "precio": 35000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería premium para uñas.",
+    "imagen": "img/unas/GM3152.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0313",
+    "nombre": "Gemas GM3153",
+    "referencia": "GM3153",
+    "precio": 12000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas. Set x12.",
+    "imagen": "img/unas/GM3153.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0314",
+    "nombre": "Gemas GM3154",
+    "referencia": "GM3154",
+    "precio": 12000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas. Set x12.",
+    "imagen": "img/unas/GM3154.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0315",
+    "nombre": "Gemas GM3155",
+    "referencia": "GM3155",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas.",
+    "imagen": "img/unas/GM3155.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0316",
+    "nombre": "Gemas GM3158",
+    "referencia": "GM3158",
+    "precio": 35000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería premium para uñas.",
+    "imagen": "img/unas/GM3158.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0317",
+    "nombre": "Gemas GM3159",
+    "referencia": "GM3159",
+    "precio": 12000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas. Set x12.",
+    "imagen": "img/unas/GM3159.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0318",
+    "nombre": "Gemas GM3160",
+    "referencia": "GM3160",
+    "precio": 12000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería para uñas. Set x12.",
+    "imagen": "img/unas/GM3160.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0319",
+    "nombre": "Gemas GM3165",
+    "referencia": "GM3165",
+    "precio": 35000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Decoración en pedrería premium para uñas.",
+    "imagen": "img/unas/GM3165.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0320",
+    "nombre": "Cristal Triturado GEC2601",
+    "referencia": "GEC2601",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Cristal triturado para decoración de uñas en todo tipo de técnica.",
+    "imagen": "img/unas/GEC2601 (2) (1).webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0321",
+    "nombre": "Accesorios Decorativos GEC2611",
+    "referencia": "GEC2611",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "Accesorios decorativos para todo tipo de técnica de uñas.",
+    "imagen": "img/unas/GEC2611 (2).webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0329",
+    "nombre": "Sticker Líneas 3D — 3DLINEAS",
+    "referencia": "3DLINEAS",
+    "precio": 2000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "Stickers para uñas. Compatibles con semipermanente y tradicional.",
+    "imagen": "img/unas/3DLINEAS_1.webp",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/3DLINEAS_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/3DLINEAS_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0330",
+    "nombre": "Stickers para Uñas GM3087",
+    "referencia": "GM3087",
+    "precio": 4000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "Stickers para uñas para crear hermosos diseños en todo tipo de técnica.",
+    "imagen": "img/unas/GM3087_1.webp",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/GM3087_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/GM3087_2.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/GM3087_3.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/GM3087_4.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/GM3087_5.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/GM3087_6.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/GM3087_7.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0331",
+    "nombre": "Probador de Uñas x50 PROUN2",
+    "referencia": "PROUN2",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Práctico mostrador y probador de uñas. Incluye 50 uñas.",
+    "imagen": "img/unas/PROUN2.webp",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0332",
+    "nombre": "Probador de Uñas x50 PROUN4",
+    "referencia": "PROUN4",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Práctico mostrador y probador de uñas. Incluye 50 uñas.",
+    "imagen": "img/unas/PROUN4.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0333",
+    "nombre": "Papel Aluminio ALU02",
+    "referencia": "ALU02",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Aluminio para retirado de esmalte semipermanente. Resistente, conserva el calor.",
+    "imagen": "img/unas/alu02.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0334",
+    "nombre": "Placa Acrílica PLADECOU",
+    "referencia": "PLADECOU",
+    "precio": 9000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Placa acrílica para copia de figuras fáciles y rápidas.",
+    "imagen": "img/unas/PLADECOU.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0335",
+    "nombre": "Placa Metálica PLADECOU2",
+    "referencia": "PLADECOU2",
+    "precio": 7000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Placa metálica para copia de figuras.",
+    "imagen": "img/unas/PLADECOU2 (6).webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0336",
+    "nombre": "Uñas Postizas x24 NEW-SALON-CL",
+    "referencia": "NEW-SALON-CL",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Uñas postizas x24 sets, ideales para aplicación de esmaltes.",
+    "imagen": "img/unas/new salon.jpg",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0337",
+    "nombre": "Punzones Kit x5 PUNZON1",
+    "referencia": "PUNZON1",
+    "precio": 4000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Kit de 5 pinceles con punzón (doble punta) para decorado de uñas.",
+    "imagen": "img/unas/PUNZON1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0338",
+    "nombre": "Pinceles Punzón PUN5PCS",
+    "referencia": "PUN5PCS",
+    "precio": 2000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Pinceles con punzón (doble punta) por unidad.",
+    "imagen": "img/unas/PUN5PCS.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0339",
+    "nombre": "Pads Limpiadores x200 PADS2",
+    "referencia": "PADS2",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Pads limpiadores paquete x200.",
+    "imagen": "img/unas/PADS2.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0340",
+    "nombre": "Pads Limpiadores x200 PADS3",
+    "referencia": "PADS3",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Pads limpiadores paquete x200.",
+    "imagen": "img/unas/PADS3.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0341",
+    "nombre": "Cubos Pulidores x10 CUB02",
+    "referencia": "CUB02",
+    "precio": 22000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Cubos pulidores de colores x10 bloques. Para uñas naturales y acrílicas.",
+    "imagen": "img/unas/CUB-02.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0342",
+    "nombre": "Cepillo Uñas HC-0396",
+    "referencia": "HC-0396",
+    "precio": 4000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Kit de 2 cepillos para uñas.",
+    "imagen": "img/unas/HC-0396.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0343",
+    "nombre": "Mortero x20 MOR1",
+    "referencia": "MOR1",
+    "precio": 46000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Recipiente de vidrio grueso para monómero en uñas acrílicas. x20 unidades.",
+    "imagen": "img/unas/MOR1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0344",
+    "nombre": "Molde Apliques ML01",
+    "referencia": "ML01",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Molde silicona 3D para Nail Art 6.5x5cm. Para semipermanente, gel o acrílico.",
+    "imagen": "img/unas/ML01.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0345",
+    "nombre": "Molde Apliques ML02",
+    "referencia": "ML02",
+    "precio": 11000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Molde silicona 3D para Nail Art 8.5x5.5cm.",
+    "imagen": "img/unas/ML02.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0346",
+    "nombre": "Molde Apliques ML03",
+    "referencia": "ML03",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Molde silicona 3D para Nail Art 6.5x5cm.",
+    "imagen": "img/unas/ML03.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0347",
+    "nombre": "Cortacutícula Plástico CORT2867",
+    "referencia": "CORT2867",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Cortacutícula plástico Spring. Por unidad.",
+    "imagen": "img/unas/CORT2867_1.webp",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/CORT2867_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/CORT2867_2.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/CORT2867_3.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/CORT2867_4.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/CORT2867_5.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/CORT2867_6.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0348",
+    "nombre": "Cortacutícula Metálico CORT8819",
+    "referencia": "CORT8819",
+    "precio": 11000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Cortacutícula metálico.",
+    "imagen": "img/unas/CORT8819.webp",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0349",
+    "nombre": "Cortauñas x24 — 602",
+    "referencia": "602",
+    "precio": 20000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Mini cortauñas de acero x24 unidades.",
+    "imagen": "img/unas/602.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0350",
+    "nombre": "Guillotina Blacky",
+    "referencia": "BLACKY",
+    "precio": 22000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Guillotina de alta calidad con mango ergonómico antideslizante. Corte preciso y sin esfuerzo.",
+    "imagen": "img/unas/BLACKY.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0351",
+    "nombre": "Cortacutículas CORT8850",
+    "referencia": "CORT8850",
+    "precio": 28000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Cortacutículas.",
+    "imagen": "img/unas/CORT8850.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0354",
+    "nombre": "Pusher con Punta Diamante PUS20",
+    "referencia": "PUS20",
+    "precio": 7000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Pusher con punta diamante DU. Para correr cutícula y limpiar uñas. Permite desinfección y esterilización.",
+    "imagen": "img/unas/PUS20.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0355",
+    "nombre": "Pusher Doble Pala PUS21",
+    "referencia": "PUS21",
+    "precio": 7000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Pusher doble pala DU.",
+    "imagen": "img/unas/PUS21.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0356",
+    "nombre": "Pusher PUS22",
+    "referencia": "PUS22",
+    "precio": 7000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Pusher DU.",
+    "imagen": "img/unas/PUS22.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0357",
+    "nombre": "Pusher Tipo Pala PUS23",
+    "referencia": "PUS23",
+    "precio": 7000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Pusher tipo pala DU.",
+    "imagen": "img/unas/PUS23.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0358",
+    "nombre": "Pusher Doble Uso PUS03",
+    "referencia": "PUS03",
+    "precio": 5000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Pusher doble uso para correr cutícula y limpiar uñas.",
+    "imagen": "img/unas/PUS03.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0359",
+    "nombre": "Pusher Doble Uso PUS04",
+    "referencia": "PUS04",
+    "precio": 5000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Pusher doble uso.",
+    "imagen": "img/unas/PUS04.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0360",
+    "nombre": "Pusher Doble Uso PUS05",
+    "referencia": "PUS05",
+    "precio": 5000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Pusher doble uso.",
+    "imagen": "img/unas/PUS05.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0361",
+    "nombre": "Pusher Doble Uso PUS06",
+    "referencia": "PUS06",
+    "precio": 5000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Pusher doble uso.",
+    "imagen": "img/unas/PUS06.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0363",
+    "nombre": "Lima Metálica x12 LIM30-053",
+    "referencia": "LIM30-053",
+    "precio": 18000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Lima metálica pico de loro x12 unidades. Punta curva para acceder a todos los rincones.",
+    "imagen": "img/unas/LIM30-053.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0364",
+    "nombre": "Patecabra x12 PT30-112",
+    "referencia": "PT30-112",
+    "precio": 18000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Herramienta básica para cortar cutículas en plástico con punta de goma. Set x12.",
+    "imagen": "img/unas/PT30-112.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0365",
+    "nombre": "Extractor de Espinillas SETEP",
+    "referencia": "SETEP",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Extractor manual de espinillas x3 unidades, diversidad de puntas.",
+    "imagen": "img/unas/SETEP.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/SETEP.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/SETEP-Y-SETEP02.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0366",
+    "nombre": "Extractor de Espinillas SETEP02",
+    "referencia": "SETEP02",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Extractor manual de espinillas x3 unidades.",
+    "imagen": "img/unas/SETEP02.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0367",
+    "nombre": "Palitos de Naranja x100 — 115",
+    "referencia": "115",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Palitos de naranjo en madera x100. Para retirar residuos, empujar cutícula, corregir manicure.",
+    "imagen": "img/unas/115.jpeg",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0368",
+    "nombre": "Palitos de Naranja x10 — 0010",
+    "referencia": "0010",
+    "precio": 2000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Palitos de naranjo en madera x10.",
+    "imagen": "img/unas/0010.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0388",
+    "nombre": "Kit 1 — Arcilla + Exhibidor + Soporte",
+    "referencia": "KIT1",
+    "precio": "pendiente",
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Kits para uñas",
+    "descripcion": "Kit compuesto por arcilla + VIDUNA1 (exhibidor vidrio) + SOPO1 (soporte mostrador).",
+    "imagen": "img/unas/KIT1.webp",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0389",
+    "nombre": "Kit 2 — Arcilla + Exhibidor + Soporte",
+    "referencia": "KIT2",
+    "precio": "pendiente",
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Kits para uñas",
+    "descripcion": "Kit compuesto por arcilla + VIDUNA2 (exhibidor vidrio) + SOPO2 (soporte mostrador).",
+    "imagen": "img/unas/KIT2.webp",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0390",
+    "nombre": "Kit 3 — Arcilla + Exhibidor + Soporte",
+    "referencia": "KIT3",
+    "precio": "pendiente",
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Kits para uñas",
+    "descripcion": "Kit compuesto por arcilla + VIDUNA3 (exhibidor vidrio) + SOPO3 (soporte mostrador).",
+    "imagen": "img/unas/KIT3.webp",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0391",
+    "nombre": "Kit 4 — Arcilla + Exhibidor + Soporte",
+    "referencia": "KIT4",
+    "precio": "pendiente",
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Kits para uñas",
+    "descripcion": "Kit compuesto por arcilla + VIDUNA4 (exhibidor vidrio) + SOPO1 (soporte mostrador).",
+    "imagen": "img/unas/KIT4.webp",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0656",
+    "nombre": "Uña X Nail CL — 20XNAIL-CL",
+    "referencia": "20XNAIL-CL",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/20XNAIL-CL.jpg",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0657",
+    "nombre": "Uña Guía — 20X-NAIL-NT",
+    "referencia": "20X-NAIL-NT",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0658",
+    "nombre": "Arcilla — ARCILLA",
+    "referencia": "ARCILLA",
+    "precio": 7000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/ARCILLA_1.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0662",
+    "nombre": "Carta de Colores de Esmalte — CARTA",
+    "referencia": "CARTA",
+    "precio": 83000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0663",
+    "nombre": "Cortacutícula CORT3100",
+    "referencia": "CORT3100",
+    "precio": 15000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/CORT3100_1.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/CORT3100_1.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/CORT3100_2.png"
+      }
+    ]
+  },
+  {
+    "id": "du0665",
+    "nombre": "Película Laminar — FILM",
+    "referencia": "FILM",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0666",
+    "nombre": "Gema GEC2602",
+    "referencia": "GEC2602",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0667",
+    "nombre": "Gema GEC2612",
+    "referencia": "GEC2612",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GEC2612.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0668",
+    "nombre": "Gema GEM1217",
+    "referencia": "GEM1217",
+    "precio": 5000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GEM1217.png",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0669",
+    "nombre": "Gema GEM1218",
+    "referencia": "GEM1218",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GEM1218_1.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/GEM1218_1.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/GEM1218_2.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/GEM1218_3.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/GEM1218_4.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/GEM1218_5.png"
+      }
+    ]
+  },
+  {
+    "id": "du0670",
+    "nombre": "Gema GEM1301",
+    "referencia": "GEM1301",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GEM1301.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0671",
+    "nombre": "Gema GEM1302",
+    "referencia": "GEM1302",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GEM1302.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0672",
+    "nombre": "Gema GEM1303",
+    "referencia": "GEM1303",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GEM1303.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0673",
+    "nombre": "Gema GEM1304",
+    "referencia": "GEM1304",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GEM1304.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0674",
+    "nombre": "Gema GEM1305",
+    "referencia": "GEM1305",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GEM1305.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0675",
+    "nombre": "Gema GEM1306",
+    "referencia": "GEM1306",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GEM1306.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0676",
+    "nombre": "Gema GEM1307",
+    "referencia": "GEM1307",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GEM1307.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0677",
+    "nombre": "Gema GEM1308",
+    "referencia": "GEM1308",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GEM1308.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0678",
+    "nombre": "Gema GEM1309",
+    "referencia": "GEM1309",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GEM1309.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0679",
+    "nombre": "Gema GEM1310",
+    "referencia": "GEM1310",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GEM1310.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0680",
+    "nombre": "Gema GEM1311",
+    "referencia": "GEM1311",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GEM1311.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0681",
+    "nombre": "Gema GEM1312",
+    "referencia": "GEM1312",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GEM1312.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0686",
+    "nombre": "Gemas GM3065",
+    "referencia": "GM3065",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GM3065_1.jpg",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/GM3065_1.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/GM3065_2.jpg"
+      }
+    ]
+  },
+  {
+    "id": "du0687",
+    "nombre": "Stickers para Uñas GM3086",
+    "referencia": "GM3086",
+    "precio": 6000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0688",
+    "nombre": "Gemas GM3091",
+    "referencia": "GM3091",
+    "precio": 12000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GM3091.jpg",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0689",
+    "nombre": "Gemas GM3115",
+    "referencia": "GM3115",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GM3115.jpg",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0690",
+    "nombre": "Gemas GM3116",
+    "referencia": "GM3116",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GM3116.jpg",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0691",
+    "nombre": "Gemas GM3117",
+    "referencia": "GM3117",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GM3117.jpg",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0692",
+    "nombre": "Gemas GM3118",
+    "referencia": "GM3118",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GM3118.jpg",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0693",
+    "nombre": "Gemas GM3127",
+    "referencia": "GM3127",
+    "precio": 12000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GM3127_1.jpg",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/GM3127_1.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/GM3127_2.jpg"
+      }
+    ]
+  },
+  {
+    "id": "du0694",
+    "nombre": "Gemas GM3141",
+    "referencia": "GM3141",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GM3141_1.jpg",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/GM3141_1.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/GM3141_2.jpg"
+      }
+    ]
+  },
+  {
+    "id": "du0695",
+    "nombre": "Gemas GM3156",
+    "referencia": "GM3156",
+    "precio": 40000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/GM3156_1.jpg",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/GM3156_1.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/GM3156_2.jpg"
+      }
+    ]
+  },
+  {
+    "id": "du0696",
+    "nombre": "Lámpara Portátil LAM04",
+    "referencia": "LAM04",
+    "precio": 88000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/LAM04_1.jpg",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/LAM04_1.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/LAM04_2.jpg"
+      }
+    ]
+  },
+  {
+    "id": "du0697",
+    "nombre": "Mortero MOR7",
+    "referencia": "MOR7",
+    "precio": 8000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/MOR7.png",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0698",
+    "nombre": "Paleta PAL6",
+    "referencia": "PAL6",
+    "precio": 14000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/PAL6_1.jpg",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/PAL6_1.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/PAL6_2.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/PAL6_3.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/PAL6_4.jpg"
+      }
+    ]
+  },
+  {
+    "id": "du0699",
+    "nombre": "Polvillo Cola de Sirena — P-CON",
+    "referencia": "P-CON",
+    "precio": 15000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Efectos y apliques",
+    "descripcion": "",
+    "imagen": "img/unas/P-CON_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/P-CON_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/P-CON_2.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/P-CON_3.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/P-CON_4.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/P-CON_5.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/P-CON_6.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/P-CON_7.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/P-CON_8.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/P-CON_9.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/P-CON_10.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/P-CON_11.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/P-CON_12.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0700",
+    "nombre": "Pincel PIN5002",
+    "referencia": "PIN5002",
+    "precio": 29000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/PIN5002.png",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0701",
+    "nombre": "Pomo para Uña — POMUNA",
+    "referencia": "POMUNA",
+    "precio": 17000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/POMUNA_1.png",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/POMUNA_1.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/POMUNA_2.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/POMUNA_3.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/POMUNA_4.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/POMUNA_5.png"
+      }
+    ]
+  },
+  {
+    "id": "du0702",
+    "nombre": "Probador de Uñas PROUN23",
+    "referencia": "PROUN23",
+    "precio": 4500,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/PROUN23.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0705",
+    "nombre": "Soporte Uña Huella — SOP01",
+    "referencia": "SOP01",
+    "precio": 7000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/SOP01.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/SOP01.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/SOP01_1.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/SOP01_2.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/SOP01_3.jpg"
+      }
+    ]
+  },
+  {
+    "id": "du0706",
+    "nombre": "Soporte Uña Corazón — SOP02",
+    "referencia": "SOP02",
+    "precio": 7000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/SOP02.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/SOP02.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/SOP02_1.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/SOP02_2.png"
+      }
+    ]
+  },
+  {
+    "id": "du0707",
+    "nombre": "Soporte Uña Flor — SOP03",
+    "referencia": "SOP03",
+    "precio": 7000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/SOP03.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/SOP03.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/SOP03_1.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/SOP03_2.png"
+      }
+    ]
+  },
+  {
+    "id": "du0708",
+    "nombre": "Stickers Muñecos, Estrellas Neón, Astral y Mariposas — STICKER1",
+    "referencia": "STICKER1",
+    "precio": 2000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER1_1.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER1_1.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER1_2.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER1_3.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER1_4.png"
+      }
+    ]
+  },
+  {
+    "id": "du0718",
+    "nombre": "Probador de Esmalte en Vidrio VIDUNA1",
+    "referencia": "VIDUNA1",
+    "precio": 7000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/VIDUNA1_1.jpg",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/VIDUNA1_1.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/VIDUNA1_2.jpg"
+      }
+    ]
+  },
+  {
+    "id": "du0719",
+    "nombre": "Probador de Esmalte en Vidrio VIDUNA2",
+    "referencia": "VIDUNA2",
+    "precio": 7000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/VIDUNA2.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/VIDUNA2.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/VIDUNA2_1.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/VIDUNA2_2.png"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/VIDUNA2_3.png"
+      }
+    ]
+  },
+  {
+    "id": "du0720",
+    "nombre": "Probador de Esmalte en Vidrio VIDUNA3",
+    "referencia": "VIDUNA3",
+    "precio": 7000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/VIDUNA3_1.jpg",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/VIDUNA3_1.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/VIDUNA3_2.jpg"
+      }
+    ]
+  },
+  {
+    "id": "du0721",
+    "nombre": "Probador de Esmalte en Vidrio VIDUNA4",
+    "referencia": "VIDUNA4",
+    "precio": 7000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/VIDUNA4.png",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0722",
+    "nombre": "Punzón Pincel — PUNDB",
+    "referencia": "PUNDB",
+    "precio": 4000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/PUNDB.png",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0724",
+    "nombre": "Sticker Gel Dimension #01 — STICKER3-01",
+    "referencia": "STICKER3-01",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-1_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-1_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-1_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0725",
+    "nombre": "Sticker Gel Dimension #02 — STICKER3-02",
+    "referencia": "STICKER3-02",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-2_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-2_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-2_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0726",
+    "nombre": "Sticker Gel Dimension #03 — STICKER3-03",
+    "referencia": "STICKER3-03",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-3_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-3_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-3_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0727",
+    "nombre": "Sticker Gel Dimension #04 — STICKER3-04",
+    "referencia": "STICKER3-04",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-4_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-4_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-4_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0728",
+    "nombre": "Sticker Gel Dimension #05 — STICKER3-05",
+    "referencia": "STICKER3-05",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-5_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-5_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-5_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0729",
+    "nombre": "Sticker Gel Dimension #06 — STICKER3-06",
+    "referencia": "STICKER3-06",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-6_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-6_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-6_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0730",
+    "nombre": "Sticker Gel Dimension #07 — STICKER3-07",
+    "referencia": "STICKER3-07",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-7_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-7_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-7_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0731",
+    "nombre": "Sticker Gel Dimension #08 — STICKER3-08",
+    "referencia": "STICKER3-08",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-8_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-8_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-8_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0732",
+    "nombre": "Sticker Gel Dimension #09 — STICKER3-09",
+    "referencia": "STICKER3-09",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-9_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-9_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-9_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0733",
+    "nombre": "Sticker Gel Dimension #10 — STICKER3-10",
+    "referencia": "STICKER3-10",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-10_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-10_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-10_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0734",
+    "nombre": "Sticker Gel Dimension #11 — STICKER3-11",
+    "referencia": "STICKER3-11",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-11_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-11_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-11_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0735",
+    "nombre": "Sticker Gel Dimension #12 — STICKER3-12",
+    "referencia": "STICKER3-12",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-12_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-12_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-12_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0736",
+    "nombre": "Sticker Gel Dimension #13 — STICKER3-13",
+    "referencia": "STICKER3-13",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-13_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-13_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-13_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0737",
+    "nombre": "Sticker Gel Dimension #14 — STICKER3-14",
+    "referencia": "STICKER3-14",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-14_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-14_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-14_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0738",
+    "nombre": "Sticker Gel Dimension #15 — STICKER3-15",
+    "referencia": "STICKER3-15",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-15_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-15_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-15_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0739",
+    "nombre": "Sticker Gel Dimension #16 — STICKER3-16",
+    "referencia": "STICKER3-16",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-16_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-16_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-16_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0740",
+    "nombre": "Sticker Gel Dimension #17 — STICKER3-17",
+    "referencia": "STICKER3-17",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-17_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-17_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-17_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0741",
+    "nombre": "Sticker Gel Dimension #18 — STICKER3-18",
+    "referencia": "STICKER3-18",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-18_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-18_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-18_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0742",
+    "nombre": "Sticker Gel Dimension #19 — STICKER3-19",
+    "referencia": "STICKER3-19",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-19_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-19_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-19_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0743",
+    "nombre": "Sticker Gel Dimension #20 — STICKER3-20",
+    "referencia": "STICKER3-20",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-20_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-20_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-20_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0744",
+    "nombre": "Sticker Gel Dimension #21 — STICKER3-21",
+    "referencia": "STICKER3-21",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-21_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-21_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-21_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0745",
+    "nombre": "Sticker Gel Dimension #22 — STICKER3-22",
+    "referencia": "STICKER3-22",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-22_1.webp",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-22_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-22_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0746",
+    "nombre": "Sticker Gel Dimension #23 — STICKER3-23",
+    "referencia": "STICKER3-23",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-23_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-23_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-23_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0747",
+    "nombre": "Sticker Gel Dimension #24 — STICKER3-24",
+    "referencia": "STICKER3-24",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-24_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-24_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-24_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0748",
+    "nombre": "Sticker Gel Dimension #25 — STICKER3-25",
+    "referencia": "STICKER3-25",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-25_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-25_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-25_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0749",
+    "nombre": "Sticker Gel Dimension #26 — STICKER3-26",
+    "referencia": "STICKER3-26",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-26_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-26_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-26_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0750",
+    "nombre": "Sticker Gel Dimension #27 — STICKER3-27",
+    "referencia": "STICKER3-27",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-27_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-27_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-27_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0751",
+    "nombre": "Sticker Gel Dimension #28 — STICKER3-28",
+    "referencia": "STICKER3-28",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-28_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-28_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-28_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0752",
+    "nombre": "Sticker Gel Dimension #29 — STICKER3-29",
+    "referencia": "STICKER3-29",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-29_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-29_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-29_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0753",
+    "nombre": "Sticker Gel Dimension #30 — STICKER3-30",
+    "referencia": "STICKER3-30",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-30_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-30_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-30_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0754",
+    "nombre": "Sticker Gel Dimension #31 — STICKER3-31",
+    "referencia": "STICKER3-31",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-31_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-31_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-31_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0755",
+    "nombre": "Sticker Gel Dimension #32 — STICKER3-32",
+    "referencia": "STICKER3-32",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-32_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-32_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-32_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0756",
+    "nombre": "Sticker Gel Dimension #33 — STICKER3-33",
+    "referencia": "STICKER3-33",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-33_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-33_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-33_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0757",
+    "nombre": "Sticker Gel Dimension #34 — STICKER3-34",
+    "referencia": "STICKER3-34",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-34_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-34_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-34_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0758",
+    "nombre": "Sticker Gel Dimension #35 — STICKER3-35",
+    "referencia": "STICKER3-35",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-35_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-35_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-35_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0759",
+    "nombre": "Sticker Gel Dimension #36 — STICKER3-36",
+    "referencia": "STICKER3-36",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-36_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-36_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-36_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0760",
+    "nombre": "Sticker Gel Dimension #37 — STICKER3-37",
+    "referencia": "STICKER3-37",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-37_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-37_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-37_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0761",
+    "nombre": "Sticker Gel Dimension #38 — STICKER3-38",
+    "referencia": "STICKER3-38",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-38_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-38_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-38_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0762",
+    "nombre": "Sticker Gel Dimension #39 — STICKER3-39",
+    "referencia": "STICKER3-39",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-39_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-39_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-39_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0763",
+    "nombre": "Sticker Gel Dimension #40 — STICKER3-40",
+    "referencia": "STICKER3-40",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-40_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-40_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-40_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0764",
+    "nombre": "Sticker Gel Dimension #41 — STICKER3-41",
+    "referencia": "STICKER3-41",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-41_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-41_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-41_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0765",
+    "nombre": "Sticker Gel Dimension #42 — STICKER3-42",
+    "referencia": "STICKER3-42",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-42_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-42_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-42_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0766",
+    "nombre": "Sticker Gel Dimension #43 — STICKER3-43",
+    "referencia": "STICKER3-43",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-43_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-43_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-43_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0767",
+    "nombre": "Sticker Gel Dimension #44 — STICKER3-44",
+    "referencia": "STICKER3-44",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-44_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-44_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-44_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0768",
+    "nombre": "Sticker Gel Dimension #45 — STICKER3-45",
+    "referencia": "STICKER3-45",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-45_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-45_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-45_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0769",
+    "nombre": "Sticker Gel Dimension #46 — STICKER3-46",
+    "referencia": "STICKER3-46",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-46_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-46_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-46_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0770",
+    "nombre": "Sticker Gel Dimension #47 — STICKER3-47",
+    "referencia": "STICKER3-47",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-47_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-47_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-47_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0771",
+    "nombre": "Sticker Gel Dimension #48 — STICKER3-48",
+    "referencia": "STICKER3-48",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-48_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-48_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-48_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0772",
+    "nombre": "Sticker Gel Dimension #49 — STICKER3-49",
+    "referencia": "STICKER3-49",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-49_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-49_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-49_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0773",
+    "nombre": "Sticker Gel Dimension #50 — STICKER3-50",
+    "referencia": "STICKER3-50",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-50_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-50_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-50_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0774",
+    "nombre": "Sticker Gel Dimension #51 — STICKER3-51",
+    "referencia": "STICKER3-51",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-51_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-51_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-51_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0775",
+    "nombre": "Sticker Gel Dimension #52 — STICKER3-52",
+    "referencia": "STICKER3-52",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-52_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-52_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-52_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0776",
+    "nombre": "Sticker Gel Dimension #53 — STICKER3-53",
+    "referencia": "STICKER3-53",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-53_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-53_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-53_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0777",
+    "nombre": "Sticker Gel Dimension #54 — STICKER3-54",
+    "referencia": "STICKER3-54",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-54_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-54_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-54_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0778",
+    "nombre": "Sticker Gel Dimension #55 — STICKER3-55",
+    "referencia": "STICKER3-55",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-55_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-55_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-55_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0779",
+    "nombre": "Sticker Gel Dimension #56 — STICKER3-56",
+    "referencia": "STICKER3-56",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-56_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-56_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-56_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0780",
+    "nombre": "Sticker Gel Dimension #57 — STICKER3-57",
+    "referencia": "STICKER3-57",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-57_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-57_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-57_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0781",
+    "nombre": "Sticker Gel Dimension #58 — STICKER3-58",
+    "referencia": "STICKER3-58",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-58_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-58_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-58_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0782",
+    "nombre": "Sticker Gel Dimension #59 — STICKER3-59",
+    "referencia": "STICKER3-59",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-59_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-59_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-59_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0783",
+    "nombre": "Sticker Gel Dimension #60 — STICKER3-60",
+    "referencia": "STICKER3-60",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-60_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-60_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-60_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0784",
+    "nombre": "Sticker Gel Dimension #61 — STICKER3-61",
+    "referencia": "STICKER3-61",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-61_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-61_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-61_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0785",
+    "nombre": "Sticker Gel Dimension #62 — STICKER3-62",
+    "referencia": "STICKER3-62",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-62_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-62_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-62_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0786",
+    "nombre": "Sticker Gel Dimension #63 — STICKER3-63",
+    "referencia": "STICKER3-63",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-63_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-63_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-63_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0787",
+    "nombre": "Sticker Gel Dimension #64 — STICKER3-64",
+    "referencia": "STICKER3-64",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER2-64_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0788",
+    "nombre": "Sticker Gel Dimension #65 — STICKER3-65",
+    "referencia": "STICKER3-65",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER2-65_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0789",
+    "nombre": "Sticker Gel Dimension #66 — STICKER3-66",
+    "referencia": "STICKER3-66",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-2-66_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-2-66_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-2-66_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0790",
+    "nombre": "Sticker Gel Dimension #67 — STICKER3-67",
+    "referencia": "STICKER3-67",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER2-67_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0791",
+    "nombre": "Sticker Gel Dimension #68 — STICKER3-68",
+    "referencia": "STICKER3-68",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-2-68_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-2-68_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-2-68_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0792",
+    "nombre": "Sticker Gel Dimension #69 — STICKER3-69",
+    "referencia": "STICKER3-69",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-2-69_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-2-69_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-2-69_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0793",
+    "nombre": "Sticker Gel Dimension #70 — STICKER3-70",
+    "referencia": "STICKER3-70",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-2-70_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-2-70_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-2-70_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0794",
+    "nombre": "Sticker Gel Dimension #71 — STICKER3-71",
+    "referencia": "STICKER3-71",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-2-71_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-2-71_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-2-71_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0795",
+    "nombre": "Sticker Gel Dimension #72 — STICKER3-72",
+    "referencia": "STICKER3-72",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-2-72_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-2-72_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-2-72_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0796",
+    "nombre": "Sticker Gel Dimension #73 — STICKER3-73",
+    "referencia": "STICKER3-73",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-2-73_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0797",
+    "nombre": "Sticker Gel Dimension #74 — STICKER3-74",
+    "referencia": "STICKER3-74",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-2-74_1.webp",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-2-74_1.webp"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-2-74_2.webp"
+      }
+    ]
+  },
+  {
+    "id": "du0798",
+    "nombre": "Sticker Gel Dimension #75 — STICKER3-75",
+    "referencia": "STICKER3-75",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3-75_1.jpg",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-75_1.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3-75_2.jpg"
+      }
+    ]
+  },
+  {
+    "id": "du0799",
+    "nombre": "Sticker Gel Dimension Varios — STICKER3-VARIOS",
+    "referencia": "STICKER3-VARIOS",
+    "precio": 10000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
+  },
+  {
+    "id": "du0800",
+    "nombre": "Sticker 3D — STICKER3D",
+    "referencia": "STICKER3D",
+    "precio": 2000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Stickers para uñas",
+    "descripcion": "",
+    "imagen": "img/unas/STICKER3D_1.jpg",
+    "agotado": false,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": "",
+    "galeria": [
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3D_1.jpg"
+      },
+      {
+        "tipo": "foto",
+        "src": "img/unas/STICKER3D_2.jpg"
+      }
+    ]
+  },
+  {
+    "id": "du0897",
+    "nombre": "Punzón Liner PUNDLINER",
+    "referencia": "PUNDLINER",
+    "precio": 16000,
+    "marca": "DU",
+    "categoria": "Uñas DU",
+    "subcategoria": "Accesorios para uñas",
+    "descripcion": "Punzón liner para nail art PUNDLINER.",
+    "imagen": "img/unas/PUNDLINER.webp",
+    "agotado": true,
+    "nuevo": false,
+    "best_seller": false,
+    "color_blob": ""
   }
 ]
