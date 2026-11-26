@@ -1818,13 +1818,13 @@
     .du-hero { display: none; position: relative; overflow: hidden; margin-bottom: 22px; padding: 26px 28px;
       border-radius: 18px; background: linear-gradient(120deg, #EAF6FD 0%, #D6EEFB 55%, #C3E5F8 100%); border: 1px solid #CBE6F6; }
     body.du-on .du-hero { display: block; }
-    .du-hero-mark { position: absolute; right: -10px; bottom: -38px; font-size: 9rem; font-weight: 700; letter-spacing: -8px;
+    @font-face { font-family: "Tekno DU"; src: url(data:font/woff;base64,d09GRk9UVE8AAAT8AAwAAAAABaQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAAC8AAAAWUAAAFlGdTUO0dERUYAAARYAAAAFgAAABYAEQACR1BPUwAABHAAAABTAAAAdCveJI5HU1VCAAAExAAAACoAAAAquPq49E9TLzIAAAF8AAAATQAAAGBoSGoEY21hcAAAAqgAAAAxAAAAPAB4AJBoZWFkAAABHAAAADYAAAA2KWSHdGhoZWEAAAFUAAAAIAAAACQJOgTvaG10eAAABPAAAAAKAAAACgj/AKBtYXhwAAABdAAAAAYAAAAGAANQAG5hbWUAAAHMAAAA2wAAAYoddDbwcG9zdAAAAtwAAAATAAAAIP+4ADIAAQAAAAEAAJBYe09fDzz1AAMD6AAAAADd0ATbAAAAAOcuPvYAZAAABOwCwwAAAAMAAgAAAAAAAHicY2BkYGB+8d+CgYE1gCGFIYXlDQMjAypgAgBsYgQ0AABQAAADAAB4nGNgZjnEOIGBlYGDqYspgoGBwRtCM8YxGDHqMDAwMLAywAEjAxII9Q73Y3BgcGEIZVb4b8FwgvkFwwmYGsYvTIcZGBgUGJgBC/0MFAAAAHicZc/NSkJRFMXxn2lFkwY+QJxhky4aaIijaCgURB/QzPKkot0b16vUvCfoLXqFni44XMKIPfnvvddam419D5oarQOU1NzQVta849BHzU3HPmtubWl2TXzXvKfdOHKh8OpdaW5qphJ8CU51dJ0JHr0LRqJcLqrMUp9bq6zSPBOcW1oKW0mr1MWkKW1EE5kb0UKuEFylxGvR1NrSWKkr00k1dGvk3qXhluukdt2l1JW5Qi788c0UKk9ps/ndZbo6BoZejC3EpHoWvYnp50xPpq+nZ6D//+oPqCs3ggB4nCXKSxEAEBQAwPUZCYQQRAUxRZDtmeG0l0VGQVekZzXQVEk2rQi+cWK/hQuSrQkCAAAAeJxjYGYAg/9bGYwYsAAALMIB6gABAAQCAAEBAQpUZWtuby1PbmUAAQEBH/gPAPgbAfgcAvgYBO+LHATs+VcF94cPu/edEveMEQACAQE+R0NvcHlyaWdodCBcKGNcKSAyMDE3IGJ5IEtlbm5ldGggS251dHNlbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5UZWtubyBPbmUACwEBCRwgKS1FSVFWXmQoHfyLByEdDiod/XoGZGyqsh/4i/sf/IsiCgv3sgcL9wXm5vcFIQoLHyIdC/quFiAK/kr9Vwb3H/jRFSkd+7IHJx0GDmlhHwtgaWlhHv26CyMd+x8L+boGtqwmHQtkbGxkHgsAACUANgADAQEEBgv8Rg4lHfq0FiAde5v4iJr3VJvYmwb7bJsHHjfD/wwJiwwL9xoK9x8L9xoMDPcfDA0cBVAUHAT9FbsTAAUBAQwQGR0k9wjpIwot6fsIHgsf+IsLB/sF5jD3BR4L6iQKC/cIJB33CAsAAAAAAQAAAAwAAAAAAAAAAQABAAIAAQABAAB4nE2KIQ6AMBAE546KC6IvQFaieANBIfsBBApSQfh/yRXT3UwyyS4CjCQWdN32TLyPtxAJALXiu1znUzC3RkAxBEOZ2jMxowz0EbTjr7p/mjAHtwAAAQAAAAoAJgAoAAJERkxUAA5sYXRuABgABAAAAAD//wAAAAAAAAAAAAAAAANLADwFUABkAGQAAA==) format("woff"); font-display: block; } /* Tekno One, solo letras D y U */
+    .du-hero-mark { position: absolute; right: 18px; bottom: -30px; font-family: "Tekno DU", "Instrument Sans", sans-serif; font-size: 9rem; font-weight: 400; letter-spacing: -0.17em;
       color: rgba(22,50,74,0.07); line-height: 1; pointer-events: none; user-select: none; }
-    .du-hero .sec-eyebrow { color: #3D6B8C; }
-    .du-hero-title { font-size: 2rem; font-weight: 600; letter-spacing: -0.6px; line-height: 1.05; color: var(--du-ink); margin: 4px 0 8px; }
+    .du-hero-title { font-size: 2rem; font-weight: 600; letter-spacing: -0.6px; line-height: 1.05; color: var(--du-ink); margin: 0 0 8px; }
     .du-hero-title em { font-weight: 400; font-style: italic; }
     .du-hero p { position: relative; font-size: 0.84rem; color: #3D5A70; line-height: 1.55; max-width: 460px; }
-    @media (max-width: 960px) { .du-hero { padding: 20px 18px; border-radius: 14px; } .du-hero-title { font-size: 1.55rem; } .du-hero-mark { font-size: 6.5rem; } }
+    @media (max-width: 960px) { .du-hero { padding: 20px 18px; border-radius: 14px; } .du-hero-title { font-size: 1.55rem; } .du-hero-mark { font-size: 4.6rem; right: 10px; bottom: -20px; } }
     /* Black Days: la tarjeta de DU va en azul */
     .bf-tier.du .bf-pct { background: var(--du-grad); background-size: 300% 300%; -webkit-background-clip: text; background-clip: text; }
   </style>
@@ -1913,7 +1913,6 @@
 <!-- ── APARTADO DU (solo se ve dentro de la categoría Uñas DU) ── -->
     <section class="du-hero" id="du-hero" aria-label="Productos de uñas DU">
       <div class="du-hero-mark" aria-hidden="true">DU</div>
-      <div class="sec-eyebrow">Marca aliada · Entrebell</div>
       <div class="du-hero-title">Uñas <em>DU</em></div>
       <p>Accesorios, efectos, gemas y stickers de DU. Se agregan al mismo pedido y los atiende la misma asesora.</p>
     </section>
@@ -2948,6 +2947,11 @@ function wlSubmit() {
   afterWelcome();
 }
 function afterWelcome() {
+  if (location.hash === '#du') {   // enlace desde el catálogo DU: abre directo "Uñas DU"
+    history.replaceState(null, '', location.pathname + location.search);
+    resetSearchBox(); activeCat = DU_CAT; activeSub = null; priceMin = priceMax = null; page = 1;
+    opts_forceScroll = true; render({ scroll: true }); opts_forceScroll = false; return;
+  }
   if (location.hash === '#colores') { history.replaceState(null, '', location.pathname + location.search); openWheel(); return; }
   const id = decodeURIComponent(location.hash.slice(1));
   if (id && PRODUCTOS.some(p => p.id === id)) {
