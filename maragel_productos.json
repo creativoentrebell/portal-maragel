@@ -456,7 +456,7 @@
     "subcategoria": "Lámparas UV",
     "descripcion": "Base metálica efecto espejo. Temporizador 10/30/60/99 seg. Sensor de movimiento. Apta para pedicura.",
     "imagen": "img/color/LGEL1_1.webp",
-    "agotado": false,
+    "agotado": true,
     "nuevo": false,
     "best_seller": false,
     "color_blob": "",
